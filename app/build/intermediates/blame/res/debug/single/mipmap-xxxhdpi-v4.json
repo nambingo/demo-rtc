@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_back_white.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_back_white.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_select_unchecked.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_select_unchecked.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_dropdown_black.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_dropdown_black.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_dropdown_white.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_dropdown_white.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_select_checked.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_select_checked.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_camera.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_camera.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_photo.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_photo.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher_round.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_selected.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_selected.png"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/gallery_pick_back_black.png",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/gallery_pick_back_black.png"
+    }
+]

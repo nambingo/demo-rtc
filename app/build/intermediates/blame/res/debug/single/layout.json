@@ -1,0 +1,654 @@
+[
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/com_facebook_login_fragment.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/layout/com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_input_email.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_input_email.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_ill_detail_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_ill_detail_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_create_session_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_create_session_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_item_folder.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_item_folder.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_cai_dat.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_cai_dat.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_webview_info.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_webview_info.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_kham_online.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_kham_online.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/progress_dialog.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/progress_dialog.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/date_picker_dialog.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/res/layout/date_picker_dialog.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_filter.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_filter.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/ucrop_layout_rotate_wheel.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/layout/ucrop_layout_rotate_wheel.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_mini_item.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_mini_item.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_chat_message_date.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_chat_message_date.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_chi_tiet_bs.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_chi_tiet_bs.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_popup_folder.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_popup_folder.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_question.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_question.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_recharge.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_recharge.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_error.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_error.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_image.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_image.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_slider.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_slider.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/toolbar.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/toolbar.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_swipe_intro.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_swipe_intro.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_chat_message_text.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_chat_message_text.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_tooltip.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_tooltip.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_danh_sach_bs.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_danh_sach_bs.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_create_session.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_create_session.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/com_facebook_device_auth_dialog_fragment.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/layout/com_facebook_device_auth_dialog_fragment.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/com_facebook_smart_device_dialog_fragment.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/layout/com_facebook_smart_device_dialog_fragment.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_mini.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_mini.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_swipe_guider.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_swipe_guider.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/date_picker_container.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/res/layout/date_picker_container.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_gallery.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_gallery.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_info_account_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_info_account_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_title.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_title.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_search.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_search.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_chat_message_mtest.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_chat_message_mtest.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/number_picker_day_month.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/res/layout/number_picker_day_month.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_session.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_session.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/com_facebook_activity_layout.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/layout/com_facebook_activity_layout.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_update_account.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_update_account.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/date_picker_dialog_container.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/res/layout/date_picker_dialog_container.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/ucrop_layout_scale_wheel.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/layout/ucrop_layout_scale_wheel.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_list_ill_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_list_ill_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_list_ill.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_list_ill.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/layout_content_menu.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/layout_content_menu.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_info_account_v3.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_info_account_v3.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_create_session.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_create_session.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_main.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_main.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_custom.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_vietskin_contain.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_vietskin_contain.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_intro_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_intro_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_guide.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_guide.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_chat.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_chat.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/com_facebook_tooltip_bubble.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/layout/com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow_custom.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_large.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/layout/messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_danh_sach_bs.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_danh_sach_bs.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_webview.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_webview.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_recharge_result.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_recharge_result.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/number_picker_year.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/res/layout/number_picker_year.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_item_camera.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_item_camera.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_ill.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_ill.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_large.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/layout/messenger_button_send_white_large.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_small.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/layout/messenger_button_send_blue_small.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_q_2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_q_2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_webview_swipe.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_webview_swipe.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_login_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_login_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/main2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/main2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/ucrop_aspect_ratio.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/layout/ucrop_aspect_ratio.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_alert_wait_doctor.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_alert_wait_doctor.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/ucrop_controls.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/layout/ucrop_controls.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_alert_v2_login.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_alert_v2_login.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_slider_image.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_slider_image.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_chat_message_file.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_chat_message_file.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/spinner_text.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/spinner_text.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_control_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_control_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_info_account.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_info_account.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_one_choice.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_one_choice.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_round.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/layout/messenger_button_send_blue_round.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/login_fb.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/login_fb.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_alert.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_alert.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_wellcome_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_wellcome_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_small.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/layout/messenger_button_send_white_small.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_update_info.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_update_info.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_two_choice.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_two_choice.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_webview.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_webview.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_setting_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_setting_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/ucrop_activity_photobox.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/layout/ucrop_activity_photobox.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_recharge_v2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_recharge_v2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_viet_skin.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_viet_skin.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_setting_container.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_setting_container.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/dialog_alert_v2_fee.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/dialog_alert_v2_fee.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/ucrop_view.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/layout/ucrop_view.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_q_1.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_q_1.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_round.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/layout/messenger_button_send_white_round.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_right_menu.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_right_menu.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/gallery_item_photo.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/layout/gallery_item_photo.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_detail_doctor.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_detail_doctor.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/date_picker.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/res/layout/date_picker.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/fragment_ill_detail.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/fragment_ill_detail.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_imagev2.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_imagev2.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/layout/design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/item_photo.xml",
+        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/layout/item_photo.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/layout/abc_action_mode_bar.xml"
+    }
+]

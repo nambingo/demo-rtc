@@ -1,0 +1,109 @@
+{
+  "project_info": {
+    "project_number": "268865333568",
+    "firebase_url": "https://vietskin-d7f0a.firebaseio.com",
+    "project_id": "vietskin-d7f0a",
+    "storage_bucket": "vietskin-d7f0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268865333568:android:5654b2cf0770d315",
+        "android_client_info": {
+          "package_name": "com.giahan.app.vietskin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268865333568-pk63mat2s30i4omenre6e54gr82r0g4g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.giahan.app.vietskin",
+            "certificate_hash": "4355bb1d9ddcc7bdc90fd4c68cd5918fab10d8f8"
+          }
+        },
+        {
+          "client_id": "268865333568-8oadepojn771utihou0dq1c5tl4h4tbf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.giahan.app.vietskin",
+            "certificate_hash": "5325550471860ed6bd5f3477fd870b307b0cfa83"
+          }
+        },
+        {
+          "client_id": "268865333568-p9t7c47mph270hutr3ssa81qo2cvv48h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.giahan.app.vietskin",
+            "certificate_hash": "06b63617a70fda7588b7f243dbd283e3a00ef435"
+          }
+        },
+        {
+          "client_id": "268865333568-gvmdnlofoop6f9b3h1e5tjbcg0krvnl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkfAQQzPSIiYzfURMj7CcOEgAe_j-448Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268865333568-gvmdnlofoop6f9b3h1e5tjbcg0krvnl0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "268865333568-siq8uhucvskb4mgh6go7v1et3g12rhd4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "doctor.com.vietskin.vn"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268865333568:android:77183f87a26e253e",
+        "android_client_info": {
+          "package_name": "com.giahan.app.vietskindoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268865333568-gvmdnlofoop6f9b3h1e5tjbcg0krvnl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkfAQQzPSIiYzfURMj7CcOEgAe_j-448Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

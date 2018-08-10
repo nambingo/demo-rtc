@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-watch-v20/abc_dialog_material_background.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-watch-v20/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    }
+]

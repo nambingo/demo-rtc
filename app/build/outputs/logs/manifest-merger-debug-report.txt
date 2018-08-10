@@ -1,0 +1,815 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+MERGED from [com.android.support:multidex:1.0.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/fa4ce46e26bea0f05599d6b9b9a071f5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:2:1-19:12
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-41:12
+MERGED from [com.android.support:design:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.android:facebook-android-sdk:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.33.0.aar/7287e187820e476b29f619315c4c8fab/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-login:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/AndroidManifest.xml:21:1-31:12
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/a948adb092d8529ea95b44a7648bb0be/AndroidManifest.xml:2:1-10:12
+MERGED from [com.github.everhad:AndroidRatingStar:v1.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/AndroidRatingStar-v1.0.1.aar/bd164018a648e1efa6f5cac919572d35/AndroidManifest.xml:2:1-17:12
+MERGED from [com.ryanjeffreybrooks:indefinitepagerindicator:1.0.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/indefinitepagerindicator-1.0.9.aar/90a70321f01bbcdaaa3c96559a067aee/AndroidManifest.xml:2:1-11:12
+MERGED from [com.yalantis:ucrop:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/AndroidManifest.xml:2:1-12:12
+MERGED from [com.facebook.android:facebook-share:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:21:1-36:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f852f5da3b91cd4cb5b14c987cb3f6e4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/e1ae9d8b88da2680e00e9a2b57aa4ff0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.0.1.aar/5f059d9ea074bf24a94c4f7814ee22b8/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/f6fbd1bc71508edd5a1d2af130e4bb55/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/5d2e760d3235b07e71a62781f83afd9d/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-core:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/4423991d7854f6733761d8f074d4404c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:17:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:17:1-65:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/259c5cf2065e55215754e0ebb2687b9d/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:2:1-16:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f081b113c219f7d53b1615b8c8584ffb/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/e6d6ee9338da6000b16fedf54e5b42d8/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/715ca6f883158a54bb25f9609ad89670/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/ffdec523c30b4ea74bb72c839eaee3c9/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/074f6f84758f297f8b66e314e5c8c714/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/dd0e8617cf855a003d5c23e8596ac5e9/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:transition:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/dd4e69c4d17e66e788bf8e4b70066da4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customtabs:27.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/cd1e2ada629dcc455679c1c17a5b1ffc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/cce100a4ceb0c95c47b071f75456b06e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1b87ab46898a406560826f9dbdb1218c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9292e7149ca9cab4899388f1d92489b9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/aa9b709621e1f995a50eaaa585bec29c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.android:facebook-places:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-places-4.33.0.aar/25b052ebec6c47671567e99e8e9d5ea6/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-applinks:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.33.0.aar/4297ced37cef1e2451a5fb65fd023ec5/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-messenger:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:21:1-53:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/02256dcfb5fd63127e3fbfa42deee378/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.gongwen:swipeback:1.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/swipeback-1.0.2.aar/8f118fdc662048dce16531aa90dc7118/AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/6ef71f2e804a08cd0a69bcc0d0e69d21/AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:iconics-core:2.8.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/iconics-core-2.8.2.aar/5ebcef00daccbf1807a52a2a92c739b1/AndroidManifest.xml:2:1-12:12
+MERGED from [com.mikepenz:google-material-typeface:3.0.1.0.original] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/google-material-typeface-3.0.1.0.original.aar/76a1c9d553d283d7659a49636375dd03/AndroidManifest.xml:17:1-29:12
+MERGED from [com.github.hrskrs:InstaDotView:1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/InstaDotView-1.1.aar/7035b5dc31d5815ffe0ee72e3d6f2ce2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.drawers:SpinnerDatePicker:1.0.6] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/AndroidManifest.xml:2:1-14:12
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.6.3.aar/7099b1d35651d1c68dfa5ef6f789f455/AndroidManifest.xml:45:1-56:12
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/beta-1.2.9.aar/e2b9aa1f7460f6d7353a01e7aa3b749f/AndroidManifest.xml:2:1-13:12
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/answers-1.4.2.aar/c7c17d612196ef4fc74e3654c48e7bff/AndroidManifest.xml:2:1-13:12
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/fabric-1.4.3.aar/237ec0bd3c179e0503f70940d195de71/AndroidManifest.xml:22:1-33:12
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/39c964fdf0a03af051ebf0165061531f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/30ae056c34368884c9d9b4f2ae713e81/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7a499ee8cddd764e7f3069fbc83c5efd/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/8951cd220dace813a878936289964f7e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/786898320d3052760c5190b906239781/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/ee3058b125eb7b801155304f508e1829/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+	package
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:4:5-44
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:1-153:12
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:6:5-66
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:23:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.6.3.aar/7099b1d35651d1c68dfa5ef6f789f455/AndroidManifest.xml:52:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.6.3.aar/7099b1d35651d1c68dfa5ef6f789f455/AndroidManifest.xml:52:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/beta-1.2.9.aar/e2b9aa1f7460f6d7353a01e7aa3b749f/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/beta-1.2.9.aar/e2b9aa1f7460f6d7353a01e7aa3b749f/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/answers-1.4.2.aar/c7c17d612196ef4fc74e3654c48e7bff/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/answers-1.4.2.aar/c7c17d612196ef4fc74e3654c48e7bff/AndroidManifest.xml:9:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/fabric-1.4.3.aar/237ec0bd3c179e0503f70940d195de71/AndroidManifest.xml:29:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/fabric-1.4.3.aar/237ec0bd3c179e0503f70940d195de71/AndroidManifest.xml:29:5-67
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:7:5-81
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-81
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:8:5-80
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-80
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:8:22-77
+supports-screens
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:10:5-15:40
+	android:largeScreens
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:12:9-36
+	android:smallScreens
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:14:9-36
+	android:normalScreens
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:13:9-37
+	android:xlargeScreens
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:15:9-37
+	android:anyDensity
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:11:9-34
+uses-feature#0x00020000
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:17:5-54
+	android:glEsVersion
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:17:19-51
+uses-feature#android.hardware.touchscreen
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:18:5-20:36
+	android:required
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:20:9-33
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:19:9-52
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:21:5-23:36
+	android:required
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:23:9-33
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:22:9-63
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:24:5-26:36
+	android:required
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:25:9-72
+application
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:29:5-151:19
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:11:5-17:19
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:11:5-17:19
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:16:5-39:19
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:16:5-39:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.33.0.aar/7287e187820e476b29f619315c4c8fab/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.33.0.aar/7287e187820e476b29f619315c4c8fab/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/AndroidManifest.xml:28:5-29:19
+MERGED from [com.github.everhad:AndroidRatingStar:v1.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/AndroidRatingStar-v1.0.1.aar/bd164018a648e1efa6f5cac919572d35/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.everhad:AndroidRatingStar:v1.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/AndroidRatingStar-v1.0.1.aar/bd164018a648e1efa6f5cac919572d35/AndroidManifest.xml:11:5-15:19
+MERGED from [com.facebook.android:facebook-share:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:28:5-34:19
+MERGED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:28:5-34:19
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:22:5-36:19
+MERGED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:22:5-36:19
+MERGED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/5d2e760d3235b07e71a62781f83afd9d/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/5d2e760d3235b07e71a62781f83afd9d/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-core:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/4423991d7854f6733761d8f074d4404c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/4423991d7854f6733761d8f074d4404c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:34:5-63:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:34:5-63:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/259c5cf2065e55215754e0ebb2687b9d/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/259c5cf2065e55215754e0ebb2687b9d/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:8:5-14:19
+MERGED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:8:5-14:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f081b113c219f7d53b1615b8c8584ffb/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f081b113c219f7d53b1615b8c8584ffb/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/e6d6ee9338da6000b16fedf54e5b42d8/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/e6d6ee9338da6000b16fedf54e5b42d8/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/715ca6f883158a54bb25f9609ad89670/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/715ca6f883158a54bb25f9609ad89670/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/ffdec523c30b4ea74bb72c839eaee3c9/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/ffdec523c30b4ea74bb72c839eaee3c9/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.android:facebook-places:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-places-4.33.0.aar/25b052ebec6c47671567e99e8e9d5ea6/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-places:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-places-4.33.0.aar/25b052ebec6c47671567e99e8e9d5ea6/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.33.0.aar/4297ced37cef1e2451a5fb65fd023ec5/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.33.0.aar/4297ced37cef1e2451a5fb65fd023ec5/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:28:5-51:19
+MERGED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:28:5-51:19
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/6ef71f2e804a08cd0a69bcc0d0e69d21/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/6ef71f2e804a08cd0a69bcc0d0e69d21/AndroidManifest.xml:9:5-20
+MERGED from [com.mikepenz:google-material-typeface:3.0.1.0.original] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/google-material-typeface-3.0.1.0.original.aar/76a1c9d553d283d7659a49636375dd03/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:google-material-typeface:3.0.1.0.original] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/google-material-typeface-3.0.1.0.original.aar/76a1c9d553d283d7659a49636375dd03/AndroidManifest.xml:27:5-20
+MERGED from [com.github.drawers:SpinnerDatePicker:1.0.6] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/AndroidManifest.xml:11:5-12:19
+MERGED from [com.github.drawers:SpinnerDatePicker:1.0.6] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/AndroidManifest.xml:11:5-12:19
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.6.3.aar/7099b1d35651d1c68dfa5ef6f789f455/AndroidManifest.xml:54:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.6.3.aar/7099b1d35651d1c68dfa5ef6f789f455/AndroidManifest.xml:54:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/beta-1.2.9.aar/e2b9aa1f7460f6d7353a01e7aa3b749f/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/beta-1.2.9.aar/e2b9aa1f7460f6d7353a01e7aa3b749f/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/answers-1.4.2.aar/c7c17d612196ef4fc74e3654c48e7bff/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/answers-1.4.2.aar/c7c17d612196ef4fc74e3654c48e7bff/AndroidManifest.xml:11:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/fabric-1.4.3.aar/237ec0bd3c179e0503f70940d195de71/AndroidManifest.xml:31:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/fabric-1.4.3.aar/237ec0bd3c179e0503f70940d195de71/AndroidManifest.xml:31:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/786898320d3052760c5190b906239781/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/786898320d3052760c5190b906239781/AndroidManifest.xml:22:5-20
+	android:supportsRtl
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:34:9-35
+	android:label
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:33:9-41
+	android:icon
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:32:9-43
+	android:allowBackup
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:31:9-35
+	android:theme
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:35:9-61
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:30:9-44
+provider#android.support.v4.content.FileProvider
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:36:9-44:20
+	android:grantUriPermissions
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:40:13-47
+	android:authorities
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:38:13-77
+	android:exported
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:37:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:41:13-43:53
+	android:resource
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:43:17-50
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:42:17-67
+activity#com.giahan.app.vietskindoctor.activity.SplashActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:46:9-54:20
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:48:13-49
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:47:13-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:49:13-53:29
+action#android.intent.action.MAIN
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:50:17-69
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:50:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:52:17-77
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:52:27-74
+service#com.giahan.app.vietskindoctor.services.firebase.FMService
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:56:9-62:19
+	android:exported
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:57:13-37
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:58:13-56
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:59:13-61:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:60:17-77
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:60:25-75
+service#com.giahan.app.vietskindoctor.services.firebase.FIDService
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:64:9-70:19
+	android:exported
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:65:13-37
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:66:13-57
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:67:13-69:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:68:17-79
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:68:25-77
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:72:9-73:54
+	android:value
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:73:13-52
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:72:20-65
+activity#com.facebook.FacebookActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:75:9-80:56
+MERGED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:29:9-32:66
+	android:label
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:79:13-45
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:78:13-96
+	android:theme
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:80:13-53
+		REJECTED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:32:13-63
+	tools:replace
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:76:13-42
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:77:13-57
+activity#com.giahan.app.vietskindoctor.activity.LoginActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:82:9-85:52
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:85:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:84:13-120
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:83:13-51
+activity#com.giahan.app.vietskindoctor.activity.MainActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:87:9-91:54
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:90:13-49
+	android:windowSoftInputMode
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:91:13-52
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:89:13-120
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:88:13-50
+activity#com.giahan.app.vietskindoctor.activity.Main2
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:93:9-96:52
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:96:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:95:13-120
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:94:13-43
+activity#com.giahan.app.vietskindoctor.activity.LoginV2Activity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:98:9-101:52
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:101:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:100:13-120
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:99:13-53
+activity#com.giahan.app.vietskindoctor.activity.GuideActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:103:9-107:66
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:106:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:105:13-120
+	android:theme
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:107:13-64
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:104:13-51
+activity#com.giahan.app.vietskindoctor.activity.WellcomeActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:109:9-112:52
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:112:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:111:13-120
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:110:13-54
+activity#com.giahan.app.vietskindoctor.activity.ControlActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:114:9-117:52
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:117:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:116:13-120
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:115:13-53
+activity#com.giahan.app.vietskindoctor.activity.IntroImageActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:119:9-123:67
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:122:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:121:13-120
+	android:theme
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:123:13-64
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:120:13-56
+activity#com.giahan.app.vietskindoctor.activity.WebviewActivity
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:125:9-129:67
+	android:screenOrientation
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:128:13-49
+	android:configChanges
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:127:13-120
+	android:theme
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:129:13-65
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:126:13-53
+meta-data#io.fabric.ApiKey
+ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:148:9-150:72
+	android:value
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:150:13-69
+	android:name
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml:149:13-44
+uses-sdk
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:multidex:1.0.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/fa4ce46e26bea0f05599d6b9b9a071f5/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/fa4ce46e26bea0f05599d6b9b9a071f5/AndroidManifest.xml:20:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:7:5-43
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-android-sdk:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.33.0.aar/7287e187820e476b29f619315c4c8fab/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.33.0.aar/7287e187820e476b29f619315c4c8fab/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/AndroidManifest.xml:24:5-26:41
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/a948adb092d8529ea95b44a7648bb0be/AndroidManifest.xml:6:5-8:41
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/a948adb092d8529ea95b44a7648bb0be/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.everhad:AndroidRatingStar:v1.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/AndroidRatingStar-v1.0.1.aar/bd164018a648e1efa6f5cac919572d35/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.everhad:AndroidRatingStar:v1.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/AndroidRatingStar-v1.0.1.aar/bd164018a648e1efa6f5cac919572d35/AndroidManifest.xml:7:5-9:41
+MERGED from [com.ryanjeffreybrooks:indefinitepagerindicator:1.0.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/indefinitepagerindicator-1.0.9.aar/90a70321f01bbcdaaa3c96559a067aee/AndroidManifest.xml:7:5-9:41
+MERGED from [com.ryanjeffreybrooks:indefinitepagerindicator:1.0.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/indefinitepagerindicator-1.0.9.aar/90a70321f01bbcdaaa3c96559a067aee/AndroidManifest.xml:7:5-9:41
+MERGED from [com.yalantis:ucrop:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/AndroidManifest.xml:8:5-10:41
+MERGED from [com.yalantis:ucrop:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.android:facebook-share:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f852f5da3b91cd4cb5b14c987cb3f6e4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f852f5da3b91cd4cb5b14c987cb3f6e4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/e1ae9d8b88da2680e00e9a2b57aa4ff0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/e1ae9d8b88da2680e00e9a2b57aa4ff0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.0.1.aar/5f059d9ea074bf24a94c4f7814ee22b8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.0.1.aar/5f059d9ea074bf24a94c4f7814ee22b8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/f6fbd1bc71508edd5a1d2af130e4bb55/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/f6fbd1bc71508edd5a1d2af130e4bb55/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/5d2e760d3235b07e71a62781f83afd9d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.0.aar/5d2e760d3235b07e71a62781f83afd9d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/4423991d7854f6733761d8f074d4404c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/4423991d7854f6733761d8f074d4404c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/259c5cf2065e55215754e0ebb2687b9d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/259c5cf2065e55215754e0ebb2687b9d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:5:5-6:37
+MERGED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:5:5-6:37
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f081b113c219f7d53b1615b8c8584ffb/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f081b113c219f7d53b1615b8c8584ffb/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/e6d6ee9338da6000b16fedf54e5b42d8/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/e6d6ee9338da6000b16fedf54e5b42d8/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/715ca6f883158a54bb25f9609ad89670/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/715ca6f883158a54bb25f9609ad89670/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/ffdec523c30b4ea74bb72c839eaee3c9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/ffdec523c30b4ea74bb72c839eaee3c9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/074f6f84758f297f8b66e314e5c8c714/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/074f6f84758f297f8b66e314e5c8c714/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/dd0e8617cf855a003d5c23e8596ac5e9/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/dd0e8617cf855a003d5c23e8596ac5e9/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:transition:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/dd4e69c4d17e66e788bf8e4b70066da4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/dd4e69c4d17e66e788bf8e4b70066da4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/cd1e2ada629dcc455679c1c17a5b1ffc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/cd1e2ada629dcc455679c1c17a5b1ffc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/cce100a4ceb0c95c47b071f75456b06e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/cce100a4ceb0c95c47b071f75456b06e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1b87ab46898a406560826f9dbdb1218c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1b87ab46898a406560826f9dbdb1218c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9292e7149ca9cab4899388f1d92489b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9292e7149ca9cab4899388f1d92489b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/aa9b709621e1f995a50eaaa585bec29c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/aa9b709621e1f995a50eaaa585bec29c/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-places:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-places-4.33.0.aar/25b052ebec6c47671567e99e8e9d5ea6/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-places:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-places-4.33.0.aar/25b052ebec6c47671567e99e8e9d5ea6/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.33.0.aar/4297ced37cef1e2451a5fb65fd023ec5/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.33.0.aar/4297ced37cef1e2451a5fb65fd023ec5/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/02256dcfb5fd63127e3fbfa42deee378/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/02256dcfb5fd63127e3fbfa42deee378/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/936db97d39d1fd7fa22552260536dcc5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/AndroidManifest.xml:20:5-44
+MERGED from [com.gongwen:swipeback:1.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/swipeback-1.0.2.aar/8f118fdc662048dce16531aa90dc7118/AndroidManifest.xml:7:5-9:41
+MERGED from [com.gongwen:swipeback:1.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/swipeback-1.0.2.aar/8f118fdc662048dce16531aa90dc7118/AndroidManifest.xml:7:5-9:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/6ef71f2e804a08cd0a69bcc0d0e69d21/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/6ef71f2e804a08cd0a69bcc0d0e69d21/AndroidManifest.xml:5:5-7:41
+MERGED from [com.mikepenz:iconics-core:2.8.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/iconics-core-2.8.2.aar/5ebcef00daccbf1807a52a2a92c739b1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:iconics-core:2.8.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/iconics-core-2.8.2.aar/5ebcef00daccbf1807a52a2a92c739b1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:google-material-typeface:3.0.1.0.original] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/google-material-typeface-3.0.1.0.original.aar/76a1c9d553d283d7659a49636375dd03/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:google-material-typeface:3.0.1.0.original] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/google-material-typeface-3.0.1.0.original.aar/76a1c9d553d283d7659a49636375dd03/AndroidManifest.xml:23:5-25:41
+MERGED from [com.github.hrskrs:InstaDotView:1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/InstaDotView-1.1.aar/7035b5dc31d5815ffe0ee72e3d6f2ce2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.hrskrs:InstaDotView:1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/InstaDotView-1.1.aar/7035b5dc31d5815ffe0ee72e3d6f2ce2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.drawers:SpinnerDatePicker:1.0.6] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.drawers:SpinnerDatePicker:1.0.6] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/SpinnerDatePicker-1.0.6.aar/d330a28ff4b3fb5b94efa9cc5198cd86/AndroidManifest.xml:7:5-9:41
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.6.3.aar/7099b1d35651d1c68dfa5ef6f789f455/AndroidManifest.xml:50:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.6.3.aar/7099b1d35651d1c68dfa5ef6f789f455/AndroidManifest.xml:50:5-43
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/beta-1.2.9.aar/e2b9aa1f7460f6d7353a01e7aa3b749f/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/beta-1.2.9.aar/e2b9aa1f7460f6d7353a01e7aa3b749f/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/answers-1.4.2.aar/c7c17d612196ef4fc74e3654c48e7bff/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/answers-1.4.2.aar/c7c17d612196ef4fc74e3654c48e7bff/AndroidManifest.xml:7:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/fabric-1.4.3.aar/237ec0bd3c179e0503f70940d195de71/AndroidManifest.xml:27:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/fabric-1.4.3.aar/237ec0bd3c179e0503f70940d195de71/AndroidManifest.xml:27:5-43
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/39c964fdf0a03af051ebf0165061531f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/39c964fdf0a03af051ebf0165061531f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/30ae056c34368884c9d9b4f2ae713e81/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/30ae056c34368884c9d9b4f2ae713e81/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7a499ee8cddd764e7f3069fbc83c5efd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7a499ee8cddd764e7f3069fbc83c5efd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/8951cd220dace813a878936289964f7e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/8951cd220dace813a878936289964f7e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/786898320d3052760c5190b906239781/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/786898320d3052760c5190b906239781/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/ee3058b125eb7b801155304f508e1829/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/ee3058b125eb7b801155304f508e1829/AndroidManifest.xml:20:5-44
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/AndroidManifest.xml
+provider#com.crashlytics.android.CrashlyticsInitProvider
+ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:12:9-16:39
+	android:authorities
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:14:13-75
+	android:exported
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:15:13-37
+	android:initOrder
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:16:13-36
+	android:name
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.4.aar/d4f30c124d3c9dd21581e58d477623ca/AndroidManifest.xml:13:13-75
+activity#com.yancy.gallerypick.activity.GalleryPickActivity
+ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:30:9-34:51
+	android:screenOrientation
+		ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:33:13-49
+	android:configChanges
+		ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:32:13-74
+	android:theme
+		ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:34:13-48
+	android:name
+		ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:31:13-78
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:35:9-38:72
+	android:screenOrientation
+		ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:37:13-49
+	android:theme
+		ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [:gallerypick] /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/manifests/full/debug/AndroidManifest.xml:36:13-60
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:33:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-common:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/AndroidManifest.xml:33:19-68
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/0f3757ec9bf9d120e169b8ec55dc7251/AndroidManifest.xml:34:13-89
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:23:9-29:75
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:25:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:27:13-48
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:26:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:28:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:29:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:24:13-85
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:31:9-35:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:35:9-39:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:35:9-39:19
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:31:18-89
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.2] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.2.aar/b32f65c07741fadf098ea4cb240f22e6/AndroidManifest.xml:33:17-109
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:28:9-34:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:17.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/AndroidManifest.xml:29:13-82
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:23:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:24:22-65
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/37626b07477035aed67f67f45a2facd6/AndroidManifest.xml:29:17-139
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:30:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/1d53174a16bdeb7d7f9508a824d4cc70/AndroidManifest.xml:29:9-37:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:35:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:39:13-41:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:40:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:40:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:44:9-47:40
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:50:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:51:13-37
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:52:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/42233ff25959ba0c25e010667ea79498/AndroidManifest.xml:49:13-87
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:26:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:29:9-63
+permission#com.giahan.app.vietskindoctor.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:29:9-63
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:32:22-76
+uses-permission#com.giahan.app.vietskindoctor.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:32:22-76
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:37:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:41:9-50:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:43:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:44:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:42:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:${applicationId}
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:45:13-49:29
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:com.giahan.app.vietskindoctor
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:45:13-49:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:46:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:46:25-78
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:48:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:48:27-58
+category#com.giahan.app.vietskindoctor
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:48:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:48:27-58
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:56:9-62:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:58:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/32e7dc433446cc97db10dddb639cd516/AndroidManifest.xml:57:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:9:9-13:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:11:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:12:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:13:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:16.0.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/bd0cb74c05cc93610749bd4666055fcb/AndroidManifest.xml:10:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/AndroidManifest.xml:24:13-58
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:39:9-42:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:41:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:40:13-70
+receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
+ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:44:9-50:20
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:45:13-86
+intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:47:13-49:29
+action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:48:17-95
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.33.0] /home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-core-4.33.0.aar/515817e3fdb35da9356f4607226331bb/AndroidManifest.xml:48:25-92

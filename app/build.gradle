@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+def APP_ID = "com.giahan.app.vietskindoctor"
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.google.gms:google-services:3.0.0'
+    }
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    flavorDimensions "mode"
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        applicationId "${APP_ID}"
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["resourcePackageName": android.defaultConfig.applicationId]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //annotation
+    implementation "org.androidannotations:androidannotations-api:$rootProject.ext.annotationApiVersion"
+    annotationProcessor "org.androidannotations:androidannotations:$rootProject.ext.annotationApiVersion"
+    //Fabric
+    //Fabric
+    implementation("com.crashlytics.sdk.android:crashlytics:$rootProject.ext.fabricVersion") {
+        transitive = true;
+    }
+    implementation project(':gallerypick')
+//    implementation files('libs/unity-classes.jar')
+
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:support-compat:$rootProject.ext.supportLibraryVersion"
+
+    implementation "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
+    implementation "com.facebook.android:facebook-android-sdk:$rootProject.ext.facebookVersion"
+    //noinspection GradleCompatible
+    implementation "com.google.android.gms:play-services-auth:$rootProject.ext.playAuthVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.converterGsonVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttp3Version"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttp3Version"
+    implementation "com.gongwen:swipeback:$rootProject.ext.swipebackVersion"
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+    implementation "com.facebook.android:facebook-login:$rootProject.ext.facebookVersion"
+    implementation "com.google.firebase:firebase-auth:$rootProject.ext.firebaseAuth"
+    implementation "com.google.firebase:firebase-core:$rootProject.ext.firebaseCore"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMsg"
+    implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleimageviewVersion"
+    implementation "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    implementation "com.rengwuxian.materialedittext:library:$rootProject.ext.materialedittextVersion"
+    implementation "com.github.everhad:AndroidRatingStar:$rootProject.ext.androidRatingStarVersion"
+    implementation "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
+    implementation "com.github.nkzawa:socket.io-client:$rootProject.ext.socketioVersion"
+    implementation 'com.mikepenz:iconics-core:2.8.2@aar'
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.0.original@aar'
+    implementation 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.9'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.hrskrs:InstaDotView:1.1'
+    implementation 'com.github.drawers:SpinnerDatePicker:1.0.6'
+}
+
+apply plugin: 'com.google.gms.google-services'
