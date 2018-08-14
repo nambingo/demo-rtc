@@ -42,13 +42,12 @@
     <uses-permission android:name="com.giahan.app.vietskindoctor.permission.C2D_MESSAGE" />
 
     <application
-        android:name="com.giahan.app.vietskindoctor.VietSkinApplication"
+        android:name="com.giahan.app.vietskindoctor.VietSkinDoctorApplication"
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoTitle" >
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -95,20 +94,12 @@
             android:label="@string/app_name"
             android:theme="@style/Fully.Translucent" />
         <activity
-            android:name="com.giahan.app.vietskindoctor.activity.LoginActivity"
-            android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.giahan.app.vietskindoctor.activity.MainActivity"
             android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.giahan.app.vietskindoctor.activity.Main2"
-            android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.giahan.app.vietskindoctor.activity.LoginV2Activity"
+            android:name="com.giahan.app.vietskindoctor.activity.LoginActivity"
             android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
             android:screenOrientation="portrait" />
         <activity
@@ -116,14 +107,6 @@
             android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Swipe.Back.NoActionBar" />
-        <activity
-            android:name="com.giahan.app.vietskindoctor.activity.WellcomeActivity"
-            android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.giahan.app.vietskindoctor.activity.ControlActivity"
-            android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
-            android:screenOrientation="portrait" />
         <activity
             android:name="com.giahan.app.vietskindoctor.activity.IntroImageActivity"
             android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"

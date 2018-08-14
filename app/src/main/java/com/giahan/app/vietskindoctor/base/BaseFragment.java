@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 
-import com.giahan.app.vietskindoctor.VietSkinApplication;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
 import com.giahan.app.vietskindoctor.utils.ProgressDialogUtil;
@@ -32,7 +32,7 @@ public abstract class BaseFragment extends Fragment {
         super.onCreate(savedInstanceState);
         mActivity = (BaseActivity) getActivity();
         mProgressDialogUtil = new ProgressDialogUtil(mActivity);
-        mPref = new PrefHelper_(VietSkinApplication.getInstance());
+        mPref = new PrefHelper_(VietSkinDoctorApplication.getInstance());
     }
 
     @Nullable

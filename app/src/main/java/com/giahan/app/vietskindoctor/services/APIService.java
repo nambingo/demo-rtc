@@ -6,6 +6,7 @@ import com.giahan.app.vietskindoctor.domains.CreateSessionResult;
 import com.giahan.app.vietskindoctor.domains.Doctor;
 import com.giahan.app.vietskindoctor.domains.ListDoctorResult;
 import com.giahan.app.vietskindoctor.domains.ListFilterResult;
+import com.giahan.app.vietskindoctor.domains.ListRequestResult;
 import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.MessageBody;
 import com.giahan.app.vietskindoctor.domains.SendMessageResult;
@@ -46,10 +47,10 @@ public interface APIService {
     @GET("mapping-quests")//1
     Call<MappingResult> getMappingResult();
 
-    @POST("patient/facebook-login")
+    @POST("doctor/facebook-login")
     Call<UserInfoResponse> loginFb(@Body FbModelBody fbModelBody);
 
-    @POST("patient/google-login")
+    @POST("doctor/google-login")
     Call<UserInfoResponse> loginGoogle(@Body GoogleModelBody googleModelBody);
 
     @GET("patient/get-available-doctors")
@@ -80,11 +81,14 @@ public interface APIService {
     @POST("patient/dsession")
     Call<CreateSessionResult> createSession(@Body SessionBody sessionBody);
 
+    @GET("doctor/dsessions")
+    Call<ListSessionResult> getListSession();
+
     @POST("patient/dsession/request-doctor")
     Call<RequestDoctorResult> requestDoctor(@Body RequestDoctorBody requestDoctorBody);
 
-    @GET("patient/dsessions")
-    Call<ListSessionResult> getListSession();
+    @GET("doctor/awaiting-drequests")
+    Call<ListRequestResult> getListSessionRequest();
 //    Call<ListSessionResult> getListSession(@Query("filter") String filter);
 
     @POST("patient/dsession/cancel")

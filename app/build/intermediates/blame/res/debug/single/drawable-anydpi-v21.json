@@ -1,218 +1,226 @@
 [
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_right_gray_24dp.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_right_gray_24dp.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_launcher_background.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_male.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_male.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_close_black_24dp.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_close_black_24dp.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_logo.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_logo.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_info_chat.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_info_chat.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_launcher_background.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_btn_back.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_btn_back.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_home.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_home.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/avatar.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/avatar.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_btn_back.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_btn_back.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_right_white_24dp.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_right_white_24dp.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_right_white_24dp.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_right_white_24dp.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/dollar_coin_money2.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/dollar_coin_money2.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_search.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_search.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_star.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_star.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_status_offline.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_status_offline.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_new_mess.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_new_mess.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_down2.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_down2.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/btn_next.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/btn_next.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chat.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chat.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/home3.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/home3.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/btn_next.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/btn_next.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_doctor.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_doctor.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_info.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_info.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_female.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_female.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_left_gray_24dp.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_left_gray_24dp.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_cloud_upload_black_24dp.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_cloud_upload_black_24dp.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_login.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_login.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chat2.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chat2.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_left_white_24dp.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_left_white_24dp.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/drawable-anydpi-v21/design_ic_visibility.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_notification_gray.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_notification_gray.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/img_error.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/img_error.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_chose.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_chose.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_ketqua.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_ketqua.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_wallet.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_wallet.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/btn_back.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/btn_back.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_logo.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_logo.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_female.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_female.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_spinner_down.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_spinner_down.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_status_online.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_status_online.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_support.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_support.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_add_session.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_add_session.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_image_upload.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_image_upload.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_avatar_default.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_avatar_default.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_setting.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_setting.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_info_chat.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_info_chat.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_ketqua.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_ketqua.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_chose.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_chose.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/btn_back.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/btn_back.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_back.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_back.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chat.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chat.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_star.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_star.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_login.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_login.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chat2.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chat2.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_close.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_close.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_spinner_down.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_spinner_down.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_logout.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_logout.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/quest_banner.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/quest_banner.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_home.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_home.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_home_1.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_home_1.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_filter.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_filter.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_home_1.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_home_1.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_image_upload.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_image_upload.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/drawable-anydpi-v21/design_ic_visibility.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_doctor.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_doctor.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_filter.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_filter.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_update_black_24dp.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_update_black_24dp.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_info.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_info.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_add_photo.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_add_photo.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/img_error.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/img_error.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/dollar_coin_money2.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/dollar_coin_money2.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_right_gray_24dp.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_right_gray_24dp.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_delete_photo.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_delete_photo.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_double_arrow_up.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_double_arrow_up.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_down.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_down.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_down.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_down.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_card_contact_info2.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_card_contact_info2.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_down2.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_down2.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_close_black_24dp.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_close_black_24dp.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_status_offline.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_status_offline.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_new_mess.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_new_mess.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_notification_blue.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_notification_blue.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/avatar.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/avatar.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_search.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_search.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_star_highlight.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_star_highlight.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_add_photo.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_add_photo.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_logout.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_logout.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_update_black_24dp.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_update_black_24dp.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_left_white_24dp.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_left_white_24dp.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_avatar_default.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_avatar_default.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_close.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_close.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_chevron_left_gray_24dp.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_left_gray_24dp.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_cloud_upload_black_24dp.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_cloud_upload_black_24dp.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_card_contact_info2.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_card_contact_info2.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/home3.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/home3.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_delete_photo.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_delete_photo.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_double_arrow_up.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_double_arrow_up.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_male.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_male.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_support.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_support.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/icon_back.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_back.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_wallet.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_wallet.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_add_session.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_add_session.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_setting.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_setting.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_status_online.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_status_online.xml"
+    },
+    {
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/quest_banner.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/quest_banner.xml"
+    },
+    {
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_star_highlight.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_star_highlight.xml"
     }
 ]

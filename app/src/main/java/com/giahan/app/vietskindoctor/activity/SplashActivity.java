@@ -1,9 +1,7 @@
 package com.giahan.app.vietskindoctor.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.WindowManager;
 
@@ -51,7 +49,7 @@ public class SplashActivity extends BaseActivity {
     void skip() {
         handler.removeCallbacksAndMessages(null);
         if (TextUtils.isEmpty(pref.token().get())) {
-            startActivity(new Intent(getApplicationContext(), LoginV2Activity.class));
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         } else {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }

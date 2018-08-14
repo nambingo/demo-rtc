@@ -13,8 +13,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.VietSkinApplication;
-import com.giahan.app.vietskindoctor.activity.ControlActivity;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -31,14 +30,14 @@ public class FMService extends FirebaseMessagingService {
         if (remoteMessage.getData() == null) return;
         if (remoteMessage.getNotification() == null) return;
         if (icon == null || icon.isRecycled()) {
-            icon = BitmapFactory.decodeResource(VietSkinApplication.getInstance().getResources(),
+            icon = BitmapFactory.decodeResource(VietSkinDoctorApplication.getInstance().getResources(),
                     R.mipmap.ic_launcher);
         }
         if (TextUtils.isEmpty(remoteMessage.getNotification().getBody())) return;
-        buildNotification(new Intent(this, ControlActivity.class), remoteMessage
-                        .getNotification()
-                .getBody(),
-                NOTIFY_SHOW_NOTIFICATION);
+//        buildNotification(new Intent(this, ControlActivity.class), remoteMessage
+//                        .getNotification()
+//                .getBody(),
+//                NOTIFY_SHOW_NOTIFICATION);
     }
 
     private void buildNotification(Intent intent, String message, int notifyID) {

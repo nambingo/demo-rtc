@@ -1,69 +1,69 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
 	package
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:2:5-36
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:2:5-36
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:1-36:12
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:5:5-80
+ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:5:5-80
 	android:name
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:5:22-77
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:5:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:7:5-81
+ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:7:22-78
 application
-ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:9:5-34:19
+ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:9:5-34:19
 	android:supportsRtl
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:11:9-35
 	android:allowBackup
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:10:9-35
 activity#com.yancy.gallerypick.activity.GalleryPickActivity
-ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:22:9-26:51
+ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:22:9-26:51
 	android:screenOrientation
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:25:13-49
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:25:13-49
 	android:configChanges
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:24:13-74
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:24:13-74
 	android:theme
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:26:13-48
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:26:13-48
 	android:name
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:23:13-57
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:23:13-57
 activity#com.yalantis.ucrop.UCropActivity
-ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:28:9-31:72
+ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:28:9-31:72
 	android:screenOrientation
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:30:13-49
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:30:13-49
 	android:theme
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:31:13-69
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:31:13-69
 	android:name
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml:29:13-60
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml:29:13-60
 uses-sdk
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-		ADDED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
-		INJECTED from /home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/src/main/AndroidManifest.xml
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+		ADDED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml
+		INJECTED from /Users/phamducnam/Documents/Project/vsdoctor/gallerypick/src/main/AndroidManifest.xml

@@ -50,6 +50,32 @@ public class Session {
     @SerializedName("doctor_avatar_url")
     private String mDoctorAvatarUrl;
 
+    @SerializedName("relationship")
+    private String mRelationship;
+
+    @SerializedName("dsession_id")
+    private String mDsessionID;
+
+    private String name;
+
+    private String weight;
+
+    private String birthdate;
+
+    private String sex;
+
+    private String time_created;
+
+    @SerializedName("patient_name")
+    private String mPatientName;
+
+    @SerializedName("patient_age")
+    private String mPatientAge;
+
+    private List<String> photos;
+
+
+
     public String getId() {
         return id;
     }
@@ -176,5 +202,85 @@ public class Session {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getRelationship() {
+        return mRelationship;
+    }
+
+    public void setRelationship(final String relationship) {
+        mRelationship = relationship;
+    }
+
+    public String getDsessionID() {
+        return mDsessionID;
+    }
+
+    public void setDsessionID(final String dsessionID) {
+        mDsessionID = dsessionID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(final String weight) {
+        this.weight = weight;
+    }
+
+    public String getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(final String birthdate) {
+        this.birthdate = birthdate;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(final String sex) {
+        this.sex = sex;
+    }
+
+    public String getTime_created() {
+        return time_created;
+    }
+
+    public void setTime_created(final String time_created) {
+        this.time_created = time_created;
+    }
+
+    public String getPatientName() {
+        return mPatientName;
+    }
+
+    public void setPatientName(final String patientName) {
+        mPatientName = patientName;
+    }
+
+    public String getPatientAge() {
+        return mPatientAge;
+    }
+
+    public void setPatientAge(final String patientAge) {
+        mPatientAge = patientAge;
+    }
+
+    public List<String> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(final List<String> photos) {
+        this.photos = photos;
     }
 }

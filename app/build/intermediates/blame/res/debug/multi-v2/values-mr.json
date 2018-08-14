@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/values-mr/values-mr.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/values-mr/values-mr.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/res/values-mr/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "99",
-                        "endOffsets": "304"
-                    },
-                    "to": {
-                        "startLines": "60",
-                        "startColumns": "4",
-                        "startOffsets": "7041",
-                        "endColumns": "103",
-                        "endOffsets": "7140"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/values-mr/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/values-mr/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,41 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/values-mr/values-mr.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,207,343,484,597,683,769,848,939,1032,1145,1255,1350,1445,1550,1671,1752,1837,2010,2107,2207,2324,2431",
-                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
-                        "endOffsets": "202,338,479,592,678,764,843,934,1027,1140,1250,1345,1440,1545,1666,1747,1832,2005,2102,2202,2319,2426,2581"
-                    },
-                    "to": {
-                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1867,2019,2155,2296,2409,2495,2581,2660,2751,2844,2957,3067,3162,3257,3362,3483,3564,3649,3822,3919,4019,4136,4243",
-                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
-                        "endOffsets": "2014,2150,2291,2404,2490,2576,2655,2746,2839,2952,3062,3157,3252,3357,3478,3559,3644,3817,3914,4014,4131,4238,4393"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/values-mr/values-mr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "62",
-                        "startColumns": "4",
-                        "startOffsets": "7225",
-                        "endColumns": "100",
-                        "endOffsets": "7321"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/values-mr/values-mr.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/values-mr/values-mr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -89,7 +38,58 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/res/values-mr/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/16bd67aed412ffb61c76ff405d88d66c/res/values-mr/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "99",
+                        "endOffsets": "304"
+                    },
+                    "to": {
+                        "startLines": "60",
+                        "startColumns": "4",
+                        "startOffsets": "7041",
+                        "endColumns": "103",
+                        "endOffsets": "7140"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "62",
+                        "startColumns": "4",
+                        "startOffsets": "7225",
+                        "endColumns": "100",
+                        "endOffsets": "7321"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,207,343,484,597,683,769,848,939,1032,1145,1255,1350,1445,1550,1671,1752,1837,2010,2107,2207,2324,2431",
+                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
+                        "endOffsets": "202,338,479,592,678,764,843,934,1027,1140,1250,1345,1440,1545,1666,1747,1832,2005,2102,2202,2319,2426,2581"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1867,2019,2155,2296,2409,2495,2581,2660,2751,2844,2957,3067,3162,3257,3362,3483,3564,3649,3822,3919,4019,4136,4243",
+                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
+                        "endOffsets": "2014,2150,2291,2404,2490,2576,2655,2746,2839,2952,3062,3157,3252,3357,3478,3559,3644,3817,3914,4014,4131,4238,4393"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4d1ffba7d3febc172656f559b72e8597/res/values-mr/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -108,27 +108,10 @@
             ]
         },
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/res/values-mr/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "99",
-                        "endOffsets": "304"
-                    },
-                    "to": {
-                        "startLines": "60",
-                        "startColumns": "4",
-                        "startOffsets": "7041",
-                        "endColumns": "103",
-                        "endOffsets": "7140"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/values-mr/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/values-mr/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -145,41 +128,7 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/values-mr/values-mr.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,207,343,484,597,683,769,848,939,1032,1145,1255,1350,1445,1550,1671,1752,1837,2010,2107,2207,2324,2431",
-                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
-                        "endOffsets": "202,338,479,592,678,764,843,934,1027,1140,1250,1345,1440,1545,1666,1747,1832,2005,2102,2202,2319,2426,2581"
-                    },
-                    "to": {
-                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1867,2019,2155,2296,2409,2495,2581,2660,2751,2844,2957,3067,3162,3257,3362,3483,3564,3649,3822,3919,4019,4136,4243",
-                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
-                        "endOffsets": "2014,2150,2291,2404,2490,2576,2655,2746,2839,2952,3062,3157,3252,3357,3478,3559,3644,3817,3914,4014,4131,4238,4393"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/values-mr/values-mr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "62",
-                        "startColumns": "4",
-                        "startOffsets": "7225",
-                        "endColumns": "100",
-                        "endOffsets": "7321"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/values-mr/values-mr.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/values-mr/values-mr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -196,7 +145,58 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/res/values-mr/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/16bd67aed412ffb61c76ff405d88d66c/res/values-mr/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "99",
+                        "endOffsets": "304"
+                    },
+                    "to": {
+                        "startLines": "60",
+                        "startColumns": "4",
+                        "startOffsets": "7041",
+                        "endColumns": "103",
+                        "endOffsets": "7140"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "62",
+                        "startColumns": "4",
+                        "startOffsets": "7225",
+                        "endColumns": "100",
+                        "endOffsets": "7321"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,207,343,484,597,683,769,848,939,1032,1145,1255,1350,1445,1550,1671,1752,1837,2010,2107,2207,2324,2431",
+                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
+                        "endOffsets": "202,338,479,592,678,764,843,934,1027,1140,1250,1345,1440,1545,1666,1747,1832,2005,2102,2202,2319,2426,2581"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1867,2019,2155,2296,2409,2495,2581,2660,2751,2844,2957,3067,3162,3257,3362,3483,3564,3649,3822,3919,4019,4136,4243",
+                        "endColumns": "151,135,140,112,85,85,78,90,92,112,109,94,94,104,120,80,84,172,96,99,116,106,154",
+                        "endOffsets": "2014,2150,2291,2404,2490,2576,2655,2746,2839,2952,3062,3157,3252,3357,3478,3559,3644,3817,3914,4014,4131,4238,4393"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4d1ffba7d3febc172656f559b72e8597/res/values-mr/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

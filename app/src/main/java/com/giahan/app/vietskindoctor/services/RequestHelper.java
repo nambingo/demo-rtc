@@ -1,10 +1,9 @@
 package com.giahan.app.vietskindoctor.services;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.giahan.app.vietskindoctor.BuildConfig;
-import com.giahan.app.vietskindoctor.VietSkinApplication;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.network.ConnectivityInterceptor;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
@@ -52,7 +51,7 @@ public class RequestHelper {
                     Request request = original.newBuilder()
                             .header("Content-Type", "application/json")
                             .build();
-                    PrefHelper_ pref = new PrefHelper_(VietSkinApplication.getInstance());
+                    PrefHelper_ pref = new PrefHelper_(VietSkinDoctorApplication.getInstance());
                     if (!Toolbox.isEmpty(pref.token().get())) {
                         Request requestPre = original.newBuilder()
                                 .header("Content-Type", "application/json")

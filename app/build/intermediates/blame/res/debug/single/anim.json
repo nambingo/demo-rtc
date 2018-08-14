@@ -1,130 +1,130 @@
 [
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_slide_in_bottom.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/enter_from_left.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/enter_from_left.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_scale.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/anim/ucrop_loader_circle_scale.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/exit_to_right.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/exit_to_right.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/enter_from_right.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/enter_from_right.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/exit_to_top.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/exit_to_top.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/enter_from_left.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/enter_from_left.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_tooltip_enter.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_tooltip_enter.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/exit_to_bottom.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/exit_to_bottom.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/exit_to_bottom.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/exit_to_bottom.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/push_out_left.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/push_out_left.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/enter_from_right.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/enter_from_right.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/in_fade.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/anim/in_fade.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/anim/design_snackbar_in.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/pull_in_right.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/pull_in_right.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_slide_in_top.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_path.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/anim/ucrop_loader_circle_path.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/pull_in_right.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/pull_in_right.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_tooltip_enter.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_tooltip_enter.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_fade_in.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/enter_from_bottom.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/enter_from_bottom.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_fade_out.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/pull_in_left.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/pull_in_left.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_tooltip_exit.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_tooltip_exit.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_popup_exit.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/enter_from_bottom.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/enter_from_bottom.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_fade_in.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/anim/design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_path.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/anim/ucrop_loader_circle_path.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/anim/design_bottom_sheet_slide_out.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/enter_from_top.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/enter_from_top.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/exit_to_top.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/exit_to_top.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/exit_to_left.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/exit_to_left.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/exit_to_right.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/exit_to_right.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/anim/design_snackbar_in.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_popup_enter.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_slide_out_top.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/exit_to_left.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/exit_to_left.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_popup_enter.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_scale.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/anim/ucrop_loader_circle_scale.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/anim/design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/push_out_right.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/push_out_right.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/anim/design_snackbar_out.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/anim/design_snackbar_out.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/out_fade.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/anim/out_fade.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/push_out_left.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/push_out_left.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_fade_out.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_popup_exit.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_slide_out_top.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/pull_in_left.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/anim/pull_in_left.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/in_fade.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/anim/in_fade.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_tooltip_exit.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_tooltip_exit.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/enter_from_top.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/enter_from_top.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/out_fade.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/anim/out_fade.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/anim/abc_slide_out_bottom.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/anim/abc_slide_in_top.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/anim/push_out_right.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/anim/push_out_right.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/anim/design_bottom_sheet_slide_in.xml"
     }
 ]

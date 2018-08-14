@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/menu/ucrop_menu_activity.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/menu/ucrop_menu_activity.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/menu/nav_bottom_bar.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/menu/nav_bottom_bar.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/menu/demo.xml",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/menu/demo.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/menu/demo.xml",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/menu/demo.xml"
+    },
+    {
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/menu/ucrop_menu_activity.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/menu/ucrop_menu_activity.xml"
     }
 ]

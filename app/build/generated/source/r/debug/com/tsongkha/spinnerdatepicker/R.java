@@ -11,7 +11,7 @@ public final class R {
         public static final int datePickerContainer = 0x7f0f00e3;
         public static final int day = 0x7f0f00e1;
         public static final int month = 0x7f0f00e0;
-        public static final int number_picker = 0x7f0f01e6;
+        public static final int number_picker = 0x7f0f01e0;
         public static final int parent = 0x7f0f00df;
         public static final int year = 0x7f0f00e2;
     }
@@ -20,8 +20,8 @@ public final class R {
         public static final int date_picker_container = 0x7f040030;
         public static final int date_picker_dialog = 0x7f040031;
         public static final int date_picker_dialog_container = 0x7f040032;
-        public static final int number_picker_day_month = 0x7f040095;
-        public static final int number_picker_year = 0x7f040096;
+        public static final int number_picker_day_month = 0x7f040098;
+        public static final int number_picker_year = 0x7f040099;
     }
     public static final class string {
         public static final int app_name = 0x7f080054;

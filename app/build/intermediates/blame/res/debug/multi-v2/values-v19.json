@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/values-v19/values-v19.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/values-v19/values-v19.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/values-v19/values-v19.xml",
+                    "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/values-v19/values-v19.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -17,10 +17,10 @@
             ]
         },
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/values-v19/values-v19.xml",
+                    "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/values-v19/values-v19.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
