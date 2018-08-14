@@ -22,8 +22,8 @@ import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.VietSkinApplication;
-import com.giahan.app.vietskindoctor.activity.LoginV2Activity;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
+import com.giahan.app.vietskindoctor.activity.LoginActivity;
 import com.giahan.app.vietskindoctor.model.event.TimeOutEvent;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
@@ -52,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
-        pref = new PrefHelper_(VietSkinApplication.getInstance());
+        pref = new PrefHelper_(VietSkinDoctorApplication.getInstance());
         createView();
         mProgressDialogUtil = new ProgressDialogUtil(this);
     }
@@ -118,10 +118,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private void signOut() {
         // Firebase sign out
-        VietSkinApplication.getmAuth().signOut();
+        VietSkinDoctorApplication.getmAuth().signOut();
 
         // Google sign out
-        VietSkinApplication.getmGoogleSignInClient(this).signOut().addOnCompleteListener(this,
+        VietSkinDoctorApplication.getmGoogleSignInClient(this).signOut().addOnCompleteListener(this,
                 new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -137,7 +137,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (isBack) {
             EventBus.getDefault().post(new TimeOutEvent());
         }
-        Intent intent = new Intent(getApplicationContext(), LoginV2Activity.class);
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         intent.putExtra(Constant.CHANGE_TAB, true);
         startActivity(intent);
         overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);

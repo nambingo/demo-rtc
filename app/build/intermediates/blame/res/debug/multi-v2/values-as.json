@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/values-as/values-as.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/res/values-as/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/16bd67aed412ffb61c76ff405d88d66c/res/values-as/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -23,10 +23,10 @@
             ]
         },
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/values-as/values-as.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/res/values-as/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/16bd67aed412ffb61c76ff405d88d66c/res/values-as/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

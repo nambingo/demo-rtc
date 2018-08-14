@@ -1,46 +1,46 @@
 [
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_select_checked.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_select_checked.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_dropdown_white.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_dropdown_white.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_back_black.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_back_black.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher_round.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_dropdown_white.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_dropdown_white.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_photo.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_photo.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_dropdown_black.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_dropdown_black.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_select_checked.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_select_checked.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_selected.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_selected.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_selected.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_selected.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_select_unchecked.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_select_unchecked.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_camera.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_camera.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_photo.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_photo.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_dropdown_black.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_dropdown_black.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_back_white.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_back_white.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_select_unchecked.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_select_unchecked.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_camera.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_camera.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_back_black.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_back_black.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher_round.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/gallery_pick_back_white.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/gallerypick/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/gallery_pick_back_white.png"
     }
 ]

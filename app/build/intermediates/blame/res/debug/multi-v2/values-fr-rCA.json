@@ -1,44 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,1937",
+                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
+                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,2018"
                     },
                     "to": {
-                        "startLines": "39",
-                        "startColumns": "4",
-                        "startOffsets": "5029",
-                        "endColumns": "100",
-                        "endOffsets": "5125"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,4943",
+                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
+                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,5024"
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/res/values-fr-rCA/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "219",
-                        "endOffsets": "470"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3158",
-                        "endColumns": "219",
-                        "endOffsets": "3373"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/values-fr-rCA/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/res/values-fr-rCA/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4d1ffba7d3febc172656f559b72e8597/res/values-fr-rCA/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "219",
+                        "endOffsets": "470"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3158",
+                        "endColumns": "219",
+                        "endOffsets": "3373"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/16bd67aed412ffb61c76ff405d88d66c/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -72,63 +72,46 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,1937",
-                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
-                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,2018"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,38",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,4943",
-                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
-                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,5024"
+                        "startLines": "39",
+                        "startColumns": "4",
+                        "startOffsets": "5029",
+                        "endColumns": "100",
+                        "endOffsets": "5125"
                     }
                 }
             ]
         },
         {
-            "outputFile": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,1937",
+                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
+                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,2018"
                     },
                     "to": {
-                        "startLines": "39",
-                        "startColumns": "4",
-                        "startOffsets": "5029",
-                        "endColumns": "100",
-                        "endOffsets": "5125"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,4943",
+                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
+                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,5024"
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/aabaf8df30912e82a958d1e3efc2ce30/res/values-fr-rCA/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "219",
-                        "endOffsets": "470"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3158",
-                        "endColumns": "219",
-                        "endOffsets": "3373"
-                    }
-                },
-                {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/values-fr-rCA/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -145,7 +128,24 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/bc8df7199d81c1003497d434419135b1/res/values-fr-rCA/values.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4d1ffba7d3febc172656f559b72e8597/res/values-fr-rCA/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "219",
+                        "endOffsets": "470"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3158",
+                        "endColumns": "219",
+                        "endOffsets": "3373"
+                    }
+                },
+                {
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.0.0.aar/16bd67aed412ffb61c76ff405d88d66c/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -162,20 +162,20 @@
                     }
                 },
                 {
-                    "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,1937",
-                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
-                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,2018"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,38",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,4943",
-                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
-                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,5024"
+                        "startLines": "39",
+                        "startColumns": "4",
+                        "startOffsets": "5029",
+                        "endColumns": "100",
+                        "endOffsets": "5125"
                     }
                 }
             ]

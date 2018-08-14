@@ -1,566 +1,574 @@
 [
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_star.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_star.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/quest_banner.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/quest_banner.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_wallet.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_wallet.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_large_blue.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/drawable-hdpi-v4/messenger_bubble_large_blue.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_card_contact_info2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_card_contact_info2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher_background.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_status_online.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_status_online.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_48dp.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_chose.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_chose.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_down2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_down2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_scale.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_scale.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_spinner_down.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_spinner_down.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_send_icon_white.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/res/drawable-hdpi-v4/com_facebook_button_send_icon_white.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/c6211e96dcc07a17da5a55d3a883a16e/res/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_doctor.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_doctor.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_large_white.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/drawable-hdpi-v4/messenger_bubble_large_white.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/design_ic_visibility_off.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/drawable-hdpi-v4/design_ic_visibility_off.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_icon_blue.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/drawable-hdpi-v4/com_facebook_button_icon_blue.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_login.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_login.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_full_open_on_phone.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/drawable-hdpi-v4/common_full_open_on_phone.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_done.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_done.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_rotate.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_rotate.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_down.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_down.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_add_session.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_add_session.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chat.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chat.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_close.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_close.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_icon_white.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/16cc4997fcb7e1e468f192da7f2bb6f1/res/drawable-hdpi-v4/com_facebook_button_icon_white.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_cloud_upload_black_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_cloud_upload_black_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_status_offline.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_status_offline.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_close_black_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_close_black_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_back.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_back.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_search.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_search.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_female.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_female.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_down2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_down2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_image_upload.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_image_upload.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_avatar_default.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_avatar_default.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_focused_holo.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_list_focused_holo.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/img_error.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/img_error.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/drawable-hdpi-v4/common_full_open_on_phone.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_left_white_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_left_white_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_status_offline.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_status_offline.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_delete_photo.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_delete_photo.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_male.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_male.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_spinner_down.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_spinner_down.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_support.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_support.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_home_1.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_home_1.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/btn_back.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/btn_back.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/img_error.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/img_error.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_logo.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_logo.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/home3.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/home3.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_logout.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_logout.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_logout.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_logout.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_back.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_back.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_cloud_upload_black_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_cloud_upload_black_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/btn_next.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/btn_next.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_small_white.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/e48e3a1d24a0f6f29f9810b113a1e83a/res/drawable-hdpi-v4/messenger_bubble_small_white.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_reset.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_reset.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_info.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_info.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_add_photo.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_add_photo.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_home_1.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_home_1.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_wallet.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_wallet.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_ketqua.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_ketqua.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chat2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chat2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_right_gray_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_right_gray_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_angle.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_angle.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_small_white.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/drawable-hdpi-v4/messenger_bubble_small_white.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_rotate.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_rotate.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/quest_banner.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/quest_banner.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_info.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_info.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/googleg_disabled_color_18.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/drawable-hdpi-v4/googleg_disabled_color_18.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/googleg_standard_color_18.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/drawable-hdpi-v4/googleg_standard_color_18.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_icon_blue.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/16cc4997fcb7e1e468f192da7f2bb6f1/res/drawable-hdpi-v4/com_facebook_button_icon_blue.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_male.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_male.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_info_chat.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_info_chat.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_close.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/drawable-hdpi-v4/com_facebook_close.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_close_black_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_close_black_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_focused_holo.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_list_focused_holo.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_login.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_login.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_button_send_round_shadow.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/e48e3a1d24a0f6f29f9810b113a1e83a/res/drawable-hdpi-v4/messenger_button_send_round_shadow.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/res/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_send_icon_white.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/c6211e96dcc07a17da5a55d3a883a16e/res/drawable-hdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_home.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_home.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_info_chat.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_info_chat.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_add_photo.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_add_photo.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_cross.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_cross.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_delete_photo.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_delete_photo.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_left_white_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_left_white_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_next.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_next.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_support.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_support.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/avatar.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/avatar.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_notification_gray.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_notification_gray.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_16dp.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_star_black_16dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_scale.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_scale.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_next.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_next.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/home3.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/home3.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chat2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chat2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_ketqua.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_ketqua.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_48dp.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_star_black_48dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_left_gray_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_left_gray_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/avatar.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/avatar.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_doctor.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_doctor.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/met_ic_clear.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/a948adb092d8529ea95b44a7648bb0be/res/drawable-hdpi/met_ic_clear.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_close.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_close.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chat.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chat.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_left_gray_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_left_gray_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b3d5a3dc98078f79d1b641d841bd54c/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_large_white.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/e48e3a1d24a0f6f29f9810b113a1e83a/res/drawable-hdpi-v4/messenger_bubble_large_white.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher_background.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_right_white_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_right_white_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_down.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_down.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_right_white_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_right_white_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_new_mess.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_new_mess.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_female.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_female.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/dollar_coin_money2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/dollar_coin_money2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_logo.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_logo.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_chose.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/icon_chose.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/design_ic_visibility_off.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/drawable-hdpi-v4/design_ic_visibility_off.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_setting.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_setting.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_crop.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_crop.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/btn_next.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/btn_next.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_double_arrow_up.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_double_arrow_up.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_setting.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_setting.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_done.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_done.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_star_highlight.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_star_highlight.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_new_mess.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_new_mess.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_small_blue.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/e48e3a1d24a0f6f29f9810b113a1e83a/res/drawable-hdpi-v4/messenger_bubble_small_blue.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/btn_back.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/btn_back.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/met_ic_clear.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/89b35037f793f3f4d01ff5750cf2dc29/res/drawable-hdpi/met_ic_clear.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_notification_blue.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_notification_blue.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_chevron_right_gray_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_right_gray_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_reset.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_reset.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_image_upload.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_image_upload.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_search.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_search.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/googleg_disabled_color_18.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/drawable-hdpi-v4/googleg_disabled_color_18.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_close.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/16cc4997fcb7e1e468f192da7f2bb6f1/res/drawable-hdpi-v4/com_facebook_close.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_filter.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_filter.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_large_blue.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/e48e3a1d24a0f6f29f9810b113a1e83a/res/drawable-hdpi-v4/messenger_bubble_large_blue.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_btn_back.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_btn_back.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_btn_back.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_btn_back.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_icon_white.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/drawable-hdpi-v4/com_facebook_button_icon_white.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_16dp.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/dollar_coin_money2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/dollar_coin_money2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_double_arrow_up.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_double_arrow_up.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_angle.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-hdpi-v4/ucrop_ic_angle.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_home.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_home.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_filter.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_filter.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/googleg_standard_color_18.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/drawable-hdpi-v4/googleg_standard_color_18.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_bubble_small_blue.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/drawable-hdpi-v4/messenger_bubble_small_blue.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_star.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_star.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_update_black_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_update_black_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_status_online.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_status_online.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_avatar_default.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_avatar_default.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_normal.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/4ae2245a8ea7fa736597b49ffaf0959c/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_add_session.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_add_session.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_button_send_round_shadow.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.33.0.aar/63cc6a120f428f6546f736891a64dbb1/res/drawable-hdpi-v4/messenger_button_send_round_shadow.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/design_ic_visibility.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/drawable-hdpi-v4/design_ic_visibility.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/design_ic_visibility.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/drawable-hdpi-v4/design_ic_visibility.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_cross.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_cross.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/16cc4997fcb7e1e468f192da7f2bb6f1/res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_star_highlight.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_star_highlight.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_update_black_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_update_black_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_card_contact_info2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-hdpi/ic_card_contact_info2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/4e8d6f36ca438139d114111c3a50abfa/res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-login-4.33.0.aar/9f3c3f743a08b2691af61da3f5994c4c/res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png"
+    },
+    {
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ucrop_ic_crop.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-hdpi-v4/ucrop_ic_crop.png"
     }
 ]

@@ -10,7 +10,6 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.OnClick;
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.screens.khamonline.CreateSessionFragment;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.domains.Doctor;
 import com.giahan.app.vietskindoctor.domains.Filter;
@@ -151,10 +150,10 @@ public class ChiTietBSFragment extends BaseFragment {
 
     @OnClick(R.id.tvDangKy)
     public void onDangKy(){
-        Bundle bundle = new Bundle();
-        bundle.putString(Constant.TAG_DOCTOR_ID, String.valueOf(mDoctor.getId()));
-        CreateSessionFragment createSessionFragment = new CreateSessionFragment();
-        createSessionFragment.setArguments(bundle);
-        getMainActivity().pushFragment(createSessionFragment);
+//        Bundle bundle = new Bundle();
+//        bundle.putString(Constant.TAG_DOCTOR_ID, String.valueOf(mDoctor.getId()));
+//        CreateSessionFragment createSessionFragment = new CreateSessionFragment();
+//        createSessionFragment.setArguments(bundle);
+//        getMainActivity().pushFragment(createSessionFragment);
     }
 }

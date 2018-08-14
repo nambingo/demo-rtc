@@ -1,242 +1,250 @@
 [
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_delete_photo.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_delete_photo.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/img_error.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/img_error.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chat2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chat2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_star.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_star.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/dollar_coin_money2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/dollar_coin_money2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_update_black_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_update_black_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_wallet.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_wallet.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_support.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_support.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_star_highlight.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_star_highlight.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/home3.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/home3.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_status_offline.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_status_offline.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_filter.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_filter.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_setting.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_setting.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/dollar_coin_money2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/dollar_coin_money2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_next.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_next.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_reset.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_reset.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_home.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_home.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_done.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_done.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_search.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_search.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chat.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chat.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_reset.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_reset.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_close.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_close.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_card_contact_info2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_card_contact_info2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_search.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_search.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_image_upload.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_image_upload.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_crop.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_crop.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_login.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_login.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_status_offline.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_status_offline.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_crop.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_crop.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_login.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_login.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/img_error.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/img_error.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_back.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_back.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_ketqua.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_ketqua.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_info_chat.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_info_chat.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_add_photo.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_photo.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_down.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_down.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_cloud_upload_black_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_cloud_upload_black_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher_background.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_launcher_background.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_new_mess.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_new_mess.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_notification_blue.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_notification_blue.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_scale.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_scale.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_next.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_next.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/quest_banner.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/quest_banner.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_home_1.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_home_1.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_filter.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_filter.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_right_white_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_right_white_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_angle.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_angle.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_left_white_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_left_white_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_spinner_down.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_spinner_down.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_back.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/btn_back.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_logo.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_logo.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_rotate.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_rotate.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_status_online.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_status_online.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chat2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chat2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_next.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/btn_next.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_new_mess.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_new_mess.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_right_white_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_right_white_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_star_highlight.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_star_highlight.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_down.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_down.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_close_black_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_close_black_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_back.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_back.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_angle.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_angle.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_left_white_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_left_white_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_avatar_default.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_avatar_default.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_home_1.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_home_1.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_home.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_home.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_down2.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_down2.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_delete_photo.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_delete_photo.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_info_chat.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_info_chat.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/quest_banner.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/quest_banner.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher_background.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_launcher_background.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_doctor.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_doctor.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_double_arrow_up.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_double_arrow_up.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_left_gray_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_left_gray_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chat.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chat.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_setting.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_setting.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_left_gray_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_left_gray_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_logo.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_logo.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_female.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_female.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_notification_gray.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_notification_gray.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_right_gray_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_right_gray_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_add_photo.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_photo.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_add_session.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_session.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_status_online.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_status_online.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_done.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_done.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_card_contact_info2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_card_contact_info2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/avatar.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/avatar.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_cross.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_cross.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/home3.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/home3.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_female.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_female.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_back.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/btn_back.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_down2.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_down2.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_cross.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_cross.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_btn_back.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_btn_back.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_btn_back.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_btn_back.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_scale.png",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/drawable-ldpi-v4/ucrop_ic_scale.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ucrop_ic_rotate.png",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/drawable-ldpi-v4/ucrop_ic_rotate.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_next.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/btn_next.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_update_black_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_update_black_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_male.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_male.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_close.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_close.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_spinner_down.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_spinner_down.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_close_black_24dp.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_close_black_24dp.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_double_arrow_up.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_double_arrow_up.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_male.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_male.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_add_session.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_session.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_chose.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_chose.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_ketqua.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_ketqua.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_info.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_info.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_info.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_info.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_doctor.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_doctor.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_cloud_upload_black_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_cloud_upload_black_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_logout.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_logout.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_chevron_right_gray_24dp.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_right_gray_24dp.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_support.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_support.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_image_upload.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_image_upload.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_avatar_default.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_avatar_default.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/avatar.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/avatar.png"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_star.png",
-        "source": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_star.png"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_wallet.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_wallet.png"
+    },
+    {
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon_chose.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/icon_chose.png"
+    },
+    {
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_logout.png",
+        "source": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/generated/res/pngs/debug/drawable-ldpi/ic_logout.png"
     }
 ]

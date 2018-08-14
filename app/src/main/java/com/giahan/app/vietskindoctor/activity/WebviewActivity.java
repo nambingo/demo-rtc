@@ -13,7 +13,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.VietSkinApplication;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.gw.swipeback.SwipeBackLayout;
@@ -146,7 +146,7 @@ public class WebviewActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        VietSkinApplication.setIsOpenDetailScreen(false);
+        VietSkinDoctorApplication.setIsOpenDetailScreen(false);
     }
 
     @Override

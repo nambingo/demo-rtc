@@ -1,118 +1,118 @@
 [
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/switch_thumb_material_dark.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/color/common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/color/design_error.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/color/design_tint_password_toggle.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/switch_thumb_material_light.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_tint_edittext.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_tint_default.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/ucrop_scale_text_view_selector.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/46855c46f8a3fa4da94a18991e2f3be6/res/color/ucrop_scale_text_view_selector.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_tint_switch_track.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_hint_foreground_material_dark.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/color/common_google_signin_btn_text_light.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_tint_switch_track.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/com_facebook_send_button_text_color.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/03effec549219241e623e096750464ee/res/color/com_facebook_send_button_text_color.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_btn_colored_borderless_text_material.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/35df1c9ffe02f625d572ea0b8f295f84/res/color/design_tint_password_toggle.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_primary_text_material_dark.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_btn_colored_text_material.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_tint_seek_thumb.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/switch_thumb_material_light.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_search_url_text.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_search_url_text.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_secondary_text_material_light.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/ucrop_scale_text_view_selector.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0.aar/00870318465c0661f5c70ff726397457/res/color/ucrop_scale_text_view_selector.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_tint_default.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_tint_btn_checkable.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_tint_spinner.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/design_error.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2d6bdbd6fdff4e5c128548e607d54ed2/res/color/design_error.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/com_facebook_button_text_color.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/16cc4997fcb7e1e468f192da7f2bb6f1/res/color/com_facebook_button_text_color.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/com_facebook_button_text_color.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/facebook-common-4.33.0.aar/7b303371a6a36f3223d200e80bf388c3/res/color/com_facebook_button_text_color.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_tint_spinner.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/719a07b45cc950d9f4477ff6cd908098/res/color/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_hint_foreground_material_light.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_primary_text_material_light.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/color/common_google_signin_btn_text_dark.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/switch_thumb_material_dark.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/3d3b73a8a648eab4fbb809020619383e/res/color/common_google_signin_btn_tint.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/com_facebook_send_button_text_color.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/facebook-share-4.33.0.aar/c6211e96dcc07a17da5a55d3a883a16e/res/color/com_facebook_send_button_text_color.xml"
     },
     {
-        "merged": "/home/pham.duc.nam/Documents/Project/VSDoctor/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
-        "source": "/home/pham.duc.nam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/80c43afbf91283fc13accd20b2ee0d22/res/color/abc_tint_edittext.xml"
+        "merged": "/Users/phamducnam/Documents/Project/vsdoctor/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/phamducnam/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/92d8e53ed1ebb71f0b7c040dde0130f7/res/color/abc_btn_colored_borderless_text_material.xml"
     }
 ]

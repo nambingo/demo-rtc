@@ -5,9 +5,8 @@ import android.view.Menu;
 import android.view.View;
 
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.VietSkinApplication;
 import com.giahan.app.vietskindoctor.activity.GuideActivity;
-import com.giahan.app.vietskindoctor.activity.LoginV2Activity;
+import com.giahan.app.vietskindoctor.activity.LoginActivity;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
@@ -106,18 +105,18 @@ public class CaiDatFragment extends BaseFragment {
 
     @OnClick(R.id.ll_info)
     void openInfoAccount() {
-        getMainActivity().pushFragment(new InfoAccountV3Fragment());
+//        getMainActivity().pushFragment(new InfoAccountV3Fragment());
     }
 
     @OnClick(R.id.ll_recharge)
     void openRecharge() {
-        VietSkinApplication.setIsBackToSession(false);
-        getMainActivity().pushFragment(new RechargeFragment());
+//        VietSkinDoctorApplication.setIsBackToSession(false);
+//        getMainActivity().pushFragment(new RechargeFragment());
     }
 
     @OnClick(R.id.ll_login)
     void login() {
-        Intent intent = new Intent(getApplicationContext(), LoginV2Activity.class);
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         intent.putExtra(Constant.CHANGE_TAB, false);
         startActivity(intent);
         getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);

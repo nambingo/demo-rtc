@@ -22,7 +22,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.VietSkinApplication;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.IntroImageActivity;
 import com.giahan.app.vietskindoctor.activity.WebviewActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
@@ -485,8 +485,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     }
 
     private void showDetailImage(Message message){
-        if(!VietSkinApplication.isIsOpenDetailScreen()) {
-            VietSkinApplication.setIsOpenDetailScreen(true);
+        if(!VietSkinDoctorApplication.isIsOpenDetailScreen()) {
+            VietSkinDoctorApplication.setIsOpenDetailScreen(true);
             ArrayList<Photo> photos = new ArrayList<>();
             photos.add(new Photo(0, message.getObjUrl()));
             Intent intent = new Intent(getMainActivity(), IntroImageActivity.class);
@@ -497,8 +497,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     }
 
     private void showDetailMtes(Message message){
-        if(!VietSkinApplication.isIsOpenDetailScreen()) {
-            VietSkinApplication.setIsOpenDetailScreen(true);
+        if(!VietSkinDoctorApplication.isIsOpenDetailScreen()) {
+            VietSkinDoctorApplication.setIsOpenDetailScreen(true);
             Intent intent = new Intent(getMainActivity(), WebviewActivity.class);
             intent.putExtra("url", message.getObjUrl() + "?access_token=" + mPref.token().get());
             startActivity(intent);

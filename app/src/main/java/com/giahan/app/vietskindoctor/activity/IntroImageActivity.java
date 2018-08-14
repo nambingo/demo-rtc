@@ -17,7 +17,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.VietSkinApplication;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.adapter.IntroImageAdapter;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.domains.Photo;
@@ -223,7 +223,7 @@ public class IntroImageActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        VietSkinApplication.setIsOpenDetailScreen(false);
+        VietSkinDoctorApplication.setIsOpenDetailScreen(false);
     }
 
     @Override

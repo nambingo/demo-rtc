@@ -18,6 +18,8 @@ public interface PrefHelper {
     @DefaultString("")
     String user();
 
+    String currentRequest();
+
     String currentDoctor();
 
     String filterDoctor();

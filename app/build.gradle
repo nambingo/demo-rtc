@@ -97,6 +97,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.github.hrskrs:InstaDotView:1.1'
     implementation 'com.github.drawers:SpinnerDatePicker:1.0.6'
+    implementation 'com.ncapdevi:frag-nav:2.4.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

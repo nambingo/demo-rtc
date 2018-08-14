@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VSDoctor.iml" filepath="$PROJECT_DIR$/VSDoctor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/gallerypick/gallerypick.iml" filepath="$PROJECT_DIR$/gallerypick/gallerypick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vsdoctor.iml" filepath="$PROJECT_DIR$/vsdoctor.iml" />
     </modules>
   </component>
 </project>

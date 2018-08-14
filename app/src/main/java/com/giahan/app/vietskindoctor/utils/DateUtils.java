@@ -3,6 +3,9 @@ package com.giahan.app.vietskindoctor.utils;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -14,6 +17,7 @@ public class DateUtils {
     static String formatDate = "yyyy-MM-dd HH:mm:ss";
     static String format = "dd-MM-yyyy";
     static String formatList = "EEE, dd/MM/yy      HH:mm";
+    static String formatAge = "yyyy-MM-dd";
 
     public static Date getDate(String date){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formatDate, Locale.US);
@@ -50,6 +54,11 @@ public class DateUtils {
         return convertDate(date, format);
     }
 
+    public static String convertDayRequest(String date){
+        String format = "dd-MM-yyyy";
+        return convertDateRequest(date, format);
+    }
+
     public static String convertHours(String date){
         String format = "HH:mm";
         return convertDate(date, format);
@@ -59,7 +68,20 @@ public class DateUtils {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formatDate, Locale.US);
         DateFormat df = new SimpleDateFormat(format, Locale.US);
         try {
-            return df.format(simpleDateFormat.parse(date));
+            String f = df.format(simpleDateFormat.parse(date));
+            return f;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private static String convertDateRequest(String date, String format){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        DateFormat df = new SimpleDateFormat(format, Locale.US);
+        try {
+            String f = df.format(simpleDateFormat.parse(date));
+            return f;
         } catch (ParseException e) {
             e.printStackTrace();
             return null;
@@ -108,6 +130,19 @@ public class DateUtils {
         try {
             Date date1 = (Date) dateFormat.parse(date);
             return date1.getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static String getAge(String date) {
+        DateFormat dateFormat = new SimpleDateFormat(formatAge, Locale.US);
+        try {
+            Date mDate = dateFormat.parse(date);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(mDate);
+            return String.valueOf(Calendar.getInstance().get(Calendar.YEAR) - calendar.get(Calendar.YEAR));
         } catch (ParseException e) {
             e.printStackTrace();
             return null;
