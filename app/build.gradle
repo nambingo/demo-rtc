@@ -54,7 +54,6 @@ dependencies {
     implementation "org.androidannotations:androidannotations-api:$rootProject.ext.annotationApiVersion"
     annotationProcessor "org.androidannotations:androidannotations:$rootProject.ext.annotationApiVersion"
     //Fabric
-    //Fabric
     implementation("com.crashlytics.sdk.android:crashlytics:$rootProject.ext.fabricVersion") {
         transitive = true;
     }

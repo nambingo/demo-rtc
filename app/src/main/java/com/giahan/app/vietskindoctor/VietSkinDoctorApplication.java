@@ -45,7 +45,7 @@ public class VietSkinDoctorApplication extends Application {
 
     private void setupFabric(){
         Fabric fabric = new Fabric.Builder(this).kits(new Crashlytics()).debuggable(true).build();
-        Fabric.with(fabric);
+        Fabric.with(fabric, new Crashlytics());
     }
 
     public static GoogleSignInClient getmGoogleSignInClient(Context context) {

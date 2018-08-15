@@ -1,6 +1,7 @@
 package com.giahan.app.vietskindoctor.screens.phienkham;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -28,9 +29,10 @@ import static com.giahan.app.vietskindoctor.screens.phienkham.KhamOnlineFragment
 public class ListSessionAdapter extends RecyclerView.Adapter<ListSessionAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Session> mList = new ArrayList<>();
+
+    private List<Session> mList;
+
     private OnClickOpenSessionListener mOpenSessionListener;
-    private OnClickCancelSessionLestener mCancelSessionLestener;
 
     public ListSessionAdapter(Context context, List<Session> list) {
         this.mContext = context;
@@ -47,10 +49,6 @@ public class ListSessionAdapter extends RecyclerView.Adapter<ListSessionAdapter.
         this.mOpenSessionListener = onClick;
     }
 
-    void setCancelSessionListener(OnClickCancelSessionLestener onClick) {
-        this.mCancelSessionLestener = onClick;
-    }
-
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
@@ -63,13 +61,11 @@ public class ListSessionAdapter extends RecyclerView.Adapter<ListSessionAdapter.
     public void onBindViewHolder(MyViewHolder holder, int position) {
         final Session session = mList.get(position);
         holder.binData(session);
-        holder.rlItemSession.setOnClickListener(v -> {
-            if (mOpenSessionListener == null) return;
+        holder.lnItemSession.setOnClickListener(v -> {
+            if (mOpenSessionListener == null) {
+                return;
+            }
             mOpenSessionListener.onClickSession(session);
-        });
-        holder.lnCancel.setOnClickListener(view -> {
-            if (mCancelSessionLestener == null) return;
-            mCancelSessionLestener.onClickCancel(session);
         });
     }
 
@@ -79,29 +75,35 @@ public class ListSessionAdapter extends RecyclerView.Adapter<ListSessionAdapter.
     }
 
     public interface OnClickOpenSessionListener {
-        void onClickSession(Session session);
-    }
 
-    public interface OnClickCancelSessionLestener {
-        void onClickCancel(Session session);
+        void onClickSession(Session session);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.tvTime)
         TextView tvTime;
-        @BindView(R.id.tvDescription)
-        TextView tvDescription;
-        @BindView(R.id.tvDoctor)
-        TextView tvDoctor;
-        @BindView(R.id.rlItemSession)
-        RelativeLayout rlItemSession;
-        @BindView(R.id.lnCancel)
-        LinearLayout lnCancel;
-        @BindView(R.id.lnRemain)
-        LinearLayout lnRemain;
+
+        @BindView(R.id.tvMessage)
+        TextView tvMessage;
+
+        @BindView(R.id.tvPatientName)
+        TextView tvPatientName;
+
+        @BindView(R.id.lnItemSession)
+        LinearLayout lnItemSession;
+
         @BindView(R.id.tvRemain)
         TextView tvRemain;
+
+        @BindView(R.id.tvSex)
+        TextView tvSex;
+
+        @BindView(R.id.tvAge)
+        TextView tvAge;
+
+        @BindView(R.id.tvWeight)
+        TextView tvWeight;
 
         MyViewHolder(View itemView) {
             super(itemView);
@@ -109,29 +111,48 @@ public class ListSessionAdapter extends RecyclerView.Adapter<ListSessionAdapter.
         }
 
         void binData(Session session) {
-            switch (session.getStatus()){
-                case TAG_WAIT:
-                    tvTime.setText(DateUtils.convertDateString(session.getCreateAt()));
-                    lnRemain.setVisibility(View.GONE);
-                    lnCancel.setVisibility(View.VISIBLE);
-                    tvDescription.setText(session.getDescription());
-                    break;
+            switch (session.getStatus()) {
                 case TAG_ACCEPT:
                     tvTime.setText(TextUtils.isEmpty(session.getLastMessage())
                             ? DateUtils.convertDateString(session.getCreateAt())
                             : DateUtils.convertDateString(session.getLastMessageAt()));
-                    lnCancel.setVisibility(View.GONE);
-                    lnRemain.setVisibility(View.VISIBLE);
-                    tvRemain.setText(String.format("Còn %s ngày", DateUtils.getDateRemain(session.getCreateAt())));
-                    tvDescription.setText(TextUtils.isEmpty(session.getLastMessage()) ? session.getDescription() : session.getLastMessage());
+                    tvRemain.setText(String.format("Còn %s ngày ", DateUtils.getDateRemain(session.getCreateAt())));
+                    tvMessage.setText(TextUtils.isEmpty(session.getLastMessage()) ? session.getDescription()
+                            : session.getLastMessage());
                     break;
                 case TAG_COMPLETE:
                     tvTime.setText(DateUtils.convertDateString(session.getLastMessageAt()));
-                    lnCancel.setVisibility(View.GONE);
-                    tvDescription.setText(session.getLastMessage());
+                    tvMessage.setText(session.getLastMessage());
                     break;
             }
-            tvDoctor.setText(session.getPatientName());
+            tvPatientName.setText(TextUtils.isEmpty(session.getPatientName()) ? "N/A"
+                    : session.getPatientName());
+            tvSex.setVisibility(TextUtils.isEmpty(session.getSex()) ? View.GONE : View.VISIBLE);
+            if (!TextUtils.isEmpty(session.getSex())) {
+                tvSex.setText(session.getSex().equals("0") ? "Nữ" : "Nam");
+            }
+            tvAge.setVisibility(TextUtils.isEmpty(session.getPatientAge()) ? View.GONE : View.VISIBLE);
+            if (!TextUtils.isEmpty(session.getPatientAge())) {
+                tvAge.setText(String.format("%s tuổi",
+                        DateUtils.getAge(session.getPatientAge())));
+            }
+            tvWeight.setVisibility(TextUtils.isEmpty(session.getWeight()) ? View.GONE : View.VISIBLE);
+            if (!TextUtils.isEmpty(session.getWeight())) {
+                tvWeight.setText(
+                        String.format("%s kg", session.getWeight()));
+            }
+            if (TextUtils.isEmpty(session.getLastMessageAt()) || TextUtils.isEmpty(session.getLastReadAt())) {
+                return;
+            }
+            if (DateUtils.compareDates(session.getLastMessageAt(), session.getLastReadAt())) {
+                tvPatientName.setTypeface(Typeface.DEFAULT);
+                tvPatientName.setTextColor(mContext.getResources().getColor(R.color.warm_grey_three));
+                tvMessage.setTextColor(mContext.getResources().getColor(R.color.warm_grey_three));
+            } else {
+                tvPatientName.setTypeface(Typeface.DEFAULT_BOLD);
+                tvPatientName.setTextColor(mContext.getResources().getColor(R.color.black));
+                tvMessage.setTextColor(mContext.getResources().getColor(R.color.black));
+            }
         }
     }
 }

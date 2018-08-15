@@ -71,6 +71,15 @@ public class UserInfoResponse {
     @Expose
     private String weight;
 
+    @SerializedName("avatar")
+    private String mAvatarDoctor;
+
+    @SerializedName("workplace")
+    private String mWorkplace;
+
+    @SerializedName("degree")
+    private String mDegree;
+
     public UserInfoResponse() {
     }
 
@@ -284,5 +293,29 @@ public class UserInfoResponse {
 
     public void setWeight(String weight) {
         this.weight = weight;
+    }
+
+    public String getAvatarDoctor() {
+        return mAvatarDoctor;
+    }
+
+    public void setAvatarDoctor(final String avatarDoctor) {
+        mAvatarDoctor = avatarDoctor;
+    }
+
+    public String getWorkplace() {
+        return mWorkplace;
+    }
+
+    public void setWorkplace(final String workplace) {
+        mWorkplace = workplace;
+    }
+
+    public String getDegree() {
+        return mDegree;
+    }
+
+    public void setDegree(final String degree) {
+        mDegree = degree;
     }
 }

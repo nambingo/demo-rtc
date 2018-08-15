@@ -389,13 +389,13 @@ public class LoginActivity extends BaseActivity {
 
                         EventBus.getDefault().post(new ChangeEvent());
 
-                        if (Toolbox.isEmpty(response.body().getName()) || Toolbox.isEmpty(response.body().getBirthdate()) ||
-                                Toolbox.isEmpty(response.body().getGender()) || Toolbox.isEmpty(response.body().getPhone())) {
-                            showPopupUpdateInfo();
-                        } else {
+//                        if (Toolbox.isEmpty(response.body().getName()) || Toolbox.isEmpty(response.body().getBirthdate()) ||
+//                                Toolbox.isEmpty(response.body().getGender()) || Toolbox.isEmpty(response.body().getPhone())) {
+//                            showPopupUpdateInfo();
+//                        } else {
 //                            finish();
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                        }
+//                        }
                     }
 //                    new GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, new GraphRequest.Callback() {
 //                        @Override
@@ -496,12 +496,13 @@ public class LoginActivity extends BaseActivity {
                     pref.isLogged().put(true);
 
                     EventBus.getDefault().post(new ChangeEvent());
-                    if (Toolbox.isEmpty(response.body().getName()) || Toolbox.isEmpty(response.body().getBirthdate()) ||
-                            Toolbox.isEmpty(response.body().getGender()) || Toolbox.isEmpty(response.body().getPhone())) {
-                        showPopupUpdateInfo();
-                    } else {
+//                    if (Toolbox.isEmpty(response.body().getName()) || Toolbox.isEmpty(response.body().getBirthdate()) ||
+//                            Toolbox.isEmpty(response.body().getGender()) || Toolbox.isEmpty(response.body().getPhone())) {
+//                        showPopupUpdateInfo();
+//                    } else {
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         finish();
-                    }
+//                    }
                 }
             }
 

@@ -9,7 +9,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Message;
+import com.giahan.app.vietskindoctor.domains.Session;
 import com.google.gson.Gson;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -49,5 +52,15 @@ public class GeneralUtil {
                 DateUtils.getDate(o1.getCreatedAt())).compareTo
                 (DateUtils.getDate(o2.getCreatedAt())));
         return messageList;
+    }
+
+    public static List<Session> sortSession(List<Session> list){
+        if (list == null) {
+            list = new ArrayList<>();
+        }
+
+        Collections.sort(list, (o1, o2) -> Objects.requireNonNull(DateUtils.getDate(o2.getLastMessageAt()))
+                .compareTo(DateUtils.getDate(o1.getLastMessageAt())));
+        return list;
     }
 }

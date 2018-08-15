@@ -57,7 +57,7 @@ public class CaiDatFragment extends BaseFragment {
         UserInfoResponse user = UserInfoResponse.getUser(getMainActivity().pref);
         if (user != null) {
             llInfo.setVisibility(View.VISIBLE);
-            llRecharge.setVisibility(View.VISIBLE);
+            llRecharge.setVisibility(View.GONE);
             llGuide.setVisibility(View.VISIBLE);
             llLogout.setVisibility(View.VISIBLE);
             llTableFee.setVisibility(View.GONE);
@@ -105,7 +105,7 @@ public class CaiDatFragment extends BaseFragment {
 
     @OnClick(R.id.ll_info)
     void openInfoAccount() {
-//        getMainActivity().pushFragment(new InfoAccountV3Fragment());
+        getMainActivity().pushFragment(new InfoAccountV3Fragment());
     }
 
     @OnClick(R.id.ll_recharge)

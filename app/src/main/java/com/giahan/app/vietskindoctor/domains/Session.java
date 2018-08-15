@@ -72,7 +72,7 @@ public class Session {
     @SerializedName("patient_age")
     private String mPatientAge;
 
-    private List<String> photos;
+    private List<Photo> photos;
 
 
 
@@ -276,11 +276,11 @@ public class Session {
         mPatientAge = patientAge;
     }
 
-    public List<String> getPhotos() {
+    public List<Photo> getPhotos() {
         return photos;
     }
 
-    public void setPhotos(final List<String> photos) {
+    public void setPhotos(final List<Photo> photos) {
         this.photos = photos;
     }
 }

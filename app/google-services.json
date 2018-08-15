@@ -39,6 +39,14 @@
           }
         },
         {
+          "client_id": "268865333568-mu501dfa1ohp98tsb1he14itljq5t615.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.giahan.app.vietskin",
+            "certificate_hash": "24d286db77a758fefe1e812c64eae47709fed03c"
+          }
+        },
+        {
           "client_id": "268865333568-gvmdnlofoop6f9b3h1e5tjbcg0krvnl0.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -82,6 +90,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "268865333568-sfcckmtm9nhag83rc5id56jsmldt7eug.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.giahan.app.vietskindoctor",
+            "certificate_hash": "06b63617a70fda7588b7f243dbd283e3a00ef435"
+          }
+        },
+        {
           "client_id": "268865333568-gvmdnlofoop6f9b3h1e5tjbcg0krvnl0.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -96,8 +112,20 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268865333568-gvmdnlofoop6f9b3h1e5tjbcg0krvnl0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "268865333568-siq8uhucvskb4mgh6go7v1et3g12rhd4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "doctor.com.vietskin.vn"
+              }
+            }
+          ]
         },
         "ads_service": {
           "status": 2

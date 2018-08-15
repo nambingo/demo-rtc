@@ -7,15 +7,14 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Session;
-import com.giahan.app.vietskindoctor.screens.phienkham.ListSessionAdapter.OnClickOpenSessionListener;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
-import java.util.Date;
 import java.util.List;
 
 public class YeuCauAdapter extends RecyclerView.Adapter<YeuCauAdapter.MyViewHolder> {
@@ -50,8 +49,8 @@ public class YeuCauAdapter extends RecyclerView.Adapter<YeuCauAdapter.MyViewHold
         TextView tvAge;
         @BindView(R.id.tvWeight)
         TextView tvWeight;
-        @BindView(R.id.rlItemSession)
-        RelativeLayout rlItemSession;
+        @BindView(R.id.lnItemSession)
+        LinearLayout lnItemSession;
 
         public MyViewHolder(final View itemView) {
             super(itemView);
@@ -59,15 +58,24 @@ public class YeuCauAdapter extends RecyclerView.Adapter<YeuCauAdapter.MyViewHold
         }
 
         public void binData(final Session session) {
-            tvPatientName.setText(TextUtils.isEmpty(session.getPatientName()) ? "Bệnh nhân không có tên"
+            tvPatientName.setText(TextUtils.isEmpty(session.getPatientName()) ? "N/A"
                     : session.getPatientName());
             tvInfo.setText(session.getDescription());
             tvTime.setText(DateUtils.convertDateString(session.getCreateAt()));
-            tvSex.setText(TextUtils.isEmpty(session.getSex()) ? "N/A" : session.getSex());
+            tvSex.setVisibility(TextUtils.isEmpty(session.getSex()) ? View.GONE : View.VISIBLE);
+            if (!TextUtils.isEmpty(session.getSex())) {
+                tvSex.setText(session.getSex().equals("0") ? "Nữ" : "Nam");
+            }
+            tvAge.setVisibility(
+                    TextUtils.isEmpty(session.getBirthdate()) && TextUtils.isEmpty(session.getPatientAge())
+                            ? View.GONE : View.VISIBLE);
+            if (!TextUtils.isEmpty(session.getBirthdate()))
             tvAge.setText(String.format("%s tuổi",
-                    TextUtils.isEmpty(session.getPatientAge()) ? "N/A" : DateUtils.getAge(session.getPatientAge())));
+                    DateUtils.getAge(session.getBirthdate())));
+            tvWeight.setVisibility(TextUtils.isEmpty(session.getWeight()) ? View.GONE : View.VISIBLE);
+            if (!TextUtils.isEmpty(session.getWeight()))
             tvWeight.setText(
-                    String.format("%s kg", TextUtils.isEmpty(session.getWeight()) ? "N/A" : session.getWeight()));
+                    String.format("%s kg", session.getWeight()));
         }
     }
 
@@ -84,7 +92,7 @@ public class YeuCauAdapter extends RecyclerView.Adapter<YeuCauAdapter.MyViewHold
     public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         final Session session = mList.get(position);
         holder.binData(session);
-        holder.rlItemSession.setOnClickListener(v -> {
+        holder.lnItemSession.setOnClickListener(v -> {
             if (mOpenSessionListener == null) return;
             mOpenSessionListener.onClickSession(session);
         });

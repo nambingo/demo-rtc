@@ -1,87 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rlItemSession"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnItemSession"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_100"
-    android:paddingTop="@dimen/dp_10"
+    android:orientation="horizontal"
     android:paddingLeft="@dimen/dp_10"
     android:paddingRight="@dimen/dp_10"
-    >
+    android:paddingTop="@dimen/dp_10">
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dp_0"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_alignParentLeft="true">
+        android:layout_weight="5"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvDoctor"
+            android:id="@+id/tvPatientName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxWidth="@dimen/dp_200"
             android:maxLines="1"
+            android:maxWidth="@dimen/dp_200"
             android:singleLine="true"
-            android:text="fsjfksjfkjsfkjksfjlsdfjlksjflksjflkjsalf"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_18"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDescription"
+            android:id="@+id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            android:singleLine="true"
-            android:text="sfkjasdjfjskfjlsafjlajsfklajsfljaslkfjalkfjklajfkldjsaklfjaklfjdkljaflkajfkljaklfjak"
             android:maxWidth="@dimen/dp_200"
+            android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_12"
-            />
+            android:textSize="@dimen/sp_12" />
 
         <TextView
             android:id="@+id/tvTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="343434"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/lnCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/dp_5"
-        android:layout_marginTop="@dimen/dp_20"
-        android:visibility="gone">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cancel"/>
-        <ImageView
-            android:layout_width="@dimen/dp_20"
-            android:layout_height="@dimen/dp_20"
-            android:src="@drawable/ic_delete_button"
-            android:layout_marginLeft="@dimen/dp_5"/>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/lnRemain"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/dp_5"
-        android:layout_marginTop="@dimen/dp_20">
+            android:maxLines="1"
+            android:maxWidth="@dimen/dp_200"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="italic" />
+
         <TextView
             android:id="@+id/tvRemain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="fsjfsjflsjfkjsfjskfjskfjs"
-            android:maxWidth="@dimen/dp_100"
             android:maxLines="1"
-            android:singleLine="true"/>
+            android:maxWidth="@dimen/dp_200"
+            android:singleLine="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/sp_12"/>
+
+        <TextView
+            android:id="@+id/tvWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/sp_12"/>
 
     </LinearLayout>
 
-
-</RelativeLayout>
+</LinearLayout>

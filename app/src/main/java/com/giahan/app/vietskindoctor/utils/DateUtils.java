@@ -77,7 +77,7 @@ public class DateUtils {
     }
 
     private static String convertDateRequest(String date, String format){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Constant.LOCALE_VN);
         DateFormat df = new SimpleDateFormat(format, Locale.US);
         try {
             String f = df.format(simpleDateFormat.parse(date));
@@ -88,15 +88,15 @@ public class DateUtils {
         }
     }
     public static String convertDateString(String date){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formatDate, Locale.US);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formatDate, Constant.LOCALE_VN);
         try {
             Date mDate = simpleDateFormat.parse(date);
             simpleDateFormat.getCalendar().setTime(mDate);
             DateFormat df = null;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                df = new SimpleDateFormat("EEE, dd/MM/yy      HH:mm", Locale.forLanguageTag("vn-VN"));
+                df = new SimpleDateFormat("EEE, dd/MM/yy      HH:mm ", Locale.forLanguageTag("vn-VN"));
             }else {
-                df = new SimpleDateFormat("EEE, dd/MM/yy      HH:mm", Locale.US);
+                df = new SimpleDateFormat("EEE, dd/MM/yy      HH:mm ", Constant.LOCALE_VN);
             }
             return df.format(simpleDateFormat.parse(date));
         } catch (ParseException e) {
@@ -147,5 +147,30 @@ public class DateUtils {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String convertCurrentTime() {
+        return new SimpleDateFormat(formatDate).format(new Date());
+    }
+
+    public static boolean compareDates(String startDate, String endDate) {
+
+        SimpleDateFormat dfDate = new SimpleDateFormat(formatDate, Locale.US);
+
+        boolean b = false;
+
+        try {
+            if (dfDate.parse(startDate).before(dfDate.parse(endDate))) {
+                b = true;  // If start date is before end date.
+            } else if (dfDate.parse(startDate).equals(dfDate.parse(endDate))) {
+                b = true;  // If two dates are equal.
+            } else {
+                b = false; // If start date is after the end date.
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return b;
     }
 }

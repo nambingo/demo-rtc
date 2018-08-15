@@ -118,8 +118,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     private XetNghiemAdapter mTestSampleAdapter;
     private XetNghiemAdapter mPresAdapter;
     private String mDsessionID;
-    private String mDoctorName;
-    private String mDoctorAvatar;
+    private String mPatientName;
     private String mUserID;
     private int firstVisibleItemIndex;
     private boolean loading = true;
@@ -199,8 +198,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     private void setupView() {
         setupMenuView();
         setupGallery();
-        tvNameDoctor.setText(mDoctorName);
-        mAdapter = new MessageAdapter(mActivity, mMessages, mUserID, mDoctorAvatar);
+        tvNameDoctor.setText(mPatientName);
+        mAdapter = new MessageAdapter(mActivity, mMessages, mUserID, null);
         mMessagesView.setLayoutManager(new LinearLayoutManager(mActivity));
         mMessagesView.setAdapter(mAdapter);
         mMessagesView.addOnScrollListener(mOnScrollListener);
@@ -412,8 +411,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         Bundle bundle = this.getArguments();
         if (bundle == null) return;
         mDsessionID = bundle.getString(Constant.TAG_DSSESION_ID);
-        mDoctorName = bundle.getString(Constant.TAG_DOCTER_NAME);
-        mDoctorAvatar = bundle.getString(Constant.TAG_DOCTER_AVATAR);
+        mPatientName = bundle.getString(Constant.TAG_PATIENT_NAME);
         mUserID = GeneralUtil.fromJSon(UserInfoResponse.class, mPref.user().get()).getId();
     }
 

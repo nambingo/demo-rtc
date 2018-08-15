@@ -7,6 +7,7 @@
     android:layout_marginTop="@dimen/dp_10"
     android:layout_marginBottom="@dimen/dp_10"
     android:layout_marginLeft="@dimen/dp_10"
+    android:id="@+id/rlPhoto"
     >
 
     <ImageView
@@ -15,14 +16,6 @@
         android:layout_height="@dimen/dp_80"
         android:layout_centerInParent="true"
         android:contentDescription="@null"
-        />
-    <ImageView
-        android:id="@+id/imgDelete"
-        android:layout_width="@dimen/dp_20"
-        android:layout_height="@dimen/dp_20"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/ic_delete_photo"
         />
 
 </RelativeLayout>

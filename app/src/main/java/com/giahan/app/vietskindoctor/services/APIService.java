@@ -1,5 +1,7 @@
 package com.giahan.app.vietskindoctor.services;
 
+import com.giahan.app.vietskindoctor.domains.AcceptRequest;
+import com.giahan.app.vietskindoctor.domains.AcceptRequestBody;
 import com.giahan.app.vietskindoctor.domains.CancelBody;
 import com.giahan.app.vietskindoctor.domains.CancelResult;
 import com.giahan.app.vietskindoctor.domains.CreateSessionResult;
@@ -9,6 +11,8 @@ import com.giahan.app.vietskindoctor.domains.ListFilterResult;
 import com.giahan.app.vietskindoctor.domains.ListRequestResult;
 import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.MessageBody;
+import com.giahan.app.vietskindoctor.domains.ReadMessageBody;
+import com.giahan.app.vietskindoctor.domains.ReadMessageResult;
 import com.giahan.app.vietskindoctor.domains.SendMessageResult;
 import com.giahan.app.vietskindoctor.domains.Session;
 import com.giahan.app.vietskindoctor.domains.MappingResult;
@@ -106,4 +110,10 @@ public interface APIService {
 
     @GET("patient/get-doctor-info/{id}")
     Call<Doctor> getInfoDoctor(@Path("id") String id);
+
+    @POST("dsession/chat/last-read")
+    Call<ReadMessageResult> sendLastRead(@Body ReadMessageBody readMessageBody);
+
+    @POST("doctor/dsession/accept-request")
+    Call<AcceptRequest> acceptRequest(@Body AcceptRequestBody acceptRequestBody);
 }

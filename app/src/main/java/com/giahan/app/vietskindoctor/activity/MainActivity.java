@@ -66,16 +66,20 @@ public class MainActivity extends BaseActivity
         Toolbox.setStatusBarColor(this, getResources(), R.color.color_header_bar);
     }
 
-    private void onSettingClick() {
+    public void onSettingClick() {
         mFragNavController.switchTab(INDEX_CAI_DAT);
     }
 
-    private void onNotifyClick() {
+    public void onNotifyClick() {
         mFragNavController.switchTab(INDEX_YEU_CAU);
     }
 
-    private void onPhienClick() {
+    public void onPhienClick() {
         mFragNavController.switchTab(INDEX_PHIEN);
+    }
+
+    public void selectPhien(){
+        mBottomView.setSelectedItemId(R.id.itemPhienTuVan);
     }
 
     @Override

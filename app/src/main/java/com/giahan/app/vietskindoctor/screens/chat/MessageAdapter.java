@@ -35,7 +35,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private List<Message> mMessages = new ArrayList<>();
     private String mUserID;
     private Context mContext;
-    private String mAvatarUrl;
+//    private String mAvatarUrl;
     private OnClickImageListener mOnClickImageListener;
     private OnClickMtesListener mOnClickMtesListener;
 
@@ -44,7 +44,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         mContext = context;
         mMessages = messages;
         mUserID = userID;
-        mAvatarUrl = avatarUrl;
+//        mAvatarUrl = avatarUrl;
         //mUsernameColors = context.getResources().getColor(R.color.red);
     }
 
@@ -213,10 +213,10 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             chat_text_me.setVisibility(isMe ? View.VISIBLE : View.GONE);
             tvYou.setText(isMe ? null : message.getMessage());
             tvMe.setText(isMe ? message.getMessage() : null);
-            Picasso.with(mContext)
-                    .load(mAvatarUrl)
-                    .placeholder(R.mipmap.ic_launcher)
-                    .into(imgAvatar);
+//            Picasso.with(mContext)
+//                    .load(mAvatarUrl)
+//                    .placeholder(R.mipmap.ic_launcher)
+//                    .into(imgAvatar);
             tvMe.setTag(message);
             tvYou.setTag(message);
             tvDateMe.setText(DateUtils.convertDate(message.getCreatedAt()));
@@ -256,10 +256,10 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     .centerCrop()
                     .fit()
                     .into(isMe ? imgMe : imgYou);
-            Picasso.with(mContext)
-                    .load(mAvatarUrl)
-                    .placeholder(R.mipmap.ic_launcher)
-                    .into(imgAvatar);
+//            Picasso.with(mContext)
+//                    .load(mAvatarUrl)
+//                    .placeholder(R.mipmap.ic_launcher)
+//                    .into(imgAvatar);
             imgMe.setTag(message);
             imgYou.setTag(message);
             tvDateMe.setText(DateUtils.convertDate(message.getCreatedAt()));

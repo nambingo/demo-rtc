@@ -16,7 +16,7 @@ import com.giahan.app.vietskindoctor.base.BaseActivity;
  */
 
 public class SplashActivity extends BaseActivity {
-    public static final int TIME_LOADING = 3000;
+    public static final int TIME_LOADING = 2000;
 
     private Handler handler = null;
 
@@ -33,7 +33,7 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_intro_v2;
+        return R.layout.activity_splash;
     }
 
     @Override
@@ -45,7 +45,7 @@ public class SplashActivity extends BaseActivity {
         handler.postDelayed(this::skip, TIME_LOADING);
     }
 
-    @OnClick(R.id.btnSkip)
+//    @OnClick(R.id.btnSkip)
     void skip() {
         handler.removeCallbacksAndMessages(null);
         if (TextUtils.isEmpty(pref.token().get())) {
