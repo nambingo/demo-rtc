@@ -25,6 +25,7 @@ public class PermissionsUtil {
     }
 
     public static void requestPermissions(Activity activity, int requestCode, String... permissions) {
-        ActivityCompat.requestPermissions(activity, permissions, requestCode);
+        ActivityCompat.requestPermissions
+                (activity, permissions, requestCode);
     }
 }

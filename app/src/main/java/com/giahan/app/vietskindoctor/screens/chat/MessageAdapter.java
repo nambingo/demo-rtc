@@ -30,12 +30,13 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private static final int MESSAGE_TEST_SAMPLE = 3;
     private static final int MESSAGE_PRESCRIPTION = 4;
     private static final int MESSAGE_DATE = 5;
+    private static final int MESSAGE_SYSTEM = 6;
     private LayoutInflater mLayoutInflater;
 
     private List<Message> mMessages = new ArrayList<>();
     private String mUserID;
     private Context mContext;
-//    private String mAvatarUrl;
+    private String mAvatarUrl;
     private OnClickImageListener mOnClickImageListener;
     private OnClickMtesListener mOnClickMtesListener;
 
@@ -44,7 +45,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         mContext = context;
         mMessages = messages;
         mUserID = userID;
-//        mAvatarUrl = avatarUrl;
+        mAvatarUrl = avatarUrl;
         //mUsernameColors = context.getResources().getColor(R.color.red);
     }
 
@@ -92,6 +93,9 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 view = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.item_chat_message_date, parent, false);
                 return new ChatTextViewHolder(view);
+            case MESSAGE_SYSTEM:
+                view = mLayoutInflater.inflate(R.layout.item_chat_message_system, parent, false);
+                return new ChatSystemViewHolder(view);
         }
 
         return null;
@@ -100,13 +104,19 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         Message message = mMessages.get(position);
+        boolean isLike;
+        if (position != 0)
+            isLike = message.getUserId().equals(mMessages.get(position - 1).getUserId());
+        else {
+            isLike = false;
+        }
         if (viewHolder instanceof ChatTextViewHolder) {
-            ((ChatTextViewHolder) viewHolder).bind(message);
+            ((ChatTextViewHolder) viewHolder)
+                    .bind(message, isLike);
             ((ChatTextViewHolder) viewHolder).tvMe.setOnClickListener(this::showDate);
             ((ChatTextViewHolder) viewHolder).tvYou.setOnClickListener(this::showDate);
         } else if (viewHolder instanceof ChatFileViewHolder) {
-            ((ChatFileViewHolder) viewHolder).bind(message);
-
+            ((ChatFileViewHolder) viewHolder).bind(message, isLike);
             onClickImage(((ChatFileViewHolder) viewHolder).imgMe, mOnClickImageListener, message);
             onClickImage(((ChatFileViewHolder) viewHolder).imgYou, mOnClickImageListener, message);
 
@@ -129,7 +139,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 return false;
             });
         } else {
-            ((ChatDateViewHolder) viewHolder).bind(message);
+            ((ChatSystemViewHolder) viewHolder).bind(message);
         }
     }
 
@@ -158,18 +168,22 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public int getItemViewType(int position) {
         Message message = mMessages.get(position);
-        String type = message.getType();
-        switch (type) {
-            case Message.TYPE_TEXT:
-                return MESSAGE_TEXT;
-            case Message.TYPE_FILE:
-                return MESSAGE_FILE;
-            case Message.TYPE_PRESCRIPTION:
-                return MESSAGE_PRESCRIPTION;
-            case Message.TYPE_TEST_SAMPLE:
-                return MESSAGE_TEST_SAMPLE;
-            default:
-                return MESSAGE_TEXT;
+        if (message.getUserId().equalsIgnoreCase("-1")){
+            return MESSAGE_SYSTEM;
+        }else {
+            String type = message.getType();
+            switch (type) {
+                case Message.TYPE_TEXT:
+                    return MESSAGE_TEXT;
+                case Message.TYPE_FILE:
+                    return MESSAGE_FILE;
+                case Message.TYPE_PRESCRIPTION:
+                    return MESSAGE_PRESCRIPTION;
+                case Message.TYPE_TEST_SAMPLE:
+                    return MESSAGE_TEST_SAMPLE;
+                default:
+                    return MESSAGE_TEXT;
+            }
         }
     }
 
@@ -207,16 +221,17 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             ButterKnife.bind(this, itemView);
         }
 
-        public void bind(Message message) {
+        public void bind(Message message, boolean isLike) {
             boolean isMe = message.getUserId().equals(mUserID);
             chat_text_other.setVisibility(isMe ? View.GONE : View.VISIBLE);
             chat_text_me.setVisibility(isMe ? View.VISIBLE : View.GONE);
             tvYou.setText(isMe ? null : message.getMessage());
             tvMe.setText(isMe ? message.getMessage() : null);
-//            Picasso.with(mContext)
-//                    .load(mAvatarUrl)
-//                    .placeholder(R.mipmap.ic_launcher)
-//                    .into(imgAvatar);
+            imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
+            Picasso.with(mContext)
+                    .load(mAvatarUrl)
+                    .placeholder(R.mipmap.ic_launcher)
+                    .into(imgAvatar);
             tvMe.setTag(message);
             tvYou.setTag(message);
             tvDateMe.setText(DateUtils.convertDate(message.getCreatedAt()));
@@ -247,7 +262,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             ButterKnife.bind(this, itemView);
         }
 
-        public void bind(Message message) {
+        public void bind(Message message, boolean isLike) {
             boolean isMe = message.getUserId().equals(mUserID);
             chat_text_other.setVisibility(isMe ? View.GONE : View.VISIBLE);
             chat_text_me.setVisibility(isMe ? View.VISIBLE : View.GONE);
@@ -256,10 +271,11 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     .centerCrop()
                     .fit()
                     .into(isMe ? imgMe : imgYou);
-//            Picasso.with(mContext)
-//                    .load(mAvatarUrl)
-//                    .placeholder(R.mipmap.ic_launcher)
-//                    .into(imgAvatar);
+            imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
+            Picasso.with(mContext)
+                    .load(mAvatarUrl)
+                    .placeholder(R.mipmap.ic_launcher)
+                    .into(imgAvatar);
             imgMe.setTag(message);
             imgYou.setTag(message);
             tvDateMe.setText(DateUtils.convertDate(message.getCreatedAt()));
@@ -305,6 +321,20 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public void bind(Message message) {
             tvDate.setText(message.getCreatedAt());
+        }
+    }
+
+    class ChatSystemViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.tvSystem)
+        TextView tvSystem;
+
+        public ChatSystemViewHolder(final View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+        }
+
+        public void bind(Message message) {
+            tvSystem.setText(message.getMessage());
         }
     }
 }

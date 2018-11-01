@@ -1,7 +1,17 @@
 package com.giahan.app.vietskindoctor.screens.chat;
 
+import static com.giahan.app.vietskindoctor.domains.Message.TYPE_FILE;
+import static com.giahan.app.vietskindoctor.domains.Message.TYPE_PRESCRIPTION;
+import static com.giahan.app.vietskindoctor.domains.Message.TYPE_TEST_SAMPLE;
+import static com.giahan.app.vietskindoctor.utils.Constant.TAG_RECEIVE_MESSAGE;
+import static com.giahan.app.vietskindoctor.utils.MediaHelper2.REQUEST_MEDIA_LIBRARY;
+import static com.giahan.app.vietskindoctor.utils.MediaHelper2.REQUEST_PHOTO_CAPTURED;
+
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,23 +21,32 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.LayoutManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.WindowManager.LayoutParams;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
+import android.widget.Toast;
+import butterknife.BindView;
+import butterknife.OnClick;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.IntroImageActivity;
+import com.giahan.app.vietskindoctor.activity.VideoCall2Activity;
+import com.giahan.app.vietskindoctor.activity.VideoCallActivity;
 import com.giahan.app.vietskindoctor.activity.WebviewActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.domains.MessageBody;
+import com.giahan.app.vietskindoctor.domains.PatientResponse;
 import com.giahan.app.vietskindoctor.domains.Photo;
 import com.giahan.app.vietskindoctor.domains.SendMessageResult;
 import com.giahan.app.vietskindoctor.domains.SessionResult;
@@ -36,38 +55,34 @@ import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.screens.chat.MessageAdapter.OnClickImageListener;
 import com.giahan.app.vietskindoctor.screens.chat.MessageAdapter.OnClickMtesListener;
+import com.giahan.app.vietskindoctor.services.NetworkChanged;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.utils.ActionsDialog;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
 import com.giahan.app.vietskindoctor.utils.DialogUtils;
-import com.giahan.app.vietskindoctor.utils.GalleryUtil;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
-import com.giahan.app.vietskindoctor.utils.HandlerCallBackSimple;
+import com.giahan.app.vietskindoctor.utils.MediaHelper2;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
-import com.github.nkzawa.emitter.Emitter;
-import com.github.nkzawa.socketio.client.IO;
-import com.github.nkzawa.socketio.client.Socket;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.OnClick;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONException;
+import org.json.JSONObject;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static com.giahan.app.vietskindoctor.domains.Message.TYPE_FILE;
-import static com.giahan.app.vietskindoctor.domains.Message.TYPE_PRESCRIPTION;
-import static com.giahan.app.vietskindoctor.domains.Message.TYPE_TEST_SAMPLE;
 
 /**
  * Created by pham.duc.nam on 11/06/2018.
@@ -79,12 +94,16 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     RecyclerView mMessagesView;
     @BindView(R.id.message_input)
     EditText mInputMessageView;
+    @BindView(R.id.imgCall)
+    ImageView imgCall;
     @BindView(R.id.send_button)
     ImageView sendButton;
     @BindView(R.id.tvNameDoctor)
     TextView tvNameDoctor;
     @BindView(R.id.imgMenu)
     ImageView imgMenu;
+    @BindView(R.id.tvTime)
+    TextView tvTime;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer_layout;
     @BindView(R.id.lnRight)
@@ -105,14 +124,22 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     RecyclerView lvDonThuoc;
     @BindView(R.id.nsv)
     NestedScrollView nsv;
-    private String TAG_LOGIN_SOCKET = "SOCKET_TO_SERVER_CLIENT_LOGIN";
-    private String TAG_RECEIVE_MESSAGE = "SOCKET_TO_CLIENT_NEW_CHAT_MESSAGE";
-    private String TAG_LOGOUT_SOCKET = "SOCKET_TO_SERVER_CLIENT_LOGOUT";
+    @BindView(R.id.lnCallVideo)
+    LinearLayout lnCallVideo;
+    @BindView(R.id.mNestedSV)
+    NestedScrollView nestedScrollView;
+
+
     private List<Message> mMessages = new ArrayList<>();
     private List<Message> mPathURL = new ArrayList<>();
     private List<Message> mListMauXN = new ArrayList<>();
     private List<Message> mListDonThuoc = new ArrayList<>();
-    private String path;
+
+    private String mPatientID;
+    private String mTimeRemain;
+    private String mPhone;
+    private String mAvatarPatient;
+
     private MessageAdapter mAdapter;
     private PhotoAdapter mPhotoAdapter;
     private XetNghiemAdapter mTestSampleAdapter;
@@ -123,6 +150,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     private int firstVisibleItemIndex;
     private boolean loading = true;
     private boolean isOpen =false;
+    private boolean isGallery = false;
 
     private Socket mSocket;
     private RecyclerView.OnScrollListener mOnScrollListener = new RecyclerView.OnScrollListener() {
@@ -170,57 +198,86 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_chat;
+        return R.layout.fragment_chat_2;
     }
 
     @Override
     protected void createView(View view) {
+        getActivity().getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         showLoading();
         getSessionData();
         getData(mDsessionID, null);
+        getInfoPatient(mPatientID);
         setupView();
+        setupSocket();
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        mSocket.connect();
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("access_token", mPref.token().get());
-            mSocket.emit(TAG_LOGIN_SOCKET, jsonObject);
-        } catch (JSONException ignored) {
-
+    private void setupSocket() {
+        mSocket = getBaseActivity().getSocket();
+        if (mSocket == null) {
+            JSONObject jsonObject = new JSONObject();
+            try {
+                mSocket = IO.socket(Constant.URL_SOCKET);
+                jsonObject.put("access_token", mPref.token().get());
+                mSocket.emit(Constant.TAG_LOGIN_SOCKET, jsonObject);
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            } catch (JSONException ignored) {
+                Toast.makeText(getActivity(), "Socket error!", Toast.LENGTH_SHORT).show();
+            }
         }
+        receiveMessage();
+    }
+
+    private void receiveMessage() {
         mSocket.on(TAG_RECEIVE_MESSAGE, OnNewMessage);
+        mSocket.connect();
     }
 
     private void setupView() {
         setupMenuView();
-        setupGallery();
         tvNameDoctor.setText(mPatientName);
-        mAdapter = new MessageAdapter(mActivity, mMessages, mUserID, null);
-        mMessagesView.setLayoutManager(new LinearLayoutManager(mActivity));
+
+        tvTime.setText(String.format("Còn %s ngày",
+                TextUtils.isEmpty(mTimeRemain) ? "14" : DateUtils.getDateRemain(mTimeRemain)));
+
+        mAdapter = new MessageAdapter(mActivity, mMessages, mUserID, mAvatarPatient);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
+        mMessagesView.setLayoutManager(linearLayoutManager);
         mMessagesView.setAdapter(mAdapter);
         mMessagesView.addOnScrollListener(mOnScrollListener);
         mAdapter.setOnClickImageListener(this);
         mAdapter.setOnClickMtesListener(this);
+        lnCallVideo.setOnClickListener(view -> onCallVideo());
+
     }
 
-    private void setupGallery() {
-        GalleryUtil.initGallerySingle(new HandlerCallBackSimple() {
+    private void setNestedScrollView() {
+        nestedScrollView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
-            public void onSuccess(List<String> photoList) {
-                path = photoList.get(0);
-                uploadImage(path);
-            }
+            public void onGlobalLayout() {
+                final int scrollViewHeight = nestedScrollView.getHeight();
+                if (scrollViewHeight > 0) {
+                    nestedScrollView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
-            @Override
-            public void onError() {
-                DialogUtils.showDialogError(mActivity,
-                        getString(R.string.msg_alert_info));
+                    final View lastView = nestedScrollView.getChildAt(nestedScrollView.getChildCount() - 1);
+                    final int lastViewBottom = lastView.getBottom() + nestedScrollView.getPaddingBottom();
+                    final int deltaScrollY = lastViewBottom - scrollViewHeight - nestedScrollView.getScrollY();
+                    /* If you want to see the scroll animation, call this. */
+                    nestedScrollView.smoothScrollBy(0, deltaScrollY);
+                    /* If you don't want, call this. */
+                    nestedScrollView.scrollBy(0, deltaScrollY);
+                }
             }
-        }, path);
+        });
+    }
+
+    private void onCallVideo() {
+        Intent intent = new Intent(getMainActivity(), VideoCall2Activity.class);
+        intent.putExtra("PATIENT_ID", mPatientID);
+        intent.putExtra("DOCTOR_ID", mUserID);
+        startActivity(intent);
+//        getMainActivity().overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
     }
 
     private void setupMenuView(){
@@ -250,7 +307,11 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     @OnClick(R.id.send_button)
     public void onSend() {
-        sendText();
+        if (GeneralUtil.checkInternet(getActivity())){
+            sendText();
+        }else {
+            getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+        }
     }
 
     @OnClick(R.id.llMenu)
@@ -266,7 +327,115 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     @OnClick(R.id.imgAttachPhoto)
     public void onAttachPhoto(){
-        GalleryUtil.showGallery(mActivity);
+        showDialogMediaFile();
+//        GalleryUtil.showGallery(mActivity);
+//        DialogUtils.showDialogAttachFile(getActivity(), view -> takeNewPhoto(), view -> openGallery());
+    }
+
+    private void showDialogMediaFile() {
+        hideKeyboard();
+        ActionsDialog actionsDialog = new ActionsDialog();
+        List<String> list = Arrays.asList(getString(R.string.new_photo), getString(R.string.select_photo));
+        actionsDialog.getData(list);
+        actionsDialog.show(getFragmentManager());
+        actionsDialog.callback = index -> {
+            switch (index) {
+                case 0:
+                    takeNewPhoto();
+                    break;
+                case 1:
+                    openGallery();
+                    break;
+            }
+        };
+    }
+
+    private void takeNewPhoto() {
+        MediaHelper2.takeMedia(getActivity(), REQUEST_PHOTO_CAPTURED);
+        DialogUtils.hideAlert();
+    }
+
+    private void openGallery(){
+        isGallery = true;
+        MediaHelper2.openGallery(getActivity());
+        DialogUtils.hideAlert();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+            @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MediaHelper2.STORAGE_PERMISSION_ID:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    openGallery();
+                }
+                break;
+            case MediaHelper2.CAMERA_PERMISSION_ID:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    takeNewPhoto();
+                }
+                break;
+        }
+    }
+
+    @Override
+    public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        switch (requestCode) {
+            case REQUEST_MEDIA_LIBRARY:
+                if (data == null) {
+                    break;
+                }
+                showPreview(MediaHelper2.resultCapture(getActivity(), requestCode, resultCode, data));
+                break;
+            case REQUEST_PHOTO_CAPTURED:
+                String mPath = MediaHelper2.resultFilePathCaptured();
+                if (TextUtils.isEmpty(mPath)) {
+                    break;
+                }
+                showPreview(mPath);
+                break;
+        }
+    }
+
+    private void showPreview(String pathPhoto) {
+        DialogUtils.showDialogPreview(getActivity(), pathPhoto, view -> cancelUpload(), view -> upload(pathPhoto));
+    }
+
+    private void upload(String pathPhoto) {
+        DialogUtils.hideAlert();
+        if (!TextUtils.isEmpty(pathPhoto)) {
+            uploadImage(pathPhoto);
+        } else {
+            Toast.makeText(getActivity(), getString(R.string.file_not_found), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void cancelUpload(){
+        DialogUtils.hideAlert();
+//        if (isGallery) {
+//            openGallery();
+//        }
+    }
+
+    @OnClick(R.id.imgCall)
+    public void actionCall() {
+        if (!Toolbox.isEmpty(mPhone)) {
+            DialogUtils.showDialogTwoChoice(getActivity(), false, false, true, null,
+                    getString(R.string.ask_call), getString(R.string.cancel), getString(R.string.call), view -> {
+                        DialogUtils.hideAlert();
+                    }, view -> {
+                        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", mPhone, null));
+                        startActivity(intent);
+                    });
+        } else {
+            DialogUtils.showDialogOneChoice(getActivity(), true, false,
+                    getString(R.string.msg_no_phone, mPatientName),
+                    getString(R.string.close), view -> {
+                        DialogUtils.hideAlert();
+                    });
+        }
     }
 
     @OnClick(R.id.rlMauXN)
@@ -280,11 +449,11 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
                 lvDonThuoc.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-            @NonNull int[] grantResults) {
-        GalleryUtil.onRequestPermissionsResult(requestCode, permissions, grantResults, mActivity);
-    }
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+//            @NonNull int[] grantResults) {
+//        GalleryUtil.onRequestPermissionsResult(requestCode, permissions, grantResults, mActivity);
+//    }
 
     private void openMenu() {
         isOpen = true;
@@ -412,6 +581,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         if (bundle == null) return;
         mDsessionID = bundle.getString(Constant.TAG_DSSESION_ID);
         mPatientName = bundle.getString(Constant.TAG_PATIENT_NAME);
+        mPatientID = bundle.getString(Constant.TAG_PATIENT_ID);
+        mTimeRemain = bundle.getString(Constant.TAG_REMAIN);
         mUserID = GeneralUtil.fromJSon(UserInfoResponse.class, mPref.user().get()).getId();
     }
 
@@ -437,6 +608,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
                     mPhotoAdapter.notifyDataSetChanged();
                     mAdapter.notifyItemRangeInserted(0, list.size());
                     if (lastid == null) scrollToBottom();
+                    setNestedScrollView();
                 } else {
                     loading = true;
                 }
@@ -455,6 +627,33 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         });
     }
 
+    private void getInfoPatient(String patientID){
+        if (TextUtils.isEmpty(patientID)) return;
+        Call<PatientResponse> call = RequestHelper.getRequest(false, getActivity()).getPatientInfo(patientID);
+        call.enqueue(new Callback<PatientResponse>() {
+            @Override
+            public void onResponse(final Call<PatientResponse> call, final Response<PatientResponse> response) {
+                hideLoading();
+                if (response == null) return;
+                getMainActivity().checkCodeShowDialog(response.code());
+                if (response.body() == null) return;
+                mPhone = response.body().getPhone();
+                mAvatarPatient = response.body().getAvatar();
+            }
+
+            @Override
+            public void onFailure(final Call<PatientResponse> call, final Throwable t) {
+                hideLoading();
+                if (t instanceof NoConnectivityException) {
+                    // No internet connection
+                    getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+                } else {
+                    getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                }
+            }
+        });
+    }
+
     private void addData(String type, List<Message> list){
         for (int i = 0; i < mMessages.size(); i++) {
             if (TextUtils.isEmpty(mMessages.get(i).getObjUrl())) continue;
@@ -462,14 +661,6 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
             if (list.contains(mMessages.get(i))) continue;
             list.add(mMessages.get(i));
         }
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mSocket.disconnect();
-        mSocket.off(TAG_RECEIVE_MESSAGE, OnNewMessage);
-        mSocket.emit(TAG_LOGOUT_SOCKET);
     }
 
     @Override
@@ -507,5 +698,32 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     @Override
     public void OnClickPhoto(Message message) {
         showDetailImage(message);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(NetworkChanged event) {
+        showNetworkStateView();
+    }
+
+    private void showNetworkStateView() {
+//        Crouton.cancelAllCroutons();
+        boolean isConnected = GeneralUtil.checkInternet(VietSkinDoctorApplication.getInstance());
+        if (!isConnected) {
+            getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+        }
     }
 }

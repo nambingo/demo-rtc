@@ -6,6 +6,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT"
+        tools:ignore="ProtectedPermissions"/>
 
     <application
         android:name=".VietSkinDoctorApplication"
@@ -13,16 +19,34 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/Theme.AppCompat.Light.NoTitle">
+
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.giahan.app.vietskindoctor.fileprovider"
+            android:authorities="${applicationId}.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/filepaths" />
+                android:resource="@xml/filepaths"
+                tools:replace="android:resource" />
         </provider>
+        <provider
+            android:name=".utils.PhotoProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="com.giahan.app.vietskindoctor.fileprovider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/filepaths" />-->
+        <!--</provider>-->
 
         <activity
             android:name=".activity.SplashActivity"
@@ -63,9 +87,11 @@
 
         <activity
             android:name=".activity.MainActivity"
-            android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustResize"
+            />
+        <activity android:name=".activity.VideoCall2Activity"/>
 
         <activity
             android:name=".activity.LoginActivity"
@@ -89,10 +115,18 @@
             android:configChanges="density|fontScale|locale|orientation|layoutDirection|screenLayout|screenSize|uiMode"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Swipe.Back.NoActionBar2" />
+        <activity android:name=".activity.VideoCallActivity"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="fe8e0acb0413da105b1827f8128b9b1d31c4c348" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/logo_app" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/vietskin_color" />
     </application>
 
 </manifest>

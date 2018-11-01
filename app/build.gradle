@@ -21,14 +21,22 @@ buildscript {
 }
 
 android {
+    signingConfigs {
+        config_release {
+            keyAlias 'key0'
+            keyPassword 'Aa@123456'
+            storeFile file('/Users/phamducnam/Documents/Project/vsdoctor/keystoreVSD.jks')
+            storePassword 'Aa@123456'
+        }
+    }
     compileSdkVersion rootProject.ext.compileSdkVersion
     flavorDimensions "mode"
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId "${APP_ID}"
-        versionCode 1
-        versionName "1.0"
+        versionCode 11
+        versionName "1.1"
         multiDexEnabled true
         javaCompileOptions {
             annotationProcessorOptions {
@@ -38,8 +46,13 @@ android {
     }
     buildTypes {
         release {
+//            shrinkResources true
+//            minifyEnabled true
+//            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.config_release
         }
     }
     compileOptions {
@@ -50,25 +63,26 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+
     //annotation
     implementation "org.androidannotations:androidannotations-api:$rootProject.ext.annotationApiVersion"
     annotationProcessor "org.androidannotations:androidannotations:$rootProject.ext.annotationApiVersion"
+
     //Fabric
     implementation("com.crashlytics.sdk.android:crashlytics:$rootProject.ext.fabricVersion") {
         transitive = true;
     }
-    implementation project(':gallerypick')
-//    implementation files('libs/unity-classes.jar')
-
+//    implementation project(':gallerypick')
+//    implementation project(':library')
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:design:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:support-compat:$rootProject.ext.supportLibraryVersion"
-
     implementation "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
     implementation "com.facebook.android:facebook-android-sdk:$rootProject.ext.facebookVersion"
+
     //noinspection GradleCompatible
     implementation "com.google.android.gms:play-services-auth:$rootProject.ext.playAuthVersion"
     implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
@@ -89,7 +103,11 @@ dependencies {
     implementation "com.rengwuxian.materialedittext:library:$rootProject.ext.materialedittextVersion"
     implementation "com.github.everhad:AndroidRatingStar:$rootProject.ext.androidRatingStarVersion"
     implementation "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
-    implementation "com.github.nkzawa:socket.io-client:$rootProject.ext.socketioVersion"
+
+    //    implementation "com.github.nkzawa:socket.io-client:$rootProject.ext.socketioVersion"
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
     implementation 'com.mikepenz:iconics-core:2.8.2@aar'
     implementation 'com.mikepenz:google-material-typeface:3.0.1.0.original@aar'
     implementation 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.9'
@@ -97,6 +115,15 @@ dependencies {
     implementation 'com.github.hrskrs:InstaDotView:1.1'
     implementation 'com.github.drawers:SpinnerDatePicker:1.0.6'
     implementation 'com.ncapdevi:frag-nav:2.4.0'
+    implementation 'org.webrtc:google-webrtc:1.0.22672'
+
+    //    //Glide
+
+    //    implementation 'com.github.bumptech.glide:glide:4.4.0'
+
+    //    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+
+    //    implementation 'com.github.bumptech.glide:okhttp3-integration:4.4.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

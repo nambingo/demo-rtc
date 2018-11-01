@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.adapter.GuideAdapter;
+import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
 import com.gw.swipeback.SwipeBackLayout;
@@ -22,7 +23,7 @@ import butterknife.OnClick;
  * Created by NamVT on 6/2/2018.
  */
 
-public class GuideActivity extends AppCompatActivity {
+public class GuideActivity extends BaseActivity {
 
     @BindView(R.id.swipeBackLayout)
     SwipeBackLayout mSwipeBackLayout;
@@ -38,9 +39,12 @@ public class GuideActivity extends AppCompatActivity {
     public PrefHelper_ pref;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swipe_guider);
+    protected int getLayoutId() {
+        return R.layout.activity_swipe_guider;
+    }
+
+    @Override
+    protected void createView() {
         ButterKnife.bind(this);
         pref = new PrefHelper_(VietSkinDoctorApplication.getInstance());
 

@@ -70,7 +70,6 @@ public class IntroImageActivity extends BaseActivity {
         String data = getIntent().getStringExtra("data");
         if (!Toolbox.isEmpty(data)) {
             photos = Arrays.asList(Toolbox.gson().fromJson(data, Photo[].class));
-            ;
         }
         indexPos = getIntent().getIntExtra("index", 0);
         initControl();

@@ -3,29 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingTop="@dimen/dp_8"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_10"
         android:orientation="vertical"
         >
         <LinearLayout
             android:id="@+id/chat_text_other"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="bottom|start"
+            android:gravity="center_vertical|start"
             android:layout_marginRight="@dimen/dp_16"
             android:orientation="horizontal"
             >
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imgAvatar"
-                android:layout_width="@dimen/dp_40"
-                android:layout_height="@dimen/dp_40"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
                 android:layout_marginEnd="@dimen/dp_7"
                 android:layout_marginRight="@dimen/dp_7"
+                android:visibility="invisible"
                 />
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -62,8 +60,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_16"
             android:layout_marginRight="@dimen/dp_16"
-            android:gravity="bottom|right"
+            android:gravity="center_vertical|right"
             android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_2"
             >
             <LinearLayout
                 android:layout_width="wrap_content"

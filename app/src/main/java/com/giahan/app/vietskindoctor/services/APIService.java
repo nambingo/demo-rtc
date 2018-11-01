@@ -11,6 +11,7 @@ import com.giahan.app.vietskindoctor.domains.ListFilterResult;
 import com.giahan.app.vietskindoctor.domains.ListRequestResult;
 import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.MessageBody;
+import com.giahan.app.vietskindoctor.domains.PatientResponse;
 import com.giahan.app.vietskindoctor.domains.ReadMessageBody;
 import com.giahan.app.vietskindoctor.domains.ReadMessageResult;
 import com.giahan.app.vietskindoctor.domains.SendMessageResult;
@@ -32,6 +33,7 @@ import com.giahan.app.vietskindoctor.model.PayUrlResponse;
 import com.giahan.app.vietskindoctor.model.UpdateInfoResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable.Param;
 import java.util.List;
 
 import okhttp3.RequestBody;
@@ -88,6 +90,9 @@ public interface APIService {
     @GET("doctor/dsessions")
     Call<ListSessionResult> getListSession();
 
+    @GET("doctor/dsessions")
+    Call<ListSessionResult> getListSessionWait(@Query("filter") String filter);
+
     @POST("patient/dsession/request-doctor")
     Call<RequestDoctorResult> requestDoctor(@Body RequestDoctorBody requestDoctorBody);
 
@@ -116,4 +121,7 @@ public interface APIService {
 
     @POST("doctor/dsession/accept-request")
     Call<AcceptRequest> acceptRequest(@Body AcceptRequestBody acceptRequestBody);
+
+    @GET("doctor/fetch-patient-info/{PATIENT_ID}")
+    Call<PatientResponse> getPatientInfo(@Path("PATIENT_ID") String patientID);
 }

@@ -1,6 +1,7 @@
 package com.giahan.app.vietskindoctor.screens.setting;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
@@ -11,8 +12,10 @@ import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 import com.giahan.app.vietskindoctor.model.event.ChangeEvent;
+import com.giahan.app.vietskindoctor.services.NetworkChanged;
 import com.giahan.app.vietskindoctor.utils.Constant;
 
+import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -79,10 +82,10 @@ public class CaiDatFragment extends BaseFragment {
 
     @OnClick(R.id.ll_quide)
     void guide() {
-        Intent intent = new Intent(getApplicationContext(), GuideActivity.class);
-        intent.putExtra(Constant.OPEN_GUIDER, true);
-        startActivity(intent);
-        getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
+//        Intent intent = new Intent(getApplicationContext(), GuideActivity.class);
+//        intent.putExtra(Constant.OPEN_GUIDER, true);
+//        startActivity(intent);
+//        getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
     }
 
     @OnClick(R.id.ll_table_fee)
@@ -142,5 +145,18 @@ public class CaiDatFragment extends BaseFragment {
         }
     }
 
-    ;
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(NetworkChanged event) {
+        showNetworkStateView();
+    }
+
+    private void showNetworkStateView() {
+//        Crouton.cancelAllCroutons();
+        boolean isConnected = GeneralUtil.checkInternet(getActivity());
+        if (!isConnected) {
+            Log.e("CD", "showNetworkStateView:  -----> OFF");
+        }else {
+            Log.e("CD", "showNetworkStateView:  -----> ON");
+        }
+    }
 }

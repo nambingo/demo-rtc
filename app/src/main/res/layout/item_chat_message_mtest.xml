@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dp_2"
+    android:layout_marginTop="@dimen/dp_2"
     >
     <TextView
         android:id="@+id/tvMtest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:textSize="@dimen/sp_14"
         android:textStyle="bold"
-        android:textColor="@color/login_text"
+        android:textColor="@color/colorAccent"
         android:background="@drawable/bg_mtest"
         android:padding="@dimen/dp_5"
+        android:layout_marginRight="@dimen/sp_16"
         />
     <TextView
         android:id="@+id/tvDate"
@@ -20,6 +23,7 @@
         android:layout_height="wrap_content"
         android:textStyle="italic"
         android:textSize="@dimen/sp_10"
+        android:layout_below="@id/tvMtest"
         android:visibility="gone"
         />
-</LinearLayout>
+</RelativeLayout>

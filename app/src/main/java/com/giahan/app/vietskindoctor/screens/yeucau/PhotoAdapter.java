@@ -41,6 +41,12 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+//        RequestOptions options = new RequestOptions()
+//                .centerCrop()
+//                .priority(Priority.HIGH);
+//
+//        new GlideImageLoader(holder.ivPhoto, ).load(result.get(position),options);
+
         Glide.with(context).load(result.get(position)).centerCrop().into(holder.ivPhoto);
         holder.rlPhoto.setOnClickListener(v -> {
             if (mOnClickViewListener == null) return;

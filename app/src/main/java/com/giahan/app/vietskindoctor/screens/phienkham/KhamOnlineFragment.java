@@ -14,22 +14,26 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.BindView;
 import com.giahan.app.vietskindoctor.R;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
-import com.giahan.app.vietskindoctor.domains.ListRequestResult;
 import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.ReadMessageBody;
 import com.giahan.app.vietskindoctor.domains.ReadMessageResult;
-import com.giahan.app.vietskindoctor.domains.SendMessageResult;
 import com.giahan.app.vietskindoctor.domains.Session;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.screens.chat.ChatFragment;
 import com.giahan.app.vietskindoctor.screens.phienkham.ListSessionAdapter.OnClickOpenSessionListener;
+import com.giahan.app.vietskindoctor.services.NetworkChanged;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import java.util.ArrayList;
 import java.util.List;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -85,6 +89,7 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
 
     @Override
     protected void createView(View view) {
+        Log.e("KhamOnlineFragment", "createView:  -----> "+getMainActivity().isGoToChatScreen());
     }
 
     private void setupView() {
@@ -102,14 +107,7 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
     @Override
     public void onResume() {
         super.onResume();
-        showLoading();
-        mListOnline.clear();
-        mListComplete.clear();
-        cardViewOnline.setVisibility(View.GONE);
-        cardViewComplete.setVisibility(View.GONE);
-        tvEmpty.setVisibility(View.GONE);
-        setupView();
-        nsv.scrollTo(0, 0);
+        clearData(true);
     }
 
     private void setupList() {
@@ -152,14 +150,19 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
                         case TAG_COMPLETE:
                             mListComplete.add(session);
                             break;
+                        case TAG_WAIT:
+
                     }
                 }
                 GeneralUtil.sortSession(mListOnline);
                 GeneralUtil.sortSession(mListComplete);
+                if (mListOnline.size() == 0 && mListComplete.size() ==0){
+                    tvEmpty.setVisibility(View.VISIBLE);
+                }else {
+                    tvEmpty.setVisibility(View.GONE);
+                }
                 cardViewOnline.setVisibility(mListOnline.size() == 0 ? View.GONE : View.VISIBLE);
                 cardViewComplete.setVisibility(mListComplete.size() == 0 ? View.GONE : View.VISIBLE);
-                tvEmpty.setVisibility(mListOnline.size() == 0 &&
-                        mListComplete.size() == 0 ? View.VISIBLE : View.GONE);
                 mAdapterOnline.notifyDataSetChanged();
                 mAdapterComplete.notifyDataSetChanged();
             }
@@ -184,7 +187,7 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
             resetData();
             swipeContainer.setRefreshing(false);
         });
-        swipeContainer.setColorSchemeColors(getResources().getColor(R.color.color_background));
+        swipeContainer.setColorSchemeColors(getResources().getColor(R.color.color_default));
     }
 
     private void resetData() {
@@ -193,9 +196,21 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
         getData();
     }
 
+    void clearData(boolean isShow) {
+        if (isShow) {
+            showLoading();
+            mListOnline.clear();
+            mListComplete.clear();
+            cardViewOnline.setVisibility(View.GONE);
+            cardViewComplete.setVisibility(View.GONE);
+            tvEmpty.setVisibility(View.GONE);
+        }
+        setupView();
+        nsv.scrollTo(0, 0);
+    }
+
     @Override
     public void onClickSession(Session session) {
-        Log.e("KhamOnlineFragment", "onClickSession:  -----> "+session.getLastMessage());
         sendReadMessage(session);
     }
 
@@ -231,9 +246,47 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
     private void openSession(Session session) {
         Bundle bundle = new Bundle();
         bundle.putString(Constant.TAG_DSSESION_ID, session.getId());
-        bundle.putString(Constant.TAG_PATIENT_NAME, session.getPatientName());
+        bundle.putString(Constant.TAG_PATIENT_ID, session.getPatientID());
+        bundle.putString(Constant.TAG_REMAIN, session.getCreateAt());
+        bundle.putString(Constant.TAG_PATIENT_NAME,
+                TextUtils.isEmpty(session.getName()) ? session.getPatientName() : session.getName());
         ChatFragment chatFragment = new ChatFragment();
         chatFragment.setArguments(bundle);
         getMainActivity().pushFragment(chatFragment);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+        /* Do something */
+        if (event != null) {
+            clearData(false);
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(NetworkChanged event) {
+        showNetworkStateView();
+    }
+
+    private void showNetworkStateView() {
+//        Crouton.cancelAllCroutons();
+        boolean isConnected = GeneralUtil.checkInternet(VietSkinDoctorApplication.getInstance());
+        if (isConnected) {
+            resetData();
+        }
     }
 }

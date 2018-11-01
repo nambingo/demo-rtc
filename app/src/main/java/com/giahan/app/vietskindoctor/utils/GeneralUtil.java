@@ -1,22 +1,16 @@
 package com.giahan.app.vietskindoctor.utils;
 
-import android.app.ActivityManager;
 import android.content.Context;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.GridView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.domains.Session;
 import com.google.gson.Gson;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by pham.duc.nam on 23/05/2018.
@@ -62,5 +56,16 @@ public class GeneralUtil {
         Collections.sort(list, (o1, o2) -> Objects.requireNonNull(DateUtils.getDate(o2.getLastMessageAt()))
                 .compareTo(DateUtils.getDate(o1.getLastMessageAt())));
         return list;
+    }
+
+    public static boolean checkInternet(Context context) {
+        ConnectionDetector cd = new ConnectionDetector(context);
+        return cd.isConnectingToInternet();
+    }
+
+    public static void registerEventBus(Object obj) {
+        if (!EventBus.getDefault().isRegistered(obj)) {
+            EventBus.getDefault().register(obj);
+        }
     }
 }

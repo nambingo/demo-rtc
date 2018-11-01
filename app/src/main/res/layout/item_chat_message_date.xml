@@ -24,7 +24,7 @@
             android:id="@+id/tvDate"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_25"
-            android:background="@color/color_background"
+            android:background="@color/color_default"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_10"

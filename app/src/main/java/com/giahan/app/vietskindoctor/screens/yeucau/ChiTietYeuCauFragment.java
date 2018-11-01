@@ -1,11 +1,17 @@
 package com.giahan.app.vietskindoctor.screens.yeucau;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.Scroller;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -18,6 +24,7 @@ import com.giahan.app.vietskindoctor.domains.AcceptRequest;
 import com.giahan.app.vietskindoctor.domains.AcceptRequestBody;
 import com.giahan.app.vietskindoctor.domains.Photo;
 import com.giahan.app.vietskindoctor.domains.Session;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.screens.chat.ChatFragment;
 import com.giahan.app.vietskindoctor.screens.yeucau.PhotoAdapter.OnClickViewListener;
@@ -29,6 +36,7 @@ import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import java.util.ArrayList;
 import java.util.List;
+import org.greenrobot.eventbus.EventBus;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -62,9 +70,14 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
     @BindView(R.id.tvChapNhan)
     TextView tvChapNhan;
 
+    @BindView(R.id.scrollView)
+    NestedScrollView scrollView;
+
     private Session mSession;
 
     private PhotoAdapter mAdapter;
+
+    private List<String> mListPath = new ArrayList<>();
 
     @Override
     public void onClickView(final String url) {
@@ -86,30 +99,42 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
     private void setupView() {
         switch (mSession.getRelationship()) {
             case "1":
-                tvDoiTuong.setText("Tôi");
+                tvDoiTuong.setText(getString(R.string.me));
                 break;
             case "2":
-                tvDoiTuong.setText("Vợ/Chồng");
+                tvDoiTuong.setText(getString(R.string.wife_husd));
                 break;
             case "3":
-                tvDoiTuong.setText("Con");
+                tvDoiTuong.setText(getString(R.string.parent));
                 break;
             case "4":
-                tvDoiTuong.setText("Cháu");
+                tvDoiTuong.setText(getString(R.string.child));
                 break;
-            case "5":
-                tvDoiTuong.setText("Bố/Mẹ");
+            default:
+                tvDoiTuong.setText(getString(R.string.me));
                 break;
-
         }
         tvName.setText(mSession.getPatientName());
         tvWeight.setText(mSession.getWeight());
         if (!TextUtils.isEmpty(mSession.getBirthdate())) {
-            tvNgaySinh.setText(DateUtils.convertDayRequest(mSession.getBirthdate()));
+            tvNgaySinh.setText(mSession.getBirthdate());
         }
         tvSex.setText(TextUtils.isEmpty(mSession.getSex()) ? "N/A" : mSession.getSex().equals("0") ? "Nữ" : "Nam");
         tvDescription.setText(mSession.getDescription());
+        setupDescription();
+    }
 
+    @SuppressLint("ClickableViewAccessibility")
+    private void setupDescription() {
+        tvDescription.setMovementMethod(new ScrollingMovementMethod());
+        scrollView.setOnTouchListener((v, event) -> {
+            tvDescription.getParent().requestDisallowInterceptTouchEvent(false);
+            return false;
+        });
+        tvDescription.setOnTouchListener((v, event) -> {
+            tvDescription.getParent().requestDisallowInterceptTouchEvent(true);
+            return false;
+        });
     }
 
     private void initData() {
@@ -120,7 +145,7 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         rvResultPhoto.setLayoutManager(linearLayoutManager);
-        List<String> mListPath = new ArrayList<>();
+        mListPath.clear();
         for (int i = 0; i < mSession.getPhotos().size(); i++) {
             mListPath.add(mSession.getPhotos().get(i).getUrl());
         }
@@ -165,6 +190,7 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
                     return;
                 }
                 hideLoading();
+                EventBus.getDefault().post(new MessageEvent());
                 if (isAccept) {
                     DialogUtils.showDialogOneChoice(getActivity(), false, true, getString(R.string.da_ket_noi_phien),
                             getString(R.string.ok), view -> {
@@ -201,6 +227,7 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
         Bundle bundle = new Bundle();
         bundle.putString(Constant.TAG_DSSESION_ID, session.getId());
         bundle.putString(Constant.TAG_PATIENT_NAME, session.getPatientName());
+        bundle.putString(Constant.TAG_PATIENT_ID, session.getPatientID());
         ChatFragment chatFragment = new ChatFragment();
         chatFragment.setArguments(bundle);
         getMainActivity().pushFragment(chatFragment);
@@ -209,12 +236,11 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
     private void showDetailImage(String url) {
         if (!VietSkinDoctorApplication.isIsOpenDetailScreen()) {
             VietSkinDoctorApplication.setIsOpenDetailScreen(true);
-            ArrayList<Photo> photos = new ArrayList<>();
-            photos.add(new Photo(0, url));
+            if (mListPath.size() == 0) return;
             Intent intent = new Intent(getMainActivity(), IntroImageActivity.class);
-            intent.putExtra("data", Toolbox.gson().toJson(photos));
+            intent.putExtra("data", Toolbox.gson().toJson(mSession.getPhotos()));
+            intent.putExtra("index", mListPath.indexOf(url));
             startActivity(intent);
-            getMainActivity().overridePendingTransition(R.anim.enter_from_left, R.anim.exit_to_right);
         }
     }
 }

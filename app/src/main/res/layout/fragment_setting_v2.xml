@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_setting"
             android:layout_centerInParent="true"
-            android:textSize="@dimen/sp_16"
+            android:textSize="@dimen/sp_14"
             android:textStyle="bold"
             android:textColor="@color/white"/>
     </RelativeLayout>
@@ -47,7 +47,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/title_info_account"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#000000" />
 
@@ -87,7 +87,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/title_recharge_money"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#000000" />
 
@@ -126,7 +126,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/title_guide"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#000000" />
 
@@ -167,7 +167,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/title_table_fee"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#000000" />
 
@@ -206,7 +206,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/title_login"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#000000" />
 
@@ -245,7 +245,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/title_logout"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#000000" />
 

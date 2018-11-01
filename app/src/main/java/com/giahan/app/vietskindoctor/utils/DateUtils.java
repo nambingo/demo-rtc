@@ -1,5 +1,6 @@
 package com.giahan.app.vietskindoctor.utils;
 
+import android.text.TextUtils;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -106,6 +107,7 @@ public class DateUtils {
     }
 
     public static String getDateRemain(String date){
+        if (TextUtils.isEmpty(date)) return null;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formatDate, Locale.US);
         try {
             Date mDate = simpleDateFormat.parse(date);

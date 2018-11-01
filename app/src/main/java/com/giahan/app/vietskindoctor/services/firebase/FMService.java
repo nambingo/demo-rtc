@@ -10,12 +10,18 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
+import android.util.Log;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
+import com.giahan.app.vietskindoctor.activity.MainActivity;
+import com.giahan.app.vietskindoctor.activity.SplashActivity;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import org.greenrobot.eventbus.EventBus;
 
 @SuppressLint("Registered")
 public class FMService extends FirebaseMessagingService {
@@ -26,7 +32,6 @@ public class FMService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-
         if (remoteMessage.getData() == null) return;
         if (remoteMessage.getNotification() == null) return;
         if (icon == null || icon.isRecycled()) {
@@ -34,10 +39,10 @@ public class FMService extends FirebaseMessagingService {
                     R.mipmap.ic_launcher);
         }
         if (TextUtils.isEmpty(remoteMessage.getNotification().getBody())) return;
-//        buildNotification(new Intent(this, ControlActivity.class), remoteMessage
-//                        .getNotification()
-//                .getBody(),
-//                NOTIFY_SHOW_NOTIFICATION);
+        buildNotification(MainActivity.getIntent(this, "123"), remoteMessage
+                        .getNotification()
+                .getBody(),
+                NOTIFY_SHOW_NOTIFICATION);
     }
 
     private void buildNotification(Intent intent, String message, int notifyID) {
@@ -59,17 +64,32 @@ public class FMService extends FirebaseMessagingService {
                     notificationChannel = new NotificationChannel("ID", "Name", importance);
             notificationManager.createNotificationChannel(notificationChannel);
         }
+        EventBus.getDefault().post(new MessageEvent());
         builder = new NotificationCompat.Builder(getApplicationContext());
-        builder = builder
-                .setSmallIcon(R.mipmap
-                        .ic_launcher)
-                .setLargeIcon(icon)
-                .setContentTitle(this.getString(R.string.app_name))
-                .setContentText(message)
-                .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
-                .setAutoCancel(true)
-                .setSound(defaultSoundUri)
-                .setContentIntent(pendingIntent);
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Log.e("FMService", "setupNotification: 1 -----> ");
+            builder = builder
+                    .setSmallIcon(R.mipmap.logo_app)
+                    .setColor(getResources().getColor(R.color.vietskin_color))
+                    .setLargeIcon(icon)
+                    .setContentTitle(this.getString(R.string.app_name))
+                    .setContentText(message)
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
+                    .setAutoCancel(true)
+                    .setSound(defaultSoundUri)
+                    .setContentIntent(pendingIntent);
+        } else {
+            Log.e("FMService", "setupNotification: 2 -----> ");
+            builder = builder
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setLargeIcon(icon)
+                    .setContentTitle(this.getString(R.string.app_name))
+                    .setContentText(message)
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
+                    .setAutoCancel(true)
+                    .setSound(defaultSoundUri)
+                    .setContentIntent(pendingIntent);
+        }
         notificationManager.notify(notifyID, builder.build());
     }
 }

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import android.support.multidex.MultiDexApplication;
 import com.crashlytics.android.Crashlytics;
 import com.facebook.FacebookSdk;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -18,7 +19,7 @@ import io.fabric.sdk.android.Fabric;
  * Created by pham.duc.nam
  */
 
-public class VietSkinDoctorApplication extends Application {
+public class VietSkinDoctorApplication extends MultiDexApplication {
     private static VietSkinDoctorApplication INSTANCE;
     private static boolean isShowDialogUpdate;
     private static boolean isOpenDetailScreen;

@@ -16,13 +16,18 @@ import butterknife.BindView;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.domains.ListRequestResult;
+import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.Session;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.screens.yeucau.YeuCauAdapter.OnClickOpenSessionListener;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import java.util.ArrayList;
 import java.util.List;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -65,11 +70,7 @@ public class YeuCauFragment extends BaseFragment implements OnClickOpenSessionLi
     @Override
     public void onResume() {
         super.onResume();
-        mListWait.clear();
-        cardViewWait.setVisibility(View.GONE);
-        tvEmpty.setVisibility(View.GONE);
-        setupView();
-        nsv.scrollTo(0, 0);
+        clearData(true);
     }
 
     private void setupView() {
@@ -100,31 +101,31 @@ public class YeuCauFragment extends BaseFragment implements OnClickOpenSessionLi
     }
 
     private void getData(){
-        Call<ListRequestResult> call = RequestHelper.getRequest(false, getActivity()).getListSessionRequest();
-        call.enqueue(new Callback<ListRequestResult>() {
+        Call<ListSessionResult> call = RequestHelper.getRequest(false, getActivity()).getListSessionWait(TAG_WAIT);
+        call.enqueue(new Callback<ListSessionResult>() {
             @Override
-            public void onResponse(Call<ListRequestResult> call,
-                    Response<ListRequestResult> response) {
+            public void onResponse(Call<ListSessionResult> call,
+                    Response<ListSessionResult> response) {
+                hideLoading();
                 if (response == null) return;
                 getMainActivity().checkCodeShowDialog(response.code());
                 if (response.body() == null) return;
-                hideLoading();
                 mListWait.clear();
-                for (int i = 0; i < response.body().getRequests().size(); i++) {
-                    Session session = response.body().getRequests().get(i);
-                    switch (response.body().getRequests().get(i).getStatus()){
+                for (int i = 0; i < response.body().getDsessions().size(); i++) {
+                    Session session = response.body().getDsessions().get(i);
+                    switch (response.body().getDsessions().get(i).getStatus()){
                         case TAG_WAIT:
                             mListWait.add(session);
                             break;
                     }
                 }
-                cardViewWait.setVisibility(mListWait.size() == 0 ? View.GONE : View.VISIBLE);
                 tvEmpty.setVisibility(mListWait.size() == 0 ? View.VISIBLE : View.GONE);
+                cardViewWait.setVisibility(mListWait.size() == 0 ? View.GONE : View.VISIBLE);
                 mAdapter.notifyDataSetChanged();
             }
 
             @Override
-            public void onFailure(Call<ListRequestResult> call, Throwable t) {
+            public void onFailure(Call<ListSessionResult> call, Throwable t) {
                 hideLoading();
                 if (t instanceof NoConnectivityException) {
                     // No internet connection
@@ -141,11 +142,45 @@ public class YeuCauFragment extends BaseFragment implements OnClickOpenSessionLi
             resetData();
             swipeContainer.setRefreshing(false);
         });
-        swipeContainer.setColorSchemeColors(getResources().getColor(R.color.color_background));
+        swipeContainer.setColorSchemeColors(getResources().getColor(R.color.color_default));
     }
 
     private void resetData(){
         mListWait.clear();
         getData();
+    }
+
+    void clearData(boolean isShow) {
+        if (isShow) {
+            showLoading();
+            mListWait.clear();
+            cardViewWait.setVisibility(View.GONE);
+            tvEmpty.setVisibility(View.GONE);
+        }
+        setupView();
+        nsv.scrollTo(0, 0);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+        /* Do something */
+        if (event != null) {
+            clearData(false);
+            getMainActivity().addBadge(mListWait.size());
+        }
     }
 }

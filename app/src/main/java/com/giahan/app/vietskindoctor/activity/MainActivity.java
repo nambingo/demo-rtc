@@ -1,15 +1,41 @@
 package com.giahan.app.vietskindoctor.activity;
 
+import static com.giahan.app.vietskindoctor.screens.phienkham.KhamOnlineFragment.TAG_WAIT;
+import static com.giahan.app.vietskindoctor.utils.Constant.TAG_LOGIN_SOCKET;
+import static com.giahan.app.vietskindoctor.utils.Constant.TAG_LOGOUT_SOCKET;
+import static com.giahan.app.vietskindoctor.utils.Constant.TAG_RECEIVE_MESSAGE;
+
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 import com.giahan.app.vietskindoctor.R;
+import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
+import com.giahan.app.vietskindoctor.domains.ListRequestResult;
+import com.giahan.app.vietskindoctor.domains.ListSessionResult;
+import com.giahan.app.vietskindoctor.domains.Session;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.screens.phienkham.KhamOnlineFragment;
 import com.giahan.app.vietskindoctor.screens.setting.CaiDatFragment;
 import com.giahan.app.vietskindoctor.screens.yeucau.YeuCauFragment;
+import com.giahan.app.vietskindoctor.services.NetworkChanged;
+import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.utils.Constant;
+import com.giahan.app.vietskindoctor.utils.DialogUtils;
+import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.ncapdevi.fragnav.FragNavController;
 import com.ncapdevi.fragnav.FragNavController.RootFragmentListener;
@@ -17,6 +43,19 @@ import com.ncapdevi.fragnav.FragNavController.TransactionListener;
 import com.ncapdevi.fragnav.tabhistory.FragNavTabHistoryController;
 
 import butterknife.BindView;
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONException;
+import org.json.JSONObject;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends BaseActivity
         implements RootFragmentListener, TransactionListener {
@@ -31,8 +70,28 @@ public class MainActivity extends BaseActivity
     @BindView(R.id.bottom_navigation)
     BottomNavigationView mBottomView;
 
+    private TextView tvNumber;
+
+    public boolean isGoToChatScreen = false;
+
+    public boolean isGoToChatScreen() {
+        return isGoToChatScreen;
+    }
+
+    public void setGoToChatScreen(final boolean goToChatScreen) {
+        isGoToChatScreen = goToChatScreen;
+    }
+
     //fragment manager
     private FragNavController mFragNavController;
+
+    public static final String EXT_MAIN_ID = "extra_main_id";
+
+    public static Intent getIntent(Context context, String sessionID) {
+        Intent i = new Intent(context, MainActivity.class);
+        i.putExtra(EXT_MAIN_ID, sessionID);
+        return i;
+    }
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -49,6 +108,7 @@ public class MainActivity extends BaseActivity
                                     mBottomView.setSelectedItemId(R.id.itemPhienTuVan);
                                 })
                         .build();
+        setupBadge();
         mBottomView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.itemPhienTuVan:
@@ -64,7 +124,10 @@ public class MainActivity extends BaseActivity
             return true;
         });
         Toolbox.setStatusBarColor(this, getResources(), R.color.color_header_bar);
+        getCountRequest();
     }
+
+
 
     public void onSettingClick() {
         mFragNavController.switchTab(INDEX_CAI_DAT);
@@ -78,7 +141,8 @@ public class MainActivity extends BaseActivity
         mFragNavController.switchTab(INDEX_PHIEN);
     }
 
-    public void selectPhien(){
+    public void selectPhien() {
+        mFragNavController.switchTab(INDEX_PHIEN);
         mBottomView.setSelectedItemId(R.id.itemPhienTuVan);
     }
 
@@ -89,6 +153,66 @@ public class MainActivity extends BaseActivity
 
     @Override
     protected void createView() {
+    }
+
+    private void setupBadge() {
+        BottomNavigationMenuView bottomNavigationMenuView =
+                (BottomNavigationMenuView) mBottomView.getChildAt(0);
+        View v = bottomNavigationMenuView.getChildAt(1);
+        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+
+        View badge = LayoutInflater.from(this)
+                .inflate(R.layout.notification_badge, bottomNavigationMenuView, false);
+        tvNumber = badge.findViewById(R.id.tvNumber);
+
+        itemView.addView(badge);
+        if (GeneralUtil.checkInternet(VietSkinDoctorApplication.getInstance())) {
+            tvNumber.setVisibility(View.VISIBLE);
+        } else {
+            tvNumber.setVisibility(View.GONE);
+        }
+    }
+
+    private void getCountRequest() {
+
+        Call<ListSessionResult> call = RequestHelper.getRequest(false, this).getListSessionWait(TAG_WAIT);
+        call.enqueue(new Callback<ListSessionResult>() {
+            @Override
+            public void onResponse(final Call<ListSessionResult> call, final Response<ListSessionResult> response) {
+                if (response == null) {
+                    return;
+                }
+                checkCodeShowDialog(response.code());
+                if (response.body() == null) {
+                    return;
+                }
+                hideLoading();
+                List<Session> mListWait = new ArrayList<>();
+                for (int i = 0; i < response.body().getDsessions().size(); i++) {
+                    Session session = response.body().getDsessions().get(i);
+                    switch (response.body().getDsessions().get(i).getStatus()) {
+                        case TAG_WAIT:
+                            mListWait.add(session);
+                            break;
+                    }
+                }
+                addBadge(mListWait.size());
+            }
+
+            @Override
+            public void onFailure(final Call<ListSessionResult> call, final Throwable t) {
+
+            }
+        });
+    }
+
+    public void addBadge(final int size) {
+        if (!GeneralUtil.checkInternet(VietSkinDoctorApplication.getInstance())) {
+            tvNumber.setVisibility(View.GONE);
+        } else {
+            tvNumber.setVisibility(size != 0 ? View.VISIBLE : View.GONE);
+            tvNumber.setText(String.valueOf(size));
+        }
     }
 
     @Override
@@ -107,7 +231,9 @@ public class MainActivity extends BaseActivity
     @Override
     public void onBackPressed() {
         if (!mFragNavController.popFragment()) {
-            super.onBackPressed();
+            DialogUtils.showDialogTwoChoice(this, false, false, true, getString(R.string.ask_exit), "",
+                    getString(R.string.cancel), getString(R.string.ok), view -> DialogUtils.hideAlert(),
+                    view -> super.onBackPressed());
         }
     }
 
@@ -138,18 +264,23 @@ public class MainActivity extends BaseActivity
     }
 
     @Override
-    protected void onDestroy() {
-//        EventBus.getDefault().unregister(this);
+    protected void onPause() {
+        super.onPause();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Override
+    public void onDestroy() {
         super.onDestroy();
-//        mUnityPlayer.quit();
+        EventBus.getDefault().unregister(this);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-//        if (!EventBus.getDefault().isRegistered(MainActivity.this)) {
-//            EventBus.getDefault().register(MainActivity.this);
-//        }
+        if (!EventBus.getDefault().isRegistered(MainActivity.this)) {
+            EventBus.getDefault().register(MainActivity.this);
+        }
     }
 
     @Override
@@ -172,5 +303,50 @@ public class MainActivity extends BaseActivity
         }
     }
 
-    ;
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+        /* Do something */
+        if (event != null) {
+            getCountRequest();
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(NetworkChanged event) {
+        showNetworkStateView();
+    }
+
+    private void showNetworkStateView() {
+//        Crouton.cancelAllCroutons();
+        boolean isConnected = GeneralUtil.checkInternet(VietSkinDoctorApplication.getInstance());
+        if (!isConnected) {
+            tvNumber.setVisibility(View.GONE);
+        } else {
+            getCountRequest();
+            tvNumber.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        final List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        if (fragments != null) {
+            for (Fragment fragment : fragments) {
+                fragment.onRequestPermissionsResult(requestCode, permissions, grantResults);
+            }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        final List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        if (fragments != null) {
+            for (Fragment fragment : fragments) {
+                fragment.onActivityResult(requestCode, resultCode, data);
+            }
+        }
+
+    }
 }

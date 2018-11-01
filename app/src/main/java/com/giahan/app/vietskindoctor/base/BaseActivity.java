@@ -1,8 +1,12 @@
 package com.giahan.app.vietskindoctor.base;
 
+import static com.giahan.app.vietskindoctor.utils.Constant.TAG_LOGIN_SOCKET;
+import static com.giahan.app.vietskindoctor.utils.Constant.TAG_LOGOUT_SOCKET;
+
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +15,8 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,22 +25,30 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import butterknife.ButterKnife;
 import com.facebook.login.LoginManager;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.LoginActivity;
+import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.model.event.TimeOutEvent;
+import com.giahan.app.vietskindoctor.services.NetworkChanged;
+import com.giahan.app.vietskindoctor.services.NetworkListenerReceiver;
 import com.giahan.app.vietskindoctor.utils.Constant;
+import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
 import com.giahan.app.vietskindoctor.utils.ProgressDialogUtil;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import java.net.URISyntaxException;
 import org.greenrobot.eventbus.EventBus;
-
-import butterknife.ButterKnife;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by pham.duc.nam
@@ -46,21 +60,88 @@ public abstract class BaseActivity extends AppCompatActivity {
     public PrefHelper_ pref;
     private boolean isShow = false;
     private boolean isBack = true;
+    private NetworkListenerReceiver networkStateReceiver = new NetworkListenerReceiver();
+    private Socket mSocket;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        GeneralUtil.registerEventBus(this);
         ButterKnife.bind(this);
         pref = new PrefHelper_(VietSkinDoctorApplication.getInstance());
         createView();
         mProgressDialogUtil = new ProgressDialogUtil(this);
+        if (!TextUtils.isEmpty(pref.token().get())) {
+            setupSocket();
+        }
+    }
+
+    private void setupSocket() {
+        {
+            try {
+                mSocket = IO.socket(Constant.URL_SOCKET);
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("access_token", pref.token().get());
+            mSocket.emit(TAG_LOGIN_SOCKET, jsonObject);
+        } catch (JSONException ignored) {
+            Toast.makeText(this, "Socket error!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public Socket getSocket() {
+        return mSocket;
     }
 
     public void setTranslucentModeOn() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(networkStateReceiver,
+                new IntentFilter(android.net.ConnectivityManager.CONNECTIVITY_ACTION));
+        showNetworkStateView();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(networkStateReceiver);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mSocket != null) {
+            mSocket.disconnect();
+//        mSocket.off(TAG_RECEIVE_MESSAGE, OnNewMessage);
+            mSocket.emit(TAG_LOGOUT_SOCKET);
+        }
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
+
+    private void showNetworkStateView() {
+//        Crouton.cancelAllCroutons();
+        boolean isConnected = GeneralUtil.checkInternet(this);
+        isOnline(isConnected);
+    }
+
+    public boolean isOnline(boolean isOnline){
+        return isOnline;
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(NetworkChanged event) {
+        showNetworkStateView();
     }
 
     public void hideKeyboard() {
@@ -117,6 +198,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     private void signOut() {
+        Log.e("BaseActivity", "signOut: 1 -----> ");
         // Firebase sign out
         VietSkinDoctorApplication.getmAuth().signOut();
 
@@ -169,19 +251,28 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void checkCodeShowDialog(int code) {
-        int[] codes = getResources().getIntArray(R.array.server_code);
-        if (Toolbox.contains(codes, code)) {
-            showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
-        } else {
-            if (code == 401 && !isShow) {
-                isShow = true;
-                showAlertBackDialog("Thông báo", getString(R.string.session_timed_out_content),
-                        () -> {
-                            logout(true);
-                            isShow = false;
-                        });
-            }
+        if (code == 401 && !isShow) {
+            isShow = true;
+            showAlertBackDialog("Thông báo", getString(R.string.session_timed_out_content),
+                    () -> {
+                        logout(true);
+                        isShow = false;
+                    });
         }
+//        int[] codes = getResources().getIntArray(R.array.server_code);
+//
+//        if (Toolbox.contains(codes, code)) {
+////            showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+//        } else {
+//            if (code == 401 && !isShow) {
+//                isShow = true;
+//                showAlertBackDialog("Thông báo", getString(R.string.session_timed_out_content),
+//                        () -> {
+//                            logout(true);
+//                            isShow = false;
+//                        });
+//            }
+//        }
     }
 
     public void showAlertDialog(String title, String content) {
@@ -250,7 +341,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             float x = ev.getRawX() + v.getLeft() - scrcoords[0];
             float y = ev.getRawY() + v.getTop() - scrcoords[1];
             if (x < v.getLeft() || x > v.getRight() || y < v.getTop() || y > v.getBottom()) {
-                hideKeyboard();
+//                hideKeyboard();
             }
         }
         return super.dispatchTouchEvent(ev);

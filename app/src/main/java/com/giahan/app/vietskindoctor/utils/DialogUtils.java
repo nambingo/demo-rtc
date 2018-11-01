@@ -12,11 +12,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 
@@ -379,6 +381,19 @@ public class DialogUtils {
         dialog.show();
     }
 
+    public static void showDialogAttachFile(Context context, View.OnClickListener takeCamera, View.OnClickListener selectGallery){
+        dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+        dialog.setContentView(R.layout.dialog_attach_file);
+        dialog.setCanceledOnTouchOutside(true);
+        LinearLayout takePhoto = dialog.findViewById(R.id.takePhoto);
+        LinearLayout selectPhoto = dialog.findViewById(R.id.selectPhoto);
+        LinearLayout cancel = dialog.findViewById(R.id.cancel);
+        takePhoto.setOnClickListener(takeCamera);
+        selectPhoto.setOnClickListener(selectGallery);
+        cancel.setOnClickListener(view -> dialog.dismiss());
+        dialog.show();
+    }
+
     public static void showDialogTwoChoice(Context context, boolean isFace, boolean isCheck, boolean isAsk,
                                            @Nullable String text_ask, String text_content, String text_left,
                                            String text_right, View.OnClickListener onClickLeft,
@@ -508,6 +523,20 @@ public class DialogUtils {
             }
         });
 
+        dialog.show();
+    }
+
+    public static void showDialogPreview(Context context, String mPath, View.OnClickListener cancelListener,
+            View.OnClickListener uploadListener) {
+        dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+        dialog.setContentView(R.layout.dialog_preview);
+        dialog.setCanceledOnTouchOutside(true);
+        ImageView imgPreview = dialog.findViewById(R.id.imgPreview);
+        LinearLayout btn_cancel = dialog.findViewById(R.id.btn_cancel);
+        LinearLayout btn_upload = dialog.findViewById(R.id.btn_upload);
+        btn_cancel.setOnClickListener(cancelListener);
+        btn_upload.setOnClickListener(uploadListener);
+        Glide.with(context).load(mPath).fitCenter().into(imgPreview);
         dialog.show();
     }
 

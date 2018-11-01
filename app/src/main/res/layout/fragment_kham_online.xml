@@ -156,8 +156,9 @@
                     </android.support.v7.widget.CardView>
                     <TextView
                         android:id="@+id/tvEmpty"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_30"
                         android:text="@string/chua_co_phien_tu_van"
                         android:layout_gravity="center"
                         android:gravity="center"

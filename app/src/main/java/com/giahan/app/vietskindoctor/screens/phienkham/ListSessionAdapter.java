@@ -125,21 +125,29 @@ public class ListSessionAdapter extends RecyclerView.Adapter<ListSessionAdapter.
                     tvMessage.setText(session.getLastMessage());
                     break;
             }
-            tvPatientName.setText(TextUtils.isEmpty(session.getPatientName()) ? "N/A"
-                    : session.getPatientName());
+            if (!TextUtils.isEmpty(session.getName()) || !TextUtils.isEmpty(session.getPatientName())) {
+                tvPatientName
+                        .setText(TextUtils.isEmpty(session.getName()) ? session.getPatientName() : session.getName());
+            } else {
+                tvPatientName.setText("N/A");
+            }
+
             tvSex.setVisibility(TextUtils.isEmpty(session.getSex()) ? View.GONE : View.VISIBLE);
             if (!TextUtils.isEmpty(session.getSex())) {
-                tvSex.setText(session.getSex().equals("0") ? "Nữ" : "Nam");
+                tvSex.setText(session.getSex().equals("2") ? " (Nữ" : " (Nam");
             }
-            tvAge.setVisibility(TextUtils.isEmpty(session.getPatientAge()) ? View.GONE : View.VISIBLE);
-            if (!TextUtils.isEmpty(session.getPatientAge())) {
-                tvAge.setText(String.format("%s tuổi",
-                        DateUtils.getAge(session.getPatientAge())));
+            tvAge.setVisibility(
+                    TextUtils.isEmpty(session.getPatientAge()) && TextUtils.isEmpty(session.getBirthdate())
+                            ? View.GONE : View.VISIBLE);
+            if (!TextUtils.isEmpty(session.getBirthdate())) {
+                tvAge.setText(String.format(", %s",
+                        session.getBirthdate().length() == 6 ? session.getBirthdate().substring(0, 6)
+                                : session.getBirthdate().substring(0, 7)));
             }
             tvWeight.setVisibility(TextUtils.isEmpty(session.getWeight()) ? View.GONE : View.VISIBLE);
             if (!TextUtils.isEmpty(session.getWeight())) {
                 tvWeight.setText(
-                        String.format("%s kg", session.getWeight()));
+                        String.format(", %s kg)", session.getWeight()));
             }
             if (TextUtils.isEmpty(session.getLastMessageAt()) || TextUtils.isEmpty(session.getLastReadAt())) {
                 return;

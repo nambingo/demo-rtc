@@ -2,11 +2,17 @@ package com.giahan.app.vietskindoctor.activity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Base64;
 import android.util.Log;
-
+import butterknife.BindView;
+import butterknife.OnClick;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -41,15 +47,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.iid.FirebaseInstanceId;
-
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Arrays;
-
-import butterknife.BindView;
-import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -64,15 +68,23 @@ public class LoginActivity extends BaseActivity {
     LoginButton loginButton;
 
     private static final String TAG = "GoogleActivity";
+
     private static final int RC_SIGN_IN = 9001;
 
     private FbModelBody fbModelBody;
+
     private GoogleModelBody googleModelBody;
+
     private String fbAccessToken = "";
+
     private String fbUserId = "";
+
     private String email = "";
+
     private String username = "";
+
     private String profilePicUrl = "";
+
     private UserInfoResponse userInfoResponse;
 
     //Fb
@@ -108,7 +120,38 @@ public class LoginActivity extends BaseActivity {
             EventBus.getDefault().post(new ChangeEvent());
         }
         setTranslucentModeOn();
+        hashFromSHA1("E7:4B:2C:A5:C8:BA:23:F8:40:C0:6B:68:7B:61:C4:90:A4:FE:AD:E7");
+//        getKey();
 //        Toolbox.getKeyHashFb(this);
+    }
+
+    private void getKey() {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.giahan.app.vietskindoctor",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.e("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
+        }
+    }
+
+    public void hashFromSHA1(String sha1) {
+        Log.e("ControlActivity", "hashFromSHA1:  -----> ");
+        String[] arr = sha1.split(":");
+        byte[] byteArr = new byte[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            byteArr[i] = Integer.decode("0x" + arr[i]).byteValue();
+        }
+
+        Log.e("hash222--- : ", Base64.encodeToString(byteArr, Base64.NO_WRAP));
     }
 
     @Override
@@ -183,9 +226,11 @@ public class LoginActivity extends BaseActivity {
                     }
                 } else {
                     if (response.errorBody() != null) {
-                        BaseResponse baseResponse = Toolbox.gson().fromJson(response.errorBody().charStream(), BaseResponse.class);
+                        BaseResponse baseResponse = Toolbox.gson()
+                                .fromJson(response.errorBody().charStream(), BaseResponse.class);
                         if (baseResponse.getErrorCode() != null && baseResponse.getErrorCode().equals("4")) {
-                            showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_phone_error));
+                            showAlertDialog(getString(R.string.title_alert_info),
+                                    getString(R.string.msg_phone_error));
                             return;
                         }
                     }
@@ -200,7 +245,7 @@ public class LoginActivity extends BaseActivity {
                     // No internet connection
                     showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
                 } else {
-                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+//                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
                 }
             }
         });
@@ -226,8 +271,10 @@ public class LoginActivity extends BaseActivity {
 
                     EventBus.getDefault().post(new ChangeEvent());
 
-                    if (Toolbox.isEmpty(userInfoResponse.getName()) || Toolbox.isEmpty(userInfoResponse.getBirthdate()) ||
-                            Toolbox.isEmpty(userInfoResponse.getGender()) || Toolbox.isEmpty(userInfoResponse.getPhone())) {
+                    if (Toolbox.isEmpty(userInfoResponse.getName()) || Toolbox
+                            .isEmpty(userInfoResponse.getBirthdate()) ||
+                            Toolbox.isEmpty(userInfoResponse.getGender()) || Toolbox
+                            .isEmpty(userInfoResponse.getPhone())) {
                         showPopupUpdateInfo();
                     } else {
                         finish();
@@ -247,7 +294,7 @@ public class LoginActivity extends BaseActivity {
                     // No internet connection
                     showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
                 } else {
-                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+//                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
                 }
                 pref.token().put("");
                 pref.user().put("");
@@ -337,9 +384,10 @@ public class LoginActivity extends BaseActivity {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account);
-            } catch (ApiException e) {
+            } catch (Exception e) {
                 // Google Sign In failed, update UI appropriately
                 showAlertDialog("Thông báo", "Đăng nhập bằng Google không thành công!");
+
                 // [START_EXCLUDE]
                 updateUI(null);
                 // [END_EXCLUDE]
@@ -350,7 +398,8 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void loginFb() {
-        fbModelBody = new FbModelBody(fbAccessToken, fbUserId, email, username, FirebaseInstanceId.getInstance().getToken(), Constant.OS);
+        fbModelBody = new FbModelBody(fbAccessToken, fbUserId, email, username,
+                FirebaseInstanceId.getInstance().getToken(), Constant.OS);
         showLoad();
         Call<UserInfoResponse> call = RequestHelper.getRequest(false, this).loginFb(fbModelBody);
         call.enqueue(new Callback<UserInfoResponse>() {
@@ -362,23 +411,24 @@ public class LoginActivity extends BaseActivity {
                     pref.token().put(response.headers().get("Access-Token"));
                     userInfoResponse = response.body();
                     if (Toolbox.isEmpty(response.body().getEmail())) {
-                        DialogUtils.showDialogAlertInputEmail(LoginActivity.this, new DialogUtils.onListenerInputEmail() {
-                            @Override
-                            public void onListen(String emailInput, Dialog dialog) {
-                                dialog.dismiss();
-                                email = emailInput;
-                                updateEmail();
-                            }
+                        DialogUtils.showDialogAlertInputEmail(LoginActivity.this,
+                                new DialogUtils.onListenerInputEmail() {
+                                    @Override
+                                    public void onListen(String emailInput, Dialog dialog) {
+                                        dialog.dismiss();
+                                        email = emailInput;
+                                        updateEmail();
+                                    }
 
-                            @Override
-                            public void onDismiss(Dialog dialog) {
-                                dialog.dismiss();
-                                pref.token().put("");
-                                pref.user().put("");
-                                pref.isLogged().put(false);
-                                LoginManager.getInstance().logOut();
-                            }
-                        });
+                                    @Override
+                                    public void onDismiss(Dialog dialog) {
+                                        dialog.dismiss();
+                                        pref.token().put("");
+                                        pref.user().put("");
+                                        pref.isLogged().put(false);
+                                        LoginManager.getInstance().logOut();
+                                    }
+                                });
                     } else {
                         if (Toolbox.isEmpty(response.body().getAvatarAcc())) {
                             response.body().setAvatarAcc(profilePicUrl);
@@ -394,7 +444,7 @@ public class LoginActivity extends BaseActivity {
 //                            showPopupUpdateInfo();
 //                        } else {
 //                            finish();
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
 //                        }
                     }
 //                    new GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, new GraphRequest.Callback() {
@@ -424,7 +474,7 @@ public class LoginActivity extends BaseActivity {
                     // No internet connection
                     showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
                 } else {
-                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+//                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
                 }
             }
         });
@@ -468,10 +518,11 @@ public class LoginActivity extends BaseActivity {
                                 String idToken = task.getResult().getToken();
                                 // Send token to your backend via HTTPS
                                 // ...
-                                googleModelBody = new GoogleModelBody(idToken, FirebaseInstanceId.getInstance().getToken(), Constant.OS);
+                                googleModelBody = new GoogleModelBody(idToken,
+                                        FirebaseInstanceId.getInstance().getToken(), Constant.OS);
                                 loginGoogle();
                             } else {
-                                showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+//                                showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
                             }
                         }
                     });
@@ -487,22 +538,45 @@ public class LoginActivity extends BaseActivity {
                 hideLoading();
                 checkCodeShowDialog(response.code());
                 if (response.body() != null) {
-                    if (Toolbox.isEmpty(response.body().getAvatarAcc())) {
-                        response.body().setAvatarAcc(profilePicUrl);
-                    }
-                    pref.isLoginFb().put(false);
-                    pref.token().put(response.body().getAccessToken());
-                    pref.user().put(Toolbox.gson().toJson(response.body()));
-                    pref.isLogged().put(true);
+                    if (response.body().getActivated().equals("0")) {
+                        DialogUtils.showDialogOneChoice(LoginActivity.this, true, false,
+                                getString(R.string.tai_khoan_chua_active), getString(R.string.ok), view -> {
+                                    DialogUtils.hideAlert();
+                                    signOut();
+                                    return;
+                                });
+                    } else {
+                        if (Toolbox.isEmpty(response.body().getAvatarAcc())) {
+                            response.body().setAvatarAcc(profilePicUrl);
+                        }
+                        pref.isLoginFb().put(false);
+                        pref.token().put(response.body().getAccessToken());
+                        pref.user().put(Toolbox.gson().toJson(response.body()));
+                        pref.isLogged().put(true);
 
-                    EventBus.getDefault().post(new ChangeEvent());
+                        EventBus.getDefault().post(new ChangeEvent());
 //                    if (Toolbox.isEmpty(response.body().getName()) || Toolbox.isEmpty(response.body().getBirthdate()) ||
 //                            Toolbox.isEmpty(response.body().getGender()) || Toolbox.isEmpty(response.body().getPhone())) {
 //                        showPopupUpdateInfo();
 //                    } else {
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         finish();
 //                    }
+                    }
+                } else {
+                    signOut();
+                    if (response.errorBody() != null) {
+                        try {
+                            BaseResponse baseResponse = Toolbox.gson()
+                                    .fromJson(response.errorBody().charStream(), BaseResponse.class);
+                            if (baseResponse.getError() != null) {
+                                showAlertDialog(getString(R.string.title_alert_info), baseResponse.getError());
+                            }
+                        } catch (Exception e) {
+                            showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                        }
+
+                    }
                 }
             }
 
@@ -543,5 +617,24 @@ public class LoginActivity extends BaseActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
 //        FirebaseUser currentUser = mAuth.getCurrentUser();
 //        updateUI(currentUser);
+    }
+
+    private void checkWrongAccoutType(Response<UserInfoResponse> response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response.errorBody().string());
+            String message = jsonObject.getString("error");
+            String errorCode = jsonObject.getString("errorCode");
+            if (errorCode.equals("10")) {
+                DialogUtils.showDialogOneChoice(LoginActivity.this, true, false, message,
+                        getString(R.string.close), view -> {
+                            DialogUtils.hideAlert();
+                            signOut();
+                        });
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

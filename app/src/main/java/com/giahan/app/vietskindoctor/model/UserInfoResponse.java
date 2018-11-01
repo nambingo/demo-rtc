@@ -74,6 +74,9 @@ public class UserInfoResponse {
     @SerializedName("avatar")
     private String mAvatarDoctor;
 
+    @SerializedName("avatar_url")
+    private String mAvatar;
+
     @SerializedName("workplace")
     private String mWorkplace;
 
@@ -133,6 +136,7 @@ public class UserInfoResponse {
         this.credits = userInfoResponse.credits;
         this.creditHold = userInfoResponse.creditHold;
         this.weight = userInfoResponse.weight;
+        this.mAvatar = userInfoResponse.mAvatar;
     }
 
     public String getId() {
@@ -317,5 +321,13 @@ public class UserInfoResponse {
 
     public void setDegree(final String degree) {
         mDegree = degree;
+    }
+
+    public String getAvatar() {
+        return mAvatar;
+    }
+
+    public void setAvatar(final String avatar) {
+        mAvatar = avatar;
     }
 }

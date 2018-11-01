@@ -86,7 +86,7 @@ public class InfoAccountV3Fragment extends BaseFragment {
     private void initViews() {
         UserInfoResponse user = UserInfoResponse.getUser(getMainActivity().pref);
         if (user != null) {
-            String linkAvatar = user.getAvatarDoctor();
+            String linkAvatar = user.getAvatar();
             String nameProfile = user.getName();
             String phone = user.getPhone();
             String credits = user.getCredits();
@@ -94,7 +94,7 @@ public class InfoAccountV3Fragment extends BaseFragment {
             if (!Toolbox.isEmpty(linkAvatar)) {
                 Picasso.with(getContext()).load(linkAvatar).into(profileImage);
             } else {
-                profileImage.setImageResource(R.drawable.ic_avatar);
+                profileImage.setImageResource(R.drawable.ic_launcher);
             }
             tvProfileName.setText(
                     String.format("%s %s", TextUtils.isEmpty(user.getDegree()) ? "BS." : user.getDegree(),
