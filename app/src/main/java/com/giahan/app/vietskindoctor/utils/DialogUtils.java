@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -554,5 +555,21 @@ public class DialogUtils {
 
     public interface onConfirmClickListener {
         void onListen();
+    }
+
+    public static void showDialogVideoCall(Context context, final String name, String reject,
+            View.OnClickListener rejectListener) {
+        dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+        dialog.setContentView(R.layout.dialog_receiver_video_call);
+        dialog.setCanceledOnTouchOutside(false);
+        TextView tvPatientName = dialog.findViewById(R.id.tvPatientName);
+        TextView tvConnect = dialog.findViewById(R.id.tvConnect);
+        ImageView imgCallCancel = dialog.findViewById(R.id.imgCallCancel);
+        imgCallCancel.setOnClickListener(rejectListener);
+        tvPatientName.setText(name);
+        new Handler().postDelayed(() -> {
+            tvConnect.setText(reject);
+        }, 30000);
+        dialog.show();
     }
 }

@@ -31,20 +31,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lnCallVideo"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@id/lnBack"
-            android:visibility="visible">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="CALL" />
-        </LinearLayout>
-
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
@@ -85,6 +71,21 @@
                 android:layout_height="@dimen/dp_20"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnCallVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/llMenu"
+            android:layout_marginRight="@dimen/dp_20"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_icon_video"/>
         </LinearLayout>
 
     </RelativeLayout>

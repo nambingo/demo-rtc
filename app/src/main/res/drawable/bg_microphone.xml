@@ -1,0 +1,11 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused and not pressed -->
+    <item android:drawable="@drawable/ic_microphone" android:state_focused="true" android:state_pressed="false" />
+    <!-- Focused and pressed -->
+    <item android:drawable="@drawable/ic_mute" android:state_focused="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_mute" android:state_focused="true" android:state_selected="true" />
+    <!-- Unfocused and pressed -->
+    <item android:drawable="@drawable/ic_mute" android:state_focused="false" android:state_pressed="true" />
+    <!-- Default color -->
+    <item android:drawable="@drawable/ic_microphone" />
+</selector>

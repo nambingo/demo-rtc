@@ -1,204 +1,568 @@
 package com.giahan.app.vietskindoctor.activity;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.graphics.Bitmap;
-import android.os.Build;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.ActivityCompat;
+import android.Manifest.permission;
+import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.webkit.CookieManager;
-import android.webkit.PermissionRequest;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
-import butterknife.BindView;
 import com.giahan.app.vietskindoctor.R;
-import com.giahan.app.vietskindoctor.base.BaseActivity;
+import com.giahan.app.vietskindoctor.services.rtc.CustomPeerConnectionObserver;
+import com.giahan.app.vietskindoctor.services.rtc.CustomSdpObserver;
+import com.giahan.app.vietskindoctor.services.rtc.SignallingClient;
 import com.giahan.app.vietskindoctor.utils.Constant;
+import com.giahan.app.vietskindoctor.utils.PermissionsUtil;
+import com.giahan.app.vietskindoctor.utils.PrefHelper_;
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.webrtc.AudioSource;
+import org.webrtc.AudioTrack;
+import org.webrtc.Camera1Enumerator;
+import org.webrtc.CameraEnumerator;
+import org.webrtc.DefaultVideoDecoderFactory;
+import org.webrtc.DefaultVideoEncoderFactory;
+import org.webrtc.EglBase;
+import org.webrtc.IceCandidate;
+import org.webrtc.MediaConstraints;
+import org.webrtc.MediaStream;
+import org.webrtc.PeerConnection;
+import org.webrtc.PeerConnection.IceServer;
+import org.webrtc.PeerConnectionFactory;
+import org.webrtc.SessionDescription;
+import org.webrtc.SurfaceViewRenderer;
+import org.webrtc.VideoCapturer;
+import org.webrtc.VideoSource;
+import org.webrtc.VideoTrack;
 
-public class VideoCallActivity extends BaseActivity {
+public class VideoCallActivity extends AppCompatActivity implements SignallingClient.SignalingInterface {
 
-    @BindView(R.id.webview)
-    WebView webview;
+    public final static int CAMERA_PERMISSION_ID = 101;
 
-    private static final int CAMERA_MIC_PERMISSION_REQUEST_CODE = 1;
+    private Socket mSocket;
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_video_call;
-    }
+    private static final String VIDEO_CODEC_VP9 = "VP9";
 
-    @SuppressLint("JavascriptInterface")
-    @Override
-    protected void createView() {
-        //Request Permissions
-        this.requestPermissionForCameraAndMicrophone();
-        //Setting
-        this.setUpWebViewDefaults(webview);
-        //JS Interface for Viewers Count
-        webview.addJavascriptInterface(this, "Android");
+    private static final String AUDIO_CODEC_OPUS = "opus";
 
-        //Load WebRTC Page
-        webview.loadUrl(Constant.URL_RTC);
+    PeerConnectionFactory peerConnectionFactory;
 
-        //Grant WebView Permissions
-        final VideoCallActivity context = this;
-        webview.setWebChromeClient(new WebChromeClient() {
-            @Override
-            public void onPermissionRequest(final PermissionRequest request) {
-                Log.d("----", "onPermissionRequest");
-                context.runOnUiThread(() -> {
-                    if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
-                        if (request.getOrigin().toString().equals(Constant.URL_RTC)) {
-                            request.grant(request.getResources());
-                        } else {
-                            request.deny();
-                        }
-                    }
-                });
-            }
+    MediaConstraints audioConstraints;
 
-            @Override
-            public Bitmap getDefaultVideoPoster() {
-                return Bitmap.createBitmap(10, 10, Bitmap.Config.ARGB_8888);
-            }
-        });
-//        setup();
-//        webview.getSettings().setJavaScriptEnabled(true); // enable javascript
+    MediaConstraints videoConstraints;
 
-//        webview.setWebChromeClient(new WebChromeClient(){
-//            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-//            @Override
-//            public void onPermissionRequest(final PermissionRequest request) {
-//                request.grant(request.getResources());
-//            }
-//        });
+    MediaConstraints sdpConstraints;
 
-//        webview.setOnKeyListener((v, keyCode, event) -> {
-//            if (event.getAction() == KeyEvent.ACTION_DOWN) {
-//                WebView webView = (WebView) v;
-//
-//                switch (keyCode) {
-//                    case KeyEvent.KEYCODE_BACK:
-//                        if (webView.canGoBack()) {
-//                            webView.goBack();
-//                            return true;
-//                        }
-//                        break;
-//                }
-//            }
-//
-//            return false;
-//        });
+    VideoSource videoSource;
 
-//        webview.setWebViewClient(new WebViewClient() {
-//            @Override
-//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//                view.loadUrl(url);
-//                showLoad();
-//                return true;
-//            }
-//
-//            @Override
-//            public void onPageFinished(WebView view, String url) {
-//                hideLoading();
-//            }
-//
-//            @SuppressWarnings("deprecation")
-//            @Override
-//            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-////                Toast.makeText(LoadWebviewActivity.this, description, Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @TargetApi(android.os.Build.VERSION_CODES.M)
-//            @Override
-//            public void onReceivedError(WebView view, WebResourceRequest req, WebResourceError rerr) {
-//                // Redirect to deprecated method, so you can use it in all SDK versions
-//                onReceivedError(view, rerr.getErrorCode(), rerr.getDescription().toString(), req.getUrl().toString());
-//            }
-//        });
-//
-//        webview.loadUrl(Constant.URL_RTC);
-    }
+    VideoTrack localVideoTrack;
 
-    private void requestPermissionForCameraAndMicrophone() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA) ||
-                ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
-            Toast.makeText(this,
-                    "WE NEED CAMERA AND MIC PERMISSIONS",
-                    Toast.LENGTH_LONG).show();
+    AudioSource audioSource;
+
+    AudioTrack localAudioTrack;
+
+    SurfaceViewRenderer localVideoView;
+
+    SurfaceViewRenderer remoteVideoView;
+
+    ImageView hangup;
+
+    PeerConnection localPeer;
+
+    EglBase rootEglBase;
+
+    List<IceServer> peerIceServers = new ArrayList<>();
+
+    private String mDoctorID;
+
+    private String mPatientID;
+
+    public PrefHelper_ pref;
+
+    private void checkPermission() {
+        if (checkStorePermission(this, CAMERA_PERMISSION_ID)) {
+            implementData();
         } else {
-            ActivityCompat.requestPermissions(
-                    this,
-                    new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO},
-                    CAMERA_MIC_PERMISSION_REQUEST_CODE);
+            showRequestPermission(this, CAMERA_PERMISSION_ID);
         }
     }
-    private void setup(){
-        setUpWebViewDefaults(webview);
 
-        webview.loadUrl(Constant.URL_RTC);
+    private void implementData() {
+        initViews();
+        initVideos();
+        getDataFromServer();
+        getDataFromChat();
+        setupSocket();
 
-        webview.setWebChromeClient(new WebChromeClient() {
+        SignallingClient.getInstance().init(this, mSocket);
+        start();
+        receiverAnswer();
+        receiverCandidate();
+        receiverFinishVideo();
+    }
 
-            @Override
-            public void onPermissionRequest(final PermissionRequest request) {
-                Log.e("----", "onPermissionRequest");
-                runOnUiThread(() -> {
-                    if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
-                        if(request.getOrigin().toString().equals(Constant.URL_RTC)) {
-                            request.grant(request.getResources());
-                        } else {
-                            request.deny();
-                        }
-                    }
-                });
+    private void receiverAnswer() {
+        mSocket.on(Constant.TAG_RTC_ANSWER_SOCKET, args -> runOnUiThread(() -> {
+            try {
+
+                JSONObject data = (JSONObject) args[0];
+                JSONObject sdp = data.getJSONObject("sdp");
+                onAnswerReceived(sdp);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
+        }));
+    }
+
+    private void receiverFinishVideo() {
+        mSocket.on(Constant.TAG_VIDEO_FINISH, args -> runOnUiThread(() -> {
+            JSONObject jsonObject = (JSONObject) args[0];
+            if (jsonObject != null) {
+                Log.e("VideoCallActivity", "receiverFinishVideo:  -----> ");
+
+                mSocket.disconnect();
+                mSocket.close();
+                finish();
+            }
+
+        }));
+    }
+
+    private void getDataFromChat() {
+        mDoctorID = getIntent().getStringExtra("DOCTOR_ID");
+        mPatientID = getIntent().getStringExtra("PATIENT_ID");
+    }
+
+    private void receiverCandidate() {
+        mSocket.on(Constant.TAG_RTC_CANDIDATE_SOCKET, args -> runOnUiThread(() -> {
+            JSONObject jsonObject = (JSONObject) args[0];
+            JSONObject jsonObject1 = new JSONObject();
+            IceCandidate iceCandidate = null;
+            try {
+                jsonObject1 = jsonObject.getJSONObject("candidate");
+                iceCandidate = new IceCandidate("audio", 0, jsonObject1.getString("candidate"));
+                localPeer.addIceCandidate(iceCandidate);
+                remoteVideoView.setVisibility(View.VISIBLE);
+                updateVideoViews(true);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }));
+    }
+
+    public void start() {
+        //Initialize PeerConnectionFactory globals.
+        PeerConnectionFactory.InitializationOptions initializationOptions =
+                PeerConnectionFactory.InitializationOptions.builder(this)
+                        .setEnableVideoHwAcceleration(true)
+                        .createInitializationOptions();
+        PeerConnectionFactory.initialize(initializationOptions);
+
+        //Create a new PeerConnectionFactory instance - using Hardware encoder and decoder.
+        PeerConnectionFactory.Options options = new PeerConnectionFactory.Options();
+        DefaultVideoEncoderFactory defaultVideoEncoderFactory = new DefaultVideoEncoderFactory(
+                rootEglBase.getEglBaseContext(),  /* enableIntelVp8Encoder */true,  /* enableH264HighProfile */true);
+        DefaultVideoDecoderFactory defaultVideoDecoderFactory = new DefaultVideoDecoderFactory(
+                rootEglBase.getEglBaseContext());
+//        peerConnectionFactory = PeerConnectionFactory.initializeAndroidGlobals(this, false, false, false);
+        peerConnectionFactory = new PeerConnectionFactory(options, defaultVideoEncoderFactory,
+                defaultVideoDecoderFactory);
+        peerConnectionFactory
+                .setVideoHwAccelerationOptions(rootEglBase.getEglBaseContext(), rootEglBase.getEglBaseContext());
+
+        //Now create a VideoCapturer instance.
+        VideoCapturer videoCapturerAndroid;
+        videoCapturerAndroid = createCameraCapturer(new Camera1Enumerator(false));
+
+        //Create MediaConstraints - Will be useful for specifying video and audio constraints.
+        audioConstraints = new MediaConstraints();
+        videoConstraints = new MediaConstraints();
+
+        //Create a VideoSource instance
+        if (videoCapturerAndroid != null) {
+            Log.e("VideoCallActivity", "start:  -----> NOT NULL ");
+            videoSource = peerConnectionFactory.createVideoSource(videoCapturerAndroid);
+        }
+        localVideoTrack = peerConnectionFactory.createVideoTrack("900", videoSource);
+
+        //create an AudioSource instance
+        audioSource = peerConnectionFactory.createAudioSource(audioConstraints);
+        localAudioTrack = peerConnectionFactory.createAudioTrack("901", audioSource);
+
+        if (videoCapturerAndroid != null) {
+            videoCapturerAndroid.startCapture(1024, 720, 30);
+        }
+        localVideoView.setVisibility(View.VISIBLE);
+        // And finally, with our VideoRenderer ready, we
+        // can add our renderer to the VideoTrack.
+        localVideoTrack.addSink(localVideoView);
+
+        localVideoView.setMirror(true);
+        remoteVideoView.setMirror(true);
+        onTryToStart();
+    }
+
+    private void initViews() {
+        hangup = findViewById(R.id.end_call);
+        localVideoView = findViewById(R.id.local_gl_surface_view);
+        remoteVideoView = findViewById(R.id.remote_gl_surface_view);
+        hangup.setOnClickListener(view -> onHangup());
+    }
+
+    private void onHangup() {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put(Constant.TAG_TO_USER_ID, Integer.parseInt(mDoctorID));
+            mSocket.emit(Constant.TAG_VIDEO_FINISH, jsonObject);
+            Log.e("VideoCall2Activity", "toInviteCall:  -----> TO FINISH OK");
+            finish();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void clearData() {
+        mSocket.disconnect();
+        mSocket.close();
+        localPeer.close();
+        localPeer = null;
+        finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        clearData();
+    }
+
+    private void initVideos() {
+        rootEglBase = EglBase.create();
+        localVideoView.init(rootEglBase.getEglBaseContext(), null);
+        remoteVideoView.init(rootEglBase.getEglBaseContext(), null);
+        localVideoView.setZOrderMediaOverlay(true);
+        remoteVideoView.setZOrderMediaOverlay(true);
+    }
+
+    private void setupSocket() {
+        if (mSocket == null) {
+            JSONObject jsonObject = new JSONObject();
+            try {
+                mSocket = IO.socket(Constant.URL_SOCKET);
+                mSocket.on("connect", args -> {
+                    Log.e("VideoCallActivity", "setupSocket: ABC -----> ");
+                });
+                mSocket.connect();
+                jsonObject.put("access_token", pref.token().get());
+                mSocket.emit(Constant.TAG_LOGIN_SOCKET, jsonObject);
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            } catch (JSONException ignored) {
+                Toast.makeText(this, "Socket error!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_video_call);
+        pref = new PrefHelper_(this);
+        checkPermission();
+    }
+
+    private void getDataFromServer() {
+        PeerConnection.IceServer peerIceServer1 = PeerConnection.IceServer
+                .builder("turn:103.221.222.146:3478?transport=udp")
+                .setUsername("vietskin")
+                .setPassword("tombeo99")
+                .createIceServer();
+        PeerConnection.IceServer peerIceServer2 = PeerConnection.IceServer
+                .builder("turn:103.221.222.146:3478?transport=tcp")
+                .setUsername("vietskin")
+                .setPassword("tombeo99")
+                .createIceServer();
+        peerIceServers.add(peerIceServer1);
+        peerIceServers.add(peerIceServer2);
+    }
+
+    private static void showRequestPermission(Activity activity, int requestCode) {
+        String[] permissions;
+
+        permissions = new String[]{
+                Manifest.permission.CAMERA,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                permission.RECORD_AUDIO,
+                permission.MODIFY_AUDIO_SETTINGS
+        };
+
+        PermissionsUtil.requestPermissions(activity, requestCode, permissions);
+    }
+
+
+    private boolean checkStorePermission(Context context, int permission) {
+        if (permission == CAMERA_PERMISSION_ID) {
+            String[] permissions = new String[]{
+                    Manifest.permission.CAMERA,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.RECORD_AUDIO,
+                    Manifest.permission.MODIFY_AUDIO_SETTINGS
+            };
+            return PermissionsUtil.checkPermissions(context, permissions);
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public void onRemoteHangUp(final String msg) {
+
+    }
+
+    @Override
+    public void onOfferReceived(final JSONObject data) {
+        Log.e("MainActivity", "onOfferReceived:  -----> Received Offer");
+        runOnUiThread(() -> {
+            onTryToStart();
+
+            try {
+                localPeer.setRemoteDescription(new CustomSdpObserver("localSetRemote"), new SessionDescription(
+                        SessionDescription.Type.fromCanonicalForm(data.getString("type").toLowerCase()),
+                        data.getString("sdp")));
+                doAnswer();
+                updateVideoViews(true);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         });
     }
 
-    private void setUpWebViewDefaults(WebView webView) {
-        WebSettings settings = webView.getSettings();
+    private void doAnswer() {
+        localPeer.createAnswer(new CustomSdpObserver("localCreateAns") {
+            @Override
+            public void onCreateSuccess(SessionDescription sessionDescription) {
+                super.onCreateSuccess(sessionDescription);
+                localPeer.setLocalDescription(new CustomSdpObserver("localSetLocal"), sessionDescription);
+                SignallingClient.getInstance().emitMessage(sessionDescription, mSocket, Integer.parseInt(mDoctorID));
+            }
+        }, new MediaConstraints());
+    }
 
-        // Enable Javascript
-        settings.setJavaScriptEnabled(true);
+    private void updateVideoViews(final boolean remoteVisible) {
+        runOnUiThread(() -> {
+            ViewGroup.LayoutParams params = localVideoView.getLayoutParams();
 
-        // Use WideViewport and Zoom out if there is no viewport defined
-        settings.setUseWideViewPort(true);
-        settings.setLoadWithOverviewMode(true);
+            if (remoteVisible) {
+                params.height = dpToPx(100);
+                params.width = dpToPx(100);
+            } else {
+                params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.MATCH_PARENT);
+            }
+            localVideoView.setLayoutParams(params);
+            Log.e("VideoCallActivity", "updateVideoViews:  -----> add done");
+        });
 
-        // Enable pinch to zoom without the zoom buttons
-        settings.setBuiltInZoomControls(true);
+    }
 
-        // Allow use of Local Storage
-        settings.setDomStorageEnabled(true);
+    public int dpToPx(int dp) {
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+    }
 
-        if(VERSION.SDK_INT > VERSION_CODES.HONEYCOMB) {
-            // Hide the zoom controls for HONEYCOMB+
-            settings.setDisplayZoomControls(false);
+    @Override
+    public void onAnswerReceived(final JSONObject data) {
+        Log.e("MainActivity", "onAnswerReceived:  -----> Received Answer");
+        try {
+            localPeer.setRemoteDescription(new CustomSdpObserver("localSetRemote"), new SessionDescription(
+                    SessionDescription.Type.fromCanonicalForm(data.getString("type").toLowerCase()),
+                    data.getString("sdp")));
+            updateVideoViews(true);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onIceCandidateReceived(JSONObject data) {
+        try {
+            localPeer.addIceCandidate(
+                    new IceCandidate(data.getString("id"), data.getInt("label"), data.getString("candidate")));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void onIceCandidateReceived(IceCandidate iceCandidate) {
+        //we have received ice candidate. We can set it to the other peer.
+//        localPeer.addIceCandidate(iceCandidate);
+        SignallingClient.getInstance().emitIceCandidate(iceCandidate, mSocket, Integer.parseInt(mDoctorID));
+    }
+
+    @Override
+    public void onTryToStart() {
+        runOnUiThread(() -> {
+            createPeerConnection();
+//            SignallingClient.getInstance().isStarted = true;
+            doCall();
+        });
+    }
+
+    private void doCall() {
+        sdpConstraints = new MediaConstraints();
+        sdpConstraints.mandatory.add(
+                new MediaConstraints.KeyValuePair("OfferToReceiveAudio", "true"));
+        sdpConstraints.mandatory.add(new MediaConstraints.KeyValuePair(
+                "OfferToReceiveVideo", "true"));
+        localPeer.createOffer(new CustomSdpObserver("localCreateOffer") {
+            @Override
+            public void onCreateSuccess(SessionDescription sessionDescription) {
+                super.onCreateSuccess(sessionDescription);
+                localPeer.setLocalDescription(new CustomSdpObserver("localSetLocalDesc"), sessionDescription);
+                Log.d("onCreateSuccess", "SignallingClient emit ");
+                SignallingClient.getInstance().emitOffer(sessionDescription, mSocket, Integer.parseInt(mPatientID));
+            }
+        }, sdpConstraints);
+    }
+
+    @Override
+    public void onCreatedRoom() {
+
+    }
+
+    @Override
+    public void onJoinedRoom() {
+
+    }
+
+    @Override
+    public void onNewPeerJoined() {
+
+    }
+
+    private void createPeerConnection() {
+        PeerConnection.RTCConfiguration rtcConfig =
+                new PeerConnection.RTCConfiguration(peerIceServers);
+        // TCP candidates are only useful when connecting to a server that supports
+        // ICE-TCP.
+        rtcConfig.tcpCandidatePolicy = PeerConnection.TcpCandidatePolicy.DISABLED;
+        rtcConfig.bundlePolicy = PeerConnection.BundlePolicy.MAXBUNDLE;
+        rtcConfig.rtcpMuxPolicy = PeerConnection.RtcpMuxPolicy.REQUIRE;
+        rtcConfig.continualGatheringPolicy = PeerConnection.ContinualGatheringPolicy.GATHER_CONTINUALLY;
+        // Use ECDSA encryption.
+        rtcConfig.keyType = PeerConnection.KeyType.ECDSA;
+        localPeer = peerConnectionFactory
+                .createPeerConnection(rtcConfig, new CustomPeerConnectionObserver("localPeerCreation") {
+                    @Override
+                    public void onIceCandidate(IceCandidate iceCandidate) {
+                        super.onIceCandidate(iceCandidate);
+                        onIceCandidateReceived(iceCandidate);
+                    }
+
+                    @Override
+                    public void onAddStream(MediaStream mediaStream) {
+                        Log.e("MainActivity", "onAddStream:  -----> Received Remote stream");
+                        super.onAddStream(mediaStream);
+                        gotRemoteStream(mediaStream);
+                    }
+                });
+
+        addStreamToLocalPeer();
+    }
+
+//    public void setRemoteIceCandidate() {
+//        for (IceCandidate ice : remoteIceCandidate) {
+//            peerConnection.addIceCandidate(ice);
+//        }
+//        remoteIceCandidate = new ArrayList<IceCandidate>();
+//    }
+
+    private void gotRemoteStream(MediaStream stream) {
+        //we have remote video stream. add to the renderer.
+        final VideoTrack videoTrack = stream.videoTracks.get(0);
+        runOnUiThread(() -> {
+            try {
+                Log.e("VideoCallActivity", "gotRemoteStream:  -----> OK OK");
+//                VideoRenderer remoteVideo = new VideoRenderer(remoteVideoView);
+                remoteVideoView.setVisibility(View.VISIBLE);
+//                videoTrack.addRenderer(remoteVideo);
+                videoTrack.addSink(remoteVideoView);
+
+            } catch (Exception e) {
+                Log.e("MainActivity", "gotRemoteStream:  -----> " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+
+    }
+
+    private void addStreamToLocalPeer() {
+        //creating local mediastream
+        MediaStream stream = peerConnectionFactory.createLocalMediaStream("ARDAMS");
+        AudioSource audioSource = peerConnectionFactory.createAudioSource(new MediaConstraints());
+        stream.addTrack(peerConnectionFactory.createAudioTrack("ARDAMSa0", audioSource));
+        stream.addTrack(localAudioTrack);
+        stream.addTrack(localVideoTrack);
+        localPeer.addStream(stream);
+    }
+
+    private VideoCapturer createCameraCapturer(CameraEnumerator enumerator) {
+        final String[] deviceNames = enumerator.getDeviceNames();
+
+        // First, try to find front facing camera
+        Log.e("MainActivity", "createCameraCapturer:  -----> Looking for front facing cameras.");
+        for (String deviceName : deviceNames) {
+            if (enumerator.isFrontFacing(deviceName)) {
+                Log.e("MainActivity", "createCameraCapturer:  -----> Creating front facing camera capturer.");
+                VideoCapturer videoCapturer = enumerator.createCapturer(deviceName, null);
+
+                if (videoCapturer != null) {
+                    return videoCapturer;
+                }
+            }
         }
 
-        // Enable remote debugging via chrome://inspect
-        if(VERSION.SDK_INT >= VERSION_CODES.KITKAT) {
-            WebView.setWebContentsDebuggingEnabled(true);
+        // Front facing camera not found, try something else
+        Log.e("MainActivity", "createCameraCapturer:  -----> Looking for other cameras.");
+        for (String deviceName : deviceNames) {
+            if (!enumerator.isFrontFacing(deviceName)) {
+                Log.e("MainActivity", "createCameraCapturer:  -----> Creating other camera capturer.");
+                VideoCapturer videoCapturer = enumerator.createCapturer(deviceName, null);
+
+                if (videoCapturer != null) {
+                    return videoCapturer;
+                }
+            }
         }
 
-        webView.setWebViewClient(new WebViewClient());
+        return null;
+    }
 
-        // AppRTC requires third party cookies to work
-        CookieManager cookieManager = CookieManager.getInstance();
-        if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
-            cookieManager.setAcceptThirdPartyCookies(webView, true);
+    @Override
+    public void onRequestPermissionsResult(final int requestCode, @NonNull final String[] permissions,
+            @NonNull final int[] grantResults) {
+        if (requestCode == CAMERA_PERMISSION_ID) {
+            if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                implementData();
+            }
         }
     }
 }

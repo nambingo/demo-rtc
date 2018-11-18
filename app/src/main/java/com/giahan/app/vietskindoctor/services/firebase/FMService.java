@@ -21,6 +21,7 @@ import com.giahan.app.vietskindoctor.activity.SplashActivity;
 import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import java.util.Random;
 import org.greenrobot.eventbus.EventBus;
 
 @SuppressLint("Registered")
@@ -33,16 +34,12 @@ public class FMService extends FirebaseMessagingService {
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         if (remoteMessage.getData() == null) return;
-        if (remoteMessage.getNotification() == null) return;
         if (icon == null || icon.isRecycled()) {
             icon = BitmapFactory.decodeResource(VietSkinDoctorApplication.getInstance().getResources(),
                     R.mipmap.ic_launcher);
         }
-        if (TextUtils.isEmpty(remoteMessage.getNotification().getBody())) return;
-        buildNotification(MainActivity.getIntent(this, "123"), remoteMessage
-                        .getNotification()
-                .getBody(),
-                NOTIFY_SHOW_NOTIFICATION);
+//        buildNotification(ChatActivity.getIntent(this, notice.getSessionID()), notice.getNotificationMessage(),
+//                new Random().nextInt());
     }
 
     private void buildNotification(Intent intent, String message, int notifyID) {

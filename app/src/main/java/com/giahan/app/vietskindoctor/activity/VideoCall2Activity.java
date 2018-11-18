@@ -141,7 +141,7 @@ public class VideoCall2Activity extends AppCompatActivity implements SignallingC
         mSocket.on(Constant.TAG_RTC_ANSWER_SOCKET, args -> runOnUiThread(() -> {
             Log.e("----SignallingClient", "message call() called with: args = [" + Arrays.toString(args) + "]");
             try {
-
+                Log.e("VideoCall2Activity", "receiverAnswer:  -----> Answer ok");
                 JSONObject data = (JSONObject) args[0];
                 JSONObject sdp = data.getJSONObject("sdp");
                 Log.e("---SignallingClient", "Json Received :: " + data.toString());

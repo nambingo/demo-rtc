@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dialog_color">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/tvConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dang_ket_noi"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_20"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/imgCallCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel_call"/>
+    </LinearLayout>
+
+</RelativeLayout>

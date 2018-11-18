@@ -177,6 +177,21 @@ public class SignallingClient {
         }
     }
 
+    public void emitOffer(SessionDescription message, Socket socket, int patientID) {
+        try {
+            JSONObject obj = new JSONObject();
+            obj.put("type", message.type.canonicalForm());
+            obj.put("sdp", message.description);
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("sdp", obj);
+            jsonObject.put("toUserId", patientID);
+            socket.emit(Constant.TAG_RTC_OFFER_SOCKET, jsonObject);
+            Log.e("SignallingClient", "emitMessage:  -----> send offer: "+jsonObject.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void emitMessage(SessionDescription message, Socket socket, int doctorID) {
         try {
             Log.d("SignallingClient", "emitMessage() called with: message = [" + message + "]");

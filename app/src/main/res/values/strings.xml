@@ -219,4 +219,6 @@
     <string name="select_photo">Chọn ảnh từ thư viện</string>
     <string name="file_not_found">Không tìm thấy file!</string>
     <string name="chon_anh">Chọn ảnh</string>
+    <string name="dang_ket_noi">Đang kết nối...</string>
+    <string name="connect_unsuccess">Kết nối không thành công!</string>
 </resources>

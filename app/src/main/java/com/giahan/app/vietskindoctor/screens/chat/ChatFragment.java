@@ -7,25 +7,30 @@ import static com.giahan.app.vietskindoctor.utils.Constant.TAG_RECEIVE_MESSAGE;
 import static com.giahan.app.vietskindoctor.utils.MediaHelper2.REQUEST_MEDIA_LIBRARY;
 import static com.giahan.app.vietskindoctor.utils.MediaHelper2.REQUEST_PHOTO_CAPTURED;
 
-import android.app.Dialog;
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.LayoutManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnLayoutChangeListener;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager.LayoutParams;
 import android.widget.EditText;
@@ -40,9 +45,10 @@ import butterknife.OnClick;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.IntroImageActivity;
-import com.giahan.app.vietskindoctor.activity.VideoCall2Activity;
+import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.activity.VideoCallActivity;
 import com.giahan.app.vietskindoctor.activity.WebviewActivity;
+import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.domains.MessageBody;
@@ -62,8 +68,10 @@ import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
 import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
+import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.MediaHelper2;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
+import com.google.gson.Gson;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
@@ -126,10 +134,13 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     NestedScrollView nsv;
     @BindView(R.id.lnCallVideo)
     LinearLayout lnCallVideo;
-    @BindView(R.id.mNestedSV)
-    NestedScrollView nestedScrollView;
+//    @BindView(R.id.mNestedSV)
+//    NestedScrollView nestedScrollView;
+    @BindView(R.id.ll_total)
+    CoordinatorLayout ll_total;
 
 
+    private int TIME_WAITING = 33000;
     private List<Message> mMessages = new ArrayList<>();
     private List<Message> mPathURL = new ArrayList<>();
     private List<Message> mListMauXN = new ArrayList<>();
@@ -151,6 +162,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     private boolean loading = true;
     private boolean isOpen =false;
     private boolean isGallery = false;
+    private boolean isAcceptVideoCall = false;
+    private Activity mActivity;
 
     private Socket mSocket;
     private RecyclerView.OnScrollListener mOnScrollListener = new RecyclerView.OnScrollListener() {
@@ -183,17 +196,31 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         if (message.getUserId() == null) return;
         addMessageToBottom(message);
     });
-    {
-        try {
-            mSocket = IO.socket(Constant.URL_SOCKET);
-        } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
-        }
+    private Emitter.Listener OnVideoAccept = args -> mActivity.runOnUiThread(() -> {
+        JSONObject jsonObject = (JSONObject) args[0];
+        Log.e("ChatFragment", ":  -----> INVITE ACCEPT: "+new Gson().toJson(jsonObject));
+        isAcceptVideoCall = true;
+        DialogUtils.hideAlert();
+        openVideoCallScreen();
+    });
+
+    private Emitter.Listener OnVideoDecline = args -> mActivity.runOnUiThread(() -> {
+        JSONObject jsonObject = (JSONObject) args[0];
+        Log.e("ChatFragment", ":  -----> INVITE REJECT: "+new Gson().toJson(jsonObject));
+        cancelVideoCall();
+    });
+
+    private void openVideoCallScreen() {
+        Intent intent = new Intent(getMainActivity(), VideoCallActivity.class);
+        intent.putExtra("PATIENT_ID", mPatientID);
+        intent.putExtra("DOCTOR_ID", mUserID);
+        startActivity(intent);
     }
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(final Context context) {
         super.onAttach(context);
+        mActivity = (MainActivity) getActivity();
     }
 
     @Override
@@ -231,6 +258,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     private void receiveMessage() {
         mSocket.on(TAG_RECEIVE_MESSAGE, OnNewMessage);
+        mSocket.on(Constant.TAG_VIDEO_ACCEPT, OnVideoAccept);
+        mSocket.on(Constant.TAG_VIDEO_DECLINE, OnVideoDecline);
         mSocket.connect();
     }
 
@@ -246,38 +275,88 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         mMessagesView.setLayoutManager(linearLayoutManager);
         mMessagesView.setAdapter(mAdapter);
         mMessagesView.addOnScrollListener(mOnScrollListener);
+        mMessagesView.addOnLayoutChangeListener(
+                (v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
+                    if (bottom < oldBottom) {
+                        mMessagesView.postDelayed(() -> scrollToBottom(), 100);
+                    }
+                });
         mAdapter.setOnClickImageListener(this);
         mAdapter.setOnClickMtesListener(this);
         lnCallVideo.setOnClickListener(view -> onCallVideo());
-
-    }
-
-    private void setNestedScrollView() {
-        nestedScrollView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                final int scrollViewHeight = nestedScrollView.getHeight();
-                if (scrollViewHeight > 0) {
-                    nestedScrollView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-
-                    final View lastView = nestedScrollView.getChildAt(nestedScrollView.getChildCount() - 1);
-                    final int lastViewBottom = lastView.getBottom() + nestedScrollView.getPaddingBottom();
-                    final int deltaScrollY = lastViewBottom - scrollViewHeight - nestedScrollView.getScrollY();
-                    /* If you want to see the scroll animation, call this. */
-                    nestedScrollView.smoothScrollBy(0, deltaScrollY);
-                    /* If you don't want, call this. */
-                    nestedScrollView.scrollBy(0, deltaScrollY);
-                }
+        mInputMessageView.setOnFocusChangeListener((view, b) -> {
+            if (b) {
+                scrollToBottom();
             }
         });
+        mInputMessageView.setOnClickListener(view -> scrollToBottom());
+        setupUIHideKeyboard(ll_total);
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    public void setupUIHideKeyboard(View view) {
+
+        // Set up touch listener for non-text box views to hide keyboard.
+        if (!(view instanceof EditText)) {
+            view.setOnTouchListener((v, event) -> {
+                KeyBoardUtil.hide(getActivity());
+                return false;
+            });
+        }
+
+        //If a layout container, iterate over children and seed recursion.
+        if (view instanceof ViewGroup) {
+            for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
+                View innerView = ((ViewGroup) view).getChildAt(i);
+                setupUIHideKeyboard(innerView);
+            }
+        }
     }
 
     private void onCallVideo() {
-        Intent intent = new Intent(getMainActivity(), VideoCall2Activity.class);
-        intent.putExtra("PATIENT_ID", mPatientID);
-        intent.putExtra("DOCTOR_ID", mUserID);
-        startActivity(intent);
-//        getMainActivity().overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
+        isAcceptVideoCall = false;
+        DialogUtils.showDialogVideoCall(getActivity(), mPatientName, getString(R.string.connect_unsuccess),
+                view -> {
+                    isAcceptVideoCall = true;
+                    cancelVideoCall();
+                });
+        startCallVideo();
+        new Handler().postDelayed(() -> {
+            if (!isAcceptVideoCall) {
+                cancelVideoCall();
+            }
+        }, TIME_WAITING);
+    }
+
+    private void startCallVideo() {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put(Constant.TAG_TO_USER_ID, Integer.parseInt(mPatientID));
+            jsonObject.put("dsessionId", Integer.parseInt(mDsessionID));
+            mSocket.emit(Constant.TAG_VIDEO_INVITE, jsonObject);
+            Log.e("ChatFragment",
+                    "startCallVideo:  -----> START INVITE: " + jsonObject);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void cancelVideoCall() {
+        onFinishCallVideo();
+        DialogUtils.hideAlert();
+    }
+
+    private void onFinishCallVideo() {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put(Constant.TAG_TO_USER_ID, Integer.parseInt(mPatientID));
+            jsonObject.put("dsessionId", Integer.parseInt(mDsessionID));
+            mSocket.emit(Constant.TAG_VIDEO_FINISH, jsonObject);
+            Log.e("ChatFragment",
+                    "onFinishCallVideo:  -----> FINISH VIDEO: " + jsonObject);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     private void setupMenuView(){
@@ -328,8 +407,6 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     @OnClick(R.id.imgAttachPhoto)
     public void onAttachPhoto(){
         showDialogMediaFile();
-//        GalleryUtil.showGallery(mActivity);
-//        DialogUtils.showDialogAttachFile(getActivity(), view -> takeNewPhoto(), view -> openGallery());
     }
 
     private void showDialogMediaFile() {
@@ -414,9 +491,6 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     private void cancelUpload(){
         DialogUtils.hideAlert();
-//        if (isGallery) {
-//            openGallery();
-//        }
     }
 
     @OnClick(R.id.imgCall)
@@ -574,6 +648,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     private void scrollToBottom() {
         mMessagesView.scrollToPosition(mAdapter.getItemCount() - 1);
+//        nestedScrollView.scrollTo(0, 0);
     }
 
     private void getSessionData() {
@@ -608,7 +683,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
                     mPhotoAdapter.notifyDataSetChanged();
                     mAdapter.notifyItemRangeInserted(0, list.size());
                     if (lastid == null) scrollToBottom();
-                    setNestedScrollView();
+//                    setNestedScrollView();
                 } else {
                     loading = true;
                 }

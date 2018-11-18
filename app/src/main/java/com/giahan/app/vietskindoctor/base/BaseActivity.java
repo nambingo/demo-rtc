@@ -259,20 +259,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                         isShow = false;
                     });
         }
-//        int[] codes = getResources().getIntArray(R.array.server_code);
-//
-//        if (Toolbox.contains(codes, code)) {
-////            showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
-//        } else {
-//            if (code == 401 && !isShow) {
-//                isShow = true;
-//                showAlertBackDialog("Thông báo", getString(R.string.session_timed_out_content),
-//                        () -> {
-//                            logout(true);
-//                            isShow = false;
-//                        });
-//            }
-//        }
     }
 
     public void showAlertDialog(String title, String content) {

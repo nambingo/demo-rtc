@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 
+import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.MainActivity;
+import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
 import com.giahan.app.vietskindoctor.utils.ProgressDialogUtil;
 
@@ -26,6 +28,7 @@ public abstract class BaseFragment extends Fragment {
     protected View mView;
     protected ProgressDialogUtil mProgressDialogUtil;
     public PrefHelper_ mPref;
+    private boolean isShow = false;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -105,5 +108,17 @@ public abstract class BaseFragment extends Fragment {
     public BaseActivity getBaseActivity() {
         return ((BaseActivity) getActivity());
     }
+
+//    public void checkCodeShowDialog(int code) {
+//        if (code == 401 && !isShow) {
+//            isShow = true;
+//            DialogUtils.showDialogOneChoice(getActivity(), true, false, getString(R.string.session_timed_out_content),
+//                    getString(R.string.close),
+//                    () -> {
+//                        logout(true);
+//                        isShow = false;
+//                    });
+//        }
+//    }
 
 }
