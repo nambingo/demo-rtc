@@ -6,12 +6,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -22,11 +24,12 @@ import com.giahan.app.vietskindoctor.services.rtc.SignallingClient;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.PermissionsUtil;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
+import com.google.gson.Gson;
 import io.socket.client.IO;
 import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,6 +37,7 @@ import org.webrtc.AudioSource;
 import org.webrtc.AudioTrack;
 import org.webrtc.Camera1Enumerator;
 import org.webrtc.CameraEnumerator;
+import org.webrtc.CameraVideoCapturer;
 import org.webrtc.DefaultVideoDecoderFactory;
 import org.webrtc.DefaultVideoEncoderFactory;
 import org.webrtc.EglBase;
@@ -91,7 +95,17 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
 
     private String mPatientID;
 
+    private String mDsessionID;
+
     public PrefHelper_ pref;
+
+    private VideoCapturer videoCapturerAndroid;
+    private MediaStream mMediaStream;
+
+    CheckBox imgMic;
+    CheckBox imgSwitch;
+
+    private boolean isAcceptVideoCall = false;
 
     private void checkPermission() {
         if (checkStorePermission(this, CAMERA_PERMISSION_ID)) {
@@ -116,10 +130,11 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
     }
 
     private void receiverAnswer() {
+        if (mSocket == null) setupSocket();
         mSocket.on(Constant.TAG_RTC_ANSWER_SOCKET, args -> runOnUiThread(() -> {
             try {
-
                 JSONObject data = (JSONObject) args[0];
+                Log.e("VideoCallActivity", "receiverAnswer:  -----> "+data.toString());
                 JSONObject sdp = data.getJSONObject("sdp");
                 onAnswerReceived(sdp);
 
@@ -131,6 +146,7 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
     }
 
     private void receiverFinishVideo() {
+        if (mSocket == null) setupSocket();
         mSocket.on(Constant.TAG_VIDEO_FINISH, args -> runOnUiThread(() -> {
             JSONObject jsonObject = (JSONObject) args[0];
             if (jsonObject != null) {
@@ -147,16 +163,21 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
     private void getDataFromChat() {
         mDoctorID = getIntent().getStringExtra("DOCTOR_ID");
         mPatientID = getIntent().getStringExtra("PATIENT_ID");
+        mDsessionID = getIntent().getStringExtra("DSESSION_ID");
     }
 
     private void receiverCandidate() {
+        if (mSocket == null) setupSocket();
+
         mSocket.on(Constant.TAG_RTC_CANDIDATE_SOCKET, args -> runOnUiThread(() -> {
             JSONObject jsonObject = (JSONObject) args[0];
             JSONObject jsonObject1 = new JSONObject();
             IceCandidate iceCandidate = null;
             try {
                 jsonObject1 = jsonObject.getJSONObject("candidate");
+                Log.e("111111", "receiverCandidate:  -----> "+jsonObject1.toString());
                 iceCandidate = new IceCandidate("audio", 0, jsonObject1.getString("candidate"));
+                Log.e("VideoCallActivity", "receiverCandidate: AAAAA -----> "+new Gson().toJson(iceCandidate));
                 localPeer.addIceCandidate(iceCandidate);
                 remoteVideoView.setVisibility(View.VISIBLE);
                 updateVideoViews(true);
@@ -187,7 +208,6 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
                 .setVideoHwAccelerationOptions(rootEglBase.getEglBaseContext(), rootEglBase.getEglBaseContext());
 
         //Now create a VideoCapturer instance.
-        VideoCapturer videoCapturerAndroid;
         videoCapturerAndroid = createCameraCapturer(new Camera1Enumerator(false));
 
         //Create MediaConstraints - Will be useful for specifying video and audio constraints.
@@ -199,11 +219,11 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
             Log.e("VideoCallActivity", "start:  -----> NOT NULL ");
             videoSource = peerConnectionFactory.createVideoSource(videoCapturerAndroid);
         }
-        localVideoTrack = peerConnectionFactory.createVideoTrack("900", videoSource);
+        localVideoTrack = peerConnectionFactory.createVideoTrack("100", videoSource);
 
         //create an AudioSource instance
         audioSource = peerConnectionFactory.createAudioSource(audioConstraints);
-        localAudioTrack = peerConnectionFactory.createAudioTrack("901", audioSource);
+        localAudioTrack = peerConnectionFactory.createAudioTrack("101", audioSource);
 
         if (videoCapturerAndroid != null) {
             videoCapturerAndroid.startCapture(1024, 720, 30);
@@ -222,13 +242,45 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
         hangup = findViewById(R.id.end_call);
         localVideoView = findViewById(R.id.local_gl_surface_view);
         remoteVideoView = findViewById(R.id.remote_gl_surface_view);
+        imgMic = findViewById(R.id.imgMic);
+        imgSwitch = findViewById(R.id.imgSwitch);
         hangup.setOnClickListener(view -> onHangup());
+        imgMic.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b){
+                onMute();
+            }else {
+                onUnMute();
+            }
+        });
+        imgSwitch.setOnCheckedChangeListener((compoundButton, b) -> {
+            switchCamera();
+        });
+
+    }
+
+    private void switchCamera() {
+        if (videoCapturerAndroid != null) {
+            if (videoCapturerAndroid instanceof CameraVideoCapturer) {
+                CameraVideoCapturer cameraVideoCapturer = (CameraVideoCapturer) videoCapturerAndroid;
+                cameraVideoCapturer.switchCamera(null);
+            }
+        }
+    }
+
+    private void onUnMute() {
+        mMediaStream.audioTracks.get(0).setEnabled(true);
+    }
+
+    private void onMute() {
+        mMediaStream.audioTracks.get(0).setEnabled(false);
     }
 
     private void onHangup() {
+        if (mSocket == null) setupSocket();
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put(Constant.TAG_TO_USER_ID, Integer.parseInt(mDoctorID));
+            jsonObject.put(Constant.TAG_TO_USER_ID, Integer.parseInt(mPatientID));
+            jsonObject.put(Constant.TAG_DSESSIONID, Integer.parseInt(mDsessionID));
             mSocket.emit(Constant.TAG_VIDEO_FINISH, jsonObject);
             Log.e("VideoCall2Activity", "toInviteCall:  -----> TO FINISH OK");
             finish();
@@ -240,9 +292,11 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
     private void clearData() {
         mSocket.disconnect();
         mSocket.close();
-        localPeer.close();
-        localPeer = null;
-        finish();
+        if (localPeer != null) {
+            localPeer.close();
+            localPeer = null;
+        }
+//        finish();
     }
 
     @Override
@@ -275,6 +329,48 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
             } catch (JSONException ignored) {
                 Toast.makeText(this, "Socket error!", Toast.LENGTH_SHORT).show();
             }
+        }
+        receiveMessage();
+    }
+
+    private void receiveMessage() {
+//        mSocket.on(Constant.TAG_VIDEO_ACCEPT, OnVideoAccept);
+        mSocket.on(Constant.TAG_VIDEO_DECLINE, OnVideoDecline);
+        mSocket.connect();
+    }
+
+//    private Emitter.Listener OnVideoAccept = args -> runOnUiThread(() -> {
+//        JSONObject jsonObject = (JSONObject) args[0];
+//        Log.e("VideoCallActivity", ":  -----> INVITE ACCEPT: "+new Gson().toJson(jsonObject));
+//        SignallingClient.getInstance().init(this, mSocket);
+//        start();
+////        isAcceptVideoCall = true;
+////        DialogUtils.hideAlert();
+////        openVideoCallScreen();
+//    });
+
+    private Emitter.Listener OnVideoDecline = args -> runOnUiThread(() -> {
+        JSONObject jsonObject = (JSONObject) args[0];
+        Log.e("ChatFragment", ":  -----> INVITE REJECT: "+new Gson().toJson(jsonObject));
+        cancelVideoCall();
+    });
+
+    private void cancelVideoCall() {
+        onFinishCallVideo();
+//        DialogUtils.hideAlert();
+    }
+
+    private void onFinishCallVideo() {
+        if (mSocket == null) setupSocket();
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put(Constant.TAG_TO_USER_ID, Integer.parseInt(mPatientID));
+            jsonObject.put(Constant.TAG_DSESSIONID, Integer.parseInt(mDsessionID));
+            mSocket.emit(Constant.TAG_VIDEO_FINISH, jsonObject);
+            Log.e("VideoCallActivty",
+                    "onFinishCallVideo:  -----> FINISH VIDEO: " + jsonObject);
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 
@@ -355,12 +451,13 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
     }
 
     private void doAnswer() {
+        if (mSocket == null) setupSocket();
         localPeer.createAnswer(new CustomSdpObserver("localCreateAns") {
             @Override
             public void onCreateSuccess(SessionDescription sessionDescription) {
                 super.onCreateSuccess(sessionDescription);
                 localPeer.setLocalDescription(new CustomSdpObserver("localSetLocal"), sessionDescription);
-                SignallingClient.getInstance().emitMessage(sessionDescription, mSocket, Integer.parseInt(mDoctorID));
+                SignallingClient.getInstance().emitMessage(sessionDescription, mSocket, Integer.parseInt(mPatientID));
             }
         }, new MediaConstraints());
     }
@@ -370,8 +467,8 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
             ViewGroup.LayoutParams params = localVideoView.getLayoutParams();
 
             if (remoteVisible) {
-                params.height = dpToPx(100);
-                params.width = dpToPx(100);
+                params.height = dpToPx(150);
+                params.width = dpToPx(150);
             } else {
                 params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT);
@@ -413,7 +510,8 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
     public void onIceCandidateReceived(IceCandidate iceCandidate) {
         //we have received ice candidate. We can set it to the other peer.
 //        localPeer.addIceCandidate(iceCandidate);
-        SignallingClient.getInstance().emitIceCandidate(iceCandidate, mSocket, Integer.parseInt(mDoctorID));
+        if (mSocket == null) setupSocket();
+        SignallingClient.getInstance().emitIceCandidate(iceCandidate, mSocket, Integer.parseInt(mPatientID));
     }
 
     @Override
@@ -426,6 +524,7 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
     }
 
     private void doCall() {
+        if (mSocket == null) setupSocket();
         sdpConstraints = new MediaConstraints();
         sdpConstraints.mandatory.add(
                 new MediaConstraints.KeyValuePair("OfferToReceiveAudio", "true"));
@@ -435,9 +534,11 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
             @Override
             public void onCreateSuccess(SessionDescription sessionDescription) {
                 super.onCreateSuccess(sessionDescription);
-                localPeer.setLocalDescription(new CustomSdpObserver("localSetLocalDesc"), sessionDescription);
-                Log.d("onCreateSuccess", "SignallingClient emit ");
-                SignallingClient.getInstance().emitOffer(sessionDescription, mSocket, Integer.parseInt(mPatientID));
+                new Handler().postDelayed(() -> {
+                    localPeer.setLocalDescription(new CustomSdpObserver("localSetLocalDesc"), sessionDescription);
+                    Log.d("onCreateSuccess", "SignallingClient emit ");
+                    SignallingClient.getInstance().emitOffer(sessionDescription, mSocket, Integer.parseInt(mPatientID));
+                }, 1000);
             }
         }, sdpConstraints);
     }
@@ -515,12 +616,12 @@ public class VideoCallActivity extends AppCompatActivity implements SignallingCl
 
     private void addStreamToLocalPeer() {
         //creating local mediastream
-        MediaStream stream = peerConnectionFactory.createLocalMediaStream("ARDAMS");
+        mMediaStream = peerConnectionFactory.createLocalMediaStream("ARDAMS");
         AudioSource audioSource = peerConnectionFactory.createAudioSource(new MediaConstraints());
-        stream.addTrack(peerConnectionFactory.createAudioTrack("ARDAMSa0", audioSource));
-        stream.addTrack(localAudioTrack);
-        stream.addTrack(localVideoTrack);
-        localPeer.addStream(stream);
+        mMediaStream.addTrack(peerConnectionFactory.createAudioTrack("ARDAMSa0", audioSource));
+        mMediaStream.addTrack(localAudioTrack);
+        mMediaStream.addTrack(localVideoTrack);
+        localPeer.addStream(mMediaStream);
     }
 
     private VideoCapturer createCameraCapturer(CameraEnumerator enumerator) {

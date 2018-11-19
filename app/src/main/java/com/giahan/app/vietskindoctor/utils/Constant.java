@@ -34,6 +34,7 @@ public class Constant {
 
     public static final String TAG_TO_USER_ID = "toUserId";
     public static final String TAG_FROM_USER_ID = "fromUserId";
+    public static final String TAG_DSESSIONID = "dsessionId";
 
     public static final String TAG_RTC_OFFER_SOCKET = "RTC_OFFER";
     public static final String TAG_RTC_ANSWER_SOCKET = "RTC_ANSWER";

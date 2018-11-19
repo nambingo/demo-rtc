@@ -24,7 +24,7 @@
             android:id="@+id/local_gl_surface_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="bottom|end" />
+            android:layout_gravity="top|end" />
 
     </FrameLayout>
 
@@ -42,24 +42,26 @@
             android:layout_centerInParent="true"
             android:src="@drawable/ic_hang_up" />
 
-        <ImageView
+        <CheckBox
             android:id="@+id/imgMic"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/bg_microphone"
-            android:layout_marginRight="@dimen/dp_20"/>
+            android:layout_marginRight="@dimen/dp_20"
+            android:button="@null"
+            android:background="@drawable/bg_microphone"/>
 
-        <ImageView
+        <CheckBox
             android:id="@+id/imgSwitch"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:src="@drawable/ic_camera_switch"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dp_20"/>
+            android:layout_marginLeft="@dimen/dp_20"
+            android:button="@null"
+            android:background="@drawable/ic_camera_switch"/>
 
     </RelativeLayout>
 

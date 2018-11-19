@@ -214,6 +214,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         Intent intent = new Intent(getMainActivity(), VideoCallActivity.class);
         intent.putExtra("PATIENT_ID", mPatientID);
         intent.putExtra("DOCTOR_ID", mUserID);
+        intent.putExtra("DSESSION_ID", mDsessionID);
         startActivity(intent);
     }
 
@@ -332,7 +333,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put(Constant.TAG_TO_USER_ID, Integer.parseInt(mPatientID));
-            jsonObject.put("dsessionId", Integer.parseInt(mDsessionID));
+            jsonObject.put(Constant.TAG_DSESSIONID, Integer.parseInt(mDsessionID));
             mSocket.emit(Constant.TAG_VIDEO_INVITE, jsonObject);
             Log.e("ChatFragment",
                     "startCallVideo:  -----> START INVITE: " + jsonObject);

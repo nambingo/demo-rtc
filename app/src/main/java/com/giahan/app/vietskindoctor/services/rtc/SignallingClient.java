@@ -192,7 +192,7 @@ public class SignallingClient {
         }
     }
 
-    public void emitMessage(SessionDescription message, Socket socket, int doctorID) {
+    public void emitMessage(SessionDescription message, Socket socket, int patientID) {
         try {
             Log.d("SignallingClient", "emitMessage() called with: message = [" + message + "]");
             JSONObject obj = new JSONObject();
@@ -201,7 +201,7 @@ public class SignallingClient {
             Log.d("emitMessage", obj.toString());
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("sdp", obj);
-            jsonObject.put("toUserId", doctorID);
+            jsonObject.put("toUserId", patientID);
             socket.emit(Constant.TAG_RTC_ANSWER_SOCKET, jsonObject);
             Log.e("SignallingClient", "emitMessage:  -----> vivek1794: "+jsonObject.toString());
         } catch (JSONException e) {
@@ -210,7 +210,7 @@ public class SignallingClient {
     }
 
 
-    public void emitIceCandidate(IceCandidate iceCandidate, Socket socket, int doctorID) {
+    public void emitIceCandidate(IceCandidate iceCandidate, Socket socket, int patientID) {
         try {
             JSONObject object = new JSONObject();
 //            object.put("type", "candidate");
@@ -218,7 +218,7 @@ public class SignallingClient {
             object.put("sdpMid", iceCandidate.sdpMid);
             object.put("candidate", iceCandidate.sdp);
             JSONObject jsonObject = new JSONObject();
-            jsonObject.put("toUserId", doctorID);
+            jsonObject.put("toUserId", patientID);
             jsonObject.put("candidate", object);
             socket.emit(Constant.TAG_RTC_CANDIDATE_SOCKET, jsonObject);
             Log.e("SignallingClient", "emitIceCandidate:  -----> "+jsonObject);
