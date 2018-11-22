@@ -8,6 +8,7 @@
     <group
             android:name="#979797ff">
         <path
+
             android:fillColor="#979797"
             android:fillAlpha="1.00"
             android:strokeAlpha="1.00"

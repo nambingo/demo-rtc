@@ -230,7 +230,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
             Picasso.with(mContext)
                     .load(mAvatarUrl)
-                    .placeholder(R.mipmap.ic_launcher)
+                    .placeholder(R.mipmap.ic_patient)
                     .into(imgAvatar);
             tvMe.setTag(message);
             tvYou.setTag(message);
