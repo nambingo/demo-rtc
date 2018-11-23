@@ -70,7 +70,7 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
     @BindView(R.id.tvChapNhan)
     TextView tvChapNhan;
 
-    @BindView(R.id.scrollView)
+    @BindView(R.id.scView_detail_request)
     NestedScrollView scrollView;
 
     private Session mSession;
