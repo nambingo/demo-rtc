@@ -88,9 +88,9 @@ public class MainActivity extends BaseActivity
     public static final String EXT_MAIN_ID = "extra_main_id";
 
     public static Intent getIntent(Context context, String sessionID) {
-        Intent i = new Intent(context, MainActivity.class);
-        i.putExtra(EXT_MAIN_ID, sessionID);
-        return i;
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.putExtra(EXT_MAIN_ID, sessionID);
+        return intent;
     }
 
     @Override
