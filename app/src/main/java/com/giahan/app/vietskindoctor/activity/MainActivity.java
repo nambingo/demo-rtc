@@ -40,6 +40,7 @@ import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.ncapdevi.fragnav.FragNavController;
 import com.ncapdevi.fragnav.FragNavController.RootFragmentListener;
 import com.ncapdevi.fragnav.FragNavController.TransactionListener;
+import com.ncapdevi.fragnav.FragNavTransactionOptions;
 import com.ncapdevi.fragnav.tabhistory.FragNavTabHistoryController;
 
 import butterknife.BindView;
@@ -72,6 +73,9 @@ public class MainActivity extends BaseActivity
 
     private TextView tvNumber;
 
+    private String mSessionId;
+    private boolean isFromNitification = false;
+
     public boolean isGoToChatScreen = false;
 
     public boolean isGoToChatScreen() {
@@ -86,10 +90,13 @@ public class MainActivity extends BaseActivity
     private FragNavController mFragNavController;
 
     public static final String EXT_MAIN_ID = "extra_main_id";
+    public static final String EXT_FROM_NOTIFICATION = "from_notification";
+
 
     public static Intent getIntent(Context context, String sessionID) {
         Intent intent = new Intent(context, MainActivity.class);
         intent.putExtra(EXT_MAIN_ID, sessionID);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }
 
@@ -125,8 +132,20 @@ public class MainActivity extends BaseActivity
         });
         Toolbox.setStatusBarColor(this, getResources(), R.color.color_header_bar);
         getCountRequest();
+
+
+
     }
 
+    private void openChatFromNoti() {
+        if(getIntent() == null){
+            return;
+        }
+        mSessionId = getIntent().getStringExtra(EXT_MAIN_ID);
+        if(mSessionId != null){
+            isFromNitification = true;
+        }
+    }
 
 
     public void onSettingClick() {
@@ -219,7 +238,17 @@ public class MainActivity extends BaseActivity
     public Fragment getRootFragment(int index) {
         switch (index) {
             case INDEX_PHIEN:
-                return new KhamOnlineFragment();
+                //Open Chat screen from notification
+                openChatFromNoti();
+                KhamOnlineFragment khamOnlineFragment = new KhamOnlineFragment();
+                Bundle bundle = new Bundle();
+                if(isFromNitification){
+                    isFromNitification = false;
+                    bundle.putString(EXT_MAIN_ID, mSessionId);
+                    bundle.putBoolean(EXT_FROM_NOTIFICATION,true);
+                }
+                khamOnlineFragment.setArguments(bundle);
+                return khamOnlineFragment;
             case INDEX_YEU_CAU:
                 return new YeuCauFragment();
             case INDEX_CAI_DAT:
@@ -245,7 +274,7 @@ public class MainActivity extends BaseActivity
 
     public void pushFragment(Fragment fragment) {
         if (mFragNavController != null) {
-            mFragNavController.pushFragment(fragment);
+            mFragNavController.pushFragment(fragment, FragNavTransactionOptions.newBuilder().allowStateLoss(true).build());
         }
     }
 
@@ -257,7 +286,7 @@ public class MainActivity extends BaseActivity
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
+            super.onSaveInstanceState(outState);
         if (mFragNavController != null) {
             mFragNavController.onSaveInstanceState(outState);
         }

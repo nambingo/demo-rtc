@@ -39,7 +39,6 @@ public class FMService extends FirebaseMessagingService {
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         if (remoteMessage.getData() == null) return;
-
         Map<String, String> notiData = remoteMessage.getData();
         Log.d("tony", notiData.toString());
 
@@ -66,7 +65,7 @@ public class FMService extends FirebaseMessagingService {
     private void buildNotification(Intent intent, String message, int notifyID) {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, notifyID, intent,
-                PendingIntent.FLAG_ONE_SHOT);
+                0);
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         setupNotification(message, defaultSoundUri, pendingIntent, notifyID);
     }
