@@ -40,8 +40,10 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import butterknife.BindView;
 import butterknife.OnClick;
+
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.IntroImageActivity;
@@ -72,22 +74,27 @@ import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.MediaHelper2;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.google.gson.Gson;
+
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
+
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -97,7 +104,7 @@ import retrofit2.Response;
  */
 
 public class ChatFragment extends BaseFragment implements OnClickImageListener,
-        OnClickMtesListener, XetNghiemAdapter.OnClickMtesListener, PhotoAdapter.OnClickPhotoListener{
+        OnClickMtesListener, XetNghiemAdapter.OnClickMtesListener, PhotoAdapter.OnClickPhotoListener {
     @BindView(R.id.messages)
     RecyclerView mMessagesView;
     @BindView(R.id.message_input)
@@ -134,7 +141,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     NestedScrollView nsv;
     @BindView(R.id.lnCallVideo)
     LinearLayout lnCallVideo;
-//    @BindView(R.id.mNestedSV)
+    //    @BindView(R.id.mNestedSV)
 //    NestedScrollView nestedScrollView;
     @BindView(R.id.ll_total)
     CoordinatorLayout ll_total;
@@ -160,7 +167,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     private String mUserID;
     private int firstVisibleItemIndex;
     private boolean loading = true;
-    private boolean isOpen =false;
+    private boolean isOpen = false;
     private boolean isGallery = false;
     private boolean isAcceptVideoCall = false;
     private Activity mActivity;
@@ -198,7 +205,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     });
     private Emitter.Listener OnVideoAccept = args -> mActivity.runOnUiThread(() -> {
         JSONObject jsonObject = (JSONObject) args[0];
-        Log.e("ChatFragment", ":  -----> INVITE ACCEPT: "+new Gson().toJson(jsonObject));
+        Log.e("ChatFragment", ":  -----> INVITE ACCEPT: " + new Gson().toJson(jsonObject));
         isAcceptVideoCall = true;
         DialogUtils.hideAlert();
         openVideoCallScreen();
@@ -206,7 +213,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     private Emitter.Listener OnVideoDecline = args -> mActivity.runOnUiThread(() -> {
         JSONObject jsonObject = (JSONObject) args[0];
-        Log.e("ChatFragment", ":  -----> INVITE REJECT: "+new Gson().toJson(jsonObject));
+        Log.e("ChatFragment", ":  -----> INVITE REJECT: " + new Gson().toJson(jsonObject));
         cancelVideoCall();
     });
 
@@ -275,6 +282,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
         mMessagesView.setLayoutManager(linearLayoutManager);
         mMessagesView.setAdapter(mAdapter);
+        mMessagesView.setHasFixedSize(true);
+        mMessagesView.setItemAnimator(null);
         mMessagesView.addOnScrollListener(mOnScrollListener);
         mMessagesView.addOnLayoutChangeListener(
                 (v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
@@ -360,10 +369,10 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         }
     }
 
-    private void setupMenuView(){
+    private void setupMenuView() {
         drawer_layout.setClipToPadding(false);
-        int width_layout = mActivity.getResources().getDisplayMetrics().widthPixels * 3/4;
-        ScrollView.LayoutParams params = (ScrollView.LayoutParams)lnRight.getLayoutParams();
+        int width_layout = mActivity.getResources().getDisplayMetrics().widthPixels * 3 / 4;
+        ScrollView.LayoutParams params = (ScrollView.LayoutParams) lnRight.getLayoutParams();
         params.width = width_layout;
         lnRight.setLayoutParams(params);
         rvPhoto.setLayoutManager(new GridLayoutManager(getActivity(), 3));
@@ -377,7 +386,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         lvDonThuoc.setAdapter(mPresAdapter);
     }
 
-    private void setupList(RecyclerView recyclerView, XetNghiemAdapter adapter){
+    private void setupList(RecyclerView recyclerView, XetNghiemAdapter adapter) {
         recyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
@@ -387,26 +396,26 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     @OnClick(R.id.send_button)
     public void onSend() {
-        if (GeneralUtil.checkInternet(getActivity())){
+        if (GeneralUtil.checkInternet(getActivity())) {
             sendText();
-        }else {
+        } else {
             getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
         }
     }
 
     @OnClick(R.id.llMenu)
-    public void onMenu(){
+    public void onMenu() {
         if (isOpen) closeMenu();
         else openMenu();
     }
 
     @OnClick(R.id.lnBack)
-    public void onBack(){
+    public void onBack() {
         getMainActivity().popFragment();
     }
 
     @OnClick(R.id.imgAttachPhoto)
-    public void onAttachPhoto(){
+    public void onAttachPhoto() {
         showDialogMediaFile();
     }
 
@@ -433,7 +442,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         DialogUtils.hideAlert();
     }
 
-    private void openGallery(){
+    private void openGallery() {
         isGallery = true;
         MediaHelper2.openGallery(getActivity());
         DialogUtils.hideAlert();
@@ -441,7 +450,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-            @NonNull int[] grantResults) {
+                                           @NonNull int[] grantResults) {
         switch (requestCode) {
             case MediaHelper2.STORAGE_PERMISSION_ID:
                 if (grantResults.length > 0
@@ -490,7 +499,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         }
     }
 
-    private void cancelUpload(){
+    private void cancelUpload() {
         DialogUtils.hideAlert();
     }
 
@@ -535,7 +544,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         drawer_layout.openDrawer(Gravity.END);
     }
 
-    private void closeMenu(){
+    private void closeMenu() {
         isOpen = false;
         drawer_layout.closeDrawer(Gravity.END);
     }
@@ -560,7 +569,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         sendMessage(mDsessionID, 1, message, null, null);
     }
 
-    private void sendFile(String url, String id){
+    private void sendFile(String url, String id) {
         if (null == mUserID) return;
         if (!mSocket.connected()) return;
         Message item = new Message();
@@ -573,34 +582,34 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         sendMessage(mDsessionID, 2, null, id, url);
     }
 
-    private void uploadImage(String path){
+    private void uploadImage(String path) {
         if (TextUtils.isEmpty(path)) return;
-            MultipartBody.Builder builder = new MultipartBody.Builder();
-            builder.setType(MultipartBody.FORM);
-            File file = new File(path);
-            RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), file);
-            builder.addFormDataPart("file", file.getName(), requestBody);
-            Call<UploadResult> call = RequestHelper.getRequest(true, getActivity()).uploadImage(builder.build());
-            call.enqueue(new retrofit2.Callback<UploadResult>() {
-                @Override
-                public void onResponse(retrofit2.Call<UploadResult> call, retrofit2.Response<UploadResult> response) {
-                    if (response == null) return;
-                    getMainActivity().checkCodeShowDialog(response.code());
-                    if (response.body() == null) return;
-                    //listPhotoID.add(Integer.parseInt(response.body().getId()));
-                    sendFile(response.body().getUrl(), response.body().getId());
-                }
+        MultipartBody.Builder builder = new MultipartBody.Builder();
+        builder.setType(MultipartBody.FORM);
+        File file = new File(path);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), file);
+        builder.addFormDataPart("file", file.getName(), requestBody);
+        Call<UploadResult> call = RequestHelper.getRequest(true, getActivity()).uploadImage(builder.build());
+        call.enqueue(new retrofit2.Callback<UploadResult>() {
+            @Override
+            public void onResponse(retrofit2.Call<UploadResult> call, retrofit2.Response<UploadResult> response) {
+                if (response == null) return;
+                getMainActivity().checkCodeShowDialog(response.code());
+                if (response.body() == null) return;
+                //listPhotoID.add(Integer.parseInt(response.body().getId()));
+                sendFile(response.body().getUrl(), response.body().getId());
+            }
 
-                @Override
-                public void onFailure(retrofit2.Call<UploadResult> call, Throwable t) {
-                    if (t instanceof NoConnectivityException) {
-                        // No internet connection
-                        getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
-                    } else {
-                        getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
-                    }
+            @Override
+            public void onFailure(retrofit2.Call<UploadResult> call, Throwable t) {
+                if (t instanceof NoConnectivityException) {
+                    // No internet connection
+                    getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+                } else {
+                    getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
                 }
-            });
+            }
+        });
     }
 
     private void sendMessage(String mDsessionID, int mType, String mMessage, String id, String
@@ -610,7 +619,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         call.enqueue(new Callback<SendMessageResult>() {
             @Override
             public void onResponse(Call<SendMessageResult> call,
-                    Response<SendMessageResult> response) {
+                                   Response<SendMessageResult> response) {
                 if (response == null) return;
                 getMainActivity().checkCodeShowDialog(response.code());
                 if (response.body() == null) return;
@@ -640,7 +649,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         scrollToBottom();
     }
 
-    private void addDataToList(Message message, String type, List<Message> list){
+    private void addDataToList(Message message, String type, List<Message> list) {
         if (!TextUtils.isEmpty(message.getObjUrl()) && message.getType().equals(type)) {
             if (list.contains(message)) return;
             list.add(message);
@@ -703,7 +712,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         });
     }
 
-    private void getInfoPatient(String patientID){
+    private void getInfoPatient(String patientID) {
         if (TextUtils.isEmpty(patientID)) return;
         Call<PatientResponse> call = RequestHelper.getRequest(false, getActivity()).getPatientInfo(patientID);
         call.enqueue(new Callback<PatientResponse>() {
@@ -730,7 +739,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         });
     }
 
-    private void addData(String type, List<Message> list){
+    private void addData(String type, List<Message> list) {
         for (int i = 0; i < mMessages.size(); i++) {
             if (TextUtils.isEmpty(mMessages.get(i).getObjUrl())) continue;
             if (!mMessages.get(i).getType().equals(type)) continue;
@@ -749,8 +758,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         showDetailMtes(message);
     }
 
-    private void showDetailImage(Message message){
-        if(!VietSkinDoctorApplication.isIsOpenDetailScreen()) {
+    private void showDetailImage(Message message) {
+        if (!VietSkinDoctorApplication.isIsOpenDetailScreen()) {
             VietSkinDoctorApplication.setIsOpenDetailScreen(true);
             ArrayList<Photo> photos = new ArrayList<>();
             photos.add(new Photo(0, message.getObjUrl()));
@@ -761,8 +770,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         }
     }
 
-    private void showDetailMtes(Message message){
-        if(!VietSkinDoctorApplication.isIsOpenDetailScreen()) {
+    private void showDetailMtes(Message message) {
+        if (!VietSkinDoctorApplication.isIsOpenDetailScreen()) {
             VietSkinDoctorApplication.setIsOpenDetailScreen(true);
             Intent intent = new Intent(getMainActivity(), WebviewActivity.class);
             intent.putExtra("url", message.getObjUrl() + "?access_token=" + mPref.token().get());
