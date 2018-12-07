@@ -241,6 +241,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             tvYou.setText(isMe ? null : message.getMessage());
             tvMe.setText(isMe ? message.getMessage() : null);
             imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
+            
             Picasso.with(mContext)
                     .load(mAvatarUrl)
                     .placeholder(R.mipmap.ic_patient)
