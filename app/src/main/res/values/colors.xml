@@ -39,4 +39,6 @@
     <color name="color_default2">#C4C4C4</color>
     <color name="color_friend_chat">#DADADA</color>
 
+    <color name="color_background">#f7eee3</color>
+
 </resources>
