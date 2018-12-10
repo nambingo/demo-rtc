@@ -8,14 +8,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
 import com.squareup.picasso.Picasso;
+
 import de.hdodenhof.circleimageview.CircleImageView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +52,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private OnClickMtesListener mOnClickMtesListener;
 
     public MessageAdapter(Context context, List<Message> messages, String userID,
-            String avatarUrl) {
+                          String avatarUrl) {
         mContext = context;
         mMessages = messages;
         mUserID = userID;
@@ -168,9 +179,9 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public int getItemViewType(int position) {
         Message message = mMessages.get(position);
-        if (message.getUserId().equalsIgnoreCase("-1")){
+        if (message.getUserId().equalsIgnoreCase("-1")) {
             return MESSAGE_SYSTEM;
-        }else {
+        } else {
             String type = message.getType();
             switch (type) {
                 case Message.TYPE_TEXT:
@@ -257,25 +268,63 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         @BindView(R.id.tvDateMe)
         TextView tvDateMe;
 
+        @BindView(R.id.progress_bar_right)
+        ProgressBar progressBarRight;
+
+        @BindView(R.id.progress_bar_left)
+        ProgressBar progressBarLeft;
+
+        private RequestManager mGlide;
+
+
         public ChatFileViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            mGlide = Glide.with(itemView.getContext());
         }
 
         public void bind(Message message, boolean isLike) {
             boolean isMe = message.getUserId().equals(mUserID);
             chat_text_other.setVisibility(isMe ? View.GONE : View.VISIBLE);
             chat_text_me.setVisibility(isMe ? View.VISIBLE : View.GONE);
-            Picasso.with(mContext)
-                    .load(message.getObjUrl())
-                    .centerCrop()
-                    .fit()
+
+            mGlide.load(message.getObjUrl())
+                    .dontAnimate()
+                    .fitCenter()
+                    .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                    .listener(new RequestListener<String, GlideDrawable>() {
+                        @Override
+                        public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                            if (isMe) {
+                                progressBarRight.setVisibility(View.GONE);
+                            } else {
+                                progressBarLeft.setVisibility(View.GONE);
+                            }
+
+                            return false;
+                        }
+
+                        @Override
+                        public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                            return false;
+                        }
+                    })
                     .into(isMe ? imgMe : imgYou);
+
+            if (isMe) {
+                progressBarRight.setVisibility(View.GONE);
+            } else {
+                progressBarLeft.setVisibility(View.GONE);
+            }
+
             imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
-            Picasso.with(mContext)
-                    .load(mAvatarUrl)
+
+            mGlide.load(mAvatarUrl)
+                    .dontAnimate()
                     .placeholder(R.mipmap.ic_launcher)
+                    .error(R.mipmap.ic_launcher)
                     .into(imgAvatar);
+
             imgMe.setTag(message);
             imgYou.setTag(message);
             tvDateMe.setText(DateUtils.convertDate(message.getCreatedAt()));
