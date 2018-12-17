@@ -23,6 +23,7 @@ import com.giahan.app.vietskindoctor.domains.SessionBody;
 import com.giahan.app.vietskindoctor.domains.SessionResult;
 import com.giahan.app.vietskindoctor.domains.UploadResult;
 import com.giahan.app.vietskindoctor.model.AccountKitBody;
+import com.giahan.app.vietskindoctor.domains.WithdrawalRequest;
 import com.giahan.app.vietskindoctor.model.AutoDiagnoseBody;
 import com.giahan.app.vietskindoctor.model.AutoDiagnoseResponse;
 import com.giahan.app.vietskindoctor.model.BaseResponse;
@@ -39,6 +40,7 @@ import com.giahan.app.vietskindoctor.model.RegisterResponse;
 import com.giahan.app.vietskindoctor.model.UpdateInfoResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 
+import com.giahan.app.vietskindoctor.model.WithdrawBody;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelable.Param;
 import java.util.List;
 
@@ -148,4 +150,7 @@ public interface APIService {
 
     @GET("passcode/recovery")
     Call<PassCodeResponse> recoveryPassCode();
+
+    @POST("doctor/withdraw")
+    Call<WithdrawalRequest> sendWithdrawalRequest(@Body WithdrawBody withdrawBody);
 }

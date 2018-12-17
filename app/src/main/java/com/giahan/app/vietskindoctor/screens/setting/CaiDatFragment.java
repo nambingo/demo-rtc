@@ -115,7 +115,7 @@ public class CaiDatFragment extends BaseFragment {
 
     @OnClick(R.id.ll_info)
     void openInfoAccount() {
-        getMainActivity().pushFragment(new InfoAccountV3Fragment());
+        getMainActivity().pushFragment(new InfoAccountV4Fragment());
     }
 
     @OnClick(R.id.ll_change_password)

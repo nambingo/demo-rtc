@@ -1,6 +1,7 @@
 package com.giahan.app.vietskindoctor.utils;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -427,6 +428,49 @@ public class DialogUtils {
         dialog.show();
     }
 
+    public static void showDialogWithdrawProcess(Context context, boolean isPassCode, String message, View.OnClickListener onClickLeft,
+                                           onListenerWithdrawDialogInput listener) {
+        KeyBoardUtil.show((Activity)context);
+        dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+        dialog.setContentView(R.layout.dialog_request_pass_code);
+        dialog.setCanceledOnTouchOutside(true);
+        TextView title = dialog.findViewById(R.id.tvTitle);
+        LinearLayout lnMoney = dialog.findViewById(R.id.lnMoney);
+        LinearLayout lnPassCode = dialog.findViewById(R.id.lnPassCode);
+        TextView btnLeft = dialog.findViewById(R.id.btn_left);
+        TextView btnRight = dialog.findViewById(R.id.btn_right);
+        EditText edtNum1 = dialog.findViewById(R.id.edtNum1);
+        EditText edtNum2 = dialog.findViewById(R.id.edtNum2);
+        EditText edtNum3 = dialog.findViewById(R.id.edtNum3);
+        EditText edtNum4 = dialog.findViewById(R.id.edtNum4);
+        EditText edtNum5 = dialog.findViewById(R.id.edtNum5);
+        EditText edtNum6 = dialog.findViewById(R.id.edtNum6);
+        EditText edtAmount = dialog.findViewById(R.id.edtMoney);
+        GeneralUtil.autoMovingText(edtNum1,edtNum2,edtNum3,edtNum4,edtNum5,edtNum6);
+
+        title.setText(message);
+        lnMoney.setVisibility(isPassCode ? View.GONE : View.VISIBLE);
+        lnPassCode.setVisibility(isPassCode? View.VISIBLE : View.GONE);
+        btnLeft.setOnClickListener(onClickLeft);
+
+        btnRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = "";
+                if(!isPassCode){
+                    value= Toolbox.getText(edtAmount);
+                }else {
+                    value = Toolbox.getText(edtNum1) + Toolbox.getText(edtNum2) +Toolbox.getText(edtNum3) +Toolbox.getText(edtNum4)+Toolbox.getText(edtNum5)+Toolbox.getText(edtNum6);
+                }
+                if(listener!=null){
+                    listener.onListen(value);
+                }
+
+            }
+        });
+        dialog.show();
+    }
+
     public static void showDialogOneChoice(Context context, boolean isFace, boolean isCheck,
                                            String text_content, String text_choice,
                                            View.OnClickListener onClick) {
@@ -582,6 +626,10 @@ public class DialogUtils {
         void onDismiss(Dialog dialog);
     }
 
+    public interface onListenerWithdrawDialogInput{
+        void onListen(String value);
+    }
+
     public interface onConfirmClickListener {
         void onListen();
     }
@@ -601,7 +649,6 @@ public class DialogUtils {
         }, 30000);
         dialog.show();
     }
-
 
     public interface onListenerPhoneNumber{
         void onListen(String phoneNum);
