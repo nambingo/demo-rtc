@@ -15,18 +15,19 @@ import com.giahan.app.vietskindoctor.domains.PatientResponse;
 import com.giahan.app.vietskindoctor.domains.ReadMessageBody;
 import com.giahan.app.vietskindoctor.domains.ReadMessageResult;
 import com.giahan.app.vietskindoctor.domains.SendMessageResult;
-import com.giahan.app.vietskindoctor.domains.Session;
 import com.giahan.app.vietskindoctor.domains.MappingResult;
 import com.giahan.app.vietskindoctor.domains.RequestDoctorBody;
 import com.giahan.app.vietskindoctor.domains.RequestDoctorResult;
+import com.giahan.app.vietskindoctor.domains.SessionInfoResult;
 import com.giahan.app.vietskindoctor.domains.SessionBody;
 import com.giahan.app.vietskindoctor.domains.SessionResult;
+import com.giahan.app.vietskindoctor.domains.TransactionList;
 import com.giahan.app.vietskindoctor.domains.UploadResult;
 import com.giahan.app.vietskindoctor.model.AccountKitBody;
-import com.giahan.app.vietskindoctor.domains.WithdrawalRequest;
+import com.giahan.app.vietskindoctor.domains.WithdrawListReSult;
+import com.giahan.app.vietskindoctor.domains.WithdrawalResult;
 import com.giahan.app.vietskindoctor.model.AutoDiagnoseBody;
 import com.giahan.app.vietskindoctor.model.AutoDiagnoseResponse;
-import com.giahan.app.vietskindoctor.model.BaseResponse;
 import com.giahan.app.vietskindoctor.model.FbModelBody;
 import com.giahan.app.vietskindoctor.model.GoogleModelBody;
 import com.giahan.app.vietskindoctor.model.InfoUpdateBody;
@@ -41,8 +42,6 @@ import com.giahan.app.vietskindoctor.model.UpdateInfoResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 
 import com.giahan.app.vietskindoctor.model.WithdrawBody;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable.Param;
-import java.util.List;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -152,5 +151,15 @@ public interface APIService {
     Call<PassCodeResponse> recoveryPassCode();
 
     @POST("doctor/withdraw")
-    Call<WithdrawalRequest> sendWithdrawalRequest(@Body WithdrawBody withdrawBody);
+    Call<WithdrawalResult> sendWithdrawalRequest(@Body WithdrawBody withdrawBody);
+
+    @GET("doctor/credit-logs")
+    Call<TransactionList> getTransactionLogs();
+
+    @GET("doctor/withdraws")
+    Call<WithdrawListReSult> getAllWithdrawal();
+
+    @GET("dsession/info/{id}")
+    Call<SessionInfoResult> getSessionInfo(@Path("id") String id);
+
 }

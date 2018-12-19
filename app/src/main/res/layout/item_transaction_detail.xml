@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlTransContaner">
+
+    <LinearLayout
+        android:id="@+id/titleSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phiên Khám:"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tvSessionID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="221"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/dp_20"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titleWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rút tiền"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvDateAndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="italic"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="150.000"
+        android:textColor="@color/color_default"
+        android:textSize="@dimen/sp_16"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/dp_20"/>
+
+</RelativeLayout>

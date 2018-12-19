@@ -1,32 +1,34 @@
 package com.giahan.app.vietskindoctor.screens.setting;
 
 import android.app.Dialog;
-import android.text.LoginFilter;
+import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
-import com.giahan.app.vietskindoctor.domains.WithdrawalRequest;
+import com.giahan.app.vietskindoctor.domains.WithdrawListReSult;
+import com.giahan.app.vietskindoctor.domains.WithdrawalResult;
 import com.giahan.app.vietskindoctor.model.BaseResponse;
 import com.giahan.app.vietskindoctor.model.InfoUpdateBody;
 import com.giahan.app.vietskindoctor.model.UpdateInfoResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 import com.giahan.app.vietskindoctor.model.WithdrawBody;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
+import com.giahan.app.vietskindoctor.screens.setting.transaction.TransactionDetailFragment;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DialogUtils;
-import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -58,10 +60,10 @@ public class InfoAccountV4Fragment extends BaseFragment {
     ImageView profileImage;
     @BindView(R.id.tvWorkplace)
     TextView tvWorkplace;
-    @BindView(R.id.btnTransRecord)
-    Button btnTransRecord;
-    @BindView(R.id.btnWithdraw)
-    Button btnWithdrawl;
+    @BindView(R.id.khoanhgiu)
+    CardView holdCreditContainer;
+    @BindView(R.id.tvHoldCredit)
+    TextView tvHoldCredit;
 
     public String birthDayDate = "";
     private SimpleDateFormat formatSend;
@@ -69,6 +71,8 @@ public class InfoAccountV4Fragment extends BaseFragment {
     private String withdrawAmount = "";
     private String passcode;
     UserInfoResponse currentUser;
+    private List<WithdrawalResult> withdrawList= new ArrayList<>();
+    private int holdCreadit = 0;
 
     @Override
     protected int getLayoutId() {
@@ -91,7 +95,54 @@ public class InfoAccountV4Fragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
+        getHoldCreadit();
         getUserInfo();
+    }
+
+    private void getHoldCreadit() {
+        Call<WithdrawListReSult> call = RequestHelper.getRequest(false, getActivity()).getAllWithdrawal();
+        call.enqueue(new Callback<WithdrawListReSult>() {
+            @Override
+            public void onResponse(Call<WithdrawListReSult> call, Response<WithdrawListReSult> response) {
+                if(response.body()!=null){
+                    withdrawList = response.body().getWithdraws();
+                    if(withdrawList.size()>0){
+                        sumRequestingWithdraw(withdrawList);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<WithdrawListReSult> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void sumRequestingWithdraw(List<WithdrawalResult> withdrawList) {
+        holdCreadit = 0;
+        for (WithdrawalResult withdrawalResult : withdrawList){
+            if(withdrawalResult.getStatus().equals("requesting")){
+                holdCreadit += withdrawalResult.getAmount();
+            }
+        }
+        setUpHoldCreditView();
+    }
+
+    private void setUpHoldCreditView() {
+        holdCreditContainer.setVisibility(holdCreadit == 0 ? View.GONE : View.VISIBLE);
+        tvHoldCredit.setText(String.format("%s %s VND", getResources().getText(R.string.hold_credit), Toolbox.formatMoney(String.valueOf(holdCreadit))));
+        if(currentUser!=null) {
+            if (TextUtils.isEmpty(currentUser.getCredits())) {
+                tvSoTien.setText(String.format("%s 0 VNĐ", getResources().getText(
+                        R.string.vi_vietskin_cua_ban)));
+            } else {
+                int currentCredit = Integer.parseInt(currentUser.getCredits()) - holdCreadit;
+                tvSoTien.setText(String.format("%s %s VNĐ", getResources().getText(R.string.vi_vietskin_cua_ban),
+                        Toolbox.formatMoney(
+                                String.valueOf(currentCredit))));
+            }
+        }
     }
 
     private void initViews() {
@@ -136,11 +187,20 @@ public class InfoAccountV4Fragment extends BaseFragment {
             } else {
                 tvCoin.setText(getString(R.string.title_money_default));
             }
-            tvSoTien.setText(TextUtils.isEmpty(currentUser.getCredits()) ? String.format("%s 0 VNĐ", getResources().getText(
+            /*tvSoTien.setText(TextUtils.isEmpty(currentUser.getCredits()) ? String.format("%s 0 VNĐ", getResources().getText(
                     R.string.vi_vietskin_cua_ban))
                     : String.format("%s %s VNĐ", getResources().getText(R.string.vi_vietskin_cua_ban),
                             Toolbox.formatMoney(
-                                    currentUser.getCredits())));
+                                    currentUser.getCredits())));*/
+            if(TextUtils.isEmpty(currentUser.getCredits())){
+                tvSoTien.setText(String.format("%s 0 VNĐ", getResources().getText(
+                        R.string.vi_vietskin_cua_ban)));
+            }else {
+                int currentCredit = Integer.parseInt(currentUser.getCredits()) - holdCreadit;
+                tvSoTien.setText(String.format("%s %s VNĐ", getResources().getText(R.string.vi_vietskin_cua_ban),
+                        Toolbox.formatMoney(
+                                String.valueOf(currentCredit))));
+            }
             tvWorkplace.setText(
                     TextUtils.isEmpty(currentUser.getWorkplace()) ? getString(R.string.chua_cap_nhat) : currentUser.getWorkplace());
         }
@@ -262,7 +322,7 @@ public class InfoAccountV4Fragment extends BaseFragment {
                     public void onListen(String value) {
                         withdrawAmount = Toolbox.isEmpty(value)? "0" : value;
                         if(currentUser!=null && !Toolbox.isEmpty(currentUser.getCredits())){
-                            if(Integer.parseInt(withdrawAmount)>50000 && Integer.parseInt(withdrawAmount)%10000==0 && Integer.parseInt(withdrawAmount)<Integer.parseInt(currentUser.getCredits())){
+                            if(Integer.parseInt(withdrawAmount)>200000 && Integer.parseInt(withdrawAmount)%1000==0 && Integer.parseInt(withdrawAmount)<Integer.parseInt(currentUser.getCredits())){
                                 DialogUtils.hideAlert();
                                 showPasscodeRequire();
                             }else {
@@ -278,6 +338,11 @@ public class InfoAccountV4Fragment extends BaseFragment {
 
                     }
                 });
+    }
+
+    @OnClick(R.id.btnTransRecord)
+    public void onGotoTransactionDetail(){
+        getMainActivity().pushFragment(new TransactionDetailFragment());
     }
 
     private void showPasscodeRequire() {
@@ -296,10 +361,10 @@ public class InfoAccountV4Fragment extends BaseFragment {
     }
 
     private void sendWithdrawRequest(WithdrawBody withdrawBody) {
-        Call<WithdrawalRequest> call = RequestHelper.getRequest(false, getActivity()).sendWithdrawalRequest(withdrawBody);
-        call.enqueue(new Callback<WithdrawalRequest>() {
+        Call<WithdrawalResult> call = RequestHelper.getRequest(false, getActivity()).sendWithdrawalRequest(withdrawBody);
+        call.enqueue(new Callback<WithdrawalResult>() {
             @Override
-            public void onResponse(Call<WithdrawalRequest> call, Response<WithdrawalRequest> response) {
+            public void onResponse(Call<WithdrawalResult> call, Response<WithdrawalResult> response) {
                 DialogUtils.hideAlert();
                 if(response.body()!=null){
                     String msg = "Yêu cầu rút " + withdrawAmount +"vnd thành công và đang trong quá trình xử lý.\n Vui long chờ nhân viên VietSkin liên lạc trực tiếp";
@@ -307,6 +372,7 @@ public class InfoAccountV4Fragment extends BaseFragment {
                             ,getString(R.string.close), view -> {
                         DialogUtils.hideAlert();
                     });
+                    getHoldCreadit();
                 }
                 if(response.errorBody() != null){
                     BaseResponse baseResponse = Toolbox.gson().fromJson(response.errorBody().charStream(), BaseResponse.class);
@@ -322,7 +388,7 @@ public class InfoAccountV4Fragment extends BaseFragment {
             }
 
             @Override
-            public void onFailure(Call<WithdrawalRequest> call, Throwable t) {
+            public void onFailure(Call<WithdrawalResult> call, Throwable t) {
                 if (t instanceof NoConnectivityException) {
                     // No internet connection
                     getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));

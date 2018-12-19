@@ -649,7 +649,6 @@ public class DialogUtils {
         }, 30000);
         dialog.show();
     }
-
     public interface onListenerPhoneNumber{
         void onListen(String phoneNum);
     }

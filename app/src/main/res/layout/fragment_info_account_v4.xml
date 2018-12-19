@@ -123,15 +123,36 @@
             android:textSize="@dimen/sp_12" />
     </android.support.v7.widget.CardView>
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/khoanhgiu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wallet"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvHoldCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:text="Số tiền khoanh giữ: "
+            android:textSize="@dimen/sp_12" />
+    </android.support.v7.widget.CardView>
+
     <Button
         android:id="@+id/btnTransRecord"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/wallet"
+        android:layout_below="@+id/khoanhgiu"
         android:layout_centerHorizontal="true"
         android:background="@drawable/bg_close"
         android:text="Lịch sử giao dịch ví VietSkin"
-        android:textColor="@color/color_default" />
+        android:textColor="@color/color_default"
+        android:layout_marginTop="@dimen/dp_10"/>
     <Button
         android:id="@+id/btnWithdraw"
         android:layout_width="300dp"

@@ -70,7 +70,7 @@
                     android:textSize="@dimen/dp_10"
                     android:layout_marginTop="@dimen/dp_5"
                     android:textColor="@color/black"
-                    android:text="Số tiền phải lớn hơn 50.000vnd và là bội số của 10.000vnd"/>
+                    android:text="Số tiền phải lớn hơn 200.000vnd và là bội số của 1000vnd"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/lnPassCode"

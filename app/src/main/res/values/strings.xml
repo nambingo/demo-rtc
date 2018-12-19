@@ -28,6 +28,7 @@
     <string name="title_setting">Cài đặt</string>
     <string name="title_info_account">Thông tin tài khoản</string>
     <string name="title_change_password">Đổi mật khẩu</string>
+    <string name="title_transaction_log">Lịch sử giao dịch</string>
     <string name="title_info_account2">Thông tin tự chẩn đoán</string>
     <string name="title_recharge_money">Ví VietSkin</string>
     <string name="title_recharge_money2">Nạp tiền</string>
@@ -150,6 +151,7 @@
     <string name="don_thuoc">Đơn thuốc</string>
     <string name="xem_nhanh_don_thuoc">Xem nhanh đơn thuốc</string>
     <string name="vi_vietskin_cua_ban">Ví VietSkin của bạn:</string>
+    <string name="hold_credit">Số tiền khoanh giữ:</string>
     <string name="bang_cap">Bằng cấp:</string>
     <string name="tim_kiem_bac_si">Tìm kiếm bác sĩ</string>
     <string name="nhap_ten_bac_si">Nhập tên bác sĩ...</string>
