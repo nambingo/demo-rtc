@@ -123,52 +123,88 @@
             android:textSize="@dimen/sp_12" />
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/khoanhgiu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wallet"
-        android:layout_marginHorizontal="@dimen/dp_10"
-        android:visibility="gone">
-
-        <TextView
-            android:id="@+id/tvHoldCredit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/dp_10"
-            android:orientation="horizontal"
-            android:text="Số tiền khoanh giữ: "
-            android:textSize="@dimen/sp_12" />
-    </android.support.v7.widget.CardView>
-
     <Button
         android:id="@+id/btnTransRecord"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/khoanhgiu"
+        android:layout_below="@+id/wallet"
         android:layout_centerHorizontal="true"
         android:background="@drawable/bg_close"
         android:text="Lịch sử giao dịch ví VietSkin"
+        android:textStyle="bold"
         android:textColor="@color/color_default"
         android:layout_marginTop="@dimen/dp_10"/>
-    <Button
-        android:id="@+id/btnWithdraw"
-        android:layout_width="300dp"
+    
+    <RelativeLayout
+        android:id="@+id/btnWithdrawContainer"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnTransRecord"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_5"
         android:background="@drawable/bg_close"
-        android:text="Rút tiên"
-        android:textColor="@color/color_default"
-        android:layout_marginTop="@dimen/dp_5"/>
+        android:paddingBottom="@dimen/dp_5">
+        
+        <TextView
+            android:id="@+id/btnWithdraw"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="YÊU CẦU RÚT TIỀN"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:textColor="@color/color_default"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_5"/>
+        <LinearLayout
+            android:id="@+id/lnkhoanhgiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnWithdraw"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="italic"
+                android:textColor="@color/color_default"
+                android:text="Đã yêu cầu rút tiền "
+            />
+            <TextView
+                android:id="@+id/tvHoldCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="italic"
+                android:textColor="@color/hold_credit_color"
+                android:text="5000000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="italic"
+                android:textColor="@color/color_default"
+                android:text=" VNĐ ngày "/>
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="italic"
+                android:textColor="@color/hold_credit_color"
+                android:text="19/12/2018"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btnWithdraw"
+        android:layout_below="@+id/btnWithdrawContainer"
         android:focusableInTouchMode="true">
 
         <LinearLayout
@@ -211,41 +247,6 @@
                 android:textStyle="italic"
                 tools:text="vui.ve@gmail.com" />
 
-            <android.support.v7.widget.CardView
-                android:layout_width="325dp"
-                android:layout_height="68dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:visibility="gone"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="1.5dp"
-                tools:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/account_balance"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/sp_16" />
-
-                    <TextView
-                        android:id="@+id/tv_coin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/sp_16"
-                        android:textStyle="bold"
-                        tools:text="10.000.000 VNĐ" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -363,6 +364,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="@dimen/sp_20"
                 android:orientation="horizontal">
 
                 <TextView

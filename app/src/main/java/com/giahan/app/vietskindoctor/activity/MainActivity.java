@@ -95,10 +95,9 @@ public class MainActivity extends BaseActivity
     private FragNavController mFragNavController;
 
     public static final String EXT_MAIN_ID = "extra_main_id";
+    public static final String TAG_OPEN_TRANSACTION = "open transaction";
     public static final String EXT_FROM_NOTIFICATION = "from_notification";
     public static final String TAG_OPEN_TAB_ID = "open_tab_id";
-
-
 
     public static Intent getIntent(Context context, String sessionID, String type) {
         Intent intent = new Intent(context, MainActivity.class);
@@ -147,6 +146,17 @@ public class MainActivity extends BaseActivity
         Toolbox.setStatusBarColor(this, getResources(), R.color.color_header_bar);
         getCountRequest();
         registerDevice();
+
+        //checking when user click notification to open app
+        hanleFromNotify();
+    }
+
+    private void hanleFromNotify() {
+        if(getIntent()!=null){
+            if(getIntent().getBooleanExtra(TAG_OPEN_TRANSACTION,false)){
+                onSettingClick();
+            }
+        }
     }
 
     private void registerDevice() {
@@ -326,9 +336,21 @@ public class MainActivity extends BaseActivity
             case INDEX_YEU_CAU:
                 return new YeuCauFragment();
             case INDEX_CAI_DAT:
-                return new CaiDatFragment();
+                CaiDatFragment caiDatFragment = new CaiDatFragment();
+                Bundle b = new Bundle();
+                //Open Transaction record from notification
+                if(isOpenFromNitification()){
+                    b.putBoolean(EXT_FROM_NOTIFICATION,true);
+                }
+                caiDatFragment.setArguments(b);
+                return caiDatFragment;
         }
         throw new IllegalStateException();
+    }
+
+    private boolean isOpenFromNitification() {
+        if(getIntent()!=null) return getIntent().getBooleanExtra(TAG_OPEN_TRANSACTION,false);
+        else return false;
     }
 
     @Override

@@ -428,13 +428,14 @@ public class DialogUtils {
         dialog.show();
     }
 
-    public static void showDialogWithdrawProcess(Context context, boolean isPassCode, String message, View.OnClickListener onClickLeft,
+    public static void showDialogWithdrawProcess(Context context, boolean isPassCode, String message, String credit, View.OnClickListener onClickLeft,
                                            onListenerWithdrawDialogInput listener) {
         KeyBoardUtil.show((Activity)context);
         dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
         dialog.setContentView(R.layout.dialog_request_pass_code);
         dialog.setCanceledOnTouchOutside(true);
         TextView title = dialog.findViewById(R.id.tvTitle);
+        TextView tvWallet = dialog.findViewById(R.id.tvWallet);
         LinearLayout lnMoney = dialog.findViewById(R.id.lnMoney);
         LinearLayout lnPassCode = dialog.findViewById(R.id.lnPassCode);
         TextView btnLeft = dialog.findViewById(R.id.btn_left);
@@ -446,8 +447,11 @@ public class DialogUtils {
         EditText edtNum5 = dialog.findViewById(R.id.edtNum5);
         EditText edtNum6 = dialog.findViewById(R.id.edtNum6);
         EditText edtAmount = dialog.findViewById(R.id.edtMoney);
-        GeneralUtil.autoMovingText(edtNum1,edtNum2,edtNum3,edtNum4,edtNum5,edtNum6);
-
+        Toolbox.formatInputingMoney(edtAmount);
+        Toolbox.autoMovingText(edtNum1,edtNum2,edtNum3,edtNum4,edtNum5,edtNum6);
+        tvWallet.setVisibility(credit==null ? View.GONE : View.VISIBLE);
+        tvWallet.setText(Toolbox.isEmpty(credit)? String.format("%s 0 VNĐ", context.getString(R.string.vi_vietskin_cua_ban)
+                ) : String.format("%s %s VNĐ", context.getString(R.string.vi_vietskin_cua_ban), Toolbox.formatMoney(credit)));
         title.setText(message);
         lnMoney.setVisibility(isPassCode ? View.GONE : View.VISIBLE);
         lnPassCode.setVisibility(isPassCode? View.VISIBLE : View.GONE);

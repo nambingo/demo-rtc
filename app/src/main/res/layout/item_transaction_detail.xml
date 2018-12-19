@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_5"
     android:id="@+id/rlTransContaner">
 
     <LinearLayout
@@ -60,5 +61,14 @@
         android:textSize="@dimen/sp_16"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="@dimen/dp_20"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_below="@+id/tvDateAndTime"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginHorizontal="@dimen/sp_10"
+        android:background="@color/white_two">
+    </View>
 
 </RelativeLayout>

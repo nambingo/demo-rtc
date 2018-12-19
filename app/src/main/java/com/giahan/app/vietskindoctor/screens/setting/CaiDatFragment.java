@@ -1,6 +1,7 @@
 package com.giahan.app.vietskindoctor.screens.setting;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -8,11 +9,13 @@ import android.view.View;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.activity.GuideActivity;
 import com.giahan.app.vietskindoctor.activity.LoginActivity;
+import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 import com.giahan.app.vietskindoctor.model.event.ChangeEvent;
+import com.giahan.app.vietskindoctor.screens.setting.transaction.TransactionDetailFragment;
 import com.giahan.app.vietskindoctor.services.NetworkChanged;
 import com.giahan.app.vietskindoctor.utils.Constant;
 
@@ -56,7 +59,16 @@ public class CaiDatFragment extends BaseFragment {
 
     @Override
     protected void createView(View view) {
+        checkFromNoti();
         initViews();
+    }
+
+    private void checkFromNoti() {
+        Bundle bundle = this.getArguments();
+        if(bundle == null) return;
+        if(bundle.getBoolean(MainActivity.EXT_FROM_NOTIFICATION)){
+            getMainActivity().pushFragment(new TransactionDetailFragment());
+        }
     }
 
     private void initViews() {
@@ -120,9 +132,9 @@ public class CaiDatFragment extends BaseFragment {
 
     @OnClick(R.id.ll_change_password)
     void onChagePass(){
-        Intent intent = new Intent(getMainActivity(), PassCodeActivity.class);
+        Intent intent = new Intent(getContext(), PassCodeActivity.class);
         intent.putExtra("TAG_CHANGE_PASS", true);
-        getMainActivity().startActivity(intent);
+        startActivity(intent);
     }
 
     @OnClick(R.id.ll_recharge)

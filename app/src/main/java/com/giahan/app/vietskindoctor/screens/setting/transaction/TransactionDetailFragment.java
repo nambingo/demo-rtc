@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.giahan.app.vietskindoctor.R;
+import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.ReadMessageBody;
@@ -20,10 +21,12 @@ import com.giahan.app.vietskindoctor.domains.Transaction;
 import com.giahan.app.vietskindoctor.domains.TransactionList;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.screens.chat.ChatFragment;
+import com.giahan.app.vietskindoctor.screens.phienkham.KhamOnlineFragment;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
+import com.giahan.app.vietskindoctor.utils.Toolbox;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -135,6 +138,16 @@ public class TransactionDetailFragment extends BaseFragment implements Transacti
     @Override
     public void onTransClick(String sessionId) {
         getSessions(sessionId);
+//        openChatSession(sessionId);
+    }
+
+    private void openChatSession(String sessionId) {
+        KhamOnlineFragment khamOnlineFragment = new KhamOnlineFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString(MainActivity.EXT_MAIN_ID, sessionId);
+        bundle.putBoolean(MainActivity.EXT_FROM_NOTIFICATION,true);
+        khamOnlineFragment.setArguments(bundle);
+        getMainActivity().pushFragment(khamOnlineFragment);
     }
 
     private void getSessions(String sessionId) {
@@ -200,7 +213,7 @@ public class TransactionDetailFragment extends BaseFragment implements Transacti
         Bundle bundle = new Bundle();
         bundle.putString(Constant.TAG_DSSESION_ID, String.valueOf(session.getId()));
         bundle.putString(Constant.TAG_PATIENT_ID, session.getPatientId());
-        bundle.putString(Constant.TAG_REMAIN, session.getCreatedAt());
+        bundle.putString(Constant.TAG_REMAIN, DateUtils.convertDateWithTimeZone(session.getCreatedAt()));
         bundle.putString(Constant.TAG_PATIENT_NAME,
                 TextUtils.isEmpty(session.getName()) ? session.getPatientName() : session.getName());
         ChatFragment chatFragment = new ChatFragment();

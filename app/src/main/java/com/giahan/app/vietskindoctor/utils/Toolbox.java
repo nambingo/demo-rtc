@@ -970,5 +970,35 @@ public class Toolbox {
             }
         });
     }
+    public static void formatInputingMoney(EditText editText){
+        boolean isDeletePressed = false;
+        editText.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(event.getAction() == KeyEvent.KEYCODE_DEL){
+                }
+                return false;
+            }
+        });
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                editText.removeTextChangedListener(this);
+                String newStr =  Toolbox.formatMoney(editText.getText().toString());
+                editText.setText(newStr);
+                editText.setSelection(newStr.length());
+                editText.addTextChangedListener(this);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+    }
 }
