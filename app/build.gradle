@@ -26,7 +26,7 @@ android {
             keyAlias 'key0'
             keyPassword 'Aa@123456'
 //            storeFile file('/Users/phamducnam/Documents/Project/vsdoctor/keystoreVSD.jks')
-            storeFile file('/home/pham.duc.nam/Documents/Project-Doctor/vietskin-doctor/keystoreVSD.jks')
+            storeFile file('D:/DEV/AppBacSi10122018/keystoreVSD.jks')
             storePassword 'Aa@123456'
         }
     }

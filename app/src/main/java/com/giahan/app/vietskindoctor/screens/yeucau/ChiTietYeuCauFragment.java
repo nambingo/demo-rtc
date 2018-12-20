@@ -73,6 +73,9 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
     @BindView(R.id.scrollView)
     NestedScrollView scrollView;
 
+
+
+
     private Session mSession;
 
     private PhotoAdapter mAdapter;
