@@ -28,7 +28,7 @@ android {
 //            storeFile file('/Users/phamducnam/Documents/Project/vsdoctor/keystoreVSD.jks')
 //            storeFile file('/home/pham.duc.nam/Documents/Project-Doctor/vietskin-doctor/keystoreVSD.jks')
 //            storeFile file('/Users/tony/Study/Vietskin/vietskin-doctor/keystoreVSD.jks')
-            storeFile rootProject.file('keystoreVS.jks')
+            storeFile rootProject.file('keystoreVSD.jks')
             storePassword 'Aa@123456'
         }
     }
