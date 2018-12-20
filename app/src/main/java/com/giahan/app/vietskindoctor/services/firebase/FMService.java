@@ -18,9 +18,13 @@ import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.activity.SplashActivity;
+import com.giahan.app.vietskindoctor.domains.NotificationContent;
 import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.google.gson.Gson;
+
+import java.util.Map;
 import java.util.Random;
 import org.greenrobot.eventbus.EventBus;
 
@@ -29,23 +33,39 @@ public class FMService extends FirebaseMessagingService {
 
     public static final int NOTIFY_SHOW_NOTIFICATION = 2;
     private Bitmap icon;
+    private NotificationContent notice;
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         if (remoteMessage.getData() == null) return;
+        Map<String, String> notiData = remoteMessage.getData();
+        Log.d("tony", notiData.toString());
+
+        String jsonData = new Gson().toJson(notiData);
+        if(!TextUtils.isEmpty(jsonData)){
+            notice = new Gson().fromJson(jsonData, NotificationContent.class);
+        }
+
         if (icon == null || icon.isRecycled()) {
             icon = BitmapFactory.decodeResource(VietSkinDoctorApplication.getInstance().getResources(),
                     R.mipmap.ic_launcher);
         }
-//        buildNotification(ChatActivity.getIntent(this, notice.getSessionID()), notice.getNotificationMessage(),
-//                new Random().nextInt());
+
+        if(remoteMessage.getData().containsKey("description")){
+            EventBus.getDefault().post(new MessageEvent());
+        }else {
+            EventBus.getDefault().post(new MessageEvent());
+        }
+
+        buildNotification(MainActivity.getIntent(this, notice.getmSessionID()), notice.getmNotificationMessage(),
+                (int)System.currentTimeMillis());
     }
 
     private void buildNotification(Intent intent, String message, int notifyID) {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
-                PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, notifyID, intent,
+                0);
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         setupNotification(message, defaultSoundUri, pendingIntent, notifyID);
     }

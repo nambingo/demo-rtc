@@ -15,6 +15,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
+import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.ReadMessageBody;
@@ -82,6 +83,10 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
 
     private List<Session> mListComplete = new ArrayList<>();
 
+    private boolean isFromNotification = false;
+    private String mSessionId;
+    private Session mSessionFromNoti;
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_kham_online;
@@ -97,6 +102,7 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
         swipeContainer.setVisibility(TextUtils.isEmpty(mToken) ? View.GONE : View.VISIBLE);
         if (!TextUtils.isEmpty(mToken)) {
             setupList();
+            getExtraFromMain();
             getData();
             onSwipeRefresh();
         } else {
@@ -104,10 +110,25 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
         }
     }
 
+    private void getExtraFromMain() {
+         Bundle bundle = this.getArguments();
+         if (bundle == null) {
+             return;
+         }
+         isFromNotification = bundle.getBoolean(MainActivity.EXT_FROM_NOTIFICATION);
+         mSessionId = bundle.getString(MainActivity.EXT_MAIN_ID);
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         clearData(true);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        this.getArguments().clear();
     }
 
     private void setupList() {
@@ -165,6 +186,17 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
                 cardViewComplete.setVisibility(mListComplete.size() == 0 ? View.GONE : View.VISIBLE);
                 mAdapterOnline.notifyDataSetChanged();
                 mAdapterComplete.notifyDataSetChanged();
+                if(isFromNotification){
+                    for(Session session: mListOnline){
+                        if(session.getId().equals(mSessionId)){
+                            mSessionFromNoti = session;
+                        }
+                    }
+
+                    if(mSessionFromNoti != null){
+                        openSession(mSessionFromNoti);
+                    }
+                }
             }
 
             @Override
