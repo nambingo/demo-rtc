@@ -38,5 +38,7 @@
     <color name="color_default">#1B90D9</color>
     <color name="color_default2">#C4C4C4</color>
     <color name="color_friend_chat">#DADADA</color>
+    <color name="heading_text_color">#1B7AD2</color>
+    <color name="default_text_color">#575757</color>
 
 </resources>

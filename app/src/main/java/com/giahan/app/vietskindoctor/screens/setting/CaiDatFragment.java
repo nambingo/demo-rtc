@@ -8,6 +8,7 @@ import android.view.View;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.activity.GuideActivity;
 import com.giahan.app.vietskindoctor.activity.LoginActivity;
+import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.base.BaseFragment;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
@@ -119,10 +120,11 @@ public class CaiDatFragment extends BaseFragment {
 
     @OnClick(R.id.ll_login)
     void login() {
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-        intent.putExtra(Constant.CHANGE_TAB, false);
-        startActivity(intent);
-        getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
+//        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+//        intent.putExtra(Constant.CHANGE_TAB, false);
+//        startActivity(intent);
+//        getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
+        startActivity(new Intent(getActivity(), PassCodeActivity.class));
     }
 
     @Override

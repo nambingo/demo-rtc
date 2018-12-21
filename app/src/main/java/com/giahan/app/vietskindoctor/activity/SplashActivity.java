@@ -10,13 +10,14 @@ import com.giahan.app.vietskindoctor.R;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
+import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 
 /**
  * Created by pham.duc.nam
  */
 
 public class SplashActivity extends BaseActivity {
-    public static final int TIME_LOADING = 2000;
+    public static final int TIME_LOADING = 1000;
 
     private Handler handler = null;
 
@@ -48,12 +49,24 @@ public class SplashActivity extends BaseActivity {
 //    @OnClick(R.id.btnSkip)
     void skip() {
         handler.removeCallbacksAndMessages(null);
-        if (TextUtils.isEmpty(pref.token().get())) {
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-        } else {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        if (pref.isHasPasscode().get()) {
+            if (pref.isLogged().get()) {
+
+            }else {
+
+            }
+        }else {
+//            GeneralUtil.goToFirstLogin(getActivity());
         }
-        finish();
-        overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
+        if (pref.isLogged().get()) {
+            startActivity(new Intent(getApplicationContext(), PassCodeActivity.class));
+            pref.isFirstLogin().put(true);
+            finish();
+        }else {
+
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            pref.isFirstLogin().put(false);
+            finish();
+        }
     }
 }

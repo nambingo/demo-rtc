@@ -31,6 +31,7 @@ import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.LoginActivity;
 import com.giahan.app.vietskindoctor.activity.MainActivity;
+import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
 import com.giahan.app.vietskindoctor.model.event.TimeOutEvent;
 import com.giahan.app.vietskindoctor.services.NetworkChanged;
 import com.giahan.app.vietskindoctor.services.NetworkListenerReceiver;
@@ -219,7 +220,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (isBack) {
             EventBus.getDefault().post(new TimeOutEvent());
         }
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        Intent intent = new Intent(getApplicationContext(), PassCodeActivity.class);
         intent.putExtra(Constant.CHANGE_TAB, true);
         startActivity(intent);
         overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);

@@ -50,4 +50,19 @@ public interface PrefHelper {
 
     @DefaultBoolean(false)
     boolean isListDoctor();
+
+    @DefaultBoolean(false)
+    boolean isBackground();
+
+    @DefaultString("")
+    String passCodeSaved();
+
+    @DefaultBoolean(false)
+    boolean isHasPasscode();
+
+    @DefaultBoolean(false)
+    boolean isFirstLogin();
+
+    @DefaultBoolean(false)
+    boolean isCreatePassCode();
 }
