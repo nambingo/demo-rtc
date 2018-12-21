@@ -25,9 +25,6 @@ android {
         config_release {
             keyAlias 'key0'
             keyPassword 'Aa@123456'
-//            storeFile file('/Users/phamducnam/Documents/Project/vsdoctor/keystoreVSD.jks')
-//            storeFile file('/home/pham.duc.nam/Documents/Project-Doctor/vietskin-doctor/keystoreVSD.jks')
-//            storeFile file('/Users/tony/Study/Vietskin/vietskin-doctor/keystoreVSD.jks')
             storeFile rootProject.file('keystoreVSD.jks')
             storePassword 'Aa@123456'
         }
@@ -119,6 +116,8 @@ dependencies {
     implementation 'com.github.drawers:SpinnerDatePicker:1.0.6'
     implementation 'com.ncapdevi:frag-nav:2.4.0'
     implementation 'org.webrtc:google-webrtc:1.0.22672'
+    implementation 'com.facebook.android:account-kit-sdk:4.+'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
 
     //    //Glide
 

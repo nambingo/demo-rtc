@@ -22,12 +22,16 @@ import com.giahan.app.vietskindoctor.domains.RequestDoctorResult;
 import com.giahan.app.vietskindoctor.domains.SessionBody;
 import com.giahan.app.vietskindoctor.domains.SessionResult;
 import com.giahan.app.vietskindoctor.domains.UploadResult;
+import com.giahan.app.vietskindoctor.model.AccountKitBody;
 import com.giahan.app.vietskindoctor.model.AutoDiagnoseBody;
 import com.giahan.app.vietskindoctor.model.AutoDiagnoseResponse;
 import com.giahan.app.vietskindoctor.model.BaseResponse;
 import com.giahan.app.vietskindoctor.model.FbModelBody;
 import com.giahan.app.vietskindoctor.model.GoogleModelBody;
 import com.giahan.app.vietskindoctor.model.InfoUpdateBody;
+import com.giahan.app.vietskindoctor.model.PassCodeBody;
+import com.giahan.app.vietskindoctor.model.PassCodeResponse;
+import com.giahan.app.vietskindoctor.model.PasscodeLoginBody;
 import com.giahan.app.vietskindoctor.model.PayUrlBody;
 import com.giahan.app.vietskindoctor.model.PayUrlResponse;
 import com.giahan.app.vietskindoctor.model.UpdateInfoResponse;
@@ -124,4 +128,16 @@ public interface APIService {
 
     @GET("doctor/fetch-patient-info/{PATIENT_ID}")
     Call<PatientResponse> getPatientInfo(@Path("PATIENT_ID") String patientID);
+
+    @POST("doctor/account-kit/login")
+    Call<UserInfoResponse> loginAccountKit(@Body AccountKitBody accountKitBody);
+
+    @POST("passcode/change")
+    Call<PassCodeResponse> createPassCode(@Body PassCodeBody passCodeBody);
+
+    @POST("passcode/login")
+    Call<PassCodeResponse> loginPassCode(@Body PasscodeLoginBody passcodeLoginBody);
+
+    @GET("passcode/recovery")
+    Call<PassCodeResponse> recoveryPassCode();
 }

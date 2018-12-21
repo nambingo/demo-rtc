@@ -83,6 +83,9 @@ public class UserInfoResponse {
     @SerializedName("degree")
     private String mDegree;
 
+    @SerializedName("passcode")
+    private String passCode;
+
     public UserInfoResponse() {
     }
 
@@ -98,7 +101,7 @@ public class UserInfoResponse {
     public UserInfoResponse(String id, String email, String name, String accessToken, String type, String phone,
                             String birthdate, String passwd, String facebookId, String googleId, String credits, String creditHold,
                             String verifyRegister, String verifyRegisterHash, String activated, String forgotPwHash,
-                            String address, String gender, String avatar, String weight) {
+                            String address, String gender, String avatar, String weight, String passCode) {
         this.id = id;
         this.email = email;
         this.name = name;
@@ -119,6 +122,8 @@ public class UserInfoResponse {
         this.gender = gender;
         this.avatarAcc = avatar;
         this.weight = weight;
+        this.passCode = passCode;
+
     }
 
     public void setAgainData(UserInfoResponse userInfoResponse){
@@ -137,6 +142,7 @@ public class UserInfoResponse {
         this.creditHold = userInfoResponse.creditHold;
         this.weight = userInfoResponse.weight;
         this.mAvatar = userInfoResponse.mAvatar;
+        this.passCode = userInfoResponse.passCode;
     }
 
     public String getId() {
@@ -329,5 +335,13 @@ public class UserInfoResponse {
 
     public void setAvatar(final String avatar) {
         mAvatar = avatar;
+    }
+
+    public String getPassCode() {
+        return passCode;
+    }
+
+    public void setPassCode(final String passCode) {
+        this.passCode = passCode;
     }
 }

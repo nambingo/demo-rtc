@@ -221,4 +221,13 @@
     <string name="chon_anh">Chọn ảnh</string>
     <string name="dang_ket_noi">Đang kết nối...</string>
     <string name="connect_unsuccess">Kết nối không thành công!</string>
+
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">34f154831431d207d0a30e8f1ef73bd6</string>
+    <string name="mat_khau_6_ky_tu">Mật khẩu phải đảm bảo có độ dài 6 ký tự!</string>
+    <string name="mat_khau_khong_khop">Nhập lại mật khẩu không chính xác!</string>
+    <string name="nhap_day_du_passcode">Bạn cần nhập đầy đủ mật khẩu!</string>
+    <string name="mat_khau_khong_chinh_xac">Mật khẩu không chính xác!</string>
+    <string name="mat_khau_moi_duoc_gui">Mật khẩu mới sẽ được gửi đến bạn, vui lòng nhập mật khẩu để đăng nhập!</string>
+    <string name="create_password">Tạo mật khẩu</string>
+    <string name="done">HOÀN THÀNH</string>
 </resources>

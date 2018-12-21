@@ -1,12 +1,18 @@
 package com.giahan.app.vietskindoctor;
 
 import android.app.Application;
+import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.LifecycleObserver;
+import android.arch.lifecycle.OnLifecycleEvent;
+import android.arch.lifecycle.ProcessLifecycleOwner;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
 import android.support.multidex.MultiDexApplication;
+import android.util.Log;
 import com.crashlytics.android.Crashlytics;
 import com.facebook.FacebookSdk;
+import com.giahan.app.vietskindoctor.utils.PrefHelper_;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -19,7 +25,7 @@ import io.fabric.sdk.android.Fabric;
  * Created by pham.duc.nam
  */
 
-public class VietSkinDoctorApplication extends MultiDexApplication {
+public class VietSkinDoctorApplication extends MultiDexApplication implements LifecycleObserver {
     private static VietSkinDoctorApplication INSTANCE;
     private static boolean isShowDialogUpdate;
     private static boolean isOpenDetailScreen;
@@ -29,6 +35,7 @@ public class VietSkinDoctorApplication extends MultiDexApplication {
     private static FirebaseAuth mAuth;
     // [END declare_auth]
     private int bottomTabHeight = 168;
+    public PrefHelper_ mPrefHelper_;
 
     @Override
     public void onCreate(){
@@ -42,6 +49,19 @@ public class VietSkinDoctorApplication extends MultiDexApplication {
         FacebookSdk.sdkInitialize(getApplicationContext());
         WxSwipeBackActivityManager.getInstance().init(this);
         MultiDex.install(this);
+        ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
+        mPrefHelper_ = new PrefHelper_(getApplicationContext());
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    void onAppBackground(){
+        Log.e("DoctorApplication", "onAppBackground:  -----> ");
+        mPrefHelper_.isBackground().put(true);
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    void onAppForeground(){
+        Log.e("DoctorApplication", "onAppForeground:  -----> ");
     }
 
     private void setupFabric(){

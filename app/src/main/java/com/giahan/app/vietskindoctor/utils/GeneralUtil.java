@@ -1,22 +1,41 @@
 package com.giahan.app.vietskindoctor.utils;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Toast;
+import com.facebook.accountkit.AccountKitLoginResult;
+import com.facebook.accountkit.ui.AccountKitActivity;
+import com.facebook.accountkit.ui.AccountKitActivity.ResponseType;
+import com.facebook.accountkit.ui.AccountKitConfiguration;
+import com.facebook.accountkit.ui.LoginType;
 import com.giahan.app.vietskindoctor.R;
+import com.giahan.app.vietskindoctor.activity.CreatePassCodeActivity;
+import com.giahan.app.vietskindoctor.activity.MainActivity;
+import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.domains.Session;
+import com.giahan.app.vietskindoctor.model.AccountKitBody;
+import com.giahan.app.vietskindoctor.model.UserInfoResponse;
+import com.giahan.app.vietskindoctor.services.RequestHelper;
 import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import org.greenrobot.eventbus.EventBus;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by pham.duc.nam on 23/05/2018.
  */
 
 public class GeneralUtil {
+    public static int REQUEST_CODE = 999;
     public static void setBackgroundColor(Context context, View view, int position) {
         if (position % 2 == 0) {
             view.setBackgroundColor(context.getResources().getColor(R.color.bg_item_gray));
@@ -66,6 +85,97 @@ public class GeneralUtil {
     public static void registerEventBus(Object obj) {
         if (!EventBus.getDefault().isRegistered(obj)) {
             EventBus.getDefault().register(obj);
+        }
+    }
+
+//    public static void goToFirstLogin(Activity activity) {
+//        DialogUtils.showDialogFirstLogin(activity, new DialogUtils.onListenerPhoneNumber() {
+//            @Override
+//            public void onListen(String phoneNum) {
+//                if(isValidPhoneNum(phoneNum)){
+//                    GeneralUtil.goToLogin(activity, phoneNum);
+//                }else {
+//                    DialogUtils.showDialogOneChoice(activity, false, true, activity.getString(R.string.error_phone_number)
+//                            ,activity.getString(R.string.close), view ->{
+//                                DialogUtils.hideAlert();
+//                            });
+//                }
+//            }
+//        });
+//    }
+
+    public static void goToLogin(Activity activity) {
+        Intent intent = new Intent(activity, AccountKitActivity.class);
+        AccountKitConfiguration.AccountKitConfigurationBuilder configurationBuilder
+                = new AccountKitConfiguration.AccountKitConfigurationBuilder(
+                LoginType.PHONE, ResponseType.TOKEN);
+        intent.putExtra(AccountKitActivity.ACCOUNT_KIT_ACTIVITY_CONFIGURATION, configurationBuilder.build());
+        activity.startActivityForResult(intent, REQUEST_CODE);
+    }
+
+    public static void onActivityResult(Activity activity, PrefHelper_ prefHelper_, int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE) {
+            AccountKitLoginResult result = data.getParcelableExtra(AccountKitLoginResult.RESULT_KEY);
+            if (result.getError() != null) {
+                Toast.makeText(activity, "" + result.getError().getErrorType().getMessage(), Toast.LENGTH_SHORT)
+                        .show();
+                return;
+            } else if (result.wasCancelled()) {
+                Toast.makeText(activity, "Cancel", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(activity, "Login success", Toast.LENGTH_SHORT).show();
+                callToLogin(activity, prefHelper_, result.getAccessToken().getToken());
+            }
+        }
+    }
+
+    public static void callToLogin(Activity activity, PrefHelper_ prefHelper_, String token) {
+        AccountKitBody accountKitBody = new AccountKitBody();
+        accountKitBody.setCode(token);
+        accountKitBody.setIsMobile(1);
+        Call<UserInfoResponse> call = RequestHelper.getRequest(false, activity).loginAccountKit(accountKitBody);
+        call.enqueue(new Callback<UserInfoResponse>() {
+            @Override
+            public void onResponse(final Call<UserInfoResponse> call, final Response<UserInfoResponse> response) {
+                if (response != null && response.body() != null && response.errorBody() == null) {
+                    UserInfoResponse userInfoResponse = response.body();
+                    if (userInfoResponse != null) {
+                        userInfoResponse.setAgainData(response.body());
+                        prefHelper_.user().put(new Gson().toJson(userInfoResponse));
+                        prefHelper_.token().put(response.headers().get("Access-Token"));
+                    }
+
+                    if (!TextUtils.isEmpty(userInfoResponse.getPassCode())){
+                        prefHelper_.isLogged().put(true);
+//                        prefHelper_.isHasPasscode().put(true);
+                        prefHelper_.isBackground().put(false);
+                        activity.startActivity(new Intent(activity, MainActivity.class));
+                    }else {
+                        showFirstPasscode(activity);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(final Call<UserInfoResponse> call, final Throwable t) {
+                Toast.makeText(activity, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public static void showFirstPasscode(Activity activity){
+        Intent intent = new Intent(activity, CreatePassCodeActivity.class);
+        activity.startActivity(intent);
+    }
+
+    public static void showPasscodeActivity(Activity activity, PrefHelper_ prefHelper_){
+        if (prefHelper_.isBackground().get()) {
+            prefHelper_.isBackground().put(false);
+            if (prefHelper_.isLogged().get()) {
+                activity.startActivity(new Intent(activity, PassCodeActivity.class));
+            }else {
+                return;
+            }
         }
     }
 }

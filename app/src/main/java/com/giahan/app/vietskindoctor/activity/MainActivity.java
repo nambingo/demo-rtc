@@ -235,6 +235,12 @@ public class MainActivity extends BaseActivity
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
     public Fragment getRootFragment(int index) {
         switch (index) {
             case INDEX_PHIEN:
