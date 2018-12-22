@@ -237,7 +237,7 @@ public class MainActivity extends BaseActivity
     @Override
     protected void onResume() {
         super.onResume();
-
+        GeneralUtil.showPasscodeActivity(MainActivity.this, pref);
     }
 
     @Override

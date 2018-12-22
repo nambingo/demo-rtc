@@ -102,7 +102,9 @@ public class CaiDatFragment extends BaseFragment {
         getMainActivity().showAlertConfirmDialog("Đăng xuất", "Bạn có chắc chắn muốn đăng xuất tài khoản?", new BaseActivity.OkListener() {
             @Override
             public void okClick() {
-                getMainActivity().logout(false);
+//                getMainActivity().logout(false);
+                startActivity(new Intent(getMainActivity(), PassCodeActivity.class));
+                getBaseActivity().finish();
             }
         });
     }

@@ -15,11 +15,20 @@ import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.model.PassCodeResponse;
 import com.giahan.app.vietskindoctor.model.PasscodeLoginBody;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.utils.DialogUtils;
+import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.SimpleTextWatcher;
+import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.google.gson.Gson;
+import org.androidannotations.api.sharedpreferences.BooleanPrefField;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,10 +77,17 @@ public class PassCodeActivity extends BaseActivity {
     @Override
     protected void createView() {
 //        moveTaskToBack(true);
+        firstLogin(pref.isHasPasscode().get());
         edtNum1.requestFocus();
         KeyBoardUtil.show(this);
         settingEdittext();
         getDataUser();
+    }
+
+    private void firstLogin(Boolean hasPasscode) {
+        if(!hasPasscode){
+            GeneralUtil.goToFirstLogin(this);
+        }
     }
 
     private void getDataUser(){
@@ -143,14 +159,18 @@ public class PassCodeActivity extends BaseActivity {
                     if (response.body().getSuccess() == 1){
                         pref.isHasPasscode().put(true);
                         pref.isLogged().put(true);
-                        if (pref.isFirstLogin().get()) {
+                        /*if (pref.isFirstLogin().get()) {
                             Intent intent = new Intent(PassCodeActivity.this, MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                             finish();
                         }else {
                             finish();
-                        }
+                        }*/
+                        Intent intent = new Intent(PassCodeActivity.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
                     }
                 }else {
                     Toast.makeText(PassCodeActivity.this, getString(R.string.mat_khau_khong_chinh_xac), Toast.LENGTH_SHORT).show();
@@ -242,5 +262,32 @@ public class PassCodeActivity extends BaseActivity {
         edtNum5.setText("");
         edtNum6.setText("");
         edtNum1.requestFocus();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        GeneralUtil.onActivityResult(this, pref, requestCode,requestCode,data);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(!EventBus.getDefault().isRegistered(this)){
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event){
+        if(event!=null){
+            getDataUser();
+        }
     }
 }
