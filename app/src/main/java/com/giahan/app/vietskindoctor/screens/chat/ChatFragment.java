@@ -42,6 +42,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.OnClick;
+import com.esafirm.imagepicker.features.ImagePicker;
+import com.esafirm.imagepicker.model.Image;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.activity.IntroImageActivity;
@@ -57,6 +59,7 @@ import com.giahan.app.vietskindoctor.domains.Photo;
 import com.giahan.app.vietskindoctor.domains.SendMessageResult;
 import com.giahan.app.vietskindoctor.domains.SessionResult;
 import com.giahan.app.vietskindoctor.domains.UploadResult;
+import com.giahan.app.vietskindoctor.model.BaseResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.screens.chat.MessageAdapter.OnClickImageListener;
@@ -70,6 +73,7 @@ import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.MediaHelper2;
+import com.giahan.app.vietskindoctor.utils.PhotoGalleryUtil;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.google.gson.Gson;
 import io.socket.client.IO;
@@ -407,7 +411,9 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     @OnClick(R.id.imgAttachPhoto)
     public void onAttachPhoto(){
-        showDialogMediaFile();
+//        showDialogMediaFile();
+        PhotoGalleryUtil.openGalleryPhoto(mActivity, false);
+        mPref.isBackground().put(false);
     }
 
     private void showDialogMediaFile() {
@@ -442,43 +448,33 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
             @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case MediaHelper2.STORAGE_PERMISSION_ID:
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    openGallery();
-                }
-                break;
-            case MediaHelper2.CAMERA_PERMISSION_ID:
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    takeNewPhoto();
-                }
-                break;
-        }
+        PhotoGalleryUtil.onRequestPermissionsResult(requestCode, permissions, grantResults, mActivity, false);
     }
+
+    private ArrayList<Image> mImageArrayList = new ArrayList<>();
 
     @Override
     public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
-        switch (requestCode) {
-            case REQUEST_MEDIA_LIBRARY:
-                if (data == null) {
-                    break;
-                }
-                showPreview(MediaHelper2.resultCapture(getActivity(), requestCode, resultCode, data));
-                break;
-            case REQUEST_PHOTO_CAPTURED:
-                String mPath = MediaHelper2.resultFilePathCaptured();
-                if (TextUtils.isEmpty(mPath)) {
-                    break;
-                }
-                showPreview(mPath);
-                break;
+        super.onActivityResult(requestCode, resultCode, data);
+        if (ImagePicker.shouldHandle(requestCode, resultCode, data)) {
+            mPref.isBackground().put(false);
+            mImageArrayList = (ArrayList<Image>) ImagePicker.getImages(data);
+            showPreview(mImageArrayList.get(0).getPath());
         }
     }
 
     private void showPreview(String pathPhoto) {
-        DialogUtils.showDialogPreview(getActivity(), pathPhoto, view -> cancelUpload(), view -> upload(pathPhoto));
+        DialogUtils.showDialogPreview(getActivity(), pathPhoto, view -> {
+            DialogUtils.hideAlert();
+            if (!TextUtils.isEmpty(pathPhoto)) {
+                uploadImage(pathPhoto);
+            } else {
+                Toast.makeText(getActivity(), getString(R.string.file_not_found), Toast.LENGTH_SHORT).show();
+            }
+        }, view -> {
+            PhotoGalleryUtil.openGalleryPhoto(mActivity, false);
+            new Handler().postDelayed(DialogUtils::hideAlert, 2000);
+        });
     }
 
     private void upload(String pathPhoto) {
@@ -573,7 +569,7 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
         sendMessage(mDsessionID, 2, null, id, url);
     }
 
-    private void uploadImage(String path){
+    private void uploadImage1(String path){
         if (TextUtils.isEmpty(path)) return;
             MultipartBody.Builder builder = new MultipartBody.Builder();
             builder.setType(MultipartBody.FORM);
@@ -601,6 +597,55 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
                     }
                 }
             });
+    }
+
+    private void uploadImage(String path) {
+        if (TextUtils.isEmpty(path)) return;
+        MultipartBody.Builder builder = new MultipartBody.Builder();
+        builder.setType(MultipartBody.FORM);
+        File file = new File(path);
+        float length = file.length() / 1024 / 1024;
+
+        if (length > 2) {
+//            getMainActivity().showToastMsg("File ảnh > 2M -  " + length + " mb");
+            Toolbox.saveBitmapToFile(file);
+//            Toolbox.reduceImage(path, 2 * 1024 * 1024);
+        }
+        RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), file);
+        builder.addFormDataPart("file", file.getName(), requestBody);
+        Call<UploadResult> call = RequestHelper.getRequest(true, getActivity()).uploadImage(builder.build());
+        call.enqueue(new retrofit2.Callback<UploadResult>() {
+            @Override
+            public void onResponse(retrofit2.Call<UploadResult> call, retrofit2.Response<UploadResult> response) {
+                if (response == null) return;
+                if (response.errorBody() != null) {
+                    try {
+                        BaseResponse baseResponse = Toolbox.gson().fromJson(response.errorBody().charStream(), BaseResponse.class);
+                        if (baseResponse.getError() != null) {
+                            getMainActivity().showAlertDialog(getString(R.string.title_alert_info), baseResponse.getError());
+                            return;
+                        }
+                    } catch (Exception e) {
+                        getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                        return;
+                    }
+                }
+                if (response.body() == null) return;
+                //listPhotoID.add(Integer.parseInt(response.body().getId()));
+                sendFile(response.body().getUrl(), response.body().getId());
+            }
+
+            @Override
+            public void onFailure(retrofit2.Call<UploadResult> call, Throwable t) {
+                if (getMainActivity() == null) return;
+                if (t instanceof NoConnectivityException) {
+                    // No internet connection
+                    getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+                } else {
+                    getMainActivity().showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                }
+            }
+        });
     }
 
     private void sendMessage(String mDsessionID, int mType, String mMessage, String id, String

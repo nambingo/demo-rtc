@@ -380,6 +380,7 @@ public class MainActivity extends BaseActivity
         if (fragments != null) {
             for (Fragment fragment : fragments) {
                 fragment.onActivityResult(requestCode, resultCode, data);
+                pref.isBackground().put(false);
             }
         }
 

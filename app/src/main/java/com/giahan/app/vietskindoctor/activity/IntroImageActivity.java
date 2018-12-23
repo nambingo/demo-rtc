@@ -6,16 +6,20 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import butterknife.BindView;
+import butterknife.OnClick;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
 import com.giahan.app.vietskindoctor.adapter.IntroImageAdapter;
@@ -23,16 +27,12 @@ import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.domains.Photo;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.gw.swipeback.SwipeBackLayout;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * Created by NamVT on 6/14/2018.
@@ -179,12 +179,13 @@ public class IntroImageActivity extends BaseActivity {
         } else {
             showToastMsg(getString(R.string.please_wait2));
             Glide.with(this)
-                    .load(photos.get(indexPos).getUrl())
                     .asBitmap()
-                    .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                    .load(photos.get(indexPos).getUrl())
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.DATA))
                     .into(new SimpleTarget<Bitmap>() {
                         @Override
-                        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                        public void onResourceReady(@NonNull final Bitmap resource,
+                                @Nullable final Transition<? super Bitmap> transition) {
                             int nh = (int) (resource.getHeight() * (512.0 / resource.getWidth()));
                             Bitmap scaled = Bitmap.createScaledBitmap(resource, 512, nh, true);
                             photos.get(indexPos).setBitmap(scaled);

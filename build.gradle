@@ -11,9 +11,9 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.1.3'
         classpath 'com.google.gms:google-services:3.2.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
 //        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-//        classpath 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -60,7 +60,7 @@ ext {
     converterGsonVersion = '2.0.2'
     okhttp3Version  = '3.4.1'
     swipebackVersion = '1.0.2'
-    glideVersion = '3.7.0'
+    glideVersion = '4.5.0'
     socketioVersion = '0.3.0'
     butterknifeVersion = '8.8.1'
     androidRatingStarVersion = 'v1.0.1'

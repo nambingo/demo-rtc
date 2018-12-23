@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,9 +22,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 
+import com.github.chrisbanes.photoview.PhotoView;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -548,17 +552,21 @@ public class DialogUtils {
         dialog.show();
     }
 
-    public static void showDialogPreview(Context context, String mPath, View.OnClickListener cancelListener,
-            View.OnClickListener uploadListener) {
-        dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+    public static void showDialogPreview(Context context, final String mPath, View.OnClickListener uploadListener, View.OnClickListener cancelListener) {
+        dialog = new Dialog(context, android.R.style.Theme_Light);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         dialog.setContentView(R.layout.dialog_preview);
         dialog.setCanceledOnTouchOutside(true);
-        ImageView imgPreview = dialog.findViewById(R.id.imgPreview);
+        PhotoView imgPreview = dialog.findViewById(R.id.imgPreview);
         LinearLayout btn_cancel = dialog.findViewById(R.id.btn_cancel);
         LinearLayout btn_upload = dialog.findViewById(R.id.btn_upload);
         btn_cancel.setOnClickListener(cancelListener);
         btn_upload.setOnClickListener(uploadListener);
-        Glide.with(context).load(mPath).fitCenter().into(imgPreview);
+        Glide.with(context)
+                .load(mPath)
+                .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
+                .into(imgPreview);
         dialog.show();
     }
 
