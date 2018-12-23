@@ -51,7 +51,7 @@ public class CreatePassCodeActivity extends BaseActivity {
         }
         String newPass = edtPassword.getText().toString();
         String confirmPass = edtConfirmPassword.getText().toString();
-        if (pref.isCreatePassCode().get()) {
+        if (!pref.isHasPasscode().get()) {
             if (TextUtils.isEmpty(newPass)
                     || TextUtils.isEmpty(confirmPass)
                     || newPass.length() < 6
