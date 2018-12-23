@@ -34,6 +34,8 @@ import com.giahan.app.vietskindoctor.model.PassCodeResponse;
 import com.giahan.app.vietskindoctor.model.PasscodeLoginBody;
 import com.giahan.app.vietskindoctor.model.PayUrlBody;
 import com.giahan.app.vietskindoctor.model.PayUrlResponse;
+import com.giahan.app.vietskindoctor.model.RegisterDeviceBody;
+import com.giahan.app.vietskindoctor.model.RegisterResponse;
 import com.giahan.app.vietskindoctor.model.UpdateInfoResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 
@@ -56,6 +58,12 @@ public interface APIService {
     //Mapping-Quest
     @GET("mapping-quests")//1
     Call<MappingResult> getMappingResult();
+
+    @POST("register-device-token")
+    Call<RegisterResponse> registerDeviceToken(@Body RegisterDeviceBody registerDeviceBody);
+
+    @POST("clear-device-token")
+    Call<RegisterResponse> clearDevice(@Body RegisterDeviceBody registerDeviceBody);
 
     @POST("doctor/facebook-login")
     Call<UserInfoResponse> loginFb(@Body FbModelBody fbModelBody);

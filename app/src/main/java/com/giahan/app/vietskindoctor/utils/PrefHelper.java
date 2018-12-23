@@ -67,4 +67,7 @@ public interface PrefHelper {
     boolean isCreatePassCode();
 
     String currentTime();
+
+    @DefaultString("")
+    String tokenFirebase();
 }

@@ -14,10 +14,13 @@ import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.model.PassCodeResponse;
 import com.giahan.app.vietskindoctor.model.PasscodeLoginBody;
+import com.giahan.app.vietskindoctor.model.RegisterDeviceBody;
+import com.giahan.app.vietskindoctor.model.RegisterResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
@@ -156,10 +159,37 @@ public class PassCodeActivity extends BaseActivity {
             @Override
             public void okClick() {
                 AccountKit.logOut();
+                logOutFirebase();
                 logout(false);
             }
         });
     }
+
+    private void logOutFirebase() {
+        RegisterDeviceBody registerDeviceBody = new RegisterDeviceBody();
+        registerDeviceBody.setOs(Constant.OS);
+        registerDeviceBody.setToken(pref.tokenFirebase().get());
+        Call<RegisterResponse> call = RequestHelper.getRequest(false, PassCodeActivity.this).clearDevice(registerDeviceBody);
+        call.enqueue(new Callback<RegisterResponse>() {
+            @Override
+            public void onResponse(final Call<RegisterResponse> call, final Response<RegisterResponse> response) {
+                if (response != null && response.body() != null && response.errorBody() == null) {
+                    Log.e("PassCodeActivity", "onResponse:  -----> CLEAR DEVICE SUCCESS");
+                }
+            }
+
+            @Override
+            public void onFailure(final Call<RegisterResponse> call, final Throwable t) {
+                if (t instanceof NoConnectivityException) {
+                    // No internet connection
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+                } else {
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                }
+            }
+        });
+    }
+
     private void callToForgetPass() {
         Call<PassCodeResponse> call = RequestHelper.getRequest(false, this).recoveryPassCode();
         call.enqueue(new Callback<PassCodeResponse>() {
