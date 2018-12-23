@@ -29,12 +29,19 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PassCodeActivity extends BaseActivity {
     private String mPassCode;
+    private String FORMAT_DATE = "yyyy:MM:dd:HH:mm";
 
     @BindView(R.id.edtNum1)
     EditText edtNum1;
@@ -70,6 +77,7 @@ public class PassCodeActivity extends BaseActivity {
     TextView tvLogout;
 
     boolean isChangePass;
+    private int count = 0;
 
     @Override
     protected int getLayoutId() {
@@ -119,9 +127,19 @@ public class PassCodeActivity extends BaseActivity {
                 + edtNum5.getText().toString() + edtNum6.getText().toString();
         if (TextUtils.isEmpty(mPassCode) || mPassCode.length() != 6) {
             Toast.makeText(this, getString(R.string.nhap_day_du_passcode), Toast.LENGTH_SHORT).show();
-        }else {
-            pref.isBackground().put(false);
-            callToLoginPassCode(mPassCode);
+        } else {
+            if (compareTime(getCurrentTime(), pref.currentTime().get())) {
+                DialogUtils.showDialogOneChoice(PassCodeActivity.this, true, false,
+                        getString(R.string.nhap_qua_3_lan), getString(R.string.close),
+                        view -> {
+                            clearData();
+                            DialogUtils.hideAlert();
+                        });
+            } else {
+                pref.isBackground().put(false);
+                pref.currentTime().put("");
+                callToLoginPassCode(mPassCode);
+            }
         }
     }
 
@@ -198,8 +216,18 @@ public class PassCodeActivity extends BaseActivity {
                         }
                         finish();
                     }
-                }else {
-                    Toast.makeText(PassCodeActivity.this, getString(R.string.mat_khau_khong_chinh_xac), Toast.LENGTH_SHORT).show();
+                } else {
+                    count ++;
+                    if (count == 3) {
+                        saveTime();
+                        DialogUtils.showDialogOneChoice(PassCodeActivity.this, true, false,
+                                getString(R.string.nhap_qua_3_lan), getString(R.string.close),
+                                view -> DialogUtils.hideAlert());
+                    }else {
+                        Toast.makeText(PassCodeActivity.this, getString(R.string.mat_khau_khong_chinh_xac),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                    clearData();
                 }
             }
 
@@ -213,6 +241,14 @@ public class PassCodeActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+    private void saveTime(){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(FORMAT_DATE, Locale.US);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MINUTE, 15);
+        String endTime = simpleDateFormat.format(calendar.getTime());
+        pref.currentTime().put(endTime);
     }
 
     private void settingEdittext() {
@@ -278,6 +314,25 @@ public class PassCodeActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+    private boolean compareTime(String time1, String time2){
+        boolean isOld = false;
+        if (TextUtils.isEmpty(time2)) return false;
+        SimpleDateFormat sdf = new SimpleDateFormat(FORMAT_DATE, Locale.US);
+        try {
+            Date date1 = sdf.parse(time1);
+            Date date2 = sdf.parse(time2);
+            isOld = date1.compareTo(date2) < 0;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return isOld;
+    }
+
+    private String getCurrentTime(){
+        SimpleDateFormat sdf = new SimpleDateFormat(FORMAT_DATE, Locale.US);
+        return sdf.format(new Date());
     }
 
     private void clearData() {

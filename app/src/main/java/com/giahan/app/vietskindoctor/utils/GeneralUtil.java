@@ -129,6 +129,7 @@ public class GeneralUtil {
                 Toast.makeText(activity, "Cancel", Toast.LENGTH_SHORT).show();
             } else {
                 DialogUtils.hideAlert();
+                prefHelper_.isHasPasscode().put(true);
                 callToLogin(activity, prefHelper_, result.getAccessToken().getToken());
             }
         }
@@ -197,6 +198,7 @@ public class GeneralUtil {
                         prefHelper_.isBackground().put(false);
                         EventBus.getDefault().post(new MessageEvent());
                     }else {
+                        prefHelper_.isHasPasscode().put(false);
                         showFirstPasscode(activity);
                     }
                 }

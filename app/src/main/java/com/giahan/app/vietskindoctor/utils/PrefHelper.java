@@ -65,4 +65,6 @@ public interface PrefHelper {
 
     @DefaultBoolean(false)
     boolean isCreatePassCode();
+
+    String currentTime();
 }

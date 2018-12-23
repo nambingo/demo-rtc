@@ -155,7 +155,9 @@ public class KhamOnlineFragment extends BaseFragment implements OnClickOpenSessi
                 if (response == null) {
                     return;
                 }
-                getMainActivity().checkCodeShowDialog(response.code());
+                if(getMainActivity()!=null){
+                    getMainActivity().checkCodeShowDialog(response.code());
+                }
                 if (response.body() == null) {
                     return;
                 }
