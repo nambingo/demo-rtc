@@ -15,17 +15,33 @@ import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.model.PassCodeResponse;
 import com.giahan.app.vietskindoctor.model.PasscodeLoginBody;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.utils.DialogUtils;
+import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.SimpleTextWatcher;
+import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.google.gson.Gson;
+import org.androidannotations.api.sharedpreferences.BooleanPrefField;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PassCodeActivity extends BaseActivity {
     private String mPassCode;
+    private String FORMAT_DATE = "yyyy:MM:dd:HH:mm";
 
     @BindView(R.id.edtNum1)
     EditText edtNum1;
@@ -60,6 +76,9 @@ public class PassCodeActivity extends BaseActivity {
     @BindView(R.id.tvLogout)
     TextView tvLogout;
 
+    boolean isChangePass;
+    private int count = 0;
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_passcode_login;
@@ -68,10 +87,29 @@ public class PassCodeActivity extends BaseActivity {
     @Override
     protected void createView() {
 //        moveTaskToBack(true);
+        getIntentData();
         edtNum1.requestFocus();
         KeyBoardUtil.show(this);
         settingEdittext();
         getDataUser();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        firstLogin(pref.isHasPasscode().get());
+    }
+
+    private void getIntentData() {
+        if(getIntent()!=null){
+            isChangePass = getIntent().getBooleanExtra("TAG_CHANGE_PASS", false);
+        }
+    }
+
+    private void firstLogin(Boolean hasPasscode) {
+        if(!hasPasscode){
+            GeneralUtil.goToFirstLogin(this);
+        }
     }
 
     private void getDataUser(){
@@ -89,9 +127,19 @@ public class PassCodeActivity extends BaseActivity {
                 + edtNum5.getText().toString() + edtNum6.getText().toString();
         if (TextUtils.isEmpty(mPassCode) || mPassCode.length() != 6) {
             Toast.makeText(this, getString(R.string.nhap_day_du_passcode), Toast.LENGTH_SHORT).show();
-        }else {
-            pref.isBackground().put(false);
-            callToLoginPassCode(mPassCode);
+        } else {
+            if (compareTime(getCurrentTime(), pref.currentTime().get())) {
+                DialogUtils.showDialogOneChoice(PassCodeActivity.this, true, false,
+                        getString(R.string.nhap_qua_3_lan), getString(R.string.close),
+                        view -> {
+                            clearData();
+                            DialogUtils.hideAlert();
+                        });
+            } else {
+                pref.isBackground().put(false);
+                pref.currentTime().put("");
+                callToLoginPassCode(mPassCode);
+            }
         }
     }
 
@@ -104,8 +152,13 @@ public class PassCodeActivity extends BaseActivity {
 
     @OnClick(R.id.tvLogout)
     void onLogout() {
-        AccountKit.logOut();
-        logout(false);
+        showAlertConfirmDialog("Thoát Tài Khoản", "Bạn có chắc chắn muốn thoát tài khoản?", new BaseActivity.OkListener() {
+            @Override
+            public void okClick() {
+                AccountKit.logOut();
+                logout(false);
+            }
+        });
     }
     private void callToForgetPass() {
         Call<PassCodeResponse> call = RequestHelper.getRequest(false, this).recoveryPassCode();
@@ -143,17 +196,38 @@ public class PassCodeActivity extends BaseActivity {
                     if (response.body().getSuccess() == 1){
                         pref.isHasPasscode().put(true);
                         pref.isLogged().put(true);
-                        if (pref.isFirstLogin().get()) {
+                        /*if (pref.isFirstLogin().get()) {
                             Intent intent = new Intent(PassCodeActivity.this, MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                             finish();
                         }else {
                             finish();
+                        }*/
+                        if(isChangePass){
+                            Intent intent = new Intent(PassCodeActivity.this, CreatePassCodeActivity.class);
+                            pref.isCreatePassCode().put(false);
+                            intent.putExtra("PASSCODE", mPassCode);
+                            startActivity(intent);
+                        }else {
+                            Intent intent = new Intent(PassCodeActivity.this, MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
                         }
+                        finish();
                     }
-                }else {
-                    Toast.makeText(PassCodeActivity.this, getString(R.string.mat_khau_khong_chinh_xac), Toast.LENGTH_SHORT).show();
+                } else {
+                    count ++;
+                    if (count == 3) {
+                        saveTime();
+                        DialogUtils.showDialogOneChoice(PassCodeActivity.this, true, false,
+                                getString(R.string.nhap_qua_3_lan), getString(R.string.close),
+                                view -> DialogUtils.hideAlert());
+                    }else {
+                        Toast.makeText(PassCodeActivity.this, getString(R.string.mat_khau_khong_chinh_xac),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                    clearData();
                 }
             }
 
@@ -167,6 +241,14 @@ public class PassCodeActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+    private void saveTime(){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(FORMAT_DATE, Locale.US);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MINUTE, 15);
+        String endTime = simpleDateFormat.format(calendar.getTime());
+        pref.currentTime().put(endTime);
     }
 
     private void settingEdittext() {
@@ -234,6 +316,25 @@ public class PassCodeActivity extends BaseActivity {
         });
     }
 
+    private boolean compareTime(String time1, String time2){
+        boolean isOld = false;
+        if (TextUtils.isEmpty(time2)) return false;
+        SimpleDateFormat sdf = new SimpleDateFormat(FORMAT_DATE, Locale.US);
+        try {
+            Date date1 = sdf.parse(time1);
+            Date date2 = sdf.parse(time2);
+            isOld = date1.compareTo(date2) < 0;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return isOld;
+    }
+
+    private String getCurrentTime(){
+        SimpleDateFormat sdf = new SimpleDateFormat(FORMAT_DATE, Locale.US);
+        return sdf.format(new Date());
+    }
+
     private void clearData() {
         edtNum1.setText("");
         edtNum2.setText("");
@@ -242,5 +343,33 @@ public class PassCodeActivity extends BaseActivity {
         edtNum5.setText("");
         edtNum6.setText("");
         edtNum1.requestFocus();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        GeneralUtil.onActivityResult(this, pref, requestCode,requestCode,data);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(!EventBus.getDefault().isRegistered(this)){
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event){
+        if(event!=null){
+            getDataUser();
+        }
     }
 }

@@ -210,6 +210,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         pref.token().put("");
                         pref.user().put("");
+                        pref.isHasPasscode().put(false);
                         pref.isLogged().put(false);
                         goControlScreen();
                     }
@@ -220,6 +221,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (isBack) {
             EventBus.getDefault().post(new TimeOutEvent());
         }
+        pref.isHasPasscode().put(false);
         Intent intent = new Intent(getApplicationContext(), PassCodeActivity.class);
         intent.putExtra(Constant.CHANGE_TAB, true);
         startActivity(intent);

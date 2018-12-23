@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -442,6 +443,26 @@ public class DialogUtils {
         dialog.show();
     }
 
+    public static void showDialogFirstLogin(Context context, onListenerPhoneNumber listener){
+        dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+        dialog.setContentView(R.layout.dialog_first_login);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setCancelable(false);
+
+        EditText edtPhoneNum = dialog.findViewById(R.id.edtPhoneNUmber);
+        Button btnNext = dialog.findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener != null){
+                    listener.onListen(edtPhoneNum.getText().toString());
+                }
+            }
+        });
+
+        dialog.show();
+    }
+
     public static void showDialogRechargeResult(Context context, boolean isFace, boolean isTwoChoice,
                                                 @Nullable String text_ask, String text_content, String text_money, String text_left,
                                                 String text_right, View.OnClickListener onClickLeft,
@@ -571,5 +592,10 @@ public class DialogUtils {
             tvConnect.setText(reject);
         }, 30000);
         dialog.show();
+    }
+
+
+    public interface onListenerPhoneNumber{
+        void onListen(String phoneNum);
     }
 }

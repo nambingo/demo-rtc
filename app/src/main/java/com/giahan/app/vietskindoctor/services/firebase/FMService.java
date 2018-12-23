@@ -40,7 +40,6 @@ public class FMService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
         if (remoteMessage.getData() == null) return;
         Map<String, String> notiData = remoteMessage.getData();
-        Log.d("tony", notiData.toString());
 
         String jsonData = new Gson().toJson(notiData);
         if(!TextUtils.isEmpty(jsonData)){

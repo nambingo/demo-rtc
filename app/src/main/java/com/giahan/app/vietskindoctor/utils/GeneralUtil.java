@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import com.facebook.accountkit.AccountKitLoginResult;
+import com.facebook.accountkit.PhoneNumber;
 import com.facebook.accountkit.ui.AccountKitActivity;
 import com.facebook.accountkit.ui.AccountKitActivity.ResponseType;
 import com.facebook.accountkit.ui.AccountKitConfiguration;
@@ -18,7 +20,9 @@ import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.domains.Session;
 import com.giahan.app.vietskindoctor.model.AccountKitBody;
+import com.giahan.app.vietskindoctor.model.BaseResponse;
 import com.giahan.app.vietskindoctor.model.UserInfoResponse;
+import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -104,11 +108,12 @@ public class GeneralUtil {
 //        });
 //    }
 
-    public static void goToLogin(Activity activity) {
+    public static void goToLogin(Activity activity, String phoneNum) {
         Intent intent = new Intent(activity, AccountKitActivity.class);
         AccountKitConfiguration.AccountKitConfigurationBuilder configurationBuilder
                 = new AccountKitConfiguration.AccountKitConfigurationBuilder(
                 LoginType.PHONE, ResponseType.TOKEN);
+        configurationBuilder.setInitialPhoneNumber(new PhoneNumber("+84", phoneNum));
         intent.putExtra(AccountKitActivity.ACCOUNT_KIT_ACTIVITY_CONFIGURATION, configurationBuilder.build());
         activity.startActivityForResult(intent, REQUEST_CODE);
     }
@@ -123,10 +128,39 @@ public class GeneralUtil {
             } else if (result.wasCancelled()) {
                 Toast.makeText(activity, "Cancel", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(activity, "Login success", Toast.LENGTH_SHORT).show();
+                DialogUtils.hideAlert();
+                prefHelper_.isHasPasscode().put(true);
                 callToLogin(activity, prefHelper_, result.getAccessToken().getToken());
             }
         }
+    }
+
+    public static void goToFirstLogin(Activity activity) {
+        DialogUtils.showDialogFirstLogin(activity, new DialogUtils.onListenerPhoneNumber() {
+            @Override
+            public void onListen(String phoneNum) {
+                if(isValidPhoneNum(phoneNum)){
+                    GeneralUtil.goToLogin(activity, phoneNum);
+                }else {
+                    DialogUtils.showDialogOneChoice(activity, false, true, activity.getString(R.string.error_phone_number)
+                            ,activity.getString(R.string.close), view ->{
+                                DialogUtils.hideAlert();
+                            });
+                }
+            }
+        });
+    }
+
+
+    private static boolean isValidPhoneNum(String phoneNum) {
+        boolean isValid = false;
+        if(!Toolbox.isEmpty(phoneNum)){
+            if(phoneNum.substring(0,1).equals("0")) {
+                if (phoneNum.length() == 10) isValid = true;
+            }
+        }
+
+        return isValid;
     }
 
     public static void callToLogin(Activity activity, PrefHelper_ prefHelper_, String token) {
@@ -137,6 +171,19 @@ public class GeneralUtil {
         call.enqueue(new Callback<UserInfoResponse>() {
             @Override
             public void onResponse(final Call<UserInfoResponse> call, final Response<UserInfoResponse> response) {
+
+                if(response.errorBody() != null)
+                {
+                    BaseResponse baseResponse = Toolbox.gson().fromJson(response.errorBody().charStream(), BaseResponse.class);
+                    if(baseResponse.getErrorCode().equals("10")){
+                        DialogUtils.showDialogOneChoice(activity, true, false, activity.getString(R.string.msg_phone_error1),activity.getString(R.string.close)
+                                ,view ->{
+                                    prefHelper_.isHasPasscode().put(false);
+                                    DialogUtils.hideAlert();
+                                });
+                    }
+                }
+
                 if (response != null && response.body() != null && response.errorBody() == null) {
                     UserInfoResponse userInfoResponse = response.body();
                     if (userInfoResponse != null) {
@@ -147,10 +194,11 @@ public class GeneralUtil {
 
                     if (!TextUtils.isEmpty(userInfoResponse.getPassCode())){
                         prefHelper_.isLogged().put(true);
-//                        prefHelper_.isHasPasscode().put(true);
+                        prefHelper_.isHasPasscode().put(true);
                         prefHelper_.isBackground().put(false);
-                        activity.startActivity(new Intent(activity, MainActivity.class));
+                        EventBus.getDefault().post(new MessageEvent());
                     }else {
+                        prefHelper_.isHasPasscode().put(false);
                         showFirstPasscode(activity);
                     }
                 }

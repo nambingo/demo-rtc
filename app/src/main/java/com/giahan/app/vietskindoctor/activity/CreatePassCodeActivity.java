@@ -26,10 +26,10 @@ public class CreatePassCodeActivity extends BaseActivity {
     EditText edtConfirmPassword;
     @BindView(R.id.btnDone)
     Button btnDone;
-    @BindView(R.id.ll_currentPass)
-    LinearLayout ll_currentPass;
-    @BindView(R.id.edtCurrentPassword)
-    EditText edtCurrentPassword;
+    /*@BindView(R.id.ll_currentPass)
+    LinearLayout ll_currentPass;*/
+   /* @BindView(R.id.edtCurrentPassword)
+    EditText edtCurrentPassword;*/
 
 
     @Override
@@ -39,12 +39,16 @@ public class CreatePassCodeActivity extends BaseActivity {
 
     @Override
     protected void createView() {
-        ll_currentPass.setVisibility(pref.isCreatePassCode().get() ? View.GONE : View.VISIBLE);
+//        ll_currentPass.setVisibility(pref.isCreatePassCode().get() ? View.GONE : View.VISIBLE);
     }
 
     @OnClick(R.id.btnDone)
     void onClickDone() {
-        String currentPass = edtCurrentPassword.getText().toString();
+//        String currentPass = edtCurrentPassword.getText().toString();
+        String currentPass = "";
+        if(getIntent()!=null){
+            currentPass = getIntent().getStringExtra("PASSCODE");
+        }
         String newPass = edtPassword.getText().toString();
         String confirmPass = edtConfirmPassword.getText().toString();
         if (pref.isCreatePassCode().get()) {
@@ -66,7 +70,9 @@ public class CreatePassCodeActivity extends BaseActivity {
                     || newPass.length() < 6
                     || confirmPass.length() < 6) {
                 Toast.makeText(this, getString(R.string.mat_khau_6_ky_tu), Toast.LENGTH_SHORT).show();
-            } else if (!newPass.equals(confirmPass)) {
+            } else if(newPass.equals(currentPass)){
+                Toast.makeText(this, getString(R.string.trung_mat_khau), Toast.LENGTH_SHORT).show();
+            }else if (!newPass.equals(confirmPass)) {
                 Toast.makeText(this, getString(R.string.mat_khau_khong_khop), Toast.LENGTH_SHORT).show();
             } else {
                 sendPassCode(currentPass, newPass);

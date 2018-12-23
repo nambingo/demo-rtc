@@ -34,6 +34,8 @@ public class CaiDatFragment extends BaseFragment {
 
     @BindView(R.id.ll_info)
     View llInfo;
+    @BindView(R.id.ll_change_password)
+    View llChangePass;
     @BindView(R.id.ll_recharge)
     View llRecharge;
     @BindView(R.id.ll_login)
@@ -61,6 +63,7 @@ public class CaiDatFragment extends BaseFragment {
         UserInfoResponse user = UserInfoResponse.getUser(getMainActivity().pref);
         if (user != null) {
             llInfo.setVisibility(View.VISIBLE);
+            llChangePass.setVisibility(View.VISIBLE);
             llRecharge.setVisibility(View.GONE);
             llGuide.setVisibility(View.VISIBLE);
             llLogout.setVisibility(View.VISIBLE);
@@ -68,6 +71,7 @@ public class CaiDatFragment extends BaseFragment {
             llLogin.setVisibility(View.GONE);
         } else {
             llInfo.setVisibility(View.GONE);
+            llChangePass.setVisibility(View.GONE);
             llRecharge.setVisibility(View.GONE);
             llGuide.setVisibility(View.VISIBLE);
             llLogout.setVisibility(View.GONE);
@@ -102,7 +106,9 @@ public class CaiDatFragment extends BaseFragment {
         getMainActivity().showAlertConfirmDialog("Đăng xuất", "Bạn có chắc chắn muốn đăng xuất tài khoản?", new BaseActivity.OkListener() {
             @Override
             public void okClick() {
-                getMainActivity().logout(false);
+//                getMainActivity().logout(false);
+                startActivity(new Intent(getMainActivity(), PassCodeActivity.class));
+                getBaseActivity().finish();
             }
         });
     }
@@ -110,6 +116,13 @@ public class CaiDatFragment extends BaseFragment {
     @OnClick(R.id.ll_info)
     void openInfoAccount() {
         getMainActivity().pushFragment(new InfoAccountV3Fragment());
+    }
+
+    @OnClick(R.id.ll_change_password)
+    void onChagePass(){
+        Intent intent = new Intent(getMainActivity(), PassCodeActivity.class);
+        intent.putExtra("TAG_CHANGE_PASS", true);
+        getMainActivity().startActivity(intent);
     }
 
     @OnClick(R.id.ll_recharge)
