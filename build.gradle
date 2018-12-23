@@ -39,9 +39,9 @@ ext {
     targetSdkVersion = 27
     compileSdkVersion = 27
     //firebase
-    firebaseCore = '16.0.1'
-    firebaseMsg = '17.0.0'
-    firebaseAuth = '16.0.3'
+    firebaseCore = '16.0.4'
+    firebaseMsg = '17.3.4'
+    firebaseAuth = '16.0.4'
     // App dependencies
     supportLibraryVersion = '27.1.1'
     circleimageviewVersion = '2.2.0'

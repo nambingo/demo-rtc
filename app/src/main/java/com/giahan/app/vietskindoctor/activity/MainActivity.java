@@ -27,7 +27,10 @@ import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.domains.ListRequestResult;
 import com.giahan.app.vietskindoctor.domains.ListSessionResult;
 import com.giahan.app.vietskindoctor.domains.Session;
+import com.giahan.app.vietskindoctor.model.RegisterDeviceBody;
+import com.giahan.app.vietskindoctor.model.RegisterResponse;
 import com.giahan.app.vietskindoctor.model.event.MessageEvent;
+import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.screens.phienkham.KhamOnlineFragment;
 import com.giahan.app.vietskindoctor.screens.setting.CaiDatFragment;
 import com.giahan.app.vietskindoctor.screens.yeucau.YeuCauFragment;
@@ -37,6 +40,7 @@ import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.ncapdevi.fragnav.FragNavController;
 import com.ncapdevi.fragnav.FragNavController.RootFragmentListener;
 import com.ncapdevi.fragnav.FragNavController.TransactionListener;
@@ -132,9 +136,48 @@ public class MainActivity extends BaseActivity
         });
         Toolbox.setStatusBarColor(this, getResources(), R.color.color_header_bar);
         getCountRequest();
+        registerDevice();
+    }
 
+    private void registerDevice() {
+        showLoad();
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnSuccessListener(instanceIdResult -> {
+                    String deviceToken = instanceIdResult.getToken();
+                    if (TextUtils.isEmpty(pref.tokenFirebase().get())) {
+                        pref.tokenFirebase().put(deviceToken);
+                    }
+                });
+        Log.e("MainActivity", "registerDevice:  -----> " + pref.tokenFirebase().get());
+        RegisterDeviceBody registerDeviceBody = new RegisterDeviceBody();
+        registerDeviceBody.setToken(pref.tokenFirebase().get());
+        registerDeviceBody.setOs(Constant.OS);
+        Call<RegisterResponse> call = RequestHelper.getRequest(false, MainActivity.this)
+                .registerDeviceToken(registerDeviceBody);
+        call.enqueue(new Callback<RegisterResponse>() {
+            @Override
+            public void onResponse(final Call<RegisterResponse> call, final Response<RegisterResponse> response) {
+                if (response != null && response.body() != null && response.errorBody() == null) {
+                    hideLoading();
+                    Log.e("MainActivity", "onResponse:  -----> REGISTER DONE!");
+                } else {
+                    hideLoading();
+                    Toast.makeText(MainActivity.this, getString(R.string.error_empty_amount), Toast.LENGTH_SHORT)
+                            .show();
+                }
+            }
 
-
+            @Override
+            public void onFailure(final Call<RegisterResponse> call, final Throwable t) {
+                hideLoading();
+                if (t instanceof NoConnectivityException) {
+                    // No internet connection
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+                } else {
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                }
+            }
+        });
     }
 
     private void openChatFromNoti() {
@@ -220,7 +263,13 @@ public class MainActivity extends BaseActivity
 
             @Override
             public void onFailure(final Call<ListSessionResult> call, final Throwable t) {
-
+                hideLoading();
+                if (t instanceof NoConnectivityException) {
+                    // No internet connection
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+                } else {
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                }
             }
         });
     }
