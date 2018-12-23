@@ -69,6 +69,8 @@ public class PassCodeActivity extends BaseActivity {
     @BindView(R.id.tvLogout)
     TextView tvLogout;
 
+    boolean isChangePass;
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_passcode_login;
@@ -77,11 +79,23 @@ public class PassCodeActivity extends BaseActivity {
     @Override
     protected void createView() {
 //        moveTaskToBack(true);
-        firstLogin(pref.isHasPasscode().get());
+        getIntentData();
         edtNum1.requestFocus();
         KeyBoardUtil.show(this);
         settingEdittext();
         getDataUser();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        firstLogin(pref.isHasPasscode().get());
+    }
+
+    private void getIntentData() {
+        if(getIntent()!=null){
+            isChangePass = getIntent().getBooleanExtra("TAG_CHANGE_PASS", false);
+        }
     }
 
     private void firstLogin(Boolean hasPasscode) {
@@ -120,8 +134,13 @@ public class PassCodeActivity extends BaseActivity {
 
     @OnClick(R.id.tvLogout)
     void onLogout() {
-        AccountKit.logOut();
-        logout(false);
+        showAlertConfirmDialog("Thoát Tài Khoản", "Bạn có chắc chắn muốn thoát tài khoản?", new BaseActivity.OkListener() {
+            @Override
+            public void okClick() {
+                AccountKit.logOut();
+                logout(false);
+            }
+        });
     }
     private void callToForgetPass() {
         Call<PassCodeResponse> call = RequestHelper.getRequest(false, this).recoveryPassCode();
@@ -167,9 +186,16 @@ public class PassCodeActivity extends BaseActivity {
                         }else {
                             finish();
                         }*/
-                        Intent intent = new Intent(PassCodeActivity.this, MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
+                        if(isChangePass){
+                            Intent intent = new Intent(PassCodeActivity.this, CreatePassCodeActivity.class);
+                            pref.isCreatePassCode().put(false);
+                            intent.putExtra("PASSCODE", mPassCode);
+                            startActivity(intent);
+                        }else {
+                            Intent intent = new Intent(PassCodeActivity.this, MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                        }
                         finish();
                     }
                 }else {
@@ -283,6 +309,7 @@ public class PassCodeActivity extends BaseActivity {
         super.onStop();
         EventBus.getDefault().unregister(this);
     }
+
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(MessageEvent event){

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import com.facebook.accountkit.AccountKitLoginResult;
+import com.facebook.accountkit.PhoneNumber;
 import com.facebook.accountkit.ui.AccountKitActivity;
 import com.facebook.accountkit.ui.AccountKitActivity.ResponseType;
 import com.facebook.accountkit.ui.AccountKitConfiguration;
@@ -112,7 +113,7 @@ public class GeneralUtil {
         AccountKitConfiguration.AccountKitConfigurationBuilder configurationBuilder
                 = new AccountKitConfiguration.AccountKitConfigurationBuilder(
                 LoginType.PHONE, ResponseType.TOKEN);
-//        configurationBuilder.setInitialPhoneNumber(new PhoneNumber("+84", phoneNum));
+        configurationBuilder.setInitialPhoneNumber(new PhoneNumber("+84", phoneNum));
         intent.putExtra(AccountKitActivity.ACCOUNT_KIT_ACTIVITY_CONFIGURATION, configurationBuilder.build());
         activity.startActivityForResult(intent, REQUEST_CODE);
     }
@@ -127,7 +128,7 @@ public class GeneralUtil {
             } else if (result.wasCancelled()) {
                 Toast.makeText(activity, "Cancel", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(activity, "Login success", Toast.LENGTH_SHORT).show();
+                DialogUtils.hideAlert();
                 callToLogin(activity, prefHelper_, result.getAccessToken().getToken());
             }
         }
@@ -176,6 +177,7 @@ public class GeneralUtil {
                     if(baseResponse.getErrorCode().equals("10")){
                         DialogUtils.showDialogOneChoice(activity, true, false, activity.getString(R.string.msg_phone_error1),activity.getString(R.string.close)
                                 ,view ->{
+                                    prefHelper_.isHasPasscode().put(false);
                                     DialogUtils.hideAlert();
                                 });
                     }
@@ -185,7 +187,6 @@ public class GeneralUtil {
                     UserInfoResponse userInfoResponse = response.body();
                     if (userInfoResponse != null) {
                         userInfoResponse.setAgainData(response.body());
-                        Log.d("tony", userInfoResponse.getName() + userInfoResponse.getPhone());
                         prefHelper_.user().put(new Gson().toJson(userInfoResponse));
                         prefHelper_.token().put(response.headers().get("Access-Token"));
                     }
@@ -194,7 +195,6 @@ public class GeneralUtil {
                         prefHelper_.isLogged().put(true);
                         prefHelper_.isHasPasscode().put(true);
                         prefHelper_.isBackground().put(false);
-                        DialogUtils.hideAlert();
                         EventBus.getDefault().post(new MessageEvent());
                     }else {
                         showFirstPasscode(activity);

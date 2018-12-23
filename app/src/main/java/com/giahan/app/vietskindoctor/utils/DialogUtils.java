@@ -447,6 +447,7 @@ public class DialogUtils {
         dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
         dialog.setContentView(R.layout.dialog_first_login);
         dialog.setCanceledOnTouchOutside(false);
+        dialog.setCancelable(false);
 
         EditText edtPhoneNum = dialog.findViewById(R.id.edtPhoneNUmber);
         Button btnNext = dialog.findViewById(R.id.btnNext);

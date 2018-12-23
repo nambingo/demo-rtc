@@ -27,6 +27,7 @@
     <string name="title_alert_info">Thông báo</string>
     <string name="title_setting">Cài đặt</string>
     <string name="title_info_account">Thông tin tài khoản</string>
+    <string name="title_change_password">Đổi mật khẩu</string>
     <string name="title_info_account2">Thông tin tự chẩn đoán</string>
     <string name="title_recharge_money">Ví VietSkin</string>
     <string name="title_recharge_money2">Nạp tiền</string>
@@ -83,7 +84,7 @@
     <string name="input_phone_number">Nhập số điện thoại của bạn để đăng nhập</string>
 
     <string name="error_phone_number">Số điện thoại không chính xác vui lòng nhập lại</string>
-    <string name="msg_phone_error1">Số điện thoại đã được sử dụng\n Vui lòng đăng nhập bằng một số diện thoại khác</string>
+    <string name="msg_phone_error1">Số điện thoại này đã được dùng để đăng kí tài khoản bệnh nhân trong hệ thống Vietskin. Vui lòng sử dụng Số điện thoại khác để đăng kí tài khoản bác sĩ</string>
 
     <string name="gioi_tinh">Giới tính</string>
     <string name="so_nam_kinh_nghiem">Số năm kinh nghiệm</string>
@@ -228,6 +229,7 @@
     <string name="ACCOUNT_KIT_CLIENT_TOKEN">107d333d2b7bc3fe376156545e9c0f95</string>
     <string name="mat_khau_6_ky_tu">Mật khẩu phải đảm bảo có độ dài 6 ký tự!</string>
     <string name="mat_khau_khong_khop">Nhập lại mật khẩu không chính xác!</string>
+    <string name="trung_mat_khau">Trùng mật khẩu cũ! Vui lòng nhập mật khẩu mới khác mật khẩu cũ</string>
     <string name="nhap_day_du_passcode">Bạn cần nhập đầy đủ mật khẩu!</string>
     <string name="mat_khau_khong_chinh_xac">Mật khẩu không chính xác!</string>
     <string name="mat_khau_moi_duoc_gui">Mật khẩu mới sẽ được gửi đến bạn, vui lòng nhập mật khẩu để đăng nhập!</string>

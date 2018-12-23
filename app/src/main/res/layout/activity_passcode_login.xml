@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white_two">
 
     <RelativeLayout
@@ -90,7 +91,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_marginTop="@dimen/dp_10"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="visible">
             <EditText
                 android:id="@+id/edtNum1"
                 android:layout_width="@dimen/dp_40"
