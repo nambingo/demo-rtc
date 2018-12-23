@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Message;
 
@@ -41,7 +42,10 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Glide.with(context).load(result.get(position).getObjUrl()).centerCrop().into(holder.ivPhoto);
+        Glide.with(context)
+                .load(result.get(position).getObjUrl())
+                .apply(new RequestOptions().centerCrop())
+                .into(holder.ivPhoto);
         holder.ivPhoto.setOnClickListener(v -> {
             if (mOnClickPhoto == null) return;
             mOnClickPhoto.OnClickPhoto(result.get(position));

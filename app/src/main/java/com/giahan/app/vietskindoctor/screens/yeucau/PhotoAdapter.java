@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.giahan.app.vietskindoctor.R;
 import java.util.List;
 
@@ -41,13 +42,10 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-//        RequestOptions options = new RequestOptions()
-//                .centerCrop()
-//                .priority(Priority.HIGH);
-//
-//        new GlideImageLoader(holder.ivPhoto, ).load(result.get(position),options);
-
-        Glide.with(context).load(result.get(position)).centerCrop().into(holder.ivPhoto);
+        Glide.with(context)
+                .load(result.get(position))
+                .apply(new RequestOptions().centerCrop())
+                .into(holder.ivPhoto);
         holder.rlPhoto.setOnClickListener(v -> {
             if (mOnClickViewListener == null) return;
             mOnClickViewListener.onClickView(result.get(position));

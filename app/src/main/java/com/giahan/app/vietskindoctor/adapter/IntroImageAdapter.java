@@ -2,20 +2,21 @@ package com.giahan.app.vietskindoctor.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ScrollView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Photo;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,16 +53,17 @@ public class IntroImageAdapter extends PagerAdapter {
         if (photos.get(position) != null && photos.get(position).getUrl() != null) {
             Glide.with(mContext)
                     .load(photos.get(position).getUrl())
-                    .diskCacheStrategy(DiskCacheStrategy.ALL) //use this to cache
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
                     .into(imageIll);
             if(photos.get(position).getBitmap() == null) {
                 Glide.with(mContext)
-                        .load(photos.get(position).getUrl())
                         .asBitmap()
-                        .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                        .load(photos.get(position).getUrl())
+                        .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.DATA))
                         .into(new SimpleTarget<Bitmap>() {
                             @Override
-                            public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                            public void onResourceReady(@NonNull final Bitmap resource,
+                                    @Nullable final Transition<? super Bitmap> transition) {
                                 int nh = (int) (resource.getHeight() * (512.0 / resource.getWidth()));
                                 Bitmap scaled = Bitmap.createScaledBitmap(resource, 512, nh, true);
                                 photos.get(position).setBitmap(scaled);

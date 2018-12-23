@@ -85,7 +85,8 @@
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_icon_video"/>
+                android:src="@drawable/ic_icon_video"
+                android:visibility="gone"/>
         </LinearLayout>
 
     </RelativeLayout>

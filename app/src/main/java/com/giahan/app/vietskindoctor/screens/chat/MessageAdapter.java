@@ -10,23 +10,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
 import com.squareup.picasso.Picasso;
-
 import de.hdodenhof.circleimageview.CircleImageView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -287,43 +279,17 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             boolean isMe = message.getUserId().equals(mUserID);
             chat_text_other.setVisibility(isMe ? View.GONE : View.VISIBLE);
             chat_text_me.setVisibility(isMe ? View.VISIBLE : View.GONE);
-
-            mGlide.load(message.getObjUrl())
-                    .dontAnimate()
-                    .fitCenter()
-                    .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                    .listener(new RequestListener<String, GlideDrawable>() {
-                        @Override
-                        public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                            if (isMe) {
-                                progressBarRight.setVisibility(View.GONE);
-                            } else {
-                                progressBarLeft.setVisibility(View.GONE);
-                            }
-
-                            return false;
-                        }
-
-                        @Override
-                        public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                            return false;
-                        }
-                    })
+            Picasso.with(mContext)
+                    .load(message.getObjUrl())
+                    .centerCrop()
+                    .fit()
                     .into(isMe ? imgMe : imgYou);
-
-            if (isMe) {
-                progressBarRight.setVisibility(View.GONE);
-            } else {
-                progressBarLeft.setVisibility(View.GONE);
-            }
+            Picasso.with(mContext)
+                    .load(mAvatarUrl)
+                    .placeholder(R.mipmap.ic_launcher)
+                    .into(imgAvatar);
 
             imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
-
-            mGlide.load(mAvatarUrl)
-                    .dontAnimate()
-                    .placeholder(R.mipmap.ic_launcher)
-                    .error(R.mipmap.ic_launcher)
-                    .into(imgAvatar);
 
             imgMe.setTag(message);
             imgYou.setTag(message);

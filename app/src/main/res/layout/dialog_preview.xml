@@ -53,8 +53,8 @@
                 android:src="@drawable/ic_cloud_upload_black_24dp" />
         </LinearLayout>
     </RelativeLayout>
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/imgPreview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 </LinearLayout>
