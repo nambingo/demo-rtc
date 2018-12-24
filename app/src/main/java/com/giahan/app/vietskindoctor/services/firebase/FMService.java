@@ -1,5 +1,8 @@
 package com.giahan.app.vietskindoctor.services.firebase;
 
+import static android.support.v4.app.NotificationCompat.GROUP_ALERT_SUMMARY;
+import static android.support.v4.app.NotificationCompat.VISIBILITY_PRIVATE;
+
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -11,7 +14,10 @@ import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Build.VERSION;
+import android.os.Build.VERSION_CODES;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat.Builder;
 import android.text.TextUtils;
 import android.util.Log;
 import com.giahan.app.vietskindoctor.R;
@@ -32,8 +38,20 @@ import org.greenrobot.eventbus.EventBus;
 public class FMService extends FirebaseMessagingService {
 
     public static final int NOTIFY_SHOW_NOTIFICATION = 2;
+    private static String GROUP_KEY_NOTIFICATION = "com.vietskindoctor.notification_group";
+
+    public static final String CHANNEL_ID = "notify_vietskindoctor_id";
+
+    public static int NOTIFY_SUMMARY = 100;
+
     private Bitmap icon;
     private NotificationContent notice;
+
+    @Override
+    public void onNewToken(final String s) {
+        super.onNewToken(s);
+        Log.e("FMService", "onNewToken:  -----> "+s);
+    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -69,43 +87,61 @@ public class FMService extends FirebaseMessagingService {
         setupNotification(message, defaultSoundUri, pendingIntent, notifyID);
     }
 
-    private void setupNotification(String message, Uri defaultSoundUri, PendingIntent
-            pendingIntent, int notifyID){
-        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService
-                (Context.NOTIFICATION_SERVICE);
-        NotificationCompat.Builder builder = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel
-                    notificationChannel = new NotificationChannel("ID", "Name", importance);
-            notificationManager.createNotificationChannel(notificationChannel);
+    public void setupNotification(String message, Uri defaultSoundUri, PendingIntent
+            pendingIntent, int notifyID) {
+        NotificationCompat.Builder mBuilderGroup =
+                new Builder(getApplicationContext(), CHANNEL_ID);
+        mBuilderGroup.setSmallIcon(getNotificationIcon())
+                .setLargeIcon(icon)
+                .setContentTitle(this.getString(R.string.app_name))
+                .setContentText(message)
+                .setAutoCancel(true)
+                .setSound(defaultSoundUri)
+                .setGroupSummary(true)
+                .setGroup(GROUP_KEY_NOTIFICATION)
+                .setGroupSummary(true)
+                .setGroupAlertBehavior(GROUP_ALERT_SUMMARY);
+
+        NotificationCompat.Builder mBuilder =
+                new Builder(getApplicationContext(), CHANNEL_ID).
+                        setSmallIcon(getNotificationIcon())
+                        .setLargeIcon(icon)
+                        .setAutoCancel(true)
+                        .setContentTitle(this.getString(R.string.app_name))
+                        .setContentText(message)
+                        .setGroup(GROUP_KEY_NOTIFICATION)
+                        .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
+                        .setVisibility(VISIBILITY_PRIVATE)
+                        .setContentIntent(pendingIntent);
+
+        if (VERSION.SDK_INT >= VERSION_CODES.M) {
+            mBuilderGroup.setColor(this.getColor(R.color.vietskin_color));
+            mBuilder.setColor(this.getColor(R.color.vietskin_color));
         }
-        EventBus.getDefault().post(new MessageEvent());
-        builder = new NotificationCompat.Builder(getApplicationContext());
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Log.e("FMService", "setupNotification: 1 -----> ");
-            builder = builder
-                    .setSmallIcon(R.mipmap.logo_app)
-                    .setColor(getResources().getColor(R.color.vietskin_color))
-                    .setLargeIcon(icon)
-                    .setContentTitle(this.getString(R.string.app_name))
-                    .setContentText(message)
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
-                    .setAutoCancel(true)
-                    .setSound(defaultSoundUri)
-                    .setContentIntent(pendingIntent);
-        } else {
-            Log.e("FMService", "setupNotification: 2 -----> ");
-            builder = builder
-                    .setSmallIcon(R.mipmap.ic_launcher)
-                    .setLargeIcon(icon)
-                    .setContentTitle(this.getString(R.string.app_name))
-                    .setContentText(message)
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
-                    .setAutoCancel(true)
-                    .setSound(defaultSoundUri)
-                    .setContentIntent(pendingIntent);
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(notifyID, mBuilder.build());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
+                    "Channel human readable title",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            mNotificationManager.createNotificationChannel(channel);
+            mBuilder.setChannelId(CHANNEL_ID);
         }
-        notificationManager.notify(notifyID, builder.build());
+        if (VERSION.SDK_INT >= VERSION_CODES.N) {
+            mNotificationManager.notify(NOTIFY_SUMMARY, mBuilderGroup.build());
+        }
+    }
+
+    private int getNotificationIcon() {
+        boolean useWhiteIcon = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP);
+        return useWhiteIcon ? R.mipmap.logo_app : R.mipmap.ic_launcher;
+    }
+
+    public static void cancelAllNotification() {
+        NotificationManager mNotificationManager =
+                (NotificationManager) VietSkinDoctorApplication.getInstance()
+                        .getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.cancelAll();
     }
 }

@@ -20,6 +20,7 @@ import com.giahan.app.vietskindoctor.model.UserInfoResponse;
 import com.giahan.app.vietskindoctor.model.event.MessageEvent;
 import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.services.firebase.FMService;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
@@ -161,6 +162,7 @@ public class PassCodeActivity extends BaseActivity {
                 AccountKit.logOut();
                 logOutFirebase();
                 logout(false);
+                FMService.cancelAllNotification();
             }
         });
     }
