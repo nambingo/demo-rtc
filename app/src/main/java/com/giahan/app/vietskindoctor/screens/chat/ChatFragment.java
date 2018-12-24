@@ -245,8 +245,8 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
     }
 
     private void setupSocket() {
-        mSocket = getBaseActivity().getSocket();
-        if (mSocket == null) {
+//        mSocket = getBase().getSocket();
+//        if (mSocket == null) {
             JSONObject jsonObject = new JSONObject();
             try {
                 mSocket = IO.socket(Constant.URL_SOCKET);
@@ -257,8 +257,13 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
             } catch (JSONException ignored) {
                 Toast.makeText(getActivity(), "Socket error!", Toast.LENGTH_SHORT).show();
             }
-        }
-        receiveMessage();
+//        }
+        mSocket.on("connect", args -> {
+        });
+        mSocket.on(Constant.TAG_RECEIVE_MESSAGE, OnNewMessage);
+//        mSocket.on(Constant.TAG_VIDEO_INVITE, onReceiverVideoCall);
+//        mSocket.on(Constant.TAG_VIDEO_DECLINE, onReceiverMissedVideoCall);
+        mSocket.connect();
     }
 
     private void receiveMessage() {
