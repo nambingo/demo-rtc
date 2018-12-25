@@ -26,6 +26,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import butterknife.ButterKnife;
+import com.facebook.accountkit.AccountKit;
 import com.facebook.login.LoginManager;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
@@ -33,9 +34,14 @@ import com.giahan.app.vietskindoctor.activity.FirstLoginActivity;
 import com.giahan.app.vietskindoctor.activity.LoginActivity;
 import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
+import com.giahan.app.vietskindoctor.model.RegisterDeviceBody;
+import com.giahan.app.vietskindoctor.model.RegisterResponse;
 import com.giahan.app.vietskindoctor.model.event.TimeOutEvent;
+import com.giahan.app.vietskindoctor.network.NoConnectivityException;
 import com.giahan.app.vietskindoctor.services.NetworkChanged;
 import com.giahan.app.vietskindoctor.services.NetworkListenerReceiver;
+import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.services.firebase.FMService;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.PrefHelper_;
@@ -51,6 +57,9 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONException;
 import org.json.JSONObject;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by pham.duc.nam
@@ -181,58 +190,56 @@ public abstract class BaseActivity extends AppCompatActivity {
         makeToast(msg);
     }
 
-    public void logout(boolean back) {
-        isBack = back;
-        if (pref.isLoginFb().get()) {
-            disconnectFromFacebook();
-        } else {
-            signOut();
-        }
+    public void logout(){
+        showAlertConfirmDialog("Thoát Tài Khoản", "Bạn có chắc chắn muốn thoát tài khoản?", new BaseActivity.OkListener() {
+            @Override
+            public void okClick() {
+                AccountKit.logOut();
+                logOutFirebase();
+                VietSkinDoctorApplication.getmAuth().signOut();
+                FMService.cancelAllNotification();
+                goControlScreen();
+            }
+        });
     }
 
-    public void disconnectFromFacebook() {
-        showLoad();
-        pref.token().put("");
-        pref.user().put("");
-        pref.isLogged().put(false);
-        LoginManager.getInstance().logOut();
-        goControlScreen();
-    }
+    private void logOutFirebase() {
+        RegisterDeviceBody registerDeviceBody = new RegisterDeviceBody();
+        registerDeviceBody.setOs(Constant.OS);
+        registerDeviceBody.setToken(pref.tokenFirebase().get());
+        Call<RegisterResponse> call = RequestHelper.getRequest(false, BaseActivity.this).clearDevice(registerDeviceBody);
+        call.enqueue(new Callback<RegisterResponse>() {
+            @Override
+            public void onResponse(final Call<RegisterResponse> call, final Response<RegisterResponse> response) {
+                if (response != null && response.body() != null && response.errorBody() == null) {
+                    Log.e("PassCodeActivity", "onResponse:  -----> CLEAR DEVICE SUCCESS");
+                }
+            }
 
-    private void signOut() {
-        Log.e("BaseActivity", "signOut: 1 -----> ");
-        // Firebase sign out
-        VietSkinDoctorApplication.getmAuth().signOut();
-
-        // Google sign out
-        VietSkinDoctorApplication.getmGoogleSignInClient(this).signOut().addOnCompleteListener(this,
-                new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        pref.token().put("");
-                        pref.user().put("");
-                        pref.isHasPasscode().put(false);
-                        pref.isLogged().put(false);
-                        goControlScreen();
-                    }
-                });
+            @Override
+            public void onFailure(final Call<RegisterResponse> call, final Throwable t) {
+                if (t instanceof NoConnectivityException) {
+                    // No internet connection
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
+                } else {
+                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
+                }
+            }
+        });
     }
 
     private void goControlScreen() {
         if (isBack) {
             EventBus.getDefault().post(new TimeOutEvent());
         }
+        pref.token().put("");
+        pref.user().put("");
+        pref.isLogged().put(false);
         pref.isHasPasscode().put(false);
         Intent intent = new Intent(getApplicationContext(), FirstLoginActivity.class);
         intent.putExtra(Constant.CHANGE_TAB, true);
         startActivity(intent);
-        overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
         hideLoading();
-//        new Handler().postDelayed(new Runnable() {
-//            public void run() {
-//                hideLoading();
-//            }
-//        }, SplashActivity.TIME_LOADING);
     }
 
     public void hideLoading() {
@@ -259,7 +266,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             isShow = true;
             showAlertBackDialog("Thông báo", getString(R.string.session_timed_out_content),
                     () -> {
-                        logout(true);
+                        logout();
                         isShow = false;
                     });
         }

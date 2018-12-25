@@ -26,24 +26,18 @@ import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.SimpleTextWatcher;
-import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.google.gson.Gson;
-import org.androidannotations.api.sharedpreferences.BooleanPrefField;
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class PassCodeActivity extends BaseActivity {
     private String mPassCode;
@@ -165,41 +159,10 @@ public class PassCodeActivity extends BaseActivity {
 
     @OnClick(R.id.tvLogout)
     void onLogout() {
-        showAlertConfirmDialog("Thoát Tài Khoản", "Bạn có chắc chắn muốn thoát tài khoản?", new BaseActivity.OkListener() {
-            @Override
-            public void okClick() {
-                AccountKit.logOut();
-                logOutFirebase();
-                logout(false);
-                FMService.cancelAllNotification();
-            }
-        });
+        logout();
     }
 
-    private void logOutFirebase() {
-        RegisterDeviceBody registerDeviceBody = new RegisterDeviceBody();
-        registerDeviceBody.setOs(Constant.OS);
-        registerDeviceBody.setToken(pref.tokenFirebase().get());
-        Call<RegisterResponse> call = RequestHelper.getRequest(false, PassCodeActivity.this).clearDevice(registerDeviceBody);
-        call.enqueue(new Callback<RegisterResponse>() {
-            @Override
-            public void onResponse(final Call<RegisterResponse> call, final Response<RegisterResponse> response) {
-                if (response != null && response.body() != null && response.errorBody() == null) {
-                    Log.e("PassCodeActivity", "onResponse:  -----> CLEAR DEVICE SUCCESS");
-                }
-            }
 
-            @Override
-            public void onFailure(final Call<RegisterResponse> call, final Throwable t) {
-                if (t instanceof NoConnectivityException) {
-                    // No internet connection
-                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.error_no_connection));
-                } else {
-                    showAlertDialog(getString(R.string.title_alert_info), getString(R.string.msg_alert_info));
-                }
-            }
-        });
-    }
 
     private void callToForgetPass() {
         Call<PassCodeResponse> call = RequestHelper.getRequest(false, this).recoveryPassCode();

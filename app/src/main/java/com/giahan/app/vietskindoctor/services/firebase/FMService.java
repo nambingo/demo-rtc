@@ -4,9 +4,11 @@ import static android.support.v4.app.NotificationCompat.GROUP_ALERT_SUMMARY;
 import static android.support.v4.app.NotificationCompat.VISIBILITY_PRIVATE;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -111,7 +113,6 @@ public class FMService extends FirebaseMessagingService {
                         .setContentText(message)
                         .setGroup(GROUP_KEY_NOTIFICATION)
                         .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
-                        .setVisibility(VISIBILITY_PRIVATE)
                         .setContentIntent(pendingIntent);
 
         if (VERSION.SDK_INT >= VERSION_CODES.M) {
@@ -120,10 +121,10 @@ public class FMService extends FirebaseMessagingService {
         }
         NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(notifyID, mBuilder.build());
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
-                    "Channel human readable title",
+                    "VietSkin Doctor Title",
                     NotificationManager.IMPORTANCE_DEFAULT);
             mNotificationManager.createNotificationChannel(channel);
             mBuilder.setChannelId(CHANNEL_ID);
@@ -131,6 +132,7 @@ public class FMService extends FirebaseMessagingService {
         if (VERSION.SDK_INT >= VERSION_CODES.N) {
             mNotificationManager.notify(NOTIFY_SUMMARY, mBuilderGroup.build());
         }
+        mNotificationManager.notify(notifyID, mBuilder.build());
     }
 
     private int getNotificationIcon() {
