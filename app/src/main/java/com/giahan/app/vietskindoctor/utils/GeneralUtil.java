@@ -233,22 +233,17 @@ public class GeneralUtil {
         edt1.addTextChangedListener(new SimpleTextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(count==2){
-                    edt2.setText(" ");
+                if(count==1){
                     edt2.requestFocus();
-                }else {
-                    edt1.setText(" ");
                 }
             }
         });
         edt2.addTextChangedListener(new SimpleTextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(count==2){
-                    edt3.setText(" ");
+                if(count==1){
                     edt3.requestFocus();
                 }else {
-                    edt2.setText(" ");
                     edt1.requestFocus();
                 }
             }
@@ -256,11 +251,9 @@ public class GeneralUtil {
         edt3.addTextChangedListener(new SimpleTextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(count==2){
-                    edt4.setText(" ");
+                if(count==1){
                     edt4.requestFocus();
                 }else {
-                    edt3.setText(" ");
                     edt2.requestFocus();
                 }
             }
@@ -269,10 +262,8 @@ public class GeneralUtil {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(count==2){
-                    edt5.setText(" ");
                     edt5.requestFocus();
                 }else {
-                    edt4.setText(" ");
                     edt3.requestFocus();
                 }
             }
@@ -281,10 +272,8 @@ public class GeneralUtil {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(count==2){
-                    edt6.setText(" ");
                     edt6.requestFocus();
                 }else {
-                    edt5.setText(" ");
                     edt4.requestFocus();
                 }
             }
@@ -293,7 +282,6 @@ public class GeneralUtil {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(count<2){
-                    edt6.setText(" ");
                     edt5.requestFocus();
                 }
             }
