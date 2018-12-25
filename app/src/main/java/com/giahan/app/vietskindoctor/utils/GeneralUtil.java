@@ -3,9 +3,12 @@ package com.giahan.app.vietskindoctor.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 import com.facebook.accountkit.AccountKitLoginResult;
 import com.facebook.accountkit.PhoneNumber;
@@ -225,4 +228,76 @@ public class GeneralUtil {
             }
         }
     }
+
+    public static void autoMovingText(EditText edt1, EditText edt2,EditText edt3, EditText edt4,EditText edt5, EditText edt6){
+        edt1.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==2){
+                    edt2.setText(" ");
+                    edt2.requestFocus();
+                }else {
+                    edt1.setText(" ");
+                }
+            }
+        });
+        edt2.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==2){
+                    edt3.setText(" ");
+                    edt3.requestFocus();
+                }else {
+                    edt2.setText(" ");
+                    edt1.requestFocus();
+                }
+            }
+        });
+        edt3.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==2){
+                    edt4.setText(" ");
+                    edt4.requestFocus();
+                }else {
+                    edt3.setText(" ");
+                    edt2.requestFocus();
+                }
+            }
+        });
+        edt4.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==2){
+                    edt5.setText(" ");
+                    edt5.requestFocus();
+                }else {
+                    edt4.setText(" ");
+                    edt3.requestFocus();
+                }
+            }
+        });
+        edt5.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==2){
+                    edt6.setText(" ");
+                    edt6.requestFocus();
+                }else {
+                    edt5.setText(" ");
+                    edt4.requestFocus();
+                }
+            }
+        });
+        edt6.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count<2){
+                    edt6.setText(" ");
+                    edt5.requestFocus();
+                }
+            }
+        });
+    }
+
 }

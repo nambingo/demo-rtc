@@ -293,68 +293,69 @@ public class PassCodeActivity extends BaseActivity {
     }
 
     private void settingEdittext() {
-        edtNum1.addTextChangedListener(new SimpleTextWatcher() {
-            @Override
-            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
-                if (edtNum1.getText().toString().length() == 1) {
-                    edtNum2.requestFocus();
-                }
-            }
-        });
-        edtNum2.addTextChangedListener(new SimpleTextWatcher() {
-            @Override
-            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
-                if (edtNum2.getText().toString().length() == 1) {
-                    edtNum3.requestFocus();
-                } else if (edtNum2.getText().toString().length() == 0) {
-                    edtNum1.requestFocus();
-                    edtNum1.setText("");
-                }
-            }
-        });
-        edtNum3.addTextChangedListener(new SimpleTextWatcher() {
-            @Override
-            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
-                if (edtNum3.getText().toString().length() == 1) {
-                    edtNum4.requestFocus();
-                } else if (edtNum3.getText().toString().length() == 0) {
-                    edtNum2.requestFocus();
-                    edtNum2.setText("");
-                }
-            }
-        });
-        edtNum4.addTextChangedListener(new SimpleTextWatcher() {
-            @Override
-            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
-                if (edtNum4.getText().toString().length() == 1) {
-                    edtNum5.requestFocus();
-                } else if (edtNum4.getText().toString().length() == 0) {
-                    edtNum3.requestFocus();
-                    edtNum3.setText("");
-                }
-            }
-        });
-        edtNum5.addTextChangedListener(new SimpleTextWatcher() {
-            @Override
-            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
-                if (edtNum5.getText().toString().length() == 1) {
-                    edtNum6.requestFocus();
-                } else if (edtNum5.getText().toString().length() == 0) {
-                    Log.e("PassCodeActivity", "onTextChanged:  -----> ");
-                    edtNum4.requestFocus();
-                    edtNum4.setText("");
-                }
-            }
-        });
-        edtNum6.addTextChangedListener(new SimpleTextWatcher() {
-            @Override
-            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
-                if (edtNum6.getText().toString().length() == 0) {
-                    edtNum5.requestFocus();
-                    edtNum5.setText("");
-                }
-            }
-        });
+        GeneralUtil.autoMovingText(edtNum1, edtNum2, edtNum3, edtNum4, edtNum5, edtNum6);
+//        edtNum1.addTextChangedListener(new SimpleTextWatcher() {
+//            @Override
+//            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
+//                if (edtNum1.getText().toString().length() == 1) {
+//                    edtNum2.requestFocus();
+//                }
+//            }
+//        });
+//        edtNum2.addTextChangedListener(new SimpleTextWatcher() {
+//            @Override
+//            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
+//                if (edtNum2.getText().toString().length() == 1) {
+//                    edtNum3.requestFocus();
+//                } else if (edtNum2.getText().toString().length() == 0) {
+//                    edtNum1.requestFocus();
+//                    edtNum1.setText("");
+//                }
+//            }
+//        });
+//        edtNum3.addTextChangedListener(new SimpleTextWatcher() {
+//            @Override
+//            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
+//                if (edtNum3.getText().toString().length() == 1) {
+//                    edtNum4.requestFocus();
+//                } else if (edtNum3.getText().toString().length() == 0) {
+//                    edtNum2.requestFocus();
+//                    edtNum2.setText("");
+//                }
+//            }
+//        });
+//        edtNum4.addTextChangedListener(new SimpleTextWatcher() {
+//            @Override
+//            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
+//                if (edtNum4.getText().toString().length() == 1) {
+//                    edtNum5.requestFocus();
+//                } else if (edtNum4.getText().toString().length() == 0) {
+//                    edtNum3.requestFocus();
+//                    edtNum3.setText("");
+//                }
+//            }
+//        });
+//        edtNum5.addTextChangedListener(new SimpleTextWatcher() {
+//            @Override
+//            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
+//                if (edtNum5.getText().toString().length() == 1) {
+//                    edtNum6.requestFocus();
+//                } else if (edtNum5.getText().toString().length() == 0) {
+//                    Log.e("PassCodeActivity", "onTextChanged:  -----> ");
+//                    edtNum4.requestFocus();
+//                    edtNum4.setText("");
+//                }
+//            }
+//        });
+//        edtNum6.addTextChangedListener(new SimpleTextWatcher() {
+//            @Override
+//            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {
+//                if (edtNum6.getText().toString().length() == 0) {
+//                    edtNum5.requestFocus();
+//                    edtNum5.setText("");
+//                }
+//            }
+//        });
     }
 
     private boolean compareTime(String time1, String time2){
