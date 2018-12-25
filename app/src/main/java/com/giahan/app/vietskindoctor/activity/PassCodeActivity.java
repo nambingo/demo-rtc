@@ -43,6 +43,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.facebook.FacebookSdk.getApplicationContext;
+
 public class PassCodeActivity extends BaseActivity {
     private String mPassCode;
     private String FORMAT_DATE = "yyyy:MM:dd:HH:mm";
@@ -112,8 +114,15 @@ public class PassCodeActivity extends BaseActivity {
 
     private void firstLogin(Boolean hasPasscode) {
         if(!hasPasscode){
-            GeneralUtil.goToFirstLogin(this);
+            startActivity(new Intent(this, FirstLoginActivity.class));
         }
+    }
+
+    void showGuide() {
+        pref.isFirstOpenApp().put(false);
+        Intent intent = new Intent(getApplicationContext(), GuideActivity.class);
+        intent.putExtra(Constant.OPEN_GUIDER, true);
+        startActivity(intent);
     }
 
     private void getDataUser(){
@@ -395,6 +404,7 @@ public class PassCodeActivity extends BaseActivity {
     protected void onStop() {
         super.onStop();
         EventBus.getDefault().unregister(this);
+        finish();
     }
 
 
@@ -404,4 +414,5 @@ public class PassCodeActivity extends BaseActivity {
             getDataUser();
         }
     }
+
 }

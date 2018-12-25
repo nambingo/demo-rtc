@@ -29,6 +29,7 @@ import butterknife.ButterKnife;
 import com.facebook.login.LoginManager;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.VietSkinDoctorApplication;
+import com.giahan.app.vietskindoctor.activity.FirstLoginActivity;
 import com.giahan.app.vietskindoctor.activity.LoginActivity;
 import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
@@ -222,7 +223,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             EventBus.getDefault().post(new TimeOutEvent());
         }
         pref.isHasPasscode().put(false);
-        Intent intent = new Intent(getApplicationContext(), PassCodeActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FirstLoginActivity.class);
         intent.putExtra(Constant.CHANGE_TAB, true);
         startActivity(intent);
         overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);

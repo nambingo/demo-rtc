@@ -70,4 +70,7 @@ public interface PrefHelper {
 
     @DefaultString("")
     String tokenFirebase();
+
+    @DefaultBoolean(true)
+    boolean isFirstOpenApp();
 }
