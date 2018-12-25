@@ -239,9 +239,10 @@ public class GeneralUtil {
                     if(keyCode == KeyEvent.KEYCODE_DEL){
                         edt1.setText("");
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt2.setOnKeyListener(new View.OnKeyListener() {
@@ -252,9 +253,10 @@ public class GeneralUtil {
                         edt2.setText("");
                         edt1.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt3.setOnKeyListener(new View.OnKeyListener() {
@@ -265,9 +267,10 @@ public class GeneralUtil {
                         edt3.setText("");
                         edt2.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt4.setOnKeyListener(new View.OnKeyListener() {
@@ -278,9 +281,10 @@ public class GeneralUtil {
                         edt4.setText("");
                         edt3.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt5.setOnKeyListener(new View.OnKeyListener() {
@@ -291,9 +295,10 @@ public class GeneralUtil {
                         edt5.setText("");
                         edt4.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt6.setOnKeyListener(new View.OnKeyListener() {
@@ -304,9 +309,10 @@ public class GeneralUtil {
                         edt6.setText("");
                         edt5.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
 
@@ -319,7 +325,7 @@ public class GeneralUtil {
                         public void run() {
                             edt2.requestFocus();
                         }
-                    },10);
+                    },1);
                 }
             }
         });
@@ -332,7 +338,7 @@ public class GeneralUtil {
                         public void run() {
                             edt3.requestFocus();
                         }
-                    },10);
+                    },1);
                 }else {
                     edt1.requestFocus();
                 }
@@ -347,7 +353,7 @@ public class GeneralUtil {
                         public void run() {
                             edt4.requestFocus();
                         }
-                    },10);
+                    },1);
                 }else {
                     edt2.requestFocus();
                 }
@@ -362,7 +368,7 @@ public class GeneralUtil {
                         public void run() {
                             edt5.requestFocus();
                         }
-                    },10);
+                    },1);
                 }else {
                     edt3.requestFocus();
                 }
@@ -377,7 +383,7 @@ public class GeneralUtil {
                         public void run() {
                             edt6.requestFocus();
                         }
-                    },10);
+                    },1);
                 }else {
                     edt4.requestFocus();
                 }
