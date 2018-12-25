@@ -92,8 +92,8 @@
         <activity android:name=".activity.CreatePassCodeActivity"
             android:screenOrientation="portrait"/>
 
-        <!--<activity android:name=".activity.PassCodeActivity"
-            android:screenOrientation="portrait"/>-->
+        <activity android:name=".activity.FirstLoginActivity"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name="com.facebook.FacebookActivity"

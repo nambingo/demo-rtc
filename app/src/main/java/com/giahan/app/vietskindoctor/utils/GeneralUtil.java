@@ -113,7 +113,7 @@ public class GeneralUtil {
         AccountKitConfiguration.AccountKitConfigurationBuilder configurationBuilder
                 = new AccountKitConfiguration.AccountKitConfigurationBuilder(
                 LoginType.PHONE, ResponseType.TOKEN);
-        configurationBuilder.setInitialPhoneNumber(new PhoneNumber("+84", phoneNum));
+        configurationBuilder.setInitialPhoneNumber(new PhoneNumber("+84", phoneNum.substring(1)));
         intent.putExtra(AccountKitActivity.ACCOUNT_KIT_ACTIVITY_CONFIGURATION, configurationBuilder.build());
         activity.startActivityForResult(intent, REQUEST_CODE);
     }
@@ -128,7 +128,6 @@ public class GeneralUtil {
             } else if (result.wasCancelled()) {
                 Toast.makeText(activity, "Cancel", Toast.LENGTH_SHORT).show();
             } else {
-                DialogUtils.hideAlert();
                 prefHelper_.isHasPasscode().put(true);
                 callToLogin(activity, prefHelper_, result.getAccessToken().getToken());
             }
@@ -151,7 +150,6 @@ public class GeneralUtil {
         });
     }
 
-
     private static boolean isValidPhoneNum(String phoneNum) {
         boolean isValid = false;
         if(!Toolbox.isEmpty(phoneNum)){
@@ -171,7 +169,6 @@ public class GeneralUtil {
         call.enqueue(new Callback<UserInfoResponse>() {
             @Override
             public void onResponse(final Call<UserInfoResponse> call, final Response<UserInfoResponse> response) {
-
                 if(response.errorBody() != null)
                 {
                     BaseResponse baseResponse = Toolbox.gson().fromJson(response.errorBody().charStream(), BaseResponse.class);
@@ -196,7 +193,9 @@ public class GeneralUtil {
                         prefHelper_.isLogged().put(true);
                         prefHelper_.isHasPasscode().put(true);
                         prefHelper_.isBackground().put(false);
-                        EventBus.getDefault().post(new MessageEvent());
+                        activity.startActivity(new Intent(activity, PassCodeActivity.class ));
+                        activity.finish();
+//                        EventBus.getDefault().post(new MessageEvent());
                     }else {
                         prefHelper_.isHasPasscode().put(false);
                         showFirstPasscode(activity);

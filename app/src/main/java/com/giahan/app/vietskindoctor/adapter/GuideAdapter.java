@@ -1,6 +1,7 @@
 package com.giahan.app.vietskindoctor.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,28 +19,29 @@ import com.giahan.app.vietskindoctor.R;
 public class GuideAdapter extends PagerAdapter {
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-    private int[] mStringTitles, mStringDetails;
+    private String[] mStringTitles, mStringDetails;
 
     public GuideAdapter(Context context) {
         mContext = context;
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mStringDetails = new int[]{R.string.flash_screen_detail_01, R.string.flash_screen_detail_02};
+//        mStringDetails = mContext.getResources().getStringArray(R.array.content_intro);
 
-        mStringTitles = new int[]{R.string.flash_screen_title_01, R.string.flash_screen_title_02};
+//        mStringTitles = mContext.getResources().getStringArray(R.array.title_intro);
     }
 
     @Override
     public int getCount() {
-        return mStringTitles.length;
+        return 6;
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;
     }
 
+    @NonNull
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View itemView;
         /*if (position == 3) {
             itemView = mLayoutInflater.inflate(R.layout.item_image_slider_2, container, false);
@@ -48,16 +50,16 @@ public class GuideAdapter extends PagerAdapter {
         }*/
         itemView = mLayoutInflater.inflate(R.layout.item_slider, container, false);
 
-        TextView title = (TextView) itemView.findViewById(R.id.tv_title);
+//        TextView title = (TextView) itemView.findViewById(R.id.tv_title);
 //        TextView btnStart = (TextView) imageView.findViewById(R.id.btn_start);
-        if (title != null) {
-            title.setText(mStringTitles[position]);
-        }
-
-        TextView detail = (TextView) itemView.findViewById(R.id.tv_detail);
-
-        if (detail != null)
-            detail.setText(mStringDetails[position]);
+//        if (title != null) {
+//            title.setText(mStringTitles[position]);
+//        }
+//
+//        TextView detail = (TextView) itemView.findViewById(R.id.tv_detail);
+//
+//        if (detail != null)
+//            detail.setText(mStringDetails[position]);
 
         container.addView(itemView);
 
@@ -65,7 +67,7 @@ public class GuideAdapter extends PagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((LinearLayout) object);
     }
 }

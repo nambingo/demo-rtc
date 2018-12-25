@@ -87,20 +87,20 @@ public class CaiDatFragment extends BaseFragment {
 
     @OnClick(R.id.ll_quide)
     void guide() {
-//        Intent intent = new Intent(getApplicationContext(), GuideActivity.class);
-//        intent.putExtra(Constant.OPEN_GUIDER, true);
-//        startActivity(intent);
-//        getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
-    }
-
-    @OnClick(R.id.ll_table_fee)
-    void openTableFee() {
         Intent intent = new Intent(getApplicationContext(), GuideActivity.class);
         intent.putExtra(Constant.OPEN_GUIDER, true);
         startActivity(intent);
         getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
     }
 
+    /*@OnClick(R.id.ll_table_fee)
+    void openTableFee() {
+        Intent intent = new Intent(getApplicationContext(), GuideActivity.class);
+        intent.putExtra(Constant.OPEN_GUIDER, true);
+        startActivity(intent);
+        getMainActivity().overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_top);
+    }
+*/
     @OnClick(R.id.ll_logout)
     void logout() {
         getMainActivity().showAlertConfirmDialog("Đăng xuất", "Bạn có chắc chắn muốn đăng xuất tài khoản?", new BaseActivity.OkListener() {
