@@ -20,8 +20,8 @@ public class Constant {
 
     public static final String TAG_FILE_PATH = "/VietSkin/Pictures";
 
-//    public static final String URL_SOCKET = "https://socket.dev.vietskin.vn";
-    public static final String URL_SOCKET = "https://socket.vietskin.vn";
+    public static final String URL_SOCKET = "https://socket.dev.vietskin.vn";
+//    public static final String URL_SOCKET = "https://socket.vietskin.vn";
 
     public static final String TAG_LOGIN_SOCKET = "CLIENT_LOGIN";
     public static final String TAG_RECEIVE_MESSAGE = "NEW_CHAT_MESSAGE";
