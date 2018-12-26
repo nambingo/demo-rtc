@@ -86,7 +86,7 @@ public class YeuCauAdapter extends RecyclerView.Adapter<YeuCauAdapter.MyViewHold
             tvWeight.setVisibility(TextUtils.isEmpty(session.getWeight()) ? View.GONE : View.VISIBLE);
             if (!TextUtils.isEmpty(session.getWeight())) {
                 tvWeight.setText(
-                        String.format("%s kg", session.getWeight()));
+                        String.format(", %s kg)", session.getWeight()));
             }
         }
     }

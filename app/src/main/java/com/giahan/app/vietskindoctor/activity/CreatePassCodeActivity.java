@@ -15,6 +15,8 @@ import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.model.PassCodeBody;
 import com.giahan.app.vietskindoctor.model.PassCodeResponse;
 import com.giahan.app.vietskindoctor.services.RequestHelper;
+import com.giahan.app.vietskindoctor.utils.DialogUtils;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -94,10 +96,15 @@ public class CreatePassCodeActivity extends BaseActivity {
                     pref.isLogged().put(true);
                     if(pref.isCreatePassCode().get()) {
                         startActivity(new Intent(CreatePassCodeActivity.this, PassCodeActivity.class));
+                        finish();
                     }else {
-                        startActivity(new Intent(CreatePassCodeActivity.this, MainActivity.class));
+                        DialogUtils.showDialogOneChoice(CreatePassCodeActivity.this, false, true,getString(R.string.create_password_created)
+                                ,getString(R.string.close), view ->{
+                                    startActivity(new Intent(CreatePassCodeActivity.this, MainActivity.class));
+                                    finish();
+                                    DialogUtils.hideAlert();
+                                });
                     }
-                    finish();
                 }
             }
 

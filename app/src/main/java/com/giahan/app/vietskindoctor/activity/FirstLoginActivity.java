@@ -42,6 +42,7 @@ public class FirstLoginActivity extends BaseActivity{
     public void onNext(){
         String phoneNum = edtPhoneNum.getText().toString();
         if(isValidPhoneNum(phoneNum)){
+            showLoad();
             GeneralUtil.goToLogin(this, phoneNum);
         }else {
             DialogUtils.showDialogOneChoice(this, false, true, getString(R.string.error_phone_number)

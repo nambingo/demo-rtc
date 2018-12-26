@@ -60,6 +60,7 @@ public class Session {
 
     private String weight;
 
+    @SerializedName("patient_birthdate")
     private String birthdate;
 
     private String sex;

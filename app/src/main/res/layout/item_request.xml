@@ -2,16 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lnItemSession"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_100"
-    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingLeft="@dimen/dp_10"
     android:paddingRight="@dimen/dp_10"
     android:paddingTop="@dimen/dp_10">
 
     <LinearLayout
-        android:layout_width="@dimen/dp_0"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="5"
         android:orientation="horizontal">
 
         <TextView
@@ -48,9 +47,7 @@
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:maxWidth="@dimen/dp_200"
-        android:singleLine="true"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_12" />
 
