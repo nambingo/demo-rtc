@@ -292,7 +292,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="start"
-                    android:text="@string/title_date"
+                    android:text="Ngày sinh"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 

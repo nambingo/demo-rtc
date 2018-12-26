@@ -22,6 +22,7 @@ import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.activity.CreatePassCodeActivity;
 import com.giahan.app.vietskindoctor.activity.MainActivity;
 import com.giahan.app.vietskindoctor.activity.PassCodeActivity;
+import com.giahan.app.vietskindoctor.base.BaseActivity;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.domains.Session;
 import com.giahan.app.vietskindoctor.model.AccountKitBody;
@@ -131,6 +132,7 @@ public class GeneralUtil {
                         .show();
                 return;
             } else if (result.wasCancelled()) {
+                ((BaseActivity)activity).hideLoading();
                 Toast.makeText(activity, "Cancel", Toast.LENGTH_SHORT).show();
             } else {
                 prefHelper_.isHasPasscode().put(true);
@@ -176,6 +178,7 @@ public class GeneralUtil {
             public void onResponse(final Call<UserInfoResponse> call, final Response<UserInfoResponse> response) {
                 if(response.errorBody() != null)
                 {
+                    ((BaseActivity)activity).hideLoading();
                     BaseResponse baseResponse = Toolbox.gson().fromJson(response.errorBody().charStream(), BaseResponse.class);
                     if(baseResponse.getErrorCode().equals("10")){
                         DialogUtils.showDialogOneChoice(activity, true, false, activity.getString(R.string.msg_phone_error1),activity.getString(R.string.close)

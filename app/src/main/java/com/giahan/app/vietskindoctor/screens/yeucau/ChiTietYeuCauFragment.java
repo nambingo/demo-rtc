@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -120,7 +121,8 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
         tvName.setText(mSession.getPatientName());
         tvWeight.setText(mSession.getWeight());
         if (!TextUtils.isEmpty(mSession.getBirthdate())) {
-            tvNgaySinh.setText(mSession.getBirthdate());
+            tvNgaySinh.setText(mSession.getBirthdate().substring(0,mSession.getBirthdate().indexOf(" ")));
+            Log.d("tony", mSession.getBirthdate());
         }
         tvSex.setText(TextUtils.isEmpty(mSession.getSex()) ? "N/A" : mSession.getSex().equals("0") ? "Nữ" : "Nam");
         tvDescription.setText(mSession.getDescription());

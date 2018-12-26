@@ -108,7 +108,7 @@ public class CaiDatFragment extends BaseFragment {
             public void okClick() {
 //                getMainActivity().logout(false);
                 startActivity(new Intent(getMainActivity(), PassCodeActivity.class));
-                getBaseActivity().finish();
+                getMainActivity().finish();
             }
         });
     }
