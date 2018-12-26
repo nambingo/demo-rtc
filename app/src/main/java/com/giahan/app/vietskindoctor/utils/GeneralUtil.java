@@ -238,10 +238,17 @@ public class GeneralUtil {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
                         edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt2.setOnKeyListener(new View.OnKeyListener() {
@@ -249,12 +256,18 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
                         edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
                         edt1.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt3.setOnKeyListener(new View.OnKeyListener() {
@@ -262,12 +275,17 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
                         edt3.setText("");
-                        edt2.requestFocus();
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
+                    return true;
                 }
-
-                return true;
+                return false;
             }
         });
         edt4.setOnKeyListener(new View.OnKeyListener() {
@@ -275,12 +293,18 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
                         edt4.setText("");
-                        edt3.requestFocus();
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt5.setOnKeyListener(new View.OnKeyListener() {
@@ -288,12 +312,18 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
                         edt5.setText("");
-                        edt4.requestFocus();
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
         edt6.setOnKeyListener(new View.OnKeyListener() {
@@ -301,12 +331,17 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
                         edt6.setText("");
-                        edt5.requestFocus();
+                        edt1.requestFocus();
                     }
+                    return true;
                 }
-
-                return true;
+                return false;
             }
         });
 
