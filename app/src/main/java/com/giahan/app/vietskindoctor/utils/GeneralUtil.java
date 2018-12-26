@@ -238,6 +238,12 @@ public class GeneralUtil {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
                         edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
                     return true;
                 }
@@ -250,7 +256,12 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
                         edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
                         edt1.requestFocus();
                     }
                     return true;
@@ -264,12 +275,16 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
                         edt3.setText("");
-                        edt2.requestFocus();
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
                     return true;
                 }
-
                 return false;
             }
         });
@@ -278,8 +293,13 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
                         edt4.setText("");
-                        edt3.requestFocus();
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
                     return true;
                 }
@@ -292,8 +312,13 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
                         edt5.setText("");
-                        edt4.requestFocus();
+                        edt6.setText("");
+                        edt1.requestFocus();
                     }
                     return true;
                 }
@@ -306,12 +331,16 @@ public class GeneralUtil {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if(event.getAction() == KeyEvent.ACTION_UP){
                     if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
                         edt6.setText("");
-                        edt5.requestFocus();
+                        edt1.requestFocus();
                     }
                     return true;
                 }
-
                 return false;
             }
         });
@@ -325,7 +354,7 @@ public class GeneralUtil {
                         public void run() {
                             edt2.requestFocus();
                         }
-                    },1);
+                    },10);
                 }
             }
         });
@@ -338,7 +367,7 @@ public class GeneralUtil {
                         public void run() {
                             edt3.requestFocus();
                         }
-                    },1);
+                    },10);
                 }else {
                     edt1.requestFocus();
                 }
@@ -353,7 +382,7 @@ public class GeneralUtil {
                         public void run() {
                             edt4.requestFocus();
                         }
-                    },1);
+                    },10);
                 }else {
                     edt2.requestFocus();
                 }
@@ -368,7 +397,7 @@ public class GeneralUtil {
                         public void run() {
                             edt5.requestFocus();
                         }
-                    },1);
+                    },10);
                 }else {
                     edt3.requestFocus();
                 }
@@ -383,7 +412,7 @@ public class GeneralUtil {
                         public void run() {
                             edt6.requestFocus();
                         }
-                    },1);
+                    },10);
                 }else {
                     edt4.requestFocus();
                 }
