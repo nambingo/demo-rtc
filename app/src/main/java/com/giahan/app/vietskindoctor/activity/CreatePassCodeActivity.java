@@ -1,5 +1,6 @@
 package com.giahan.app.vietskindoctor.activity;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -91,11 +92,12 @@ public class CreatePassCodeActivity extends BaseActivity {
                 if (response != null && response.body() != null && response.errorBody() == null) {
                     pref.isHasPasscode().put(true);
                     pref.isLogged().put(true);
-                    if (pref.isCreatePassCode().get()) {
-                        //TODO : show dialog update info
+                    if(pref.isCreatePassCode().get()) {
+                        startActivity(new Intent(CreatePassCodeActivity.this, PassCodeActivity.class));
                     }else {
-                        finish();
+                        startActivity(new Intent(CreatePassCodeActivity.this, MainActivity.class));
                     }
+                    finish();
                 }
             }
 

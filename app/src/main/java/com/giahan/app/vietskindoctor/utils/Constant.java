@@ -10,11 +10,11 @@ public class Constant {
 
     public static final Locale LOCALE_VN = new Locale("vi", "VN");
 
-//    public static final String URL_API = "https://api.dev.vietskin.vn/";
-    public static final String URL_API = "https://api.vietskin.vn/";
+    public static final String URL_API = "https://api.dev.vietskin.vn/";
+//    public static final String URL_API = "https://api.vietskin.vn/";
 
-//    public static final String URL_MEDIA = "https://media.dev.vietskin.vn/";
-    public static final String URL_MEDIA = "https://media.vietskin.vn/";
+    public static final String URL_MEDIA = "https://media.dev.vietskin.vn/";
+//    public static final String URL_MEDIA = "https://media.vietskin.vn/";
 
     public static final String TAG_FILE_PROVIDER = "com.giahan.app.vietskin.fileprovider";
 
