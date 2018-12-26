@@ -543,8 +543,9 @@ public class ChatFragment extends BaseFragment implements OnClickImageListener,
 
     private void sendText() {
         if (null == mUserID) return;
-        if (!mSocket.connected()) return;
-
+        if (mSocket == null) {
+            setupSocket();
+        }
         String message = mInputMessageView.getText().toString().trim();
         if (TextUtils.isEmpty(message)) {
             mInputMessageView.requestFocus();
