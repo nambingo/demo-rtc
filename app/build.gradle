@@ -101,6 +101,8 @@ dependencies {
     implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleimageviewVersion"
     implementation "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
     implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.ext.glideVersion"
+
     implementation "com.rengwuxian.materialedittext:library:$rootProject.ext.materialedittextVersion"
     implementation "com.github.everhad:AndroidRatingStar:$rootProject.ext.androidRatingStarVersion"
     implementation "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
