@@ -7,22 +7,18 @@ import java.util.Locale;
  */
 
 public class Constant {
+    //PRO
+    public static final String URL_API = "https://api.vietskin.vn/";
+    public static final String URL_MEDIA = "https://media.vietskin.vn/";
+    public static final String URL_SOCKET = "https://socket.vietskin.vn";
+    //DEV
+//    public static final String URL_API = "https://api.dev.vietskin.vn/";
+//    public static final String URL_MEDIA = "https://media.dev.vietskin.vn/";
+//    public static final String URL_SOCKET = "https://socket.dev.vietskin.vn";
 
     public static final Locale LOCALE_VN = new Locale("vi", "VN");
-
-    public static final String URL_API = "https://api.dev.vietskin.vn/";
-//    public static final String URL_API = "https://api.vietskin.vn/";
-
-    public static final String URL_MEDIA = "https://media.dev.vietskin.vn/";
-//    public static final String URL_MEDIA = "https://media.vietskin.vn/";
-
     public static final String TAG_FILE_PROVIDER = "com.giahan.app.vietskin.fileprovider";
-
     public static final String TAG_FILE_PATH = "/VietSkin/Pictures";
-
-    public static final String URL_SOCKET = "https://socket.dev.vietskin.vn";
-//    public static final String URL_SOCKET = "https://socket.vietskin.vn";
-
     public static final String TAG_LOGIN_SOCKET = "CLIENT_LOGIN";
     public static final String TAG_RECEIVE_MESSAGE = "NEW_CHAT_MESSAGE";
     public static final String TAG_LOGOUT_SOCKET = "CLIENT_LOGOUT";
