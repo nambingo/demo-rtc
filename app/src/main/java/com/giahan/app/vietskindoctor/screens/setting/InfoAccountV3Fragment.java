@@ -19,6 +19,7 @@ import com.giahan.app.vietskindoctor.services.RequestHelper;
 import com.giahan.app.vietskindoctor.utils.Constant;
 import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.Toolbox;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -188,7 +189,8 @@ public class InfoAccountV3Fragment extends BaseFragment {
                 hideLoading();
                 getMainActivity().checkCodeShowDialog(response.code());
                 if (response.body() != null) {
-                    UserInfoResponse user = UserInfoResponse.getUser(getMainActivity().pref);
+                    UserInfoResponse user = response.body();
+                    mPref.user().put(new Gson().toJson(user));
                     if (user != null) {
                         user.setAgainData(response.body());
                         getMainActivity().pref.user().put(Toolbox.gson().toJson(user));
