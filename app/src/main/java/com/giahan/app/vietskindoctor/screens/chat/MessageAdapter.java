@@ -10,15 +10,19 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.giahan.app.vietskindoctor.R;
 import com.giahan.app.vietskindoctor.domains.Message;
 import com.giahan.app.vietskindoctor.utils.DateUtils;
 import com.squareup.picasso.Picasso;
+
 import de.hdodenhof.circleimageview.CircleImageView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -266,33 +270,30 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         @BindView(R.id.progress_bar_left)
         ProgressBar progressBarLeft;
 
-        private RequestManager mGlide;
+        private GlideRequests mGlide;
 
 
         public ChatFileViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-            mGlide = Glide.with(itemView.getContext());
+            mGlide = GlideApp.with(itemView.getContext());
         }
 
         public void bind(Message message, boolean isLike) {
             boolean isMe = message.getUserId().equals(mUserID);
             chat_text_other.setVisibility(isMe ? View.GONE : View.VISIBLE);
             chat_text_me.setVisibility(isMe ? View.VISIBLE : View.GONE);
-            Picasso.with(mContext)
+            mGlide
                     .load(message.getObjUrl())
-                    .centerCrop()
-                    .fit()
+                    .dontAnimate()
+                    .fitCenter()
                     .into(isMe ? imgMe : imgYou);
-            Picasso.with(mContext)
-                    .load(mAvatarUrl)
+            mGlide.load(mAvatarUrl)
                     .placeholder(R.mipmap.ic_launcher)
                     .into(imgAvatar);
 
             imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
 
-            imgMe.setTag(message);
-            imgYou.setTag(message);
             tvDateMe.setText(DateUtils.convertDate(message.getCreatedAt()));
             tvDateYou.setText(DateUtils.convertDate(message.getCreatedAt()));
             tvDateMe.setVisibility(message.isClick() ? View.VISIBLE : View.GONE);
