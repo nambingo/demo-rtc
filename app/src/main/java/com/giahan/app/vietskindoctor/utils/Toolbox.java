@@ -13,6 +13,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.app.FragmentActivity;
@@ -23,6 +24,7 @@ import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -772,4 +774,201 @@ public class Toolbox {
             return null;
         }
     }
+    public static void autoMovingText(EditText edt1, EditText edt2,EditText edt3, EditText edt4,EditText edt5, EditText edt6){
+        edt1.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(event.getAction() == KeyEvent.ACTION_UP){
+                    if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
+                    }
+                    return true;
+                }
+
+                return false;
+            }
+        });
+        edt2.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(event.getAction() == KeyEvent.ACTION_UP){
+                    if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
+                    }
+                    return true;
+                }
+
+                return false;
+            }
+        });
+        edt3.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(event.getAction() == KeyEvent.ACTION_UP){
+                    if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
+        edt4.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(event.getAction() == KeyEvent.ACTION_UP){
+                    if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
+                    }
+                    return true;
+                }
+
+                return false;
+            }
+        });
+        edt5.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(event.getAction() == KeyEvent.ACTION_UP){
+                    if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
+                    }
+                    return true;
+                }
+
+                return false;
+            }
+        });
+        edt6.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(event.getAction() == KeyEvent.ACTION_UP){
+                    if(keyCode == KeyEvent.KEYCODE_DEL){
+                        edt1.setText("");
+                        edt2.setText("");
+                        edt3.setText("");
+                        edt4.setText("");
+                        edt5.setText("");
+                        edt6.setText("");
+                        edt1.requestFocus();
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        edt1.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==1){
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            edt2.requestFocus();
+                        }
+                    },10);
+                }
+            }
+        });
+        edt2.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==1){
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            edt3.requestFocus();
+                        }
+                    },10);
+                }else {
+                    edt1.requestFocus();
+                }
+            }
+        });
+        edt3.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==1){
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            edt4.requestFocus();
+                        }
+                    },10);
+                }else {
+                    edt2.requestFocus();
+                }
+            }
+        });
+        edt4.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==1){
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            edt5.requestFocus();
+                        }
+                    },10);
+                }else {
+                    edt3.requestFocus();
+                }
+            }
+        });
+        edt5.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==1){
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            edt6.requestFocus();
+                        }
+                    },10);
+                }else {
+                    edt4.requestFocus();
+                }
+            }
+        });
+        edt6.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(count==0){
+                    edt6.requestFocus();
+                }
+            }
+        });
+    }
+
 }

@@ -26,6 +26,7 @@ import com.giahan.app.vietskindoctor.utils.DialogUtils;
 import com.giahan.app.vietskindoctor.utils.GeneralUtil;
 import com.giahan.app.vietskindoctor.utils.KeyBoardUtil;
 import com.giahan.app.vietskindoctor.utils.SimpleTextWatcher;
+import com.giahan.app.vietskindoctor.utils.Toolbox;
 import com.google.gson.Gson;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -256,7 +257,7 @@ public class PassCodeActivity extends BaseActivity {
     }
 
     private void settingEdittext() {
-        GeneralUtil.autoMovingText(edtNum1, edtNum2, edtNum3, edtNum4, edtNum5, edtNum6);
+        Toolbox.autoMovingText(edtNum1, edtNum2, edtNum3, edtNum4, edtNum5, edtNum6);
 //        edtNum1.addTextChangedListener(new SimpleTextWatcher() {
 //            @Override
 //            public void onTextChanged(final CharSequence charSequence, final int i, final int i1, final int i2) {

@@ -71,14 +71,27 @@ public class FMService extends FirebaseMessagingService {
                     R.mipmap.ic_launcher);
         }
 
-        if(remoteMessage.getData().containsKey("description")){
-            EventBus.getDefault().post(new MessageEvent());
-        }else {
-            EventBus.getDefault().post(new MessageEvent());
-        }
+//        if(remoteMessage.getData().containsKey("description")){
+//            EventBus.getDefault().post(new MessageEvent());
+//        }else {
+//            EventBus.getDefault().post(new MessageEvent());
+//        }
 
-        buildNotification(MainActivity.getIntent(this, notice.getmSessionID()), notice.getmNotificationMessage(),
-                (int)System.currentTimeMillis());
+        //bui Notification to go to specific activity
+        if(notice != null) {
+            if (notice.getNotiType() != null) {
+                if(notice.getNotiType().equals("2")){
+                    buildNotification(MainActivity.getIntent(this, notice.getmSessionID(), "2"), notice.getmNotificationMessage(),
+                            (int) System.currentTimeMillis());
+                }else if(notice.getNotiType().equals("1")){
+                    buildNotification(MainActivity.getIntent(this, notice.getmSessionID(), "1"), notice.getmNotificationMessage(),
+                            (int) System.currentTimeMillis());
+                }
+            }else {
+                buildNotification(MainActivity.getIntent(this, notice.getmSessionID(), "0"), notice.getmNotificationMessage(),
+                        (int) System.currentTimeMillis());
+            }
+        }
     }
 
     private void buildNotification(Intent intent, String message, int notifyID) {

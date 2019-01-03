@@ -7,6 +7,17 @@ public class NotificationContent {
     @SerializedName("dsessionId")
     private String mSessionID;
 
+    public String getNotiType() {
+        return notiType;
+    }
+
+    public void setNotiType(String notiType) {
+        this.notiType = notiType;
+    }
+
+    @SerializedName("type")
+    private String notiType;
+
     public String getmNotificationMessage() {
         return mNotificationMessage;
     }
