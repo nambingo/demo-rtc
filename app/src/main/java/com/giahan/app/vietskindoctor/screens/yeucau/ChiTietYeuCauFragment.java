@@ -123,7 +123,7 @@ public class ChiTietYeuCauFragment extends BaseFragment implements OnClickViewLi
         if (!TextUtils.isEmpty(mSession.getBirthdate())) {
             tvNgaySinh.setText(mSession.getBirthdate().substring(0,mSession.getBirthdate().indexOf(" ")));
         }
-        tvSex.setText(TextUtils.isEmpty(mSession.getSex()) ? "N/A" : mSession.getSex().equals("0") ? "Nữ" : "Nam");
+        tvSex.setText(TextUtils.isEmpty(mSession.getSex()) ? "N/A" : mSession.getSex().equals("2") ? "Nữ" : "Nam");
         tvDescription.setText(mSession.getDescription());
         setupDescription();
     }
