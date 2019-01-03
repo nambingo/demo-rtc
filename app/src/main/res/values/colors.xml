@@ -40,5 +40,6 @@
     <color name="color_friend_chat">#DADADA</color>
     <color name="heading_text_color">#1B7AD2</color>
     <color name="default_text_color">#575757</color>
+    <color name="passcode_bg_color">#2F9DE4</color>
 
 </resources>
