@@ -78,7 +78,8 @@ public class MainActivity extends BaseActivity
     private TextView tvNumber;
 
     private String mSessionId;
-    private boolean isFromNitification = false;
+    private boolean openChat = false;
+    private boolean openRequest = false;
 
     public boolean isGoToChatScreen = false;
 
@@ -95,14 +96,23 @@ public class MainActivity extends BaseActivity
 
     public static final String EXT_MAIN_ID = "extra_main_id";
     public static final String EXT_FROM_NOTIFICATION = "from_notification";
+    public static final String TAG_OPEN_TAB_ID = "open_tab_id";
 
 
-    public static Intent getIntent(Context context, String sessionID) {
+
+    public static Intent getIntent(Context context, String sessionID, String type) {
         Intent intent = new Intent(context, MainActivity.class);
-        intent.putExtra(EXT_MAIN_ID, sessionID);
+        if(type.equals("2")){
+            intent.putExtra(TAG_OPEN_TAB_ID, INDEX_CAI_DAT);
+        }else if(type.equals("1")){
+            intent.putExtra(EXT_MAIN_ID, sessionID);
+        }else {
+            intent.putExtra(TAG_OPEN_TAB_ID, INDEX_YEU_CAU);
+        }
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }
+
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -180,13 +190,22 @@ public class MainActivity extends BaseActivity
         });
     }
 
-    private void openChatFromNoti() {
+    private void openTabFromNoti() {
+        if(getIntent() == null){
+            return;
+        }
+        if(getIntent().getIntExtra(TAG_OPEN_TAB_ID,INDEX_PHIEN)==INDEX_YEU_CAU){
+            mBottomView.setSelectedItemId(R.id.itemNotify);
+        }
+    }
+
+    private void isOpenChat(){
         if(getIntent() == null){
             return;
         }
         mSessionId = getIntent().getStringExtra(EXT_MAIN_ID);
-        if(mSessionId != null){
-            isFromNitification = true;
+        if (mSessionId != null) {
+            openChat = true;
         }
     }
 
@@ -287,18 +306,18 @@ public class MainActivity extends BaseActivity
     protected void onResume() {
         super.onResume();
         GeneralUtil.showPasscodeActivity(MainActivity.this, pref);
+        openTabFromNoti();
     }
 
     @Override
     public Fragment getRootFragment(int index) {
         switch (index) {
             case INDEX_PHIEN:
-                //Open Chat screen from notification
-                openChatFromNoti();
+                isOpenChat();
                 KhamOnlineFragment khamOnlineFragment = new KhamOnlineFragment();
                 Bundle bundle = new Bundle();
-                if(isFromNitification){
-                    isFromNitification = false;
+                if(openChat){
+                    openChat = false;
                     bundle.putString(EXT_MAIN_ID, mSessionId);
                     bundle.putBoolean(EXT_FROM_NOTIFICATION,true);
                 }
