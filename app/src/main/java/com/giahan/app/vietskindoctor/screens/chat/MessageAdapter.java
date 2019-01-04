@@ -286,10 +286,11 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             mGlide
                     .load(message.getObjUrl())
                     .dontAnimate()
-                    .fitCenter()
+                    .centerCrop()
                     .into(isMe ? imgMe : imgYou);
             mGlide.load(mAvatarUrl)
-                    .placeholder(R.mipmap.ic_launcher)
+                    .centerCrop()
+                    .placeholder(R.drawable.ic_patient_chat)
                     .into(imgAvatar);
 
             imgAvatar.setVisibility(isLike ? View.INVISIBLE : View.VISIBLE);
