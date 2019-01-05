@@ -40,10 +40,7 @@
     <color name="color_friend_chat">#DADADA</color>
     <color name="heading_text_color">#1B7AD2</color>
     <color name="default_text_color">#575757</color>
-<<<<<<< HEAD
     <color name="passcode_bg_color">#2F9DE4</color>
-=======
     <color name="hold_credit_color">#38da45</color>
->>>>>>> ...
 
 </resources>
