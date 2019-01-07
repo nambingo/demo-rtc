@@ -28,6 +28,7 @@
     <string name="title_setting">Cài đặt</string>
     <string name="title_info_account">Thông tin tài khoản</string>
     <string name="title_change_password">Đổi mật khẩu</string>
+    <string name="title_transaction_log">Lịch sử giao dịch</string>
     <string name="title_info_account2">Thông tin tự chẩn đoán</string>
     <string name="title_recharge_money">Ví VietSkin</string>
     <string name="title_recharge_money2">Nạp tiền</string>
@@ -58,12 +59,18 @@
     <string name="msg_alert_info">Có lỗi xảy ra. Vui lòng thử lại</string>
     <string name="msg_alert_recharge_success">Vui lòng truy cập vào đường link %s để nạp tiền</string>
     <string name="msg_alert_recharge">Có lỗi xảy ra. Vui lòng thử lại</string>
+    <string name="msg_withdrawal_processing">Bạn đã yêu cầu </string>
     <string name="msg_recharge"><![CDATA[
         Nhập số tiền cần nạp (Tối thiểu 20.000 VNĐ && Tối đa 20.000.000 VNĐ)
     ]]></string>
+    <string name="msg_withdraw_once">Bạn có một yêu cầu rút tiền đang được xử lý nên bạn không được tạo yêu cầu mới.  </string>
     <string name="msg_error_input_recharge">Số tiền nạp tối thiểu 20.000 VNĐ</string>
     <string name="msg_error_input_recharge2">Số tiền nạp tối đa 20.000.000 VNĐ</string>
+    <string name="msg_pass_code_required">Nhập PassCode để xác nhận lệnh yêu cầu rút tiền ví VietSkin</string>
+    <string name="msg_withdraw_amount">Nhập số tiền yêu cầu rút</string>
     <string name="error_empty_amount">Vui lòng nhập số tiền cần nạp (VNĐ)</string>
+    <string name="error_invalid_money">Số tiền nhập không hơp lệ hoặc lớn hơn số tiền trong ví.\n Xin vui lòng kiểm tra lại.</string>
+    <string name="error_invaild_passcode">Passcode không hợp lệ</string>
     <string name="error_empty_phone">Vui lòng nhập số điện thoại</string>
     <string name="danh_sach_bs">Danh sách bác sĩ</string>
     <string name="title_result">Kết quả</string>
@@ -145,6 +152,7 @@
     <string name="don_thuoc">Đơn thuốc</string>
     <string name="xem_nhanh_don_thuoc">Xem nhanh đơn thuốc</string>
     <string name="vi_vietskin_cua_ban">Ví VietSkin của bạn:</string>
+    <string name="hold_credit">Số tiền khoanh giữ:</string>
     <string name="bang_cap">Bằng cấp:</string>
     <string name="tim_kiem_bac_si">Tìm kiếm bác sĩ</string>
     <string name="nhap_ten_bac_si">Nhập tên bác sĩ...</string>

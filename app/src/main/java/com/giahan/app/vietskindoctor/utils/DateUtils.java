@@ -10,6 +10,7 @@ import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * Created by pham.duc.nam on 18/06/2018.
@@ -41,7 +42,7 @@ public class DateUtils {
             return null;
         }
 
-        DateFormat df = new SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.US);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
         return df.format(source);
     }
 
@@ -75,6 +76,19 @@ public class DateUtils {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String convertDateWithTimeZone(String date){
+        String newDate = "";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSS'Z'");
+        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        try {
+            Date d = simpleDateFormat.parse(date);
+            newDate = convertToString(d);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return newDate;
     }
 
     private static String convertDateRequest(String date, String format){

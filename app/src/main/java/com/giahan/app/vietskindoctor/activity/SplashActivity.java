@@ -63,7 +63,6 @@ public class SplashActivity extends BaseActivity {
             pref.isFirstLogin().put(true);
             finish();
         }else {
-
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             pref.isFirstLogin().put(false);
             finish();
